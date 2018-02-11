@@ -1,0 +1,32 @@
+"amixer set Master toggle"
+  XF86AudioMute
+
+"amixer set Master 5%-"
+  XF86AudioLowerVolume
+
+"amixer set Master 5%+"
+  XF86AudioRaiseVolume
+
+"amixer set Capture toggle"
+  F4
+
+"rfkill-toggle'
+  F7
+
+"xset dpms force off"
+  F9
+
+"systemctl hibernate"
+  Shift + F9
+
+"xbacklight -dec 5"
+  XF86MonBrightnessDown
+
+"xbacklight -inc 5"
+  XF86MonBrightnessUp
+
+"scrot"
+  Print
+
+"scrot -s"
+  Shift + Print
