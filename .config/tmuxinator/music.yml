@@ -1,0 +1,5 @@
+name: music
+
+windows:
+  - player: ncmpcpp
+  - search:

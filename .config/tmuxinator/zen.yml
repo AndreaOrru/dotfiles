@@ -1,0 +1,10 @@
+name: zen
+root: ~/src/zen
+
+windows:
+  - code: nvim .
+  - qemu:
+      layout: even-horizontal
+      panes:
+          -
+          -
