@@ -19,11 +19,17 @@
 "systemctl hibernate"
   Shift + F9
 
-"xbacklight -dec 5"
+"xbacklight -dec 10"
   XF86MonBrightnessDown
 
-"xbacklight -inc 5"
+"xbacklight -inc 10"
   XF86MonBrightnessUp
+
+"xbacklight -set 1"
+  Shift + XF86MonBrightnessDown
+
+"xbacklight -set 100"
+  Shift + XF86MonBrightnessUp
 
 "scrot"
   Print
