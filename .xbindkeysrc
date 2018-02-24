@@ -25,7 +25,7 @@
 "xbacklight -inc 10"
   XF86MonBrightnessUp
 
-"xbacklight -set 1"
+"xbacklight -set 2"
   Shift + XF86MonBrightnessDown
 
 "xbacklight -set 100"
