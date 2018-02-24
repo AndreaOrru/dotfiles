@@ -47,9 +47,11 @@ This function should only modify configuration layer settings."
      ;; markdown
      ;; neotree
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     rust
+     (shell :variables
+            shell-default-shell 'eshell
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
      syntax-checking
      version-control
@@ -453,6 +455,8 @@ before packages are loaded."
   (global-visual-line-mode t)
 
   (global-set-key (kbd "C-s") 'helm-swoop)
+
+  (setq rust-format-on-save t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
