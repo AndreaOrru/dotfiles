@@ -11,5 +11,6 @@ nm-applet --sm-disable &
 
 feh --recursive --randomize --bg-fill --no-fehbg ~/wallpapers &
 eval $(ssh-agent)
+/usr/bin/emacs --daemon &
 
 exec awesome

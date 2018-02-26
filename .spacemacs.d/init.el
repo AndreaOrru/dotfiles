@@ -381,7 +381,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
 
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
@@ -445,9 +445,6 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (unless window-system
-    (spacemacs/load-theme 'gruvbox nil t))
-
   (setq mouse-wheel-progressive-speed nil)
   (setq mouse-wheel-scroll-amount'(           2
                                    ((shift) . 1)))
