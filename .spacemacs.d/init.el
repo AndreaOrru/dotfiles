@@ -55,7 +55,6 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      syntax-checking
      version-control
-     vim-empty-lines
      vinegar
      )
 
@@ -169,7 +168,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(base16-gruvbox-dark-pale)
+   dotspacemacs-themes '(base16-gruvbox-dark-pale
+                         gruvbox)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `vim-powerline' and `vanilla'. The first three
@@ -435,6 +435,8 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
   (when (file-exists-p custom-file) (load custom-file))
+
+  (setq base16-distinct-fringe-background nil)
   )
 
 (defun dotspacemacs/user-config ()
@@ -443,6 +445,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (unless window-system
+    (spacemacs/load-theme 'gruvbox nil t))
+
   (setq mouse-wheel-progressive-speed nil)
   (setq mouse-wheel-scroll-amount'(           2
                                    ((shift) . 1)))
