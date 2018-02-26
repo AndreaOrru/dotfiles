@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ "$(</sys/class/rfkill/rfkill0/state)" = "1" ] && rfkill block 0 || rfkill unblock 0
+[ "$(</sys/class/rfkill/rfkill1/state)" = "1" ] && rfkill block 1 || rfkill unblock 1
