@@ -17,6 +17,8 @@ font pango:SauceCodePro Nerd Font 11
 
 # No window titlebars
 new_window pixel
+# Hide borders when not needed
+hide_edge_borders smart
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -52,6 +54,8 @@ bindsym $mod+x split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+# toggle bar visibility
+bindsym $mod+b bar mode toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
