@@ -6,10 +6,9 @@ xrandr --dpi 192
 xrdb -merge ~/.Xresources
 
 xbanish &
-xss-lock -- slock &
-nm-applet --sm-disable &
+xss-lock -- i3lock -n -e -c 000000 &
 
 feh --recursive --randomize --bg-fill --no-fehbg ~/wallpapers &
 eval $(ssh-agent)
 
-exec awesome
+exec i3

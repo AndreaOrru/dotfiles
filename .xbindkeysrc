@@ -7,6 +7,15 @@
 "amixer set Master 5%+"
   XF86AudioRaiseVolume
 
+"mpc toggle"
+  Mod4 + XF86AudioMute
+
+"mpc prev"
+  Mod4 + XF86AudioLowerVolume
+
+"mpc next"
+  Mod4 + XF86AudioRaiseVolume
+
 "amixer set Capture toggle"
   F4
 
@@ -17,7 +26,7 @@
   F9
 
 "systemctl hibernate"
-  Shift + F9
+  Mod4 + Delete
 
 "xbacklight -dec 10"
   XF86MonBrightnessDown
@@ -26,13 +35,13 @@
   XF86MonBrightnessUp
 
 "xbacklight -set 2"
-  Shift + XF86MonBrightnessDown
+  Mod4 + XF86MonBrightnessDown
 
 "xbacklight -set 100"
-  Shift + XF86MonBrightnessUp
+  Mod4 + XF86MonBrightnessUp
 
 "scrot"
   Print
 
 "scrot -s"
-  Shift + Print
+  Mod4 + Print
