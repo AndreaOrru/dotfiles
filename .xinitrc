@@ -9,6 +9,7 @@ xbanish &
 xss-lock -- i3lock -n -e -c 000000 &
 
 feh --recursive --randomize --bg-fill --no-fehbg ~/wallpapers &
-eval $(ssh-agent)
 
+eval $(ssh-agent)
 exec i3
+eval $(ssh-agent -k)
