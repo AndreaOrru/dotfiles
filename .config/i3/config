@@ -135,6 +135,6 @@ bar {
         position top
         colors {
                 background #333333
-                separator #808080
+                separator #888888
         }
 }
