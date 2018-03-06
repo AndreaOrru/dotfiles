@@ -436,8 +436,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
   (when (file-exists-p custom-file) (load custom-file))
 
-  (setq base16-distinct-fringe-background nil)
-  )
+  (setq base16-distinct-fringe-background nil))
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -459,7 +458,7 @@ before packages are loaded."
   (global-set-key (kbd "C-s") 'helm-swoop)
 
   (setq rust-format-on-save t)
-  )
+  (setq delete-by-moving-to-trash nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
