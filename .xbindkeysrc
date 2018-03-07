@@ -19,9 +19,6 @@
 "amixer set Capture toggle"
   F4
 
-"rfkill-toggle'
-  F7
-
 "xset dpms force off"
   F9
 
