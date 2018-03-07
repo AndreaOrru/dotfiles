@@ -1,10 +1,10 @@
 "amixer set Master toggle"
   XF86AudioMute
 
-"pamixer -d 5"
+"pamixer --allow-boost -d 5"
   XF86AudioLowerVolume
 
-"pamixer -i 5"
+"pamixer --allow-boost -i 5"
   XF86AudioRaiseVolume
 
 "mpc toggle"
