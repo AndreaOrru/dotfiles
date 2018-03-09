@@ -39,7 +39,8 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     (helm :variables
+           helm-use-frame-when-more-than-two-windows nil)
      auto-completion
      ;; better-defaults
      emacs-lisp
@@ -47,7 +48,8 @@ This function should only modify configuration layer settings."
      ;; markdown
      ;; neotree
      ;; org
-     rust
+     (rust :variables
+           rust-format-on-save t)
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
@@ -187,7 +189,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("SauceCodePro Nerd Font"
-                               :size 33
+                               :size 32
                                :weight normal
                                :width normal)
 
@@ -379,6 +381,9 @@ It should only modify the values of Spacemacs settings."
    ;; emphasis the current one). (default 'all)
    dotspacemacs-highlight-delimiters 'all
 
+   ;; If non-nil, start an Emacs server if one is not already running.
+   dotspacemacs-enable-server nil
+
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
    dotspacemacs-persistent-server t
@@ -434,9 +439,7 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-  (when (file-exists-p custom-file) (load custom-file))
-
-  (setq base16-distinct-fringe-background nil))
+  (when (file-exists-p custom-file) (load custom-file)))
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -457,7 +460,6 @@ before packages are loaded."
 
   (global-set-key (kbd "C-s") 'helm-swoop)
 
-  (setq rust-format-on-save t)
   (setq delete-by-moving-to-trash nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
