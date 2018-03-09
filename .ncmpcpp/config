@@ -190,7 +190,7 @@ lyrics_directory = ~/.ncmpcpp/lyrics
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
-#alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+alternative_header_second_line_format = {{$4$b%A$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
 #current_item_prefix = $(yellow)$r
 #
@@ -262,7 +262,7 @@ lyrics_directory = ~/.ncmpcpp/lyrics
 ##   available.
 ##
 #
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{A} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
 #
 ##### various settings #####
 #
