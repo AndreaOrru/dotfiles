@@ -56,7 +56,7 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 #   performance, balance_performance, default, balance_power, power
 # Values are given in order of increasing power saving.
 # Note: Intel Skylake or newer CPU and Kernel >= 4.10 required.
-CPU_HWP_ON_AC=performance
+CPU_HWP_ON_AC=balance_performance
 CPU_HWP_ON_BAT=balance_performance
 
 # Set Intel P-state performance: 0..100 (%).
