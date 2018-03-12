@@ -30,8 +30,8 @@
 "xset dpms force off"
   XF86Sleep
 
-"systemctl hibernate"
-  Mod4 + Delete
+"undesk && desk"
+  F10
 
 "xbacklight -dec 10"
   XF86MonBrightnessDown
@@ -50,3 +50,7 @@
 
 "scrot -s"
   Mod4 + Print
+
+"systemctl hibernate"
+  Mod4 + Delete
+
