@@ -9,10 +9,16 @@
 
 "mpc toggle"
   Mod4 + XF86AudioMute
+"mpc toggle"
+  XF86AudioPlay
 
+"mpc prev"
+  XF86AudioPrev
 "mpc prev"
   Mod4 + XF86AudioLowerVolume
 
+"mpc next"
+  XF86AudioNext
 "mpc next"
   Mod4 + XF86AudioRaiseVolume
 
@@ -21,6 +27,8 @@
 
 "xset dpms force off"
   F9
+"xset dpms force off"
+  XF86Sleep
 
 "systemctl hibernate"
   Mod4 + Delete
