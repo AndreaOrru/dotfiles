@@ -39,8 +39,7 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (helm :variables
-           helm-use-frame-when-more-than-two-windows nil)
+     helm
      auto-completion
      ;; better-defaults
      emacs-lisp
@@ -48,8 +47,6 @@ This function should only modify configuration layer settings."
      ;; markdown
      ;; neotree
      ;; org
-     (rust :variables
-           rust-format-on-save t)
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
