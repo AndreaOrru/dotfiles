@@ -451,8 +451,9 @@ before packages are loaded."
   (fringe-mode '(24 . 0))
   (setq git-gutter-fr+-side 'left-fringe)
 
-  (global-subword-mode t)
+  (global-company-mode)
   (global-evil-mc-mode t)
+  (global-subword-mode t)
   (global-visual-line-mode t)
 
   (global-set-key (kbd "C-s") 'helm-swoop)
