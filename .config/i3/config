@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:SauceCodePro Nerd Font 11
 
 # No window titlebars
-new_window pixel
+new_window pixel 3
 # Hide borders when not needed
 hide_edge_borders smart
 
@@ -152,3 +152,6 @@ bar {
                 separator #888888
         }
 }
+
+# brighten active borders by 15% compared to default
+client.focused #4c7899 #285577 #ffffff #4dacf5 #35719e
