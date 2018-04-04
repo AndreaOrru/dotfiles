@@ -18,7 +18,7 @@
 "mpc toggle"
   XF86AudioPlay
 "mpc toggle"
-  Shift + space
+  Alt + space
 
 # Previous track.
 "mpc prev"
