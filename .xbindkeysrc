@@ -1,55 +1,89 @@
+####################
+#  AUDIO CONTROLS  #
+####################
+
+# Mute audio.
 "amixer set Master toggle"
   XF86AudioMute
 
+# Lower volume.
 "pamixer --allow-boost -d 5"
   XF86AudioLowerVolume
 
+# Raise volume.
 "pamixer --allow-boost -i 5"
   XF86AudioRaiseVolume
 
-"mpc toggle"
-  Mod4 + XF86AudioMute
+# Play/pause music.
 "mpc toggle"
   XF86AudioPlay
+"mpc toggle"
+  Shift + space
 
+# Previous track.
 "mpc prev"
   XF86AudioPrev
 "mpc prev"
-  Mod4 + XF86AudioLowerVolume
+  Mod4 + Left
 
+# Next track.
 "mpc next"
   XF86AudioNext
 "mpc next"
-  Mod4 + XF86AudioRaiseVolume
+  Mod4 + Right
 
+# Disable microphone.
 "amixer set Capture toggle"
   F4
 
-"xset dpms force off"
-  F9
-"xset dpms force off"
-  XF86Sleep
 
+#####################
+#  SCREEN CONTROLS  #
+#####################
+
+# Refresh multi-monitor configuration.
 "undesk && desk"
   F10
 
+# Decrease brightness.
 "xbacklight -dec 10"
   XF86MonBrightnessDown
 
+# Increase brightness.
 "xbacklight -inc 10"
   XF86MonBrightnessUp
 
+# Minimum brightness.
 "xbacklight -set 2"
   Mod4 + XF86MonBrightnessDown
 
+# Maximum brightness.
 "xbacklight -set 100"
   Mod4 + XF86MonBrightnessUp
 
-"scrot"
+# Take a screenshot of the whole screen.
+"maim ~/$(date +%s).png"
   Print
 
-"scrot -s"
+# Take a screenshot of a portion of the screen.
+"maim -s ~/$(date +%s).png"
   Mod4 + Print
 
+
+####################
+#  POWER CONTROLS  #
+####################
+
+# Lock and shut down screen.
+"xset dpms force off"
+  Delete
+"xset dpms force off"
+  XF86Sleep
+
+# Suspend system.
+"systemctl suspend"
+  Shift + Delete
+
+# Hibernate system.
 "systemctl hibernate"
   Mod4 + Delete
