@@ -44,9 +44,12 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      git
+     html
      ;; markdown
      ;; neotree
      ;; org
+     (ruby :variables ruby-enable-enh-ruby-mode t)
+     ruby-on-rails
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
@@ -55,6 +58,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
      vinegar
+     yaml
      )
 
    ;; List of additional packages that will be installed without being
