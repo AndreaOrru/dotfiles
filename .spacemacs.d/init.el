@@ -56,6 +56,7 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      ;; spell-checking
      syntax-checking
+     python
      version-control
      vinegar
      yaml
