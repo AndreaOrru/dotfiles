@@ -87,3 +87,7 @@
 # Hibernate system.
 "systemctl hibernate"
   Mod4 + Delete
+
+# Lock mouse and keyboard.
+"lk4b -xy=4000,4000 -p l"
+  Control + Alt + space
