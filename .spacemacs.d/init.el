@@ -42,8 +42,10 @@ This function should only modify configuration layer settings."
      helm
      auto-completion
      ;; better-defaults
+     (dash :variables helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
      git
+     github
      html
      ;; markdown
      ;; neotree
