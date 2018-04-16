@@ -1,0 +1,10 @@
+[Unit]
+Description=Undervolt the machine after resuming from hibernation
+After=hibernate.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/andrea/.bin/undervolt
+
+[Install]
+WantedBy=hibernate.target

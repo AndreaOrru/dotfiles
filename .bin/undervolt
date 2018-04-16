@@ -1,0 +1,10 @@
+#!/bin/sh
+
+MV=-110
+alias undervolt=/home/andrea/src/undervolt/undervolt.py
+
+if [ "$1" == "-r" ]; then
+  undervolt --read
+else
+  undervolt --core $MV --gpu $MV --cache $MV --uncore $MV --analogio $MV
+fi
