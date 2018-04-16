@@ -1,0 +1,9 @@
+[Unit]
+Description=Undervolt the machine
+
+[Service]
+Type=oneshot
+ExecStart=/home/andrea/src/undervolt/undervolt.py --core -110 --gpu -110 --cache -110 --uncore -110 --analogio -110
+
+[Install]
+WantedBy=multi-user.target
