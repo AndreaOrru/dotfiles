@@ -1,5 +1,6 @@
 [Unit]
 Description=Undervolt the machine
+After=home.service
 
 [Service]
 Type=oneshot
