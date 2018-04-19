@@ -1,7 +1,10 @@
 #!/bin/sh
 
 MV=-110
-alias undervolt=/home/andrea/src/undervolt/undervolt.py
+
+SCRIPT=`realpath $0`
+SCRIPTPATH=`dirname $SCRIPT`
+alias undervolt="$SCRIPTPATH/undervolt-git/undervolt.py"
 
 if [ $# == 1 ]; then
   if [ "$1" == "-r" ]; then

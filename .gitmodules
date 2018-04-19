@@ -6,3 +6,6 @@
 	path = .zprezto
 	url = https://github.com/AndreaOrru/prezto
 	branch = master
+[submodule ".bin/undervolt-git"]
+	path = .bin/undervolt-git
+	url = https://github.com/georgewhewell/undervolt
