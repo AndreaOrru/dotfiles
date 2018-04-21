@@ -50,14 +50,17 @@ This function should only modify configuration layer settings."
      ;; markdown
      ;; neotree
      ;; org
-     (ruby :variables ruby-enable-enh-ruby-mode t)
+     (ruby :variables
+           ruby-version-manager 'rvm
+           ruby-test-runner 'rspec
+           ruby-enable-enh-ruby-mode t)
      ruby-on-rails
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
-     syntax-checking
+     (syntax-checking :variables syntax-checking-enable-tooltips nil)
      python
      version-control
      vinegar
@@ -466,6 +469,7 @@ before packages are loaded."
   (global-set-key (kbd "C-s") 'helm-swoop)
   (global-set-key (kbd "M-m") 'just-one-space)
 
+  (setq flycheck-display-errors-delay 0)
   (setq delete-by-moving-to-trash nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
