@@ -3,7 +3,7 @@
 setup() {
     if xrandr | grep -q '^DP1 connected'; then
         # Reduce resolution of laptop monitor (larger text), place the external monitor above:
-        xrandr --output eDP1 --mode 3200x1800 --output DP1 --auto --above eDP1
+        xrandr --output eDP1 --auto --output DP1 --auto --above eDP1
         ret=0
     else
         ret=1
