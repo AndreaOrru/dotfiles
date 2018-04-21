@@ -1,6 +1,6 @@
 #!/bin/sh
 
-MV=-110
+MV=-100
 
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
