@@ -49,7 +49,7 @@ This function should only modify configuration layer settings."
      html
      ;; markdown
      ;; neotree
-     ;; org
+     org
      (ruby :variables
            ruby-version-manager 'rvm
            ruby-test-runner 'rspec
