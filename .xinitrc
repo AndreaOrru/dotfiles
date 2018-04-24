@@ -7,8 +7,6 @@ xbanish &    # Hide the mouse pointer when typing.
 
 # Automatically lock the screen:
 xss-lock -- lock &
-# Pick a random wallpaper:
-feh --recursive --randomize --bg-fill --no-fehbg ~/wallpapers &
 
 # Start the i3 window manager:
 exec i3

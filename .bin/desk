@@ -16,4 +16,5 @@ setup() {
 
 # Try twice (useful if the monitor is getting out of sleep mode).
 # If it fails both times, just assume the monitor was disconnected.
-setup; sleep 5; setup || undesk
+setup || sleep 5; setup || undesk
+wallpaper

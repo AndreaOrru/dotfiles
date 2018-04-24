@@ -2,3 +2,4 @@
 
 # Turn off external monitor, show builtin monitor at default resolution.
 xrandr --output DP1 --off --output eDP1 --auto
+wallpaper
