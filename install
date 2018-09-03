@@ -1,0 +1,18 @@
+#!/bin/sh
+
+installConf() {
+  SRC=$1
+  DEST=$2
+  AS=$3
+
+  cd $SRC
+  find -type d -exec sudo -u $AS mkdir -p $DEST/{} \;
+  find ! -type d | sed 's|^./||' | xargs -i sudo -u $AS ln -vsf $PWD/{} $DEST/{}
+}
+
+if [ "$1" == "system" ]; then
+  installConf system /etc/nixos root
+  ln -vsf /etc/nixos/hardware-configuration.nix .
+elif [ "$1" == "user" ]; then
+  installConf user $HOME $USER
+fi
