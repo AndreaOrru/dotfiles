@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=xcape
+Description=Use CTRL as ESC when pressed alone
+Exec=xcape
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
