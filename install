@@ -15,4 +15,6 @@ if [ "$1" == "system" ]; then
   ln -vsf /etc/nixos/hardware-configuration.nix .
 elif [ "$1" == "user" ]; then
   installConf user $HOME $USER
+elif [ "$1" == "dconf" ]; then
+  dconf load / < dconf/config
 fi
