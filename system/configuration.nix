@@ -70,6 +70,8 @@
       vi = "em";
 
       # NixOS.
+      conf = "vi /etc/nixos/configuration.nix";
+      pkg = "vi /etc/nixos/packages.nix";
       all = "upgrade && collect && optimize";
       collect = "sudo nix-collect-garbage -d";
       optimize = "sudo nix-store --optimise";
@@ -95,6 +97,10 @@
   };
 
   hardware = {
+    bluetooth = {
+      powerOnBoot = false;
+    };
+
     cpu = {
       intel = {
         updateMicrocode = true;
