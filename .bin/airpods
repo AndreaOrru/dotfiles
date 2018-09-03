@@ -1,7 +1,0 @@
-#!/bin/sh
-
-rfkill unblock bluetooth
-sleep 1
-echo "power on" | bluetoothctl
-sleep 2
-echo "connect 08:E6:89:62:95:32" | bluetoothctl

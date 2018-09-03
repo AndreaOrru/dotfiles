@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Re-run monitor and keyboard setup after unlocking. This is needed because
-# if the monitor powers the external keyboard and it goes into sleep mode,
-# the keyboard configuration is lost.
-
-i3lock -n -e -c 333333 && desk
