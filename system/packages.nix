@@ -33,6 +33,7 @@
       gcc8
       nodejs
       python36
+      python36Packages.ipython
       python36Packages.virtualenv
       python36Packages.virtualenvwrapper
       sbcl
@@ -41,10 +42,10 @@
       # X applications
       chromium
       emacs
+      kitty
       mpv
       signal-desktop
       spotify
-      termite
       xcape
       xsel
     ];
