@@ -97,10 +97,6 @@
   };
 
   hardware = {
-    bluetooth = {
-      powerOnBoot = false;
-    };
-
     cpu = {
       intel = {
         updateMicrocode = true;
@@ -111,7 +107,7 @@
 
     undervolt = {
       enable = true;
-      temp = 90;
+      temp = 95;
       core = -120;
       cache = -120;
       gpu = -100;
