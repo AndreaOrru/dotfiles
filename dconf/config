@@ -25,6 +25,7 @@ gtk-theme='Adwaita-dark'
 
 [org/gnome/desktop/peripherals/keyboard]
 repeat-interval=uint32 17
+delay=uint32 200
 
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
@@ -61,7 +62,7 @@ screensaver='<Super>BackSpace'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
-xkb-options=['ctrl:nocaps']
+xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
 
 [ca/desrt/dconf-editor]
 show-warning=false

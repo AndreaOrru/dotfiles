@@ -32,7 +32,7 @@
       };
     };
 
-    kernelPackages = pkgs.linuxPackages_4_18;
+    kernelPackages = pkgs.linuxPackages_latest;
 
     kernelParams = [
       "nowatchdog"  # Disable watchdogs.
@@ -288,7 +288,7 @@
         naturalScrolling = true;
       };
 
-      xkbOptions = "ctrl:nocaps";
+      xkbOptions = "ctrl:nocaps, altwin:swap_lalt_lwin";
     };
   };
 
