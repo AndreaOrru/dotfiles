@@ -32,12 +32,20 @@
       # Programming languages
       gcc8
       nodejs
-      python36
+      python36Full
+      ruby_2_4
+      sbcl
+
+      # Python packages
+      autoflake
+      mypy
+      python36Packages.flake8
+      python36Packages.importmagic
       python36Packages.ipython
+      python36Packages.isort
       python36Packages.virtualenv
       python36Packages.virtualenvwrapper
-      sbcl
-      ruby_2_4
+      python36Packages.yapf
 
       # X applications
       chromium

@@ -30,6 +30,9 @@ userConfig() {
 
   # Install Heroku.
   npm install -g heroku
+
+  # Install Ruby tools.
+  gem install pry pry-doc ruby_parser rubocop seeing_is_believing
 }
 
 dconfConfig() {
