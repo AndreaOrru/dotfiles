@@ -234,6 +234,10 @@
   };
 
   services = {
+    irqbalance = {
+      enable = true;
+    };
+
     fstrim = {
       enable = true;
     };
@@ -264,7 +268,7 @@
       enable = true;
 
       autoRepeatDelay = 200;
-      autoRepeatInterval = 60;
+      autoRepeatInterval = 15;
 
       desktopManager = {
         gnome3 = {
