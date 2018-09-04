@@ -268,7 +268,7 @@
       enable = true;
 
       autoRepeatDelay = 200;
-      autoRepeatInterval = 15;
+      autoRepeatInterval = 17;
 
       desktopManager = {
         gnome3 = {

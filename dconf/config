@@ -23,6 +23,9 @@ clock-show-date=true
 enable-animations=false
 gtk-theme='Adwaita-dark'
 
+[org/gnome/desktop/peripherals/keyboard]
+repeat-interval=uint32 17
+
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
 
