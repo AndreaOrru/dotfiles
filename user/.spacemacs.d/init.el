@@ -53,6 +53,8 @@ This function should only modify configuration layer settings."
      nixos
      org
      react
+     (ruby :variables
+           ruby-enable-enh-ruby-mode t)
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-height 30
@@ -484,14 +486,11 @@ before packages are loaded."
   (global-evil-mc-mode t)  ;; Multiple cursors.
   (global-subword-mode t)  ;; CamelCase words.
 
-  ;; Open Helm inside splits instead of full width.
-  (setq-default helm-display-function #'helm-default-display-buffer)
-  (setq helm-split-window-inside-p t)
-
   ;; Miscellaneous.
   (evil-set-initial-state 'term-mode 'emacs)
   (setq flycheck-display-errors-delay 0)
   (setq delete-by-moving-to-trash nil)
+  (setq vc-follow-symlinks t)
 
   ;; Key bindings.
   (global-set-key (kbd "C-x 2") #'split-window-below-and-focus)
