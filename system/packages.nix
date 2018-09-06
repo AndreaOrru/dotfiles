@@ -24,6 +24,7 @@
       # Developer tools
       aws
       binutils
+      cloc
       gdb
       git
       gitAndTools.git-extras

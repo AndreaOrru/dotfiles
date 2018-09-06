@@ -25,7 +25,7 @@
 
     kernel = {
       sysctl = {
-        "vm.dirty_ratio" = 3;             # Memory for dirty pages.
+        "vm.dirty_ratio" = 2;             # Memory for dirty pages.
         "vm.dirty_background_ratio" = 1;  # Memory for dirty pages before flusher kicks in.
         "vm.swappiness" = 1;              # Tendency to use swap.
         "vm.vfs_cache_pressure" = 50;     # Tendency to reclaim memory from VFS cache.
