@@ -14,7 +14,6 @@
       "wacom"           # Disable buggy pen driver.
     ];
 
-    cleanTmpDir = true;
     earlyVconsoleSetup = true;
 
     initrd = {
@@ -49,6 +48,8 @@
 
       timeout = 1;
     };
+
+    tmpOnTmpfs = true;
   };
 
   environment = {
