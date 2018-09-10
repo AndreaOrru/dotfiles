@@ -10,6 +10,7 @@
       grml-zsh-config
 
       # Shell programs
+      ffmpeg
       htop
       neovim
       nox
