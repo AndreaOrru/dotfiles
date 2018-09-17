@@ -29,6 +29,7 @@ IgnorePath '/lost+found'
 
 IgnorePath '/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache'
 IgnorePath '/usr/lib/gio/modules/giomodule.cache'
+IgnorePath '/usr/lib/gtk-2.0/2.10.0/immodules.cache'
 IgnorePath '/usr/lib/gtk-3.0/3.0.0/immodules.cache'
 IgnorePath '/usr/lib/locale/locale-archive'
 IgnorePath '/usr/lib/modules/*'
