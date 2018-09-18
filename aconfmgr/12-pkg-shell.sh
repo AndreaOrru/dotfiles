@@ -37,12 +37,16 @@ AddPackage zsh # A very advanced and programmable command interpreter (shell) fo
 AddPackage zsh-completions # Additional completion definitions for Zsh
 
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
+AddPackage --foreign agetpkg # Arch Linux Archive Get Package
 AddPackage --foreign aurvote # Tool to vote for favorite AUR packages
 AddPackage --foreign direnv # a shell extension that manages your environment
+AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting, repl, changelog population and more
 AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps from the command line
 AddPackage --foreign python-undervolt # Undervolt Intel CPUs under Linux
 AddPackage --foreign python36 # Major release 3.6 of the Python high-level programming language
+AddPackage --foreign ruby2.4 # An object-oriented language for quick and easy programming
+AddPackage --foreign ruby2.4-bundler # Manages an application's dependencies through its entire life, across many machines, systematically and repeatably.
 AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
