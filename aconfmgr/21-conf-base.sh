@@ -3,6 +3,7 @@ CopyFile /etc/hostname
 CopyFile /etc/hosts
 
 CopyFile /etc/mkinitcpio.conf   # Kernel initrd.
+CopyFile /etc/modprobe.d/nowatchdog.conf
 CopyFile /etc/sudoers           # Sudo for wheel group.
 CopyFile /etc/sysctl.d/vm.conf  # Kernel virtual memory options.
 CopyFile /etc/vconsole.conf     # Bigger console fonts.

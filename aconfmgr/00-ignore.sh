@@ -14,6 +14,7 @@ IgnorePath '/etc/pacman.d/gnupg/*'
 IgnorePath '/etc/rabbitmq/rabbitmq-env.conf'
 IgnorePath '/etc/shells'
 IgnorePath '/etc/ssl/certs'
+IgnorePath '/etc/X11/xorg.conf.d/00-keyboard.conf'
 
 IgnorePath '/etc/group'
 IgnorePath '/etc/group-'
