@@ -1,3 +1,6 @@
+IgnorePackage --foreign ruby2.4
+IgnorePackage --foreign ruby2.4-bundler
+
 IgnorePath '/boot/EFI'
 IgnorePath '/boot/*.img'
 IgnorePath '/boot/vmlin*'
