@@ -20,11 +20,14 @@ AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage postgresql # Sophisticated object-relational DBMS
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
+AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage rabbitmq # Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP
 AddPackage ranger # A simple, vim-like file manager
 AddPackage redis # Advanced key-value store
+AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage rsync # A file transfer program to keep remote files in sync
+AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
 AddPackage tlp # Linux Advanced Power Management
 AddPackage tmux # A terminal multiplexer
 AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
@@ -32,6 +35,7 @@ AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
 AddPackage wget # Network utility to retrieve files from the Web
 AddPackage x86_energy_perf_policy # Read or write MSR_IA32_ENERGY_PERF_BIAS
+AddPackage xonsh # Python-powered, cross-platform, Unix-gazing shell
 AddPackage yarn # Fast, reliable, and secure dependency management
 AddPackage zsh # A very advanced and programmable command interpreter (shell) for UNIX
 AddPackage zsh-completions # Additional completion definitions for Zsh
