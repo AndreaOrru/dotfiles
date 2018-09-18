@@ -15,6 +15,7 @@ AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
 AddPackage networkmanager # Network connection manager and user applications
+AddPackage npm # A package manager for javascript
 AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage postgresql # Sophisticated object-relational DBMS
@@ -31,6 +32,7 @@ AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
 AddPackage wget # Network utility to retrieve files from the Web
 AddPackage x86_energy_perf_policy # Read or write MSR_IA32_ENERGY_PERF_BIAS
+AddPackage yarn # Fast, reliable, and secure dependency management
 AddPackage zsh # A very advanced and programmable command interpreter (shell) for UNIX
 AddPackage zsh-completions # Additional completion definitions for Zsh
 
