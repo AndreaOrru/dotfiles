@@ -1,4 +1,6 @@
-IgnorePath '/boot/*'
+IgnorePath '/boot/EFI'
+IgnorePath '/boot/*.img'
+IgnorePath '/boot/vmlin*'
 
 IgnorePath '/etc/.pwd.lock'
 IgnorePath '/etc/.updated'
