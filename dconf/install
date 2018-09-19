@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dconf reset -f /
+dconf load / < common
+dconf load / < $HOSTNAME
