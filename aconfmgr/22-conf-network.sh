@@ -1,10 +1,8 @@
 # Custom DNS.
-if [[ "$HOSTNAME" == "manhattan" ]]; then
-  CopyFile /etc/NetworkManager/NetworkManager.conf
-else
+if [[ "$HOSTNAME" == "toxicity" ]]; then
   CopyFile /etc/dhcpcd.conf
+  CopyFile /etc/resolv.conf
 fi
-CopyFile /etc/resolv.conf
 
 # Firewall.
 CopyFile /etc/default/ufw
