@@ -1,8 +1,13 @@
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  AddPackage dhclient # A standalone DHCP client from the dhcp package
+  AddPackage networkmanager # Network connection manager and user applications
+  AddPackage tlp # Linux Advanced Power Management
+fi
+
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage atool # A script for managing file archives of various types
 AddPackage autojump # A faster way to navigate your filesystem from the command line
-AddPackage dhclient # A standalone DHCP client from the dhcp package
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
 AddPackage fzf # Command-line fuzzy finder
 AddPackage git # the fast distributed version control system
@@ -14,7 +19,6 @@ AddPackage intel-ucode # Microcode update files for Intel CPUs
 AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
-AddPackage networkmanager # Network connection manager and user applications
 AddPackage npm # A package manager for javascript
 AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
@@ -28,8 +32,8 @@ AddPackage redis # Advanced key-value store
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage rsync # A file transfer program to keep remote files in sync
 AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
-AddPackage tlp # Linux Advanced Power Management
 AddPackage tmux # A terminal multiplexer
+AddPackage tree # A directory listing program displaying a depth indented list of files
 AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program

@@ -1,5 +1,9 @@
 # Custom DNS.
-CopyFile /etc/NetworkManager/NetworkManager.conf
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  CopyFile /etc/NetworkManager/NetworkManager.conf
+else
+  CopyFile /etc/dhcpcd.conf
+fi
 CopyFile /etc/resolv.conf
 
 # Firewall.

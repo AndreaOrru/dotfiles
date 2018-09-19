@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  SCALE="2.25"
+else
+  SCALE="1.25"
+fi
+
+spotify --force-device-scale-factor=$SCALE "$@"

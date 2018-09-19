@@ -1,3 +1,7 @@
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  IgnorePath '/etc/NetworkManager/system-connections'
+fi
+
 IgnorePackage --foreign ruby2.4
 IgnorePackage --foreign ruby2.4-bundler
 
@@ -7,11 +11,12 @@ IgnorePath '/boot/vmlin*'
 
 IgnorePath '/etc/.pwd.lock'
 IgnorePath '/etc/.updated'
-IgnorePath '/etc/NetworkManager/system-connections'
 IgnorePath '/etc/adjtime'
 IgnorePath '/etc/brlapi.key'
 IgnorePath '/etc/ca-certificates/extracted'
 IgnorePath '/etc/fstab'
+IgnorePath '/etc/hostname'
+IgnorePath '/etc/hosts'
 IgnorePath '/etc/ld.so.cache'
 IgnorePath '/etc/machine-id'
 IgnorePath '/etc/os-release'

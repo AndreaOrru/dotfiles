@@ -1,4 +1,15 @@
 #
+# xorg-drivers
+#
+
+if [[ "$HOSTNAME" == "toxicity" ]]; then
+  AddPackage xf86-video-amdgpu # X.org amdgpu video driver
+fi
+AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
+AddPackage xf86-video-vesa # X.org vesa video driver
+
+
+#
 # xorg
 #
 
@@ -52,11 +63,3 @@ AddPackage xorg-xvinfo # Prints out the capabilities of any video adaptors assoc
 AddPackage xorg-xwd # X Window System image dumping utility
 AddPackage xorg-xwininfo # Command-line utility to print information about windows on an X server
 AddPackage xorg-xwud # X Window System image undumping utility
-
-
-#
-# xorg-drivers
-#
-
-AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
-AddPackage xf86-video-vesa # X.org vesa video driver
