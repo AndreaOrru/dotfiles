@@ -8,7 +8,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
-local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -78,11 +77,6 @@ local function client_menu_toggle_fn()
         end
     end
 end
--- }}}
-
--- {{{ Menu
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- Keyboard map indicator and switcher
@@ -290,9 +284,18 @@ globalkeys = gears.table.join(
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+
+    -- Launcher
+    awful.key({ modkey }, "p", function () awful.spawn("rofi -show run") end,
+              {description = "open launcher", group = "launcher"}),
+
+    -- Window switcher
+    awful.key({ modkey }, "w", function () awful.spawn("rofi -show window") end,
+              {description = "open window switcher", group = "launcher"}),
+
+    -- Lock screen
+    awful.key({ modkey }, "BackSpace", function () awful.spawn("i3lock -nec 999999") end,
+              {description = "lock screen", group = "launcher"})
 )
 
 clientkeys = gears.table.join(

@@ -3,10 +3,18 @@
 ln -vsf $PWD/bin ~/
 ln -vsf $PWD/.gitconfig ~/
 ln -vsf $PWD/.spacemacs.d ~/
-ln -vsf $PWD/.xinitrc ~/
 ln -vsf $PWD/.zprofile ~/
 
 mkdir -p ~/.config
-ln -vsf $PWD/.config/awesome ~/.config/
-ln -vsf $PWD/.config/zathura ~/.config/
+
+if [[ "$HOSTNAME" == "toxicity" ]]; then
+  ln -vsf $PWD/.Xresources ~/
+  ln -vsf $PWD/.xinitrc ~/
+
+  ln -vsf $PWD/.config/awesome ~/.config/
+  ln -vsf $PWD/.config/rofi ~/.config/
+  ln -vsf $PWD/.config/zathura ~/.config/
+fi
+
 ln -vsf $PWD/../aconfmgr ~/.config/
+

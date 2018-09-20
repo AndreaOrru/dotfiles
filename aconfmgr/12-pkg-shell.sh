@@ -31,8 +31,8 @@ AddPackage ranger # A simple, vim-like file manager
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
 AddPackage tmux # A terminal multiplexer
-AddPackage tree # A directory listing program displaying a depth indented list of files
 AddPackage --foreign tmux-current-pane-hostname-git # Tmux plugin that enables displaying hostname and user of the current pane in your status bar
+AddPackage tree # A directory listing program displaying a depth indented list of files
 
 # Archives.
 AddPackage atool # A script for managing file archives of various types
