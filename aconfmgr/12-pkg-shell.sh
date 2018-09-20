@@ -72,7 +72,14 @@ AddPackage redis # Advanced key-value store
 AddPackage yarn # Fast, reliable, and secure dependency management
 
 # Python stuff.
+AddPackage flake8 # The modular source code checker
 AddPackage ipython # An enhanced Interactive Python shell.
+AddPackage mypy # Optional static typing for Python 2 and 3 (PEP484)
+AddPackage --foreign python-autoflake # Removes unused imports and unused variables
+AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
+AddPackage --foreign python-importmagic # Automatically manage imports in Python
+AddPackage python-isort # A Python utility / library to sort Python imports.
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage --foreign python36 # Major release 3.6 of the Python high-level programming language
+AddPackage yapf # Python style guide checker
