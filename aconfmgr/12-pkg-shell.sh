@@ -50,6 +50,7 @@ AddPackage wget # Network utility to retrieve files from the Web
 
 # Media.
 AddPackage alsa-utils # An alternative implementation of Linux sound support
+AddPackage imagemagick # An image viewing/manipulation program
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
 
 # Developer tools.
