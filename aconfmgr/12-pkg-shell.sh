@@ -58,5 +58,6 @@ AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps f
 AddPackage --foreign python-undervolt # Undervolt Intel CPUs under Linux
 AddPackage --foreign python36 # Major release 3.6 of the Python high-level programming language
 AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
+AddPackage --foreign tmux-current-pane-hostname-git # Tmux plugin that enables displaying hostname and user of the current pane in your status bar
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
