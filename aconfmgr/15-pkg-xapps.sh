@@ -5,5 +5,6 @@ AddPackage xsel # XSel is a command-line program for getting and setting the con
 
 AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage --foreign spotify # A proprietary music streaming service
+AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne

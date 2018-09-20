@@ -29,20 +29,21 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 #
 
 # Misc.
-alias diff="diff --color=auto";
-alias f="sudo updatedb && sudo locate -i";
+alias diff='diff --color=auto';
+alias f='sudo updatedb && sudo locate -i';
+alias open='xdg-open'
 alias p='yay'
-alias pastebinit="pastebinit -b paste.debian.net";
+alias pastebinit='pastebinit -b paste.debian.net';
 
 # Git commands.
-alias git="hub";
+alias git='hub';
 alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`";
 alias "g.."="cd \`git root\`";
 
 # Text editors.
-alias e="emacsclient -n";
-alias em="emacsclient -nw";
-alias vi="em";
+alias e='emacsclient -n';
+alias em='emacsclient -nw';
+alias vi='em';
 
 
 # Automatically source local .envrc files.
@@ -50,4 +51,4 @@ eval "$(direnv hook zsh)"
 
 
 # Launch tmux when opening a terminal (not inside Emacs).
-test $TERM != "eterm-color" && test -z "$TMUX" && (tmux attach || tmux new-session)
+test $TERM != 'eterm-color' && test -z "$TMUX" && (tmux attach || tmux new-session)
