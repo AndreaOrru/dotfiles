@@ -11,6 +11,7 @@ AddPackage autojump # A faster way to navigate your filesystem from the command 
 AddPackage autossh # Automatically restart SSH sessions and tunnels
 AddPackage aws-cli # Universal Command Line Interface for Amazon Web Services
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
+AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage fzf # Command-line fuzzy finder
 AddPackage git # the fast distributed version control system
 AddPackage git-crypt # Transparent file encryption in Git

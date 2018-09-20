@@ -2,6 +2,8 @@
 if [[ "$HOSTNAME" == "toxicity" ]]; then
   CopyFile /etc/dhcpcd.conf
   CopyFile /etc/resolv.conf
+else
+  IgnorePath /etc/resolv.conf
 fi
 
 # Firewall.

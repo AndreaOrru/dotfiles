@@ -15,7 +15,7 @@ else
 fi
 
 # Undervolt.
-CopyFile /etc/systemd/system/undervolt.service
+CopyFileTo "/etc/systemd/system/undervolt-$HOSTNAME.service" "/etc/systemd/system/undervolt.service"
 CreateLink /etc/systemd/system/hibernate.target.wants/undervolt.service /etc/systemd/system/undervolt.service
 CreateLink /etc/systemd/system/hybrid-sleep.target.wants/undervolt.service /etc/systemd/system/undervolt.service
 CreateLink /etc/systemd/system/multi-user.target.wants/undervolt.service /etc/systemd/system/undervolt.service
