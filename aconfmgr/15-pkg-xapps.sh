@@ -2,6 +2,9 @@ AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
+AddPackage zathura # Minimalistic document viewer
+AddPackage zathura-djvu # DjVu support for Zathura
+AddPackage zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 
 AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage --foreign spotify # A proprietary music streaming service
