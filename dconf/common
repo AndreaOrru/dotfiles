@@ -35,6 +35,9 @@ sources=[('xkb', 'us'), ('xkb', 'it')]
 [org/gnome/desktop/search-providers]
 disable-external=true
 
+[org/gnome/desktop/wm/preferences]
+focus-mode='sloppy'
+
 [org/gnome/desktop/wm/keybindings]
 toggle-maximized=['<Super>m']
 close=['<Super>q']
