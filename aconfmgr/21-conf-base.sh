@@ -1,5 +1,4 @@
 # Boot loader.
-CopyFile /boot/loader/entries/arch.conf 755
 CopyFile /boot/loader/entries/arch-zen.conf 755
 CopyFile /boot/loader/loader.conf 755
 

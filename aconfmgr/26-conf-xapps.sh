@@ -1,6 +1,7 @@
-CopyFile /etc/gdm/custom.conf
-
-CopyFile /etc/xdg/autostart/xcape.desktop
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  CopyFile /etc/gdm/custom.conf
+  CopyFile /etc/xdg/autostart/xcape.desktop
+fi
 
 CopyFile /etc/xdg/kitty/base16-gruvbox-dark-medium-256.conf
 CopyFile /etc/xdg/kitty/kitty.conf

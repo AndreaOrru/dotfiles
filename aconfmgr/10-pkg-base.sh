@@ -29,7 +29,6 @@ AddPackage iproute2 # IP Routing Utilities
 AddPackage iputils # Network monitoring tools, including ping
 AddPackage less # A terminal based program for viewing text files
 AddPackage licenses # Standard licenses distribution package
-AddPackage linux # The Linux kernel and modules
 AddPackage logrotate # Rotates system logs automatically
 AddPackage lvm2 # Logical Volume Manager 2 utilities
 AddPackage man-db # A utility for reading man pages
