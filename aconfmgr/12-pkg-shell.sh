@@ -8,9 +8,12 @@ AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage atool # A script for managing file archives of various types
 AddPackage autojump # A faster way to navigate your filesystem from the command line
+AddPackage autossh # Automatically restart SSH sessions and tunnels
+AddPackage aws-cli # Universal Command Line Interface for Amazon Web Services
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
 AddPackage fzf # Command-line fuzzy finder
 AddPackage git # the fast distributed version control system
+AddPackage git-crypt # Transparent file encryption in Git
 AddPackage go # Core compiler tools for the Go programming language
 AddPackage grml-zsh-config # grml's zsh setup
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
