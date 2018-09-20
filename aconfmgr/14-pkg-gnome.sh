@@ -1,3 +1,7 @@
+#
+# gnome group
+#
+
 AddPackage baobab # A graphical directory tree analyzer
 AddPackage cheese # Take photos and videos with your webcam, with fun graphical effects
 AddPackage dconf-editor # dconf Editor

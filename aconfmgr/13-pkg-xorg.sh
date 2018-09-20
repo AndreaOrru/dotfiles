@@ -1,5 +1,5 @@
 #
-# xorg-drivers
+# xorg-drivers group
 #
 
 if [[ "$HOSTNAME" == "toxicity" ]]; then
@@ -10,7 +10,7 @@ fi
 
 
 #
-# xorg
+# xorg group
 #
 
 AddPackage xorg-bdftopcf # Convert X font from Bitmap Distribution Format to Portable Compiled Format

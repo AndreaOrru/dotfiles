@@ -1,3 +1,7 @@
+#
+# base-devel group
+#
+
 AddPackage autoconf # A GNU tool for automatically configuring source code
 AddPackage automake # A GNU tool for automatically creating Makefiles
 AddPackage binutils # A set of programs to assemble and manipulate binary and object files
