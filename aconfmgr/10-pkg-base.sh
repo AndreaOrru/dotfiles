@@ -1,3 +1,5 @@
+AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler v0.173 Sixth Gen Intel Core i3/i5/i7 optimized.
+
 AddPackage bash # The GNU Bourne Again shell
 AddPackage bzip2 # A high-quality data compression program
 AddPackage coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
