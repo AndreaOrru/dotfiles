@@ -6,4 +6,4 @@ else
   SCALE="1.25"
 fi
 
-spotify --force-device-scale-factor=$SCALE "$@"
+/usr/bin/spotify --force-device-scale-factor=$SCALE "$@"
