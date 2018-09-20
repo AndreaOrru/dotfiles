@@ -1,5 +1,5 @@
 AddPackage intel-ucode # Microcode update files for Intel CPUs
-AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler v0.173 Sixth Gen Intel Core i3/i5/i7 optimized.
+AddPackage linux-zen # The Linux-zen kernel and modules
 AddPackage --foreign python-undervolt # Undervolt Intel CPUs under Linux
 AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
 
