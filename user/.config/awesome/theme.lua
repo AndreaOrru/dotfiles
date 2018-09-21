@@ -3,12 +3,13 @@
 --    By Adrian C. (anrxc)   --
 -------------------------------
 
+local configuration_path = require("gears.filesystem").get_configuration_dir()
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
+theme.wallpaper = configuration_path .. "wallpaper.jpg"
 -- }}}
 
 -- {{{ Styles

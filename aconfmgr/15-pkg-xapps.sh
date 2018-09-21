@@ -12,8 +12,10 @@ AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successo
 if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage feh # Fast and light imlib2-based image viewer
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
+  AddPackage mpv # a free, open source, and cross-platform media player
   AddPackage rofi # A window switcher, application launcher and dmenu replacement
   AddPackage xss-lock # Use external locker as X screen saver
+  AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
   AddPackage zathura # Minimalistic document viewer
   AddPackage zathura-djvu # DjVu support for Zathura
   AddPackage zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
