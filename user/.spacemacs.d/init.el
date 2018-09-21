@@ -48,6 +48,7 @@ This function should only modify configuration layer settings."
      html
      git
      github
+     lua
      markdown
      org
      react
