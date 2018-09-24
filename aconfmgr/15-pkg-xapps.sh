@@ -14,6 +14,7 @@ if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
   AddPackage mpv # a free, open source, and cross-platform media player
   AddPackage rofi # A window switcher, application launcher and dmenu replacement
+  AddPackage scrot # Simple command-line screenshot utility for X
   AddPackage xss-lock # Use external locker as X screen saver
   AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
   AddPackage zathura # Minimalistic document viewer
