@@ -46,6 +46,15 @@ alias em='emacsclient -nw';
 alias vi='em';
 
 
+#
+# Functions
+#
+
+fetchmirrors() {
+    sudo sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=https&use_mirror_status=on' | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist"
+}
+
+
 # Automatically source local .envrc files.
 eval "$(direnv hook zsh)"
 

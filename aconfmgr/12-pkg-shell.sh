@@ -39,6 +39,7 @@ AddPackage atool # A script for managing file archives of various types
 AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
+AddPackage unzip # For extracting and viewing files in .zip archives
 
 # Networking.
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
