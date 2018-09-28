@@ -1,6 +1,10 @@
 if [[ "$HOSTNAME" == "toxicity" ]]; then
+  #
+  # Minimal desktop.
+  #
   AddPackage awesome # Highly configurable framework window manager
   AddPackage xorg-xinit # X.Org initialisation program
+
 else
   #
   # gnome group

@@ -1,8 +1,3 @@
-AddPackage intel-ucode # Microcode update files for Intel CPUs
-AddPackage linux-zen # The Linux-zen kernel and modules
-AddPackage --foreign python-undervolt # Undervolt Intel CPUs under Linux
-AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
-
 #
 # base group
 #
