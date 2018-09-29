@@ -1,8 +1,9 @@
-# Custom DNS.
 if [[ "$HOSTNAME" == "toxicity" ]]; then
+  # Custom DNS.
   CopyFile /etc/dhcpcd.conf
   CopyFile /etc/resolv.conf
 else
+  # No custom DNS on laptop (because of WiFi hotspots).
   IgnorePath /etc/resolv.conf
 fi
 

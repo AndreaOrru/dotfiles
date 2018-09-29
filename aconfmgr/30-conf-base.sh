@@ -2,6 +2,10 @@
 CopyFile /boot/loader/entries/arch-zen.conf 755
 CopyFile /boot/loader/loader.conf 755
 
+# Localization.
+CopyFile /etc/locale.conf
+CopyFile /etc/locale.gen
+
 CopyFile /etc/sudoers           # Sudo for wheel group.
 CopyFile /etc/sysctl.d/vm.conf  # Kernel virtual memory options.
 CopyFile /etc/tmux.conf         # TMux configuration.
