@@ -14,6 +14,7 @@ else
   AddPackage cheese # Take photos and videos with your webcam, with fun graphical effects
   AddPackage dconf-editor # dconf Editor
   AddPackage eog # Eye of Gnome
+  #AddPackage epiphany # A GNOME web browser based on the WebKit rendering engine
   AddPackage evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
   AddPackage file-roller # Create and modify archives
   AddPackage gdm # Display manager and login screen
@@ -25,23 +26,32 @@ else
   AddPackage gnome-characters # A character map application
   AddPackage gnome-clocks # Clocks applications for GNOME
   AddPackage gnome-color-manager # GNOME Color Profile Tools
+  #AddPackage gnome-contacts # Contacts Manager for GNOME
   AddPackage gnome-control-center # GNOME's main interface to configure various aspects of the desktop
   AddPackage gnome-dictionary # Look up words in dictionary sources
   AddPackage gnome-disk-utility # Disk Management Utility for GNOME
   AddPackage gnome-documents # A document manager application for GNOME
   AddPackage gnome-font-viewer # A font viewer utility for GNOME
+  #AddPackage gnome-getting-started-docs # Help a new user get started in GNOME
   AddPackage gnome-keyring # Stores passwords and encryption keys
   AddPackage gnome-logs # A log viewer for the systemd journal
+  #AddPackage gnome-maps # A simple GNOME 3 maps application
   AddPackage gnome-menus # GNOME menu specifications
+  #AddPackage gnome-music # Music player and management application
   AddPackage gnome-photos # Access, organize, and share your photos on GNOME
+  #AddPackage gnome-remote-desktop # GNOME Remote Desktop server
   AddPackage gnome-screenshot # Take pictures of your screen
   AddPackage gnome-session # The GNOME Session Handler
   AddPackage gnome-settings-daemon # GNOME Settings Daemon
   AddPackage gnome-shell # Next generation desktop shell
   AddPackage gnome-shell-extensions # Extensions for GNOME shell, including classic mode
+  #AddPackage gnome-software # GNOME Software Tools
   AddPackage gnome-system-monitor # View current processes and monitor system state
+  #AddPackage gnome-terminal # The GNOME Terminal Emulator
   AddPackage gnome-themes-extra # Extra Themes for GNOME Applications
+  #AddPackage gnome-todo # Task manager for GNOME
   AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
+  #AddPackage gnome-user-docs # User documentation for GNOME
   AddPackage gnome-user-share # Easy to use user-level file sharing for GNOME
   AddPackage gnome-video-effects # Collection of GStreamer effects for GNOME
   AddPackage grilo-plugins # A collection of plugins for the Grilo framework
@@ -56,8 +66,12 @@ else
   AddPackage mousetweaks # Mouse accessibility enhancements
   AddPackage mutter # A window manager for GNOME
   AddPackage nautilus # Default file manager for GNOME
+  #AddPackage orca # Screen reader for individuals who are blind or visually impaired
+  #AddPackage rygel # UPnP AV MediaServer and MediaRenderer that allows you to easily share audio, video and pictures, and control of media player on your home network
   AddPackage simple-scan # Simple scanning utility
   AddPackage sushi # A quick previewer for Nautilus
+  #AddPackage totem # Movie player for the GNOME desktop based on GStreamer
   AddPackage vino # A VNC server for the GNOME desktop
   AddPackage xdg-user-dirs-gtk # Creates user dirs and asks to relocalize them
+  #AddPackage yelp # Get help with GNOME
 fi

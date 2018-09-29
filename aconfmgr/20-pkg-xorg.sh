@@ -13,6 +13,7 @@ fi
 # xorg group
 #
 
+#AddPackage xf86-video-vesa # X.org vesa video driver
 AddPackage xorg-bdftopcf # Convert X font from Bitmap Distribution Format to Portable Compiled Format
 AddPackage xorg-docs # X.org documentations
 AddPackage xorg-font-util # X.Org font utilities
