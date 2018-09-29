@@ -2,6 +2,9 @@
 power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+
 [org/gnome/settings-daemon/plugins/media-keys]
 previous='<Super>Left'
 next='<Super>Right'
@@ -19,6 +22,10 @@ dynamic-workspaces=false
 toggle-tiled-right=['<Super>l']
 toggle-tiled-left=['<Super>h']
 
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+tap-to-click=true
+
 [org/gnome/desktop/peripherals/keyboard]
 repeat-interval=uint32 17
 delay=uint32 200
@@ -31,6 +38,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
+xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/search-providers]
 disable-external=true
