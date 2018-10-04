@@ -1,4 +1,5 @@
 AddPackage chromium # A web browser built for speed, simplicity, and security
+AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own

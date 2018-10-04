@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
+     php
      (python :variables
              python-enable-yapf-format-on-save t
              python-sort-imports-on-save t)
