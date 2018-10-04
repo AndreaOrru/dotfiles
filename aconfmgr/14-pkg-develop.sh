@@ -28,3 +28,8 @@ AddPackage postgresql # Sophisticated object-relational DBMS
 AddPackage rabbitmq # Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP
 AddPackage redis # Advanced key-value store
 AddPackage yarn # Fast, reliable, and secure dependency management
+
+# PHP.
+AddPackage composer # Dependency Manager for PHP
+AddPackage php # A general-purpose scripting language that is especially suited to web development
+AddPackage php-gd # gd module for PHP
