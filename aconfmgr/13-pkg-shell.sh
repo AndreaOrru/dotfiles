@@ -9,6 +9,7 @@ AddPackage zsh-completions # Additional completion definitions for Zsh
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
 
 # Shell utilities.
+AddPackage --foreign 1password-cli # 1Password command line tool
 AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
