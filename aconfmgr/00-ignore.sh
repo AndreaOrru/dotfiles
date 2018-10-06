@@ -7,7 +7,6 @@ IgnorePath '/boot/vmlin*'
 
 IgnorePath '/etc/.pwd.lock'
 IgnorePath '/etc/.updated'
-IgnorePath '/etc/NetworkManager/system-connections'
 IgnorePath '/etc/adjtime'
 IgnorePath '/etc/brlapi.key'
 IgnorePath '/etc/ca-certificates/extracted'
