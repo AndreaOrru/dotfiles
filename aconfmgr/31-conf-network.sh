@@ -15,6 +15,7 @@ else
   CopyFile /etc/NetworkManager/system-connections/Printroom\ Cafe 600
   CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
   CopyFile /etc/NetworkManager/system-connections/VM9882114 600
+  CopyFile /etc/NetworkManager/system-connections/WebPocket-53E0 600
   CopyFile /etc/NetworkManager/system-connections/Wireless-N 600
 fi
 
