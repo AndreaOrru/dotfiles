@@ -15,6 +15,10 @@ if [[ "$HOSTNAME" == "manhattan" ]]; then
   CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/gdm.service
   CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
   CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
+
+  # Suspend then hibernate.
+  CopyFile /etc/systemd/sleep.conf
+  CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 else
   # DHCP.
   CreateLink /etc/systemd/system/multi-user.target.wants/dhcpcd.service /usr/lib/systemd/system/dhcpcd.service
