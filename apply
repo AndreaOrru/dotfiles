@@ -1,5 +1,7 @@
 #!/bin/sh
 
+DOTFILES=$PWD
+
 aconfmgr save
 if [ -n "$(git status -s)" ]; then
   echo "The dotfiles repository contains local changes."
@@ -10,9 +12,9 @@ git pull
 # TODO: git pull - check if there are changes, or force
 aconfmgr apply
 
-cd $PWD/user    && ./install
-cd $PWD/private && ./install
+cd $DOTFILES/user    && ./install
+cd $DOTFILES/private && ./install
 
 if [ "$1" == "--dconf" ]; then
-  cd $PWD/dconf && ./install
+  cd $DOTFILES/dconf && ./install
 fi
