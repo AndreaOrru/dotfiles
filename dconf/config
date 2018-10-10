@@ -19,8 +19,8 @@ hinting='slight'
 dynamic-workspaces=false
 
 [org/gnome/mutter/keybindings]
-toggle-tiled-right=['<Super>l']
-toggle-tiled-left=['<Super>h']
+toggle-tiled-right=['<Super>l', '<Shift><Super>l']
+toggle-tiled-left=['<Super>h', '<Shift><Super>h']
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
