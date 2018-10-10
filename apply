@@ -1,25 +1,31 @@
 #!/bin/sh
 
+ARGS=("$@")
 DOTFILES=$PWD
 
-# TODO: contains instead of == and !=
-
-if [ "$1" != "--skip-save" ]; then
+if [[ " ${ARGS[@]} " =~ " --skip-save " ]]; then
   aconfmgr save
 fi
 
-if [[ "$1" != "--force" && -n "$(git status -s)" ]]; then
-  echo "The dotfiles repository contains local changes."
-  exit 1
+if [[ ! " ${ARGS[@]} " =~ " --force " ]]; then
+  if [ -n "$(git status -s)" ]; then
+    echo "The dotfiles repository contains local changes."
+    exit 1
+  fi
 fi
 
-git pull
-# TODO: git pull - check if there are changes
+git fetch
+if [[ $(git rev-parse HEAD) == $(git rev-parse @{u}) ]]; then
+  echo "The local configuration is up to date."
+  exit 0
+fi
+
+git merge FETCH_HEAD
 aconfmgr apply
 
 cd $DOTFILES/user    && ./install
 cd $DOTFILES/private && ./install
 
-if [ "$1" == "--dconf" ]; then
+if [[ " ${ARGS[@]} " =~ " --dconf " ]]; then
   cd $DOTFILES/dconf && ./install
 fi
