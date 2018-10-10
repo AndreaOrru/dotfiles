@@ -2,14 +2,19 @@
 
 DOTFILES=$PWD
 
-aconfmgr save
-if [ -n "$(git status -s)" ]; then
+# TODO: contains instead of == and !=
+
+if [ "$1" != "--skip-save" ]; then
+  aconfmgr save
+fi
+
+if [[ "$1" != "--force" && -n "$(git status -s)" ]]; then
   echo "The dotfiles repository contains local changes."
   exit 1
 fi
 
 git pull
-# TODO: git pull - check if there are changes, or force
+# TODO: git pull - check if there are changes
 aconfmgr apply
 
 cd $DOTFILES/user    && ./install
