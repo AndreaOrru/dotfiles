@@ -8,7 +8,7 @@ if [[ " ${ARGS[@]} " =~ " --skip-save " ]]; then
 fi
 
 if [[ ! " ${ARGS[@]} " =~ " --force " ]]; then
-  if [ -n "$(git status -s)" ]; then
+  if [[ -n "$(git status -s)" || -f $DOTFILES/aconfmgr/99-unsorted.sh ]]; then
     echo "The dotfiles repository contains local changes."
     exit 1
   fi
