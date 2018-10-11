@@ -11,6 +11,7 @@ AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended z
 # Shell utilities.
 AddPackage --foreign 1password-cli # 1Password command line tool
 AddPackage fd # Simple, fast and user-friendly alternative to find
+AddPackage htop # Interactive process viewer
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage ranger # A simple, vim-like file manager

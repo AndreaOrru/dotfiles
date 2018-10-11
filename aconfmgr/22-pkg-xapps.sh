@@ -6,6 +6,13 @@ AddPackage xcape # Configure modifier keys to act as other keys when pressed and
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 
+# Firefox.
+AddPackage firefox-developer-edition # Developer Edition of the popular Firefox web browser
+AddPackage hunspell # Spell checker and morphological analyzer library and program
+AddPackage hunspell-en_GB # GB English hunspell dictionaries
+AddPackage hunspell-it # Italian dictionary for Hunspell
+AddPackage libnotify # Library for sending desktop notifications
+
 AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
