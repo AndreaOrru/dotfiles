@@ -6,6 +6,9 @@ else
   # Manually enable LCD filter and sub pixel hinting.
   CreateLink /etc/fonts/conf.d/10-sub-pixel-rgb.conf ../conf.avail/10-sub-pixel-rgb.conf
   CreateLink /etc/fonts/conf.d/11-lcdfilter-default.conf ../conf.avail/11-lcdfilter-default.conf
+
+  # Force CrOS fonts.
+  CopyFile /etc/fonts/local.conf
 fi
 
 CopyFile /etc/xdg/kitty/base16-gruvbox-dark-medium-256.conf
