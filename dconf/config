@@ -62,7 +62,7 @@ switch-to-workspace-4=['<Super>4']
 toggle-fullscreen=['<Super>f']
 move-to-workspace-down=['<Shift><Super>j']
 switch-to-workspace-up=['<Super>k']
-minimize=['<Shift><Super>h']
+minimize=@as []
 
 [org/gnome/shell]
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
