@@ -31,6 +31,7 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage autossh # Automatically restart SSH sessions and tunnels
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
+AddPackage nmap # Utility for network discovery and security auditing
 AddPackage rsync # A file transfer program to keep remote files in sync
 AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 AddPackage wget # Network utility to retrieve files from the Web

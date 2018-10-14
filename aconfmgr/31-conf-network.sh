@@ -9,11 +9,13 @@ else
   # Wireless connections.
   CopyFile /etc/NetworkManager/system-connections/AndyPhone 600
   CopyFile /etc/NetworkManager/system-connections/BTBHub6-H5MP 600
+  CopyFile /etc/NetworkManager/system-connections/Clarence’s\ iPhone\ X🅂 600
   CopyFile /etc/NetworkManager/system-connections/Dot11 600
   CopyFile /etc/NetworkManager/system-connections/GAP-5G 600
   CopyFile /etc/NetworkManager/system-connections/NETGEAR_5GEXT 600
   CopyFile /etc/NetworkManager/system-connections/Printroom\ Cafe 600
   CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
+  CopyFile /etc/NetworkManager/system-connections/TOG5 600
   CopyFile /etc/NetworkManager/system-connections/TP-LINK_F35C 600
   CopyFile /etc/NetworkManager/system-connections/VM9882114 600
   CopyFile /etc/NetworkManager/system-connections/WebPocket-53E0 600
