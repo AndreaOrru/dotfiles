@@ -24,6 +24,7 @@ AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successo
 if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage feh # Fast and light imlib2-based image viewer
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
+  AddPackage pgadmin4 # Comprehensive design and management interface for PostgreSQL
   AddPackage rofi # A window switcher, application launcher and dmenu replacement
   AddPackage scrot # Simple command-line screenshot utility for X
   AddPackage xss-lock # Use external locker as X screen saver
