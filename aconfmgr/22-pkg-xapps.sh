@@ -3,7 +3,9 @@ AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage pgadmin4 # Comprehensive design and management interface for PostgreSQL
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
+AddPackage --foreign signal-desktop-bin # Private messaging from your desktop
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
@@ -24,7 +26,6 @@ AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successo
 if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage feh # Fast and light imlib2-based image viewer
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
-  AddPackage pgadmin4 # Comprehensive design and management interface for PostgreSQL
   AddPackage rofi # A window switcher, application launcher and dmenu replacement
   AddPackage scrot # Simple command-line screenshot utility for X
   AddPackage xss-lock # Use external locker as X screen saver
