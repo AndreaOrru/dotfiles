@@ -216,7 +216,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font `("Mononoki"
-                               :size ,(if (string= (system-name) "toxicity") 18 34)
+                               :size ,(if (string= (system-name) "toxicity") 26 34)
                                :weight normal
                                :width normal)
 

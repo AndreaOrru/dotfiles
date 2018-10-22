@@ -3,7 +3,7 @@
 if [[ "$HOSTNAME" == "manhattan" ]]; then
   SCALE="2.25"
 else
-  SCALE="1.25"
+  SCALE="1.85"
 fi
 
 /usr/bin/spotify --force-device-scale-factor=$SCALE "$@"
