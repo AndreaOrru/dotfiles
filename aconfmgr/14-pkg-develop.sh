@@ -1,4 +1,6 @@
 # Developer tools.
+AddPackage cloc # Count lines of code
+AddPackage cmake # A cross-platform open-source make system
 AddPackage git # the fast distributed version control system
 AddPackage git-crypt # Transparent file encryption in Git
 AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting, repl, changelog population and more
@@ -7,6 +9,10 @@ AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
 AddPackage npm # A package manager for javascript
+
+# C/C++.
+AddPackage clang # C language family frontend for LLVM
+AddPackage llvm # Collection of modular and reusable compiler and toolchain technologies
 
 # Python.
 AddPackage flake8 # The modular source code checker
