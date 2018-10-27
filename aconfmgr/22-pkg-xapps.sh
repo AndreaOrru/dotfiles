@@ -28,6 +28,7 @@ if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
   AddPackage rofi # A window switcher, application launcher and dmenu replacement
   AddPackage scrot # Simple command-line screenshot utility for X
+  AddPackage --foreign xbanish-timeout-git # Banish the mouse cursor when typing, show it again when the mouse moves. Patched fork with extra features such as timeout, ignorescroll
   AddPackage xss-lock # Use external locker as X screen saver
   AddPackage zathura # Minimalistic document viewer
   AddPackage zathura-djvu # DjVu support for Zathura
