@@ -45,11 +45,10 @@ This function should only modify configuration layer settings."
      (dash :variables
            helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
-     html
      git
      github
-     lua
      markdown
+     multiple-cursors
      org
      react
      (ruby :variables
@@ -59,7 +58,6 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
-     php
      (python :variables
              python-enable-yapf-format-on-save t
              python-sort-imports-on-save t)
