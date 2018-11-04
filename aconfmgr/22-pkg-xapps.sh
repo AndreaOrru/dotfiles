@@ -15,6 +15,7 @@ AddPackage youtube-dl # A small command-line program to download videos from You
 AddPackage firefox-developer-edition # Developer Edition of the popular Firefox web browser
 AddPackage hunspell # Spell checker and morphological analyzer library and program
 AddPackage hunspell-en_GB # GB English hunspell dictionaries
+AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage hunspell-it # Italian dictionary for Hunspell
 AddPackage libnotify # Library for sending desktop notifications
 

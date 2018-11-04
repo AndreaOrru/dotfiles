@@ -12,6 +12,7 @@ else
   CopyFile /etc/NetworkManager/system-connections/Clarence’s\ iPhone\ X🅂 600
   CopyFile /etc/NetworkManager/system-connections/Dot11 600
   CopyFile /etc/NetworkManager/system-connections/GAP-5G 600
+  CopyFile /etc/NetworkManager/system-connections/LNER-WIFI.nmconnection 600
   CopyFile /etc/NetworkManager/system-connections/NETGEAR_5GEXT 600
   CopyFile /etc/NetworkManager/system-connections/Printroom\ Cafe 600
   CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
