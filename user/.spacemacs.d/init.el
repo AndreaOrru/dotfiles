@@ -483,7 +483,6 @@ before packages are loaded."
 
   ;; Editing behaviour.
   (global-company-mode t)  ;; Autocompletion everywhere.
-  (global-evil-mc-mode t)  ;; Multiple cursors.
   (global-subword-mode t)  ;; CamelCase words.
 
   ;; Miscellaneous.
