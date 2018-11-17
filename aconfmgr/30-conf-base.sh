@@ -11,9 +11,6 @@ CopyFile /etc/sysctl.d/vm.conf  # Kernel virtual memory options.
 CopyFile /etc/tmux.conf         # TMux configuration.
 CopyFile /etc/vconsole.conf     # Bigger console fonts.
 
-# Blacklisted modules.
-CopyFile /etc/modprobe.d/nowatchdog.conf
-
 # Neovim is Vi.
 CreateLink /usr/local/bin/vi /usr/bin/nvim
 
@@ -29,4 +26,12 @@ sed -i -f - "$(GetPackageOriginalFile mkinitcpio /etc/mkinitcpio.conf)" <<EOF
   s/^MODULES=.*/MODULES=(i915)/
   s/fsck)$/resume fsck)/
 EOF
+fi
+
+# Blacklisted modules.
+CopyFile /etc/modprobe.d/nowatchdog.conf
+
+# Extra i915 options.
+if [[ "$HOSTNAME" == "manhattan" ]]; then
+  CopyFile /etc/modprobe.d/i915.conf
 fi
