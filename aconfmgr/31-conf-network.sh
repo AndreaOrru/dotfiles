@@ -18,6 +18,7 @@ else
   CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
   CopyFile /etc/NetworkManager/system-connections/TOG5 600
   CopyFile /etc/NetworkManager/system-connections/TP-LINK_F35C 600
+  CopyFile /etc/NetworkManager/system-connections/The\ Dog\ House.nmconnection 600
   CopyFile /etc/NetworkManager/system-connections/VM9882114 600
   CopyFile /etc/NetworkManager/system-connections/WebPocket-53E0 600
   CopyFile /etc/NetworkManager/system-connections/Wireless-N 600
