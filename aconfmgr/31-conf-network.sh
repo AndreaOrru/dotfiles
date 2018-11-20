@@ -9,6 +9,7 @@ else
   # Wireless connections.
   CopyFile /etc/NetworkManager/system-connections/AndyPhone 600
   CopyFile /etc/NetworkManager/system-connections/BTBHub6-H5MP 600
+  CopyFile /etc/NetworkManager/system-connections/BTWifi-Starbucks.nmconnection 600
   CopyFile /etc/NetworkManager/system-connections/Clarence’s\ iPhone\ X🅂 600
   CopyFile /etc/NetworkManager/system-connections/Dot11 600
   CopyFile /etc/NetworkManager/system-connections/GAP-5G 600
