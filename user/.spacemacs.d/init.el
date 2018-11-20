@@ -456,7 +456,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; Save custom variables in a separate file.
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-  (when (file-exists-p custom-file) (load custom-file)))
+  (when (file-exists-p custom-file) (load custom-file))
+  )
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
@@ -506,15 +507,14 @@ before packages are loaded."
 
   ;; Synchronize todo file.
   (defun todo-upload ()
-    (when (string= (buffer-file-name) "/home/andrea/todo.org")
+    (when (string= (buffer-file-name) "~/todo.org")
       (shell-command "todo-upload")))
   (defun todo-download ()
-    (when (string= (buffer-file-name) "/home/andrea/todo.org")
+    (when (string= (buffer-file-name) "~/todo.org")
       (shell-command "todo-download")))
   (add-hook 'after-save-hook #'todo-upload)
   (add-hook 'find-file-hook #'todo-download)
-
-  (find-file "~/todo.org"))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
