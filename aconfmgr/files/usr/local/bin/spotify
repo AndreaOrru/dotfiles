@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ "$HOSTNAME" == "manhattan" ]]; then
-  SCALE="2.25"
+  SCALE="2.35"
 else
   SCALE="1.85"
 fi
