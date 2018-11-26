@@ -1,8 +1,5 @@
-if [[ "$HOSTNAME" == "toxicity" ]]; then
-  AddPackage awesome # Highly configurable framework window manager
-  AddPackage xorg-xinit # X.Org initialisation program
+if [ "$LAPTOP" == true ]; then
 
-else
   AddPackageGroup gnome
   RemovePackage epiphany # A GNOME web browser based on the WebKit rendering engine
   RemovePackage gnome-contacts # Contacts Manager for GNOME
@@ -21,4 +18,10 @@ else
 
   AddPackage dconf-editor # dconf Editor
   AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
+
+else
+
+  AddPackage awesome # Highly configurable framework window manager
+  AddPackage xorg-xinit # X.Org initialisation program
+
 fi

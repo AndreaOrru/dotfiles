@@ -14,13 +14,13 @@ CopyFile /etc/vconsole.conf     # Bigger console fonts.
 CreateLink /usr/local/bin/vi /usr/bin/nvim
 
 # Early KMS.
-if [[ "$HOSTNAME" == "toxicity" ]]; then
+if [ "$AMD_GRAPHICS" == true ]; then
 sed -i -f - "$(GetPackageOriginalFile mkinitcpio /etc/mkinitcpio.conf)" <<EOF
   s/^MODULES=.*/MODULES=(amdgpu)/
   s/fsck)$/resume fsck)/
 EOF
 
-else
+elif [ "$INTEL_GRAPHICS" == true ]; then
 sed -i -f - "$(GetPackageOriginalFile mkinitcpio /etc/mkinitcpio.conf)" <<EOF
   s/^MODULES=.*/MODULES=(i915)/
   s/fsck)$/resume fsck)/
@@ -31,6 +31,6 @@ fi
 CopyFile /etc/modprobe.d/nowatchdog.conf
 
 # Extra i915 options.
-if [[ "$HOSTNAME" == "manhattan" ]]; then
+if [ "$INTEL_GRAPHICS" == true ]; then
   CopyFile /etc/modprobe.d/i915.conf
 fi

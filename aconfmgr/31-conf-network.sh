@@ -1,8 +1,4 @@
-if [[ "$HOSTNAME" == "toxicity" ]]; then
-  # Custom DNS.
-  CopyFile /etc/dhcpcd.conf
-  CopyFile /etc/resolv.conf
-else
+if [ "$LAPTOP" == true ]; then
   # No custom DNS on laptop (because of WiFi hotspots).
   IgnorePath /etc/resolv.conf
 
@@ -23,6 +19,10 @@ else
   CopyFile /etc/NetworkManager/system-connections/VM9882114 600
   CopyFile /etc/NetworkManager/system-connections/WebPocket-53E0 600
   CopyFile /etc/NetworkManager/system-connections/Wireless-N 600
+else
+  # Custom DNS.
+  CopyFile /etc/dhcpcd.conf
+  CopyFile /etc/resolv.conf
 fi
 
 # Firewall.

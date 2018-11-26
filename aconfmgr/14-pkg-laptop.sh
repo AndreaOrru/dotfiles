@@ -1,4 +1,4 @@
-if [[ "$HOSTNAME" == "manhattan" ]]; then
+if [ "$LAPTOP" == true ]; then
   AddPackage dhclient # A standalone DHCP client from the dhcp package
   AddPackage networkmanager # Network connection manager and user applications
   AddPackage tlp # Linux Advanced Power Management

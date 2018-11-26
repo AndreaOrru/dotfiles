@@ -1,4 +1,4 @@
-if [[ "$HOSTNAME" == "manhattan" ]]; then
+if [ "$LAPTOP" == true ]; then
   # No Wayland, map Caps Lock to Ctrl/Escape.
   CopyFile /etc/gdm/custom.conf
   CopyFile /etc/xdg/autostart/xcape.desktop

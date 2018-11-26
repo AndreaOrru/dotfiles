@@ -16,7 +16,7 @@ AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wid
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
 
-if [[ "$HOSTNAME" == "toxicity" ]]; then
+if [ "$WORKSTATION" == true ]; then
   AddPackage feh # Fast and light imlib2-based image viewer
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
   AddPackage rofi # A window switcher, application launcher and dmenu replacement

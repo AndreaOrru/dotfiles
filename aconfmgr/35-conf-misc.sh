@@ -1,5 +1,5 @@
 # Laptop power management.
-if [[ "$HOSTNAME" == "manhattan" ]]; then
+if [ "$LAPTOP" == true ]; then
   CopyFile /etc/default/tlp
 fi
 
