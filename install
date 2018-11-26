@@ -1,0 +1,19 @@
+#!/bin/sh
+
+stow aconfmgr
+stow binaries
+stow git
+stow spacemacs
+stow tmux
+stow zsh
+
+if [[ "$HOSTNAME" != "manhattan" ]]; then
+  stow awesome
+  stow rofi
+  stow xinit
+  stow zathura
+fi
+
+chmod 600 secrets/.ssh/*
+chmod 644 secrets/.ssh/id_rsa.pub
+stow secrets

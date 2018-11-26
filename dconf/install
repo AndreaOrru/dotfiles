@@ -1,6 +1,0 @@
-#!/bin/sh
-
-if [[ "$HOSTNAME" == "manhattan" ]]; then
-  dconf reset -f /
-  dconf load / < config
-fi
