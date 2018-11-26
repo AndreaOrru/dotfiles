@@ -39,12 +39,10 @@ IgnorePath '/usr/lib/gdk-pixbuf-*/**/loaders.cache'
 IgnorePath '/usr/lib/gio/modules/giomodule.cache'
 IgnorePath '/usr/lib/gtk-*/**/immodules.cache'
 IgnorePath '/usr/lib/locale/locale-archive'
+IgnorePath '/usr/lib/modules/**/modules.*'
 IgnorePath '/usr/lib/udev/hwdb.bin'
 IgnorePath '/usr/share/applications/mimeinfo.cache'
-IgnorePath '/usr/share/fonts/**/.uuid',
-IgnorePath '/usr/share/fonts/**/fonts.dir',
-IgnorePath '/usr/share/fonts/**/fonts.scale',
-IgnorePath '/usr/share/fonts/.uuid',
+IgnorePath '/usr/share/fonts/*'
 IgnorePath '/usr/share/glib-*/schemas/gschemas.compiled'
 IgnorePath '/usr/share/icons/**/icon-theme.cache'
 IgnorePath '/usr/share/info/dir'

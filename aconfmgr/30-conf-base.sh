@@ -8,7 +8,6 @@ CopyFile /etc/locale.gen
 
 CopyFile /etc/sudoers           # Sudo for wheel group.
 CopyFile /etc/sysctl.d/vm.conf  # Kernel virtual memory options.
-CopyFile /etc/tmux.conf         # TMux configuration.
 CopyFile /etc/vconsole.conf     # Bigger console fonts.
 
 # Neovim is Vi.

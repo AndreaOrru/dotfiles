@@ -3,6 +3,7 @@
 ln -vsf $PWD/bin ~/
 ln -vsf $PWD/.gitconfig ~/
 ln -vsf $PWD/.spacemacs.d ~/
+ln -vsf $PWD/.tmux.conf ~/
 ln -vsf $PWD/.zprofile ~/
 
 mkdir -p ~/.config
