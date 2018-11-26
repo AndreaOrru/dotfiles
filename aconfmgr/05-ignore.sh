@@ -1,8 +1,8 @@
 IgnorePackage --foreign ruby2.4
 IgnorePackage --foreign ruby2.4-bundler
 
-IgnorePath '/boot/EFI'
 IgnorePath '/boot/*.img'
+IgnorePath '/boot/EFI'
 IgnorePath '/boot/vmlin*'
 
 IgnorePath '/etc/.pwd.lock'
@@ -35,17 +35,18 @@ IgnorePath '/etc/shadow-'
 IgnorePath '/lost+found'
 
 IgnorePath '/usr/bin/__pycache__/*'
-IgnorePath '/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache'
+IgnorePath '/usr/lib/gdk-pixbuf-*/**/loaders.cache'
 IgnorePath '/usr/lib/gio/modules/giomodule.cache'
-IgnorePath '/usr/lib/gtk-2.0/2.10.0/immodules.cache'
-IgnorePath '/usr/lib/gtk-3.0/3.0.0/immodules.cache'
+IgnorePath '/usr/lib/gtk-*/**/immodules.cache'
 IgnorePath '/usr/lib/locale/locale-archive'
-IgnorePath '/usr/lib/modules/*'
 IgnorePath '/usr/lib/udev/hwdb.bin'
 IgnorePath '/usr/share/applications/mimeinfo.cache'
-IgnorePath '/usr/share/fonts/*'
-IgnorePath '/usr/share/glib-2.0/schemas/gschemas.compiled'
-IgnorePath '/usr/share/icons/*'
+IgnorePath '/usr/share/fonts/**/.uuid',
+IgnorePath '/usr/share/fonts/**/fonts.dir',
+IgnorePath '/usr/share/fonts/**/fonts.scale',
+IgnorePath '/usr/share/fonts/.uuid',
+IgnorePath '/usr/share/glib-*/schemas/gschemas.compiled'
+IgnorePath '/usr/share/icons/**/icon-theme.cache'
 IgnorePath '/usr/share/info/dir'
 IgnorePath '/usr/share/mime/*'
 IgnorePath '/usr/share/nvim/runtime/.netrwhist'

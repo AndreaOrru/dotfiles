@@ -4,10 +4,6 @@ if [[ "$HOSTNAME" == "toxicity" ]]; then
 
 else
   AddPackageGroup gnome
-
-  AddPackage dconf-editor # dconf Editor
-  AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
-
   RemovePackage epiphany # A GNOME web browser based on the WebKit rendering engine
   RemovePackage gnome-contacts # Contacts Manager for GNOME
   RemovePackage gnome-getting-started-docs # Help a new user get started in GNOME
@@ -22,4 +18,7 @@ else
   RemovePackage rygel # UPnP AV MediaServer and MediaRenderer that allows you to easily share audio, video and pictures, and control of media player on your home network
   RemovePackage totem # Movie player for the GNOME desktop based on GStreamer
   RemovePackage yelp # Get help with GNOME
+
+  AddPackage dconf-editor # dconf Editor
+  AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
 fi

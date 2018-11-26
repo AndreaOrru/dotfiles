@@ -1,3 +1,5 @@
+AddPackageGroup base-devel
+
 # Developer tools.
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system

@@ -1,5 +1,4 @@
 AddPackageGroup base
-
 RemovePackage jfsutils # JFS filesystem utilities
 RemovePackage linux # The Linux kernel and modules
 RemovePackage nano # Pico editor clone with enhancements

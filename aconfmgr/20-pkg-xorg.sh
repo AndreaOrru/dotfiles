@@ -1,7 +1,5 @@
 AddPackageGroup xorg
-
 RemovePackage xf86-video-vesa # X.org vesa video driver
-
 
 if [[ "$HOSTNAME" == "toxicity" ]]; then
   AddPackage xf86-video-amdgpu # X.org amdgpu video driver
