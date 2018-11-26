@@ -16,6 +16,7 @@ AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage ranger # A simple, vim-like file manager
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
+AddPackage stow # Manage installation of multiple softwares in the same directory tree
 AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
 AddPackage tmux # A terminal multiplexer
 AddPackage tree # A directory listing program displaying a depth indented list of files
