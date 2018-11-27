@@ -2,6 +2,11 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;; Set global variables based on the hostname.
+(pcase (system-name)
+  ('toxicity  (setq large-screen t))
+  (_          (setq large-screen nil)))
+
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
@@ -216,7 +221,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font `("Mononoki"
-                               :size ,(if (string= (system-name) "toxicity") 26 34)
+                               :size ,(if large-screen 26 34)
                                :weight normal
                                :width normal)
 
@@ -358,9 +363,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers (if (string= (system-name) "toxicity")
-                                 '(:enabled-for-modes prog-mode)
-                               nil)
+   dotspacemacs-line-numbers (if large_screen '(:enabled-for-modes prog-mode) nil)
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -494,7 +497,7 @@ before packages are loaded."
   (setq vc-follow-symlinks t)
 
   ;; Open Helm inside splits instead of full width on wide screens.
-  (when (string= (system-name) "toxicity")
+  (when large-screen
     (setq-default helm-display-function #'helm-default-display-buffer)
     (setq helm-split-window-inside-p t))
 
