@@ -1,0 +1,8 @@
+org/gnome/control-center
+org/gnome/desktop/notifications
+org/gnome/desktop/peripherals/touchscreens
+org/gnome/evince/default
+org/gnome/evolution-data-server
+org/gnome/gnome-screenshot
+org/gnome/nautilus
+org/gtk/settings/file-chooser
