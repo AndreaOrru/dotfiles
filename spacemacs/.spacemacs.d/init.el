@@ -4,7 +4,7 @@
 
 ;; Set global variables based on the hostname.
 (pcase (system-name)
-  ('toxicity  (setq large-screen t))
+  ("toxicity" (setq large-screen t))
   (_          (setq large-screen nil)))
 
 (defun dotspacemacs/layers ()
@@ -363,7 +363,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers (if large_screen '(:enabled-for-modes prog-mode) nil)
+   dotspacemacs-line-numbers (if large-screen '(:enabled-for-modes prog-mode) nil)
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
