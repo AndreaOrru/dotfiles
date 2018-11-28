@@ -53,3 +53,16 @@ CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-ssh.socket /usr/lib/
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent.socket /usr/lib/systemd/user/gpg-agent.socket
 CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib/systemd/user/p11-kit-server.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
+
+# Silent boot: enable quiet fsck.
+cat > "$(CreateFile /etc/systemd/system/systemd-fsck-root.service)" <<EOF
+$(AconfGetPackageOriginalFile systemd /usr/lib/systemd/system/systemd-fsck-root.service)
+StandardOutput=null
+StandardError=journal+console
+EOF
+
+cat > "$(CreateFile /etc/systemd/system/systemd-fsck@.service)" <<EOF
+$(AconfGetPackageOriginalFile systemd /usr/lib/systemd/system/systemd-fsck@.service)
+StandardOutput=null
+StandardError=journal+console
+EOF

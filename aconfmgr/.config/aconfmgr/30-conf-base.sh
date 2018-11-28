@@ -13,17 +13,17 @@ CopyFile /etc/vconsole.conf     # Bigger console fonts.
 # Neovim is Vi.
 CreateLink /usr/local/bin/vi /usr/bin/nvim
 
-# Early KMS.
+# Early KMS, and disable fsck (at this stage).
 if [ "$AMD_GRAPHICS" == true ]; then
 sed -i -f - "$(GetPackageOriginalFile mkinitcpio /etc/mkinitcpio.conf)" <<EOF
   s/^MODULES=.*/MODULES=(amdgpu)/
-  s/fsck)$/resume fsck)/
+  s/fsck)$/resume)/
 EOF
 
 elif [ "$INTEL_GRAPHICS" == true ]; then
 sed -i -f - "$(GetPackageOriginalFile mkinitcpio /etc/mkinitcpio.conf)" <<EOF
   s/^MODULES=.*/MODULES=(i915)/
-  s/fsck)$/resume fsck)/
+  s/fsck)$/resume)/
 EOF
 fi
 
