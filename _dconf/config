@@ -49,6 +49,9 @@ toggle-tiled-left=['<Super>h', '<Shift><Super>h']
 dynamic-workspaces=false
 
 [org/gnome/settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+night-light-schedule-to=6.0
+night-light-schedule-from=20.0
 night-light-enabled=true
 
 [org/gnome/settings-daemon/plugins/media-keys]
