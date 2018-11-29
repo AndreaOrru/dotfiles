@@ -3,10 +3,15 @@ AddPackage autojump # A faster way to navigate your filesystem from the command 
 AddPackage --foreign direnv # a shell extension that manages your environment
 AddPackage grml-zsh-config # grml's zsh setup
 AddPackage fzf # Command-line fuzzy finder
-AddPackage xonsh # Python-powered, cross-platform, Unix-gazing shell
 AddPackage zsh # A very advanced and programmable command interpreter (shell) for UNIX
 AddPackage zsh-completions # Additional completion definitions for Zsh
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
+
+# Add ~/bin to the PATHs.
+CopyFile /etc/profile.d/homebin.sh
+# ZSH configuration.
+CopyFile /etc/zsh/zshenv
+CopyFile /etc/zsh/zshrc.local
 
 # Shell utilities.
 AddPackage --foreign 1password-cli # 1Password command line tool
@@ -28,17 +33,7 @@ AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
 AddPackage unzip # For extracting and viewing files in .zip archives
 
-# Networking.
-AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
-AddPackage autossh # Automatically restart SSH sessions and tunnels
-AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
-AddPackage nmap # Utility for network discovery and security auditing
-AddPackage rsync # A file transfer program to keep remote files in sync
-AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
-AddPackage wget # Network utility to retrieve files from the Web
-
 # Media.
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
-

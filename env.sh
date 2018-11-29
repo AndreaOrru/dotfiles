@@ -14,7 +14,6 @@ case "$HOSTNAME" in
   navi)
     MAC_OS=true
     LAPTOP=true
-    INTEL_GRAPHICS=true
     ;;
   toxicity)
     LINUX=true

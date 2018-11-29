@@ -1,5 +1,4 @@
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
@@ -7,14 +6,11 @@ AddPackage pgadmin4 # Comprehensive design and management interface for PostgreS
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign signal-desktop-bin # Private messaging from your desktop
 AddPackage --foreign spotify # A proprietary music streaming service
-AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own
-AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 
-# Fonts.
-AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
-AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
-AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
+# Terminal configuration.
+CopyFile /etc/xdg/kitty/base16-gruvbox-dark-medium-256.conf
+CopyFile /etc/xdg/kitty/kitty.conf
 
 if [ "$WORKSTATION" == true ]; then
   AddPackage feh # Fast and light imlib2-based image viewer
@@ -27,3 +23,5 @@ if [ "$WORKSTATION" == true ]; then
   AddPackage zathura-djvu # DjVu support for Zathura
   AddPackage zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 fi
+
+CopyFile /usr/local/bin/spotify 755
