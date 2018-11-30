@@ -12,6 +12,10 @@ AddPackage youtube-dl # A small command-line program to download videos from You
 CopyFile /etc/xdg/kitty/base16-gruvbox-dark-medium-256.conf
 CopyFile /etc/xdg/kitty/kitty.conf
 
+# Hi-DPI aware Spotify wrapper.
+CopyFile /usr/local/bin/spotify 755
+
+
 if [ "$WORKSTATION" == true ]; then
   AddPackage feh # Fast and light imlib2-based image viewer
   AddPackage i3lock # An improved screenlocker based upon XCB and PAM
@@ -23,5 +27,3 @@ if [ "$WORKSTATION" == true ]; then
   AddPackage zathura-djvu # DjVu support for Zathura
   AddPackage zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 fi
-
-CopyFile /usr/local/bin/spotify 755

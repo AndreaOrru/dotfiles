@@ -1,12 +1,14 @@
 AddPackageGroup xorg
 RemovePackage xf86-video-vesa # X.org vesa video driver
 
+
 # Fonts.
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
 # Force CrOS fonts.
 CopyFile /etc/fonts/local.conf
+
 
 # Xorg utilities.
 AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own

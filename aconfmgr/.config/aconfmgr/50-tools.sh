@@ -13,6 +13,7 @@ CopyFile /etc/profile.d/homebin.sh
 CopyFile /etc/zsh/zshenv
 CopyFile /etc/zsh/zshrc.local
 
+
 # Shell utilities.
 AddPackage --foreign 1password-cli # 1Password command line tool
 AddPackage fd # Simple, fast and user-friendly alternative to find
