@@ -62,8 +62,6 @@ else
 
   # Start X at shell login.
   cat >> "$(GetPackageOriginalFile zsh /etc/zsh/zprofile)" <<'EOF'
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
+[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
 EOF
 fi
