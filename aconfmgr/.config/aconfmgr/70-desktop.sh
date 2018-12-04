@@ -56,6 +56,13 @@ else
   AddPackage awesome # Highly configurable framework window manager
   AddPackage xorg-xinit # X.Org initialisation program
 
+  # Basic desktop utilities.
+  AddPackage i3lock # An improved screenlocker based upon XCB and PAM
+  AddPackage redshift # Adjusts the color temperature of your screen according to your surroundings.
+  AddPackage rofi # A window switcher, application launcher and dmenu replacement
+  AddPackage --foreign xbanish-timeout-git # Banish the mouse cursor when typing, show it again when the mouse moves. Patched fork with extra features such as timeout, ignorescroll
+  AddPackage xss-lock # Use external locker as X screen saver
+
   # Manually enable LCD filter and sub pixel hinting.
   CreateLink /etc/fonts/conf.d/10-sub-pixel-rgb.conf ../conf.avail/10-sub-pixel-rgb.conf
   CreateLink /etc/fonts/conf.d/11-lcdfilter-default.conf ../conf.avail/11-lcdfilter-default.conf

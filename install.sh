@@ -34,6 +34,7 @@ if [ "$LINUX" == true ]; then
 
   if [ "$WORKSTATION" == true ]; then
     stow awesome
+    stow redshift
     stow rofi
     stow xinit
     stow zathura
