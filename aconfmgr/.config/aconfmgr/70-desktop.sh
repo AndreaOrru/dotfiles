@@ -54,6 +54,7 @@ if [ "$LAPTOP" == true ]; then
 
 else
   AddPackage awesome # Highly configurable framework window manager
+  AddPackage compton # X compositor that may fix tearing issues
   AddPackage xorg-xinit # X.Org initialisation program
 
   # Basic desktop utilities.
