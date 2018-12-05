@@ -461,6 +461,11 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 
+-- Disable rounded borders in fullscreen mode.
+client.connect_signal("property::fullscreen", function (c)
+    c.shape = c.fullscreen and gears.shape.rectangle or gears.shape.rounded_rect
+end)
+
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
