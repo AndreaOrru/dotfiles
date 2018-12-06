@@ -17,10 +17,11 @@ CopyFile /boot/loader/entries/arch-zen.conf 755
 CopyFile /etc/locale.conf
 CopyFile /etc/locale.gen
 
-CopyFile /etc/modprobe.d/nowatchdog.conf  # Blacklisted modules.
-CopyFile /etc/sudoers                     # Sudo for wheel group.
-CopyFile /etc/sysctl.d/vm.conf            # Kernel virtual memory options.
-CopyFile /etc/vconsole.conf               # Bigger console fonts.
+CopyFile /etc/modprobe.d/nowatchdog.conf          # Blacklisted modules.
+CopyFile /etc/sudoers                             # Sudo for wheel group.
+CopyFile /etc/sysctl.d/vm.conf                    # Kernel virtual memory options.
+CopyFile /etc/udev/rules.d/60-ioschedulers.rules  # BFQ by default.
+CopyFile /etc/vconsole.conf                       # Bigger console fonts.
 
 
 # Base development group.
