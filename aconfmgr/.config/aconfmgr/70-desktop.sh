@@ -12,6 +12,7 @@ CopyFile /etc/fonts/local.conf
 
 # Xorg utilities.
 AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own
+AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 
 
@@ -55,6 +56,7 @@ if [ "$LAPTOP" == true ]; then
 else
   AddPackage awesome # Highly configurable framework window manager
   AddPackage compton # X compositor that may fix tearing issues
+  AddPackage ttf-font-awesome # Iconic font designed for Bootstrap
   AddPackage xorg-xinit # X.Org initialisation program
 
   # Basic desktop utilities.

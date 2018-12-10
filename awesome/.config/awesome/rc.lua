@@ -301,11 +301,11 @@ globalkeys = gears.table.join(
               {description = "play/pause music player", group = "launcher"}),
 
     -- Save screenshot of selection
-    awful.key({ modkey          }, "s", function () awful.spawn.with_shell("maim -s ~/shots/$(date +%F_%H%M%S).png") end,
+    awful.key({ modkey            }, "s", function () awful.spawn.with_shell("maim -s ~/shots/$(date +%F_%H%M%S).png") end,
               {description = "save screenshot of selection", group = "launcher"}),
 
     -- Save screenshot of selection in the clipboard
-    awful.key({ modkey, "Shift" }, "s", function () awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png") end,
+    awful.key({ modkey, "Control" }, "s", function () awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png") end,
               {description = "take screenshot of selection", group = "launcher"}),
 
     -- Lock screen
