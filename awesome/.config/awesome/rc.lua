@@ -76,11 +76,44 @@ local function client_menu_toggle_fn()
         end
     end
 end
+
+local function fa_icon(glyph)
+    return '<span font-family="Font Awesome 5 Free">' .. glyph .. '</span>'
+end
 -- }}}
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+local mytextclock_icon = fa_icon("")
+mytextclock = wibox.widget.textclock(" " .. mytextclock_icon .. " %a %b %d, %H:%M ")
+
+-- Create a Spotify widget
+myspotify, myspotify_timer = awful.widget.watch(
+    { awful.util.shell, "-c", "playerctl status && playerctl metadata" },
+    3,
+    function(widget, stdout)
+        local artist = "N/A"
+        local title  = "N/A"
+        local state  = string.match(stdout, "Playing") or
+                       string.match(stdout, "Paused")  or "N/A"
+
+        local pair = string.gmatch(stdout, "'[^:]+:([^']+)':[%s]<%[?([^%]>]+)%]?>")
+        for k, v in pair
+        do
+            if     k == "artist" then artist = v:sub(2, -2)
+            elseif k == "title"  then title  = v:sub(2, -2) end
+        end
+
+        if state == "N/A" then widget:set_markup('')
+        else
+            local icon = fa_icon("")
+            if     state == "Playing" then color = beautiful.fg_playing
+            elseif state == "Paused"  then color = beautiful.fg_paused  end
+            widget:set_markup(' <span color="' .. color .. '">' .. icon .. " " ..
+                               artist .. " - " .. title .. '</span> ')
+        end
+    end
+)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -176,6 +209,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            myspotify,
             mytextclock,
         },
     }
@@ -184,8 +218,6 @@ end)
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -262,7 +294,19 @@ globalkeys = gears.table.join(
 
     -- Window switcher and launcher
     awful.key({ modkey }, "w", function () awful.spawn("rofi -combi-modi window,drun -show combi -modi combi") end,
-      {description = "open rofi in combi mode", group = "launcher"}),
+              {description = "open rofi in combi mode", group = "launcher"}),
+
+    -- Play/pause Spotify
+    awful.key({ modkey }, "p", function () awful.spawn("playerctl play-pause") end,
+              {description = "play/pause music player", group = "launcher"}),
+
+    -- Save screenshot of selection
+    awful.key({ modkey          }, "s", function () awful.spawn.with_shell("maim -s ~/shots/$(date +%F_%H%M%S).png") end,
+              {description = "save screenshot of selection", group = "launcher"}),
+
+    -- Save screenshot of selection in the clipboard
+    awful.key({ modkey, "Shift" }, "s", function () awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png") end,
+              {description = "take screenshot of selection", group = "launcher"}),
 
     -- Lock screen
     awful.key({ modkey }, "BackSpace", function () awful.spawn("i3lock -nec 999999") end,

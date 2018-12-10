@@ -13,16 +13,19 @@ theme.wallpaper = configuration_path .. "wallpaper.jpg"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Mononoki 14"
+theme.font       = "Mononoki 13"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
 theme.fg_focus   = "#F0DFAF"
 theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = "#3F3F3FAA"
-theme.bg_focus   = "#1E2320CC"
-theme.bg_urgent  = "#3F3F3FCC"
+theme.bg_normal  = "#3F3F3FA0"
+theme.bg_focus   = "#1E2320C0"
+theme.bg_urgent  = "#3F3F3FC0"
 theme.bg_systray = theme.bg_normal
+
+theme.fg_playing = "#BFEBBF"
+theme.fg_paused  = "#F0DFAF"
 -- }}}
 
 -- {{{ Borders
