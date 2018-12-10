@@ -8,6 +8,7 @@ AddPackage go # Core compiler tools for the Go programming language
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage npm # A package manager for javascript
+AddPackage qemu # A generic and open source machine emulator and virtualizer
 
 # C/C++.
 AddPackage clang # C language family frontend for LLVM
