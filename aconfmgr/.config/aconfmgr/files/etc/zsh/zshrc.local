@@ -34,7 +34,7 @@ alias f='sudo updatedb && sudo locate -i'
 alias open='xdg-open'
 alias p='yay'
 alias pastebinit='pastebinit -b paste.debian.net'
-alias s='tmux new -s'
+alias ta='tmux attach -t'
 
 # Git commands.
 alias git='hub'
@@ -50,6 +50,14 @@ alias vi='em'
 #
 # Functions
 #
+
+t() {
+    if [[ -z "$1" ]]; then
+        tmux
+    else
+        tmux attach -t $1 || tmux new-session -s $1
+    fi
+}
 
 fetchmirrors() {
     sudo sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=https&use_mirror_status=on' | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist"
