@@ -21,6 +21,7 @@ if [ "$LAPTOP" == true ]; then
   CreateLink /etc/systemd/system/systemd-rfkill.socket /dev/null
   # Power management options.
   CopyFile /etc/default/tlp
+  CopyFile /etc/UPower/UPower.conf
 
   # Suspend then hibernate after some time.
   CopyFile /etc/systemd/sleep.conf
