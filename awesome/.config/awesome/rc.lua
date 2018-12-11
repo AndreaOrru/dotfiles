@@ -4,6 +4,7 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
+local lain = require("lain")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -58,25 +59,12 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
-    awful.layout.suit.magnifier,
+    lain.layout.centerwork,
     awful.layout.suit.floating,
 }
 -- }}}
 
 -- {{{ Helper functions
-local function client_menu_toggle_fn()
-    local instance = nil
-
-    return function ()
-        if instance and instance.wibox.visible then
-            instance:hide()
-            instance = nil
-        else
-            instance = awful.menu.clients({ theme = { width = 250 } })
-        end
-    end
-end
-
 local function fa_icon(glyph)
     return '<span font-family="Font Awesome 5 Free">' .. glyph .. '</span>'
 end
@@ -135,22 +123,14 @@ local taglist_buttons = gears.table.join(
 
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  -- Without this, the following
-                                                  -- :isvisible() makes no sense
-                                                  c.minimized = false
-                                                  if not c:isvisible() and c.first_tag then
-                                                      c.first_tag:view_only()
-                                                  end
-                                                  -- This will also un-minimize
-                                                  -- the client, if needed
-                                                  client.focus = c
-                                                  c:raise()
+                                              if not c:isvisible() and c.first_tag then
+                                                  c.first_tag:view_only()
                                               end
+                                              -- This will also un-minimize
+                                              -- the client, if needed
+                                              client.focus = c
+                                              c:raise()
                                           end),
-                     awful.button({ }, 3, client_menu_toggle_fn()),
                      awful.button({ }, 4, function ()
                                               awful.client.focus.byidx(1)
                                           end),
@@ -218,10 +198,6 @@ end)
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
@@ -281,17 +257,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
-    awful.key({ modkey, "Control" }, "n",
-              function ()
-                  local c = awful.client.restore()
-                  -- Focus restored client
-                  if c then
-                      client.focus = c
-                      c:raise()
-                  end
-              end,
-              {description = "restore minimized", group = "client"}),
-
     -- Window switcher and launcher
     awful.key({ modkey }, "w", function () awful.spawn("rofi -combi-modi window,drun -show combi -modi combi") end,
               {description = "open rofi in combi mode", group = "launcher"}),
@@ -320,7 +285,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Control" }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
@@ -329,32 +294,7 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Control" }, "m",
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"})
+              {description = "toggle keep on top", group = "client"})
 )
 
 -- Bind all key numbers to tags.
