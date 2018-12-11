@@ -9,7 +9,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = configuration_path .. "wallpaper.jpg"
+theme.wallpaper = configuration_path .. "wallpaper"
 -- }}}
 
 -- {{{ Styles
@@ -19,9 +19,9 @@ theme.font       = "Mononoki 13"
 theme.fg_normal  = "#DCDCCC"
 theme.fg_focus   = "#F0DFAF"
 theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = "#3F3F3FA0"
-theme.bg_focus   = "#1E2320C0"
-theme.bg_urgent  = "#3F3F3FC0"
+theme.bg_normal  = "#3F3F3FD8"
+theme.bg_focus   = "#1E2320"
+theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
 
 theme.fg_playing = "#BFEBBF"
@@ -30,15 +30,15 @@ theme.fg_paused  = "#F0DFAF"
 
 -- {{{ Borders
 theme.useless_gap   = dpi(8)
-theme.border_width  = dpi(0)
+theme.border_width  = dpi(1)
 theme.border_normal = "#3F3F3F"
 theme.border_focus  = "#6F6F6F"
 theme.border_marked = "#CC9393"
 -- }}}
 
--- {{{ Titlebars
-theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_normal = "#3F3F3F"
+-- {{{ Tasklist
+theme.tasklist_bg_normal = "#3F3F3F00"
+theme.tasklist_bg_focus  = theme.bg_focus .. "90"
 -- }}}
 
 -- There are other variable sets
