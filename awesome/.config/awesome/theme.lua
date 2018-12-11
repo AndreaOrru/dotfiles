@@ -29,8 +29,8 @@ theme.fg_paused  = "#F0DFAF"
 -- }}}
 
 -- {{{ Borders
-theme.useless_gap   = dpi(8)
-theme.border_width  = dpi(1)
+theme.useless_gap   = dpi(14)
+theme.border_width  = dpi(2)
 theme.border_normal = "#3F3F3F"
 theme.border_focus  = "#6F6F6F"
 theme.border_marked = "#CC9393"
