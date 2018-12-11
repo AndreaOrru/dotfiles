@@ -57,7 +57,3 @@ fetchmirrors() {
 
 # Automatically source local .envrc files.
 eval "$(direnv hook zsh)"
-
-
-# Launch tmux when opening a terminal (not inside Emacs).
-test $TERM != 'eterm-color' && test -z "$TMUX" && (tmux attach || tmux new-session)

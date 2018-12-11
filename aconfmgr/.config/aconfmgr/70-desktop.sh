@@ -56,6 +56,7 @@ if [ "$LAPTOP" == true ]; then
 else
   AddPackage awesome # Highly configurable framework window manager
   AddPackage compton # X compositor that may fix tearing issues
+  AddPackage --foreign lain-git # Layouts, asynchronous widgets and utilities for Awesome WM
   AddPackage ttf-font-awesome # Iconic font designed for Bootstrap
   AddPackage xorg-xinit # X.Org initialisation program
 
