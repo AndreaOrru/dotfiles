@@ -29,21 +29,22 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 #
 
 # Misc.
-alias diff='diff --color=auto';
-alias f='sudo updatedb && sudo locate -i';
+alias diff='diff --color=auto'
+alias f='sudo updatedb && sudo locate -i'
 alias open='xdg-open'
 alias p='yay'
-alias pastebinit='pastebinit -b paste.debian.net';
+alias pastebinit='pastebinit -b paste.debian.net'
+alias s='tmux new -s'
 
 # Git commands.
-alias git='hub';
-alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`";
-alias "g.."="cd \`git root\`";
+alias git='hub'
+alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`"
+alias "g.."="cd \`git root\`"
 
 # Text editors.
-alias e='emacsclient -n';
-alias em='emacsclient -nw';
-alias vi='em';
+alias e='emacsclient -n'
+alias em='emacsclient -nw'
+alias vi='em'
 
 
 #
