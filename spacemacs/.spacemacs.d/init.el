@@ -502,6 +502,18 @@ before packages are loaded."
     (setq-default helm-display-function #'helm-default-display-buffer)
     (setq helm-split-window-inside-p t))
 
+  ;; React mode indenting.
+  (setq-default js-indent-level 2
+                css-indent-offset 2
+                web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2
+                web-mode-attr-indent-offset 2)
+  (with-eval-after-load 'web-mode
+    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
+
   ;; Key bindings.
   (global-set-key (kbd "C-x 2") #'split-window-below-and-focus)
   (global-set-key (kbd "C-x 3") #'split-window-right-and-focus)
