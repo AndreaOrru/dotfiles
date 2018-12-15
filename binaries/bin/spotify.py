@@ -7,10 +7,12 @@ from subprocess import check_call
 
 import spotipy
 import spotipy.oauth2 as oauth2
+from mutagen.oggvorbis import OggVorbis, OggVorbisHeaderError
 
 
 class Spotify:
-    def __init__(self, client_id, client_secret, username, password):
+    def __init__(self, client_id: str, client_secret: str, username: str,
+                 password: str):
         self.username = username
         self.password = password
         self.credentials = oauth2.SpotifyClientCredentials(
@@ -19,9 +21,39 @@ class Spotify:
         self.token = self.credentials.get_access_token()
         self.client = spotipy.Spotify(auth=self.token)
 
-    def download(self, album_id):
-        tracks = self.client.album_tracks(album_id, limit=50)['items']
+    def download_album(self, album_id: str) -> None:
+        artist_name, album, tracks = self._info_from_album(album_id)
 
+        self._album_folder(artist_name, album)
+        self._download_raw_tracks(tracks)
+
+        for track in tracks:
+            self._tag_and_rename_track(track, album, artist_name)
+
+    def search_albums(self, artist: str) -> list:
+        albums = self.client.search(
+            type='album', q=f'artist:{artist}', limit=50)['albums']['items']
+
+        albums = sorted(albums, key=lambda x: x['release_date'])
+        return albums
+
+    def _info_from_album(self, album_id: str) -> tuple:
+        album = self.client.album(album_id)
+        artist_name = album['artists'][0]['name']
+        tracks = self.client.album_tracks(album_id, limit=50)['items']
+        return (artist_name, album, tracks)
+
+    def _album_folder(self, artist: str, album: dict) -> None:
+        folder = '{}/{}/({}) {}'.format(
+            env['HOME'] + '/Music',  # TODO: use env var.
+            artist,
+            album['release_date'][:4],
+            album['name'],
+        )
+        os.makedirs(folder, exist_ok=True)
+        os.chdir(folder)
+
+    def _download_raw_tracks(self, tracks: list) -> None:
         check_call([
             'librespot-download',
             self.username,
@@ -29,19 +61,24 @@ class Spotify:
             *(t['id'] for t in tracks),
         ])
 
-        for t in tracks:
-            os.rename(
-                t['id'], '{:02}. {}.ogg'.format(
-                    t['track_number'],
-                    t['name'].replace('/', '-'),
-                ))
+    def _tag_and_rename_track(self, track: dict, album: dict,
+                              artist: str) -> None:
+        ogg = OggVorbis(track['id'])
+        ogg['title'] = track['name']
+        ogg['album'] = album['name']
+        ogg['tracknumber'] = str(track['track_number'])
+        ogg['artist'] = artist
+        ogg['date'] = album['release_date'][:4]
+        try:
+            ogg.save()
+        except OggVorbisHeaderError:
+            pass
 
-    def search(self, artist):
-        albums = self.client.search(
-            type='album', q=f'artist:{artist}', limit=50)['albums']['items']
-
-        albums = sorted(albums, key=lambda x: x['release_date'])
-        return albums
+        os.rename(
+            track['id'], '{:02} - {}.ogg'.format(
+                track['track_number'],
+                track['name'].replace('/', '-'),
+            ))
 
 
 if __name__ == '__main__':
@@ -57,14 +94,14 @@ if __name__ == '__main__':
 
     if command == 'download':
         album_id = sys.argv[2]
-        spotify.download(album_id)
+        spotify.download_album(album_id)
     elif command == 'search':
         artist = ' '.join(sys.argv[2:])
-        albums = spotify.search(artist)
+        albums = spotify.search_albums(artist)
 
         for a in albums:
-            print('{} {} ({})'.format(
+            print('{} ({}) {}'.format(
                 a['id'],
-                a['name'],
                 a['release_date'][:4],
+                a['name'],
             ))
