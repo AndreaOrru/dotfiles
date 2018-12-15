@@ -60,6 +60,7 @@ This function should only modify configuration layer settings."
      (ruby :variables
            ruby-test-runner 'rspec
            ruby-enable-enh-ruby-mode t)
+     rust
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)

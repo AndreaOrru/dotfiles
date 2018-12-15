@@ -15,6 +15,9 @@ stow zsh
 ./_emacs/install.sh
 stow spacemacs
 
+./_librespot/install.sh
+./_zig/install.sh
+
 
 #############
 #  Secrets  #
@@ -29,15 +32,13 @@ stow secrets
 #  Machine specific  #
 ######################
 
-if [ "$LINUX" == true ]; then
-  stow aconfmgr
+stow aconfmgr
 
-  if [ "$WORKSTATION" == true ]; then
-    stow awesome
-    stow compton
-    stow redshift
-    stow rofi
-    stow xinit
-    stow zathura
-  fi
+if [ "$WORKSTATION" == true ]; then
+  stow awesome
+  stow compton
+  stow redshift
+  stow rofi
+  stow xinit
+  stow zathura
 fi

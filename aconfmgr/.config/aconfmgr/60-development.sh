@@ -9,6 +9,7 @@ AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage npm # A package manager for javascript
 AddPackage qemu # A generic and open source machine emulator and virtualizer
+AddPackage rust # Systems programming language focused on safety, speed and concurrency
 
 # C/C++.
 AddPackage clang # C language family frontend for LLVM
@@ -22,6 +23,7 @@ AddPackage --foreign python-autoflake # Removes unused imports and unused variab
 AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
 AddPackage --foreign python-importmagic # Automatically manage imports in Python
 AddPackage python-isort # A Python utility / library to sort Python imports.
+AddPackage --foreign python-spotipy-git # Simple client for the Spotify Web API
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage --foreign python36 # Major release 3.6 of the Python high-level programming language
