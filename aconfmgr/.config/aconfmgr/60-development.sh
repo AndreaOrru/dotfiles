@@ -23,6 +23,7 @@ AddPackage --foreign python-autoflake # Removes unused imports and unused variab
 AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
 AddPackage --foreign python-importmagic # Automatically manage imports in Python
 AddPackage python-isort # A Python utility / library to sort Python imports.
+AddPackage python-mutagen # An audio metadata tag reader and writer library for Python 3
 AddPackage --foreign python-spotipy-git # Simple client for the Spotify Web API
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
