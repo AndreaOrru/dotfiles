@@ -38,4 +38,5 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 # Media.
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage imagemagick # An image viewing/manipulation program
+AddPackage ncmpcpp # Almost exact clone of ncmpc with some new features
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio

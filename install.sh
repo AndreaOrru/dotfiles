@@ -7,8 +7,10 @@ source ./env.sh
 #  Common  #
 ############
 
+stow aconfmgr
 stow binaries
 stow git
+stow ncmpcpp
 stow tmux
 stow zsh
 
@@ -31,8 +33,6 @@ stow secrets
 ######################
 #  Machine specific  #
 ######################
-
-stow aconfmgr
 
 if [ "$WORKSTATION" == true ]; then
   stow awesome
