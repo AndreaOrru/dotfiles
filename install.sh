@@ -10,6 +10,7 @@ source ./env.sh
 stow aconfmgr
 stow binaries
 stow git
+stow mpd
 stow ncmpcpp
 stow tmux
 stow zsh
