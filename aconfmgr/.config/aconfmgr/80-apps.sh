@@ -8,6 +8,7 @@ AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign signal-desktop-bin # Private messaging from your desktop
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
+AddPackage youtube-viewer # Command line utility for viewing YouTube videos
 
 # Terminal configuration.
 CopyFile /etc/xdg/kitty/base16-gruvbox-dark-medium-256.conf

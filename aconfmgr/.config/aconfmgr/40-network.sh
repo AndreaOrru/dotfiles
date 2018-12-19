@@ -49,6 +49,7 @@ else
   CopyFile /etc/NetworkManager/system-connections/LNER-WIFI.nmconnection 600
   CopyFile /etc/NetworkManager/system-connections/NETGEAR_5GEXT 600
   CopyFile /etc/NetworkManager/system-connections/Printroom\ Cafe 600
+  CopyFile /etc/NetworkManager/system-connections/TISCALI-C81635.nmconnection 600
   CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
   CopyFile /etc/NetworkManager/system-connections/TOG5 600
   CopyFile /etc/NetworkManager/system-connections/TP-LINK_F35C 600
