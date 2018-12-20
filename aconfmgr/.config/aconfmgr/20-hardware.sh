@@ -1,3 +1,4 @@
+AddPackage bluez-utils # Development and debugging utilities for the bluetooth protocol stack
 AddPackage intel-ucode # Microcode update files for Intel CPUs
 AddPackage --foreign python-undervolt # Undervolt Intel CPUs under Linux
 
@@ -7,6 +8,15 @@ CreateLink /etc/systemd/system/hibernate.target.wants/undervolt.service /etc/sys
 CreateLink /etc/systemd/system/hybrid-sleep.target.wants/undervolt.service /etc/systemd/system/undervolt.service
 CreateLink /etc/systemd/system/multi-user.target.wants/undervolt.service /etc/systemd/system/undervolt.service
 CreateLink /etc/systemd/system/suspend.target.wants/undervolt.service /etc/systemd/system/undervolt.service
+
+# Enable Bluetooth services.
+CreateLink /etc/systemd/system/bluetooth.target.wants/bluetooth.service /usr/lib/systemd/system/bluetooth.service
+CreateLink /etc/systemd/system/dbus-org.bluez.service /usr/lib/systemd/system/bluetooth.service
+
+# Automatically switch to newly connected audio devices.
+cat >> "$(GetPackageOriginalFile pulseaudio /etc/pulse/default.pa)" <<EOF
+load-module module-switch-on-connect
+EOF
 
 
 if [ "$LAPTOP" == true ]; then
@@ -31,22 +41,12 @@ else
   # Bluetooth-related packages.
   AddPackage bluez # Daemons for the bluetooth protocol stack
   AddPackage bluez-libs # Deprecated libraries for the bluetooth protocol stack
-  AddPackage bluez-utils # Development and debugging utilities for the bluetooth protocol stack
   AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
   AddPackage pulseaudio-bluetooth # Bluetooth support for PulseAudio
-
-  # Enable Bluetooth services.
-  CreateLink /etc/systemd/system/bluetooth.target.wants/bluetooth.service /usr/lib/systemd/system/bluetooth.service
-  CreateLink /etc/systemd/system/dbus-org.bluez.service /usr/lib/systemd/system/bluetooth.service
 
   # Power on Bluetooth adapter after reboot.
   sed -i -f - "$(GetPackageOriginalFile bluez /etc/bluetooth/main.conf)" <<EOF
     s/^#AutoEnable=false/AutoEnable=true/
-EOF
-
-  # Automatically switch to newly connected devices.
-  cat >> "$(GetPackageOriginalFile pulseaudio /etc/pulse/default.pa)" <<EOF
-load-module module-switch-on-connect
 EOF
 fi
 

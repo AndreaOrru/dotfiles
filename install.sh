@@ -11,6 +11,7 @@ stow aconfmgr
 stow binaries
 stow git
 stow mpd
+stow mpv
 stow ncmpcpp
 stow tmux
 stow zsh
