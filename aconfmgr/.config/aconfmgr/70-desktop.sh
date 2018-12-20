@@ -53,6 +53,22 @@ if [ "$LAPTOP" == true ]; then
   CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
   CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 
+  # Prevent GDM from starting its own Pulseaudio (fix for headphones).
+  CopyFile /var/lib/gdm/.config/pulse/client.conf 600 gdm gdm
+  CreateLink /var/lib/gdm/.config/systemd/user/pulseaudio.socket /dev/null gdm gdm
+  SetFileProperty /var/lib/gdm/.config/pulse group gdm
+  SetFileProperty /var/lib/gdm/.config/pulse mode 700
+  SetFileProperty /var/lib/gdm/.config/pulse owner gdm
+  SetFileProperty /var/lib/gdm/.config/systemd/user group gdm
+  SetFileProperty /var/lib/gdm/.config/systemd/user mode 700
+  SetFileProperty /var/lib/gdm/.config/systemd/user owner gdm
+  SetFileProperty /var/lib/gdm/.config/systemd group gdm
+  SetFileProperty /var/lib/gdm/.config/systemd mode 700
+  SetFileProperty /var/lib/gdm/.config/systemd owner gdm
+  SetFileProperty /var/lib/gdm/.config group gdm
+  SetFileProperty /var/lib/gdm/.config mode 700
+  SetFileProperty /var/lib/gdm/.config owner gdm
+
 else
   AddPackage awesome # Highly configurable framework window manager
   AddPackage compton # X compositor that may fix tearing issues
