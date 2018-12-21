@@ -2,6 +2,7 @@
 
 import os
 import sys
+import urllib.request
 from os import environ as env
 from subprocess import check_call
 
@@ -25,6 +26,7 @@ class Spotify:
         artist_name, album, tracks = self._info_from_album(album_id)
 
         self._album_folder(artist_name, album)
+        self._download_cover(album)
         self._download_raw_tracks(tracks)
 
         for track in tracks:
@@ -43,7 +45,8 @@ class Spotify:
         tracks = self.client.album_tracks(album_id, limit=50)['items']
         return (artist_name, album, tracks)
 
-    def _album_folder(self, artist: str, album: dict) -> None:
+    @staticmethod
+    def _album_folder(artist: str, album: dict) -> None:
         folder = '{}/{}/({}) {}'.format(
             env['HOME'] + '/Music',  # TODO: use env var.
             artist,
@@ -52,6 +55,13 @@ class Spotify:
         )
         os.makedirs(folder, exist_ok=True)
         os.chdir(folder)
+
+    @staticmethod
+    def _download_cover(album: dict) -> None:
+        image_url = max(album['images'], key=lambda x: x['height'])['url']
+        data = urllib.request.urlopen(image_url).read()
+        with open('cover.jpg', 'wb') as f:
+            f.write(data)
 
     def _download_raw_tracks(self, tracks: list) -> None:
         check_call([
