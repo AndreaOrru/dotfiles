@@ -6,7 +6,8 @@ xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
 clock-show-date=true
 gtk-im-module='gtk-im-context-simple'
 enable-animations=false
-gtk-theme='Adwaita-dark'
+icon-theme='paper-vimix'
+gtk-theme='vimix-dark-laptop-ruby'
 toolkit-accessibility=false
 
 [org/gnome/desktop/peripherals/keyboard]
@@ -39,6 +40,7 @@ switch-to-workspace-up=['<Super>k']
 minimize=@as []
 
 [org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
 focus-mode='sloppy'
 
 [org/gnome/mutter/keybindings]
@@ -74,4 +76,4 @@ app-icon-mode='both'
 
 [org/gnome/shell]
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['kitty.desktop', 'emacs.desktop', 'chromium.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['kitty.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop']
