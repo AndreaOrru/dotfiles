@@ -44,6 +44,10 @@ if [ "$LAPTOP" == true ]; then
   AddPackage dconf-editor # dconf Editor
   AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
 
+  # Gnome/GTK theme.
+  AddPackage --foreign vimix-gtk-themes-git # Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
+  AddPackage --foreign vimix-icon-theme-git # Fresh and simple personality icon theme.
+
   # Disable Wayland, map Caps Lock to Ctrl/Escape.
   CopyFile /etc/gdm/custom.conf
   CopyFile /etc/xdg/autostart/xcape.desktop
