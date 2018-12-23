@@ -46,7 +46,7 @@ if [ "$LAPTOP" == true ]; then
 
   # Gnome/GTK theme.
   AddPackage --foreign vimix-gtk-themes-git # Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
-  AddPackage --foreign vimix-icon-theme-git # Fresh and simple personality icon theme.
+  AddPackage arc-icon-theme # Arc icon theme. Official releases only.
 
   # Disable Wayland, map Caps Lock to Ctrl/Escape.
   CopyFile /etc/gdm/custom.conf

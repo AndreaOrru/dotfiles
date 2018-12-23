@@ -9,7 +9,7 @@ xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
 clock-show-date=true
 gtk-im-module='gtk-im-context-simple'
 enable-animations=false
-icon-theme='paper-vimix'
+icon-theme='Arc'
 gtk-theme='vimix-dark-laptop-ruby'
 toolkit-accessibility=false
 
