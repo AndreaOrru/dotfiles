@@ -77,7 +77,6 @@ hinting='slight'
 toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell/window-switcher]
-current-workspace-only=false
 app-icon-mode='both'
 
 [org/gnome/shell]
