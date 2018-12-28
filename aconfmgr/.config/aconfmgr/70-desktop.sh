@@ -44,6 +44,10 @@ if [ "$LAPTOP" == true ]; then
   AddPackage dconf-editor # dconf Editor
   AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
 
+  # MPD integration with Gnome.
+  AddPackage --foreign gnome-shell-extension-mediaplayer-git # A mediaplayer indicator for the Gnome Shell
+  AddPackage --foreign mpdris2-py3-git # MPRIS2 support for MPD using Python 3 -- git version
+
   # Gnome/GTK theme.
   AddPackage --foreign vimix-gtk-themes-git # Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
   AddPackage arc-icon-theme # Arc icon theme. Official releases only.
