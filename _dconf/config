@@ -28,21 +28,23 @@ picture-uri='file:///usr/share/backgrounds/gnome/endless-shapes.jpg'
 disable-external=true
 
 [org/gnome/desktop/wm/keybindings]
+toggle-fullscreen=['<Super>f']
 toggle-maximized=['<Super>m']
 close=['<Super>q']
 move-to-workspace-up=['<Shift><Super>k']
+move-to-workspace-down=['<Shift><Super>j']
 move-to-workspace-1=['<Shift><Super>exclam']
 move-to-workspace-2=['<Shift><Super>at']
 move-to-workspace-3=['<Shift><Super>numbersign']
 move-to-workspace-4=['<Shift><Super>dollar']
+switch-to-workspace-up=['<Super>k']
+switch-to-workspace-down=['<Super>j']
+switch-to-workspace-1=['<Super>1']
 switch-to-workspace-2=['<Super>2']
 switch-to-workspace-3=['<Super>3']
-switch-to-workspace-1=['<Super>1']
-switch-to-workspace-down=['<Super>j']
 switch-to-workspace-4=['<Super>4']
-toggle-fullscreen=['<Super>f']
-move-to-workspace-down=['<Shift><Super>j']
-switch-to-workspace-up=['<Super>k']
+switch-input-source=['<Super>Return']
+switch-input-source-backward=['<Shift><Super>Return']
 minimize=@as []
 
 [org/gnome/desktop/wm/preferences]
@@ -62,7 +64,7 @@ night-light-enabled=true
 [org/gnome/settings-daemon/plugins/media-keys]
 previous='<Super>Left'
 next='<Super>Right'
-play='<Alt>space'
+play='<Super>space'
 screensaver='<Super>BackSpace'
 
 [org/gnome/settings-daemon/plugins/power]
@@ -85,5 +87,5 @@ toggle-message-tray=['<Shift><Super>n']
 app-icon-mode='both'
 
 [org/gnome/shell]
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']
 favorite-apps=['kitty.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop']
