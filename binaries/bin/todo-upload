@@ -1,3 +1,0 @@
-#!/bin/sh
-
-nohup rsync -u ~/todo.org me:todo.org >/dev/null 2>&1 &

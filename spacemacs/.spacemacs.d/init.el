@@ -82,7 +82,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(pkgbuild-mode zig-mode)
+   dotspacemacs-additional-packages '(org-gcal pkgbuild-mode zig-mode)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -522,15 +522,28 @@ before packages are loaded."
   (spacemacs/set-leader-keys "RET"
     #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
 
-  ;; Synchronize todo file.
-  (defun todo-upload ()
-    (when (string= (buffer-file-name) "~/todo.org")
-      (shell-command "todo-upload")))
-  (defun todo-download ()
-    (when (string= (buffer-file-name) "~/todo.org")
-      (shell-command "todo-download")))
-  (add-hook 'after-save-hook #'todo-upload)
-  (add-hook 'find-file-hook #'todo-download)
+  ;; List of Org files to include in the agenda.
+  (setq org-agenda-files '("~/org/calendar.org"
+                           "~/org/todo.org"))
+  ;; Org capture shortcuts.
+  (setq org-capture-templates
+        '(("e" "Event" entry (file "~/org/calendar.org")
+           "* %?\n\n%^T\n\n:PROPERTIES:\n\n:END:\n\n")
+          ("t" "To Do" entry (file+headline "~/org/todo.org" "Inbox")
+           "** TODO %?")))
+
+  ;; Synchronize Google Calendar.
+  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
+  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
+  ;; Google Calendar credentials.
+  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
+        org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
+        org-gcal-file-alist '(("andreaorru1991@gmail.com" . "~/org/calendar.org")))
+
+  ;; Synchronize Todoist.
+  (load-file "~/dev/org-todoist.el/org-todoist.el")
+  (setq org-todoist-api-token (getenv "TODOIST_API_TOKEN"))
+  (spacemacs/set-leader-keys "a a" #'org-todoist-sync)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
