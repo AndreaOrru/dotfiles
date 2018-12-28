@@ -44,4 +44,6 @@ if [ "$WORKSTATION" == true ]; then
   stow rofi
   stow xinit
   stow zathura
+else
+  stow mpdris2
 fi
