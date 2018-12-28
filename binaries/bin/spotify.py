@@ -23,14 +23,14 @@ class Spotify:
         self.client = spotipy.Spotify(auth=self.token)
 
     def download_album(self, album_id: str) -> None:
-        artist_name, album, tracks = self._info_from_album(album_id)
+        artist_name, album, discs, tracks = self._info_from_album(album_id)
 
-        self._album_folder(artist_name, album)
+        self._album_folder(artist_name, album, discs)
         self._download_cover(album)
         self._download_raw_tracks(tracks)
 
         for track in tracks:
-            self._tag_and_rename_track(track, album, artist_name)
+            self._tag_and_rename_track(track, discs, album, artist_name)
 
     def search_albums(self, artist: str) -> list:
         albums = self.client.search(
@@ -43,10 +43,11 @@ class Spotify:
         album = self.client.album(album_id)
         artist_name = album['artists'][0]['name']
         tracks = self.client.album_tracks(album_id, limit=50)['items']
-        return (artist_name, album, tracks)
+        discs = max(t['disc_number'] for t in tracks)
+        return (artist_name, album, discs, tracks)
 
     @staticmethod
-    def _album_folder(artist: str, album: dict) -> None:
+    def _album_folder(artist: str, album: dict, discs: int) -> None:
         folder = '{}/{}/({}) {}'.format(
             env['HOME'] + '/Music',  # TODO: use env var.
             artist,
@@ -55,6 +56,9 @@ class Spotify:
         )
         os.makedirs(folder, exist_ok=True)
         os.chdir(folder)
+        if discs > 1:
+            for disc in range(1, discs + 1):
+                os.makedirs(f'Disc {disc}', exist_ok=True)
 
     @staticmethod
     def _download_cover(album: dict) -> None:
@@ -71,11 +75,12 @@ class Spotify:
             *(t['id'] for t in tracks),
         ])
 
-    def _tag_and_rename_track(self, track: dict, album: dict,
+    def _tag_and_rename_track(self, track: dict, discs: int, album: dict,
                               artist: str) -> None:
         ogg = OggVorbis(track['id'])
         ogg['title'] = track['name']
         ogg['album'] = album['name']
+        ogg['discnumber'] = str(track['disc_number'])
         ogg['tracknumber'] = str(track['track_number'])
         ogg['artist'] = artist
         ogg['date'] = album['release_date'][:4]
@@ -84,8 +89,13 @@ class Spotify:
         except OggVorbisHeaderError:
             pass
 
+        if discs > 1:
+            prefix = 'Disc {}/'.format(track['disc_number'])
+        else:
+            prefix = ''
+
         os.rename(
-            track['id'], '{:02} - {}.ogg'.format(
+            track['id'], '{prefix}{:02} - {}.ogg'.format(
                 track['track_number'],
                 track['name'].replace('/', '-'),
             ))
