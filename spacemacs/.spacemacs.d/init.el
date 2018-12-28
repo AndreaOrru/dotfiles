@@ -544,7 +544,8 @@ before packages are loaded."
   ;; Synchronize Todoist.
   (load-file "~/dev/org-todoist.el/org-todoist.el")
   (setq org-todoist-api-token (getenv "TODOIST_API_TOKEN"))
-  (spacemacs/set-leader-keys "a a" #'org-todoist-sync)
+  (spacemacs/set-leader-keys "D s" #'org-todoist-sync)
+  (spacemacs/set-leader-keys "D d" #'org-todoist-download)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
