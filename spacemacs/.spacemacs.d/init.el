@@ -532,13 +532,14 @@ before packages are loaded."
           ("t" "To Do" entry (file+headline "~/org/todo.org" "Inbox")
            "** TODO %?")))
 
-  ;; Synchronize Google Calendar.
-  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
-  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
   ;; Google Calendar credentials.
   (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
         org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
         org-gcal-file-alist '(("andreaorru1991@gmail.com" . "~/org/calendar.org")))
+  ;; Synchronize Google Calendar.
+  (when (not (file-exists-p "~/org/calendar.org")) (org-gcal-fetch))
+  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
+  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
 
   ;; Synchronize Todoist.
   (load-file "~/dev/org-todoist.el/org-todoist.el")

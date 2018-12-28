@@ -15,9 +15,6 @@ AddPackage wget # Network utility to retrieve files from the Web
 # Firewall service.
 CreateLink /etc/systemd/system/multi-user.target.wants/ufw.service /usr/lib/systemd/system/ufw.service
 # Firewall configuration.
-CopyFile /etc/default/ufw
-CopyFile /etc/ufw/after.rules
-CopyFile /etc/ufw/after6.rules
 CopyFile /etc/ufw/ufw.conf
 CopyFile /etc/ufw/user.rules
 CopyFile /etc/ufw/user6.rules

@@ -7,7 +7,6 @@ AddPackage playerctl # mpris media player controller and lib for spotify, vlc, a
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign signal-desktop-bin # Private messaging from your desktop
 AddPackage --foreign spotify # A proprietary music streaming service
-AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 AddPackage youtube-viewer # Command line utility for viewing YouTube videos
 
 # Terminal configuration.
