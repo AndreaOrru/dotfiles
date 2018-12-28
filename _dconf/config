@@ -73,6 +73,11 @@ sleep-inactive-ac-type='nothing'
 antialiasing='rgba'
 hinting='slight'
 
+[org/gnome/shell/extensions/mediaplayer]
+indicator-position='right'
+button-icon-style='large'
+enable-scroll=false
+
 [org/gnome/shell/keybindings]
 toggle-message-tray=['<Shift><Super>n']
 
@@ -80,5 +85,5 @@ toggle-message-tray=['<Shift><Super>n']
 app-icon-mode='both'
 
 [org/gnome/shell]
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']
 favorite-apps=['kitty.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop']
