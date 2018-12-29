@@ -503,6 +503,46 @@ before packages are loaded."
     (setq-default helm-display-function #'helm-default-display-buffer)
     (setq helm-split-window-inside-p t))
 
+  ;; Key bindings.
+  (global-set-key (kbd "C-x 2") #'split-window-below-and-focus)
+  (global-set-key (kbd "C-x 3") #'split-window-right-and-focus)
+  (global-set-key (kbd "C-s") #'helm-swoop)
+  (spacemacs/set-leader-keys "RET"
+    #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
+
+  ;; List of Org files to include in the agenda.
+  (setq org-agenda-files
+        '("~/org/calendar.org"
+          "~/org/todo.org"))
+  ;; List of Org files to sync through rsync.
+  (setq files-to-sync
+        '("~/org/goals.org"))
+
+  ;; Sync some files through rsync.
+  (defun file-upload ()
+    (when (member buffer-file-truename files-to-sync)
+      (shell-command (format "upload %s" buffer-file-truename))))
+  (defun file-download ()
+    (when (member buffer-file-truename files-to-sync)
+      (shell-command (format "download %s" buffer-file-truename))))
+  (add-hook 'after-save-hook #'file-upload)
+  (add-hook 'find-file-hook #'file-download)
+
+  ;; Synchronize Todoist.
+  (load-file "~/dev/org-todoist.el/org-todoist.el")
+  (setq org-todoist-api-token (getenv "TODOIST_API_TOKEN"))
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "D s" #'org-todoist-sync)
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "D d" #'org-todoist-download)
+
+  ;; Google Calendar credentials.
+  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
+        org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
+        org-gcal-file-alist '(("andreaorru1991@gmail.com" . "~/org/calendar.org")))
+  ;; Synchronize Google Calendar.
+  (when (not (file-exists-p "~/org/calendar.org")) (org-gcal-fetch))
+  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
+  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
+
   ;; React mode indenting.
   (setq-default js-indent-level 2
                 css-indent-offset 2
@@ -514,38 +554,6 @@ before packages are loaded."
     (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
     (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
     (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
-
-  ;; Key bindings.
-  (global-set-key (kbd "C-x 2") #'split-window-below-and-focus)
-  (global-set-key (kbd "C-x 3") #'split-window-right-and-focus)
-  (global-set-key (kbd "C-s") #'helm-swoop)
-  (spacemacs/set-leader-keys "RET"
-    #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
-
-  ;; List of Org files to include in the agenda.
-  (setq org-agenda-files '("~/org/calendar.org"
-                           "~/org/todo.org"))
-  ;; Org capture shortcuts.
-  (setq org-capture-templates
-        '(("e" "Event" entry (file "~/org/calendar.org")
-           "* %?\n\n%^T\n\n:PROPERTIES:\n\n:END:\n\n")
-          ("t" "To Do" entry (file+headline "~/org/todo.org" "Inbox")
-           "** TODO %?")))
-
-  ;; Google Calendar credentials.
-  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
-        org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
-        org-gcal-file-alist '(("andreaorru1991@gmail.com" . "~/org/calendar.org")))
-  ;; Synchronize Google Calendar.
-  (when (not (file-exists-p "~/org/calendar.org")) (org-gcal-fetch))
-  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
-  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
-
-  ;; Synchronize Todoist.
-  (load-file "~/dev/org-todoist.el/org-todoist.el")
-  (setq org-todoist-api-token (getenv "TODOIST_API_TOKEN"))
-  (spacemacs/set-leader-keys "D s" #'org-todoist-sync)
-  (spacemacs/set-leader-keys "D d" #'org-todoist-download)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
