@@ -1,3 +1,5 @@
 #!/bin/sh
 
-nohup rsync -u me:"$1" "$1" >/dev/null 2>&1 &
+FILE=`realpath --relative-to="$HOME" "$1"`
+DIR=`dirname $FILE`
+nohup rsync -u --rsync-path="mkdir -p ~/${DIR} && rsync" me:"$FILE" "$1" >/dev/null 2>&1 &
