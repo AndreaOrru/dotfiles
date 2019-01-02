@@ -3,6 +3,15 @@
 source ./env.sh
 
 
+#############
+#  Secrets  #
+#############
+
+chmod 600 secrets/.ssh/*
+chmod 644 secrets/.ssh/id_rsa.pub
+stow secrets
+
+
 ############
 #  Common  #
 ############
@@ -22,15 +31,6 @@ stow spacemacs
 
 ./_librespot/install.sh
 ./_zig/install.sh
-
-
-#############
-#  Secrets  #
-#############
-
-chmod 600 secrets/.ssh/*
-chmod 644 secrets/.ssh/id_rsa.pub
-stow secrets
 
 
 ######################
