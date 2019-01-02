@@ -16,11 +16,13 @@ CopyFile /etc/xdg/kitty/kitty.conf
 # Hi-DPI aware Spotify wrapper.
 CopyFile /usr/local/bin/spotify 755
 
-# Workaround for VA-API enabled Chromium.
-sed -i -f - "$(GetPackageOriginalFile chromium-vaapi /usr/share/applications/chromium.desktop)" <<EOF
-  s/^Exec=/Exec=env allow_rgb10_configs=false /
-EOF
 
+if [ "$AMD_GRAPHICS" == true ]; then
+  # Workaround for VA-API enabled Chromium.
+  sed -i -f - "$(GetPackageOriginalFile chromium-vaapi /usr/share/applications/chromium.desktop)" <<EOF
+    s/^Exec=/Exec=env allow_rgb10_configs=false /
+EOF
+fi
 
 if [ "$WORKSTATION" == true ]; then
   AddPackage feh # Fast and light imlib2-based image viewer

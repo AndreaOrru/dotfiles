@@ -47,5 +47,4 @@ if [ "$WORKSTATION" == true ]; then
   stow zathura
 else
   stow mpdris2
-  ./_dconf/install.sh
 fi

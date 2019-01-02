@@ -20,12 +20,14 @@ AddPackage xsel # XSel is a command-line program for getting and setting the con
 if [ "$AMD_GRAPHICS" == true ]; then
   AddPackage xf86-video-amdgpu # X.org amdgpu video driver
   AddPackage libva-mesa-driver # VA-API implementation for gallium
-  AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
   AddPackage mesa-vdpau # Mesa VDPAU drivers
   AddPackage vdpauinfo # Command line utility for querying the capabilities of a VDPAU device.
 elif [ "$INTEL_GRAPHICS" == true ]; then
   AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
+  AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
+  CopyFile /etc/profile.d/libva-driver.sh
 fi
+AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 
 
 if [ "$LAPTOP" == true ]; then
