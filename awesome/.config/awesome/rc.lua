@@ -43,11 +43,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
--- This is used later as the default terminal and editor to run.
-terminal = "kitty"
-editor = os.getenv("EDITOR") or "vi"
-editor_cmd = terminal .. " -e " .. editor
-
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -203,8 +198,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
     -- Cycle layouts
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1) end),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1) end),
+    awful.key({ modkey,           }, "Return", function () awful.layout.inc( 1) end),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.layout.inc(-1) end),
 
     -- History
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -222,6 +217,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "k", function () awful.client.focus.global_bydirection("up")    end),
     awful.key({ modkey,           }, "l", function () awful.client.focus.global_bydirection("right") end),
 
+    awful.key({ modkey,           }, "n", function () awful.client.focus.byidx( 1) end),
+    awful.key({ modkey,           }, "p", function () awful.client.focus.byidx(-1) end),
+
     awful.key({ modkey,           }, "o", function () awful.screen.focus_relative(1) end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
 
@@ -230,16 +228,17 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.global_bydirection("down")  end),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.global_bydirection("up")    end),
     awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.global_bydirection("right") end),
+
+    awful.key({ modkey, "Shift"   }, "n", function () awful.client.swap.byidx( 1) end),
+    awful.key({ modkey, "Shift"   }, "p", function () awful.client.swap.byidx(-1) end),
     -- Resize windows
     awful.key({ modkey, "Control" }, "l", function () awful.tag.incmwfact( 0.05) end),
     awful.key({ modkey, "Control" }, "h", function () awful.tag.incmwfact(-0.05) end),
 
-    -- Open a terminal window
-    awful.key({ modkey,           }, "Return",    function () awful.spawn(terminal) end),
     -- Window switcher and launcher
     awful.key({ modkey            }, "w",         function () awful.spawn("rofi -combi-modi window,drun -show combi -modi combi") end),
     -- Play/pause Spotify
-    awful.key({ modkey            }, "p",         function () awful.spawn("playerctl play-pause") end),
+    awful.key({ modkey            }, "space",     function () awful.spawn("playerctl play-pause") end),
     -- Lock screen
     awful.key({ modkey            }, "BackSpace", function () awful.spawn("i3lock -nec 999999") end),
 
@@ -257,7 +256,7 @@ clientkeys = gears.table.join(
             c:raise()
         end),
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end),  -- Close client
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),  -- Toggle floating
+    awful.key({ modkey, "Control" }, "f",      awful.client.floating.toggle                     ),  -- Toggle floating
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),  -- Move to master
     awful.key({ modkey, "Shift"   }, "o",      function (c) c:move_to_screen()               end),  -- Move to other screen
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end)   -- Toggle keep on top
