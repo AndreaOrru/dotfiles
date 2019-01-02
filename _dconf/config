@@ -1,6 +1,3 @@
-[org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/gnome/symbolics-2.jpg'
-
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
 xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
@@ -20,9 +17,6 @@ delay=uint32 200
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
 tap-to-click=true
-
-[org/gnome/desktop/screensaver]
-picture-uri='file:///usr/share/backgrounds/gnome/endless-shapes.jpg'
 
 [org/gnome/desktop/search-providers]
 disable-external=true
