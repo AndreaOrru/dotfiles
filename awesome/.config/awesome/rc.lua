@@ -238,9 +238,9 @@ globalkeys = gears.table.join(
     -- Window switcher and launcher
     awful.key({ modkey            }, "w",         function () awful.spawn("rofi -combi-modi window,drun -show combi -modi combi") end),
     -- Play/pause Spotify
-    awful.key({ modkey            }, "space",     function () awful.spawn("playerctl play-pause") end),
+    awful.key({ modkey            }, "space",     function () awful.spawn("playerctl play-pause", false) end),
     -- Lock screen
-    awful.key({ modkey            }, "BackSpace", function () awful.spawn("i3lock -nec 999999") end),
+    awful.key({ modkey            }, "BackSpace", function () awful.spawn("i3lock -nec 999999", false) end),
 
     -- Save screenshot of selection
     awful.key({ modkey            }, "s",         function () awful.spawn.with_shell("maim -s ~/shots/$(date +%F_%H%M%S).png") end),
@@ -400,3 +400,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Start compositor.
+awful.spawn("compton -b", false)
