@@ -19,6 +19,8 @@ AddPackage xsel # XSel is a command-line program for getting and setting the con
 # Drivers.
 if [ "$AMD_GRAPHICS" == true ]; then
   AddPackage xf86-video-amdgpu # X.org amdgpu video driver
+  AddPackage libva-mesa-driver # VA-API implementation for gallium
+  AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
   AddPackage mesa-vdpau # Mesa VDPAU drivers
   AddPackage vdpauinfo # Command line utility for querying the capabilities of a VDPAU device.
 elif [ "$INTEL_GRAPHICS" == true ]; then

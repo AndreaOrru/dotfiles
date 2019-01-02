@@ -1,4 +1,4 @@
-AddPackage chromium # A web browser built for speed, simplicity, and security
+AddPackage chromium-vaapi # Chromium with VA-API support to enable hardware acceleration
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
@@ -15,6 +15,11 @@ CopyFile /etc/xdg/kitty/kitty.conf
 
 # Hi-DPI aware Spotify wrapper.
 CopyFile /usr/local/bin/spotify 755
+
+# Workaround for VA-API enabled Chromium.
+sed -i -f - "$(GetPackageOriginalFile chromium-vaapi /usr/share/applications/chromium.desktop)" <<EOF
+  s/^Exec=/Exec=env allow_rgb10_configs=false /
+EOF
 
 
 if [ "$WORKSTATION" == true ]; then
