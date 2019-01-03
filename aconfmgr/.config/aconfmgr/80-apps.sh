@@ -2,6 +2,7 @@ AddPackage chromium-vaapi # Chromium with VA-API support to enable hardware acce
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
+AddPackage pepper-flash # Adobe Flash Player PPAPI
 AddPackage pgadmin4 # Comprehensive design and management interface for PostgreSQL
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
