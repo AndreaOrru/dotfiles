@@ -95,7 +95,8 @@ class Spotify:
             prefix = ''
 
         os.rename(
-            track['id'], '{prefix}{:02} - {}.ogg'.format(
+            track['id'], '{}{:02} - {}.ogg'.format(
+                prefix,
                 track['track_number'],
                 track['name'].replace('/', '-'),
             ))
