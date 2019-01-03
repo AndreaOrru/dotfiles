@@ -43,6 +43,7 @@ if [ "$WORKSTATION" == true ]; then
   stow compton
   stow redshift
   stow rofi
+  stow xdg
   stow xinit
   stow zathura
 else

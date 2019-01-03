@@ -11,6 +11,13 @@ import spotipy.oauth2 as oauth2
 from mutagen.oggvorbis import OggVorbis, OggVorbisHeaderError
 
 
+def music_folder() -> str:
+    if os.path.exists(env['HOME'] + '/Music'):
+        return env['HOME'] + '/Music'
+    else:
+        return env['HOME'] + '/music'
+
+
 class Spotify:
     def __init__(self, client_id: str, client_secret: str, username: str,
                  password: str):
@@ -49,7 +56,7 @@ class Spotify:
     @staticmethod
     def _album_folder(artist: str, album: dict, discs: int) -> None:
         folder = '{}/{}/({}) {}'.format(
-            env['HOME'] + '/Music',  # TODO: use env var.
+            music_folder(),
             artist,
             album['release_date'][:4],
             album['name'],
