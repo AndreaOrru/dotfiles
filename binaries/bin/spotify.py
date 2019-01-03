@@ -110,6 +110,9 @@ class Spotify:
 
 
 if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        exit()
+
     command = sys.argv[1]
     assert command in ('download', 'search')
 
