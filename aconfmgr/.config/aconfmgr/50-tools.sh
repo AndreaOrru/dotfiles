@@ -39,6 +39,7 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage mpd # Flexible, powerful, server-side application for playing music
+AddPackage --foreign mpdris2-py3-git # MPRIS2 support for MPD using Python 3 -- git version
 AddPackage mps-youtube # Terminal based YouTube jukebox with playlist management
 AddPackage ncmpcpp # Almost exact clone of ncmpc with some new features
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
