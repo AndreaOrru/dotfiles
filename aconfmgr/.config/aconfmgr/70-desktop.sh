@@ -83,7 +83,7 @@ if [ "$LAPTOP" == true ]; then
   SetFileProperty /var/lib/gdm/.config owner gdm
 
 else
-  AddPackage awesome # Highly configurable framework window manager
+  AddPackage --foreign awesome-git # Highly configurable framework window manager
   AddPackage compton # X compositor that may fix tearing issues
   AddPackage --foreign lain-git # Layouts, asynchronous widgets and utilities for Awesome WM
   AddPackage ttf-font-awesome # Iconic font designed for Bootstrap

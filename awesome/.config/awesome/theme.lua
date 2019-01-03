@@ -87,6 +87,10 @@ theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
 -- }}}
 
+-- {{{ Notifications
+theme.notification_icon_size = 384
+-- }}}
+
 -- {{{ Layout
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
 theme.layout_tileleft   = themes_path .. "zenburn/layouts/tileleft.png"
