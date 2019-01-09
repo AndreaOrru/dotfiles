@@ -47,6 +47,10 @@ This function should only modify configuration layer settings."
      (helm :variables
            helm-use-fuzzy nil)
      auto-completion
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t
+            c-c++-enable-clang-format-on-save t)
      (dash :variables
            helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
@@ -61,6 +65,7 @@ This function should only modify configuration layer settings."
            ruby-test-runner 'rspec
            ruby-enable-enh-ruby-mode t)
      rust
+     semantic
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)

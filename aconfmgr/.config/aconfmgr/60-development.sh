@@ -2,6 +2,7 @@
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage --foreign emacs-git # GNU Emacs. Development.
+AddPackage gdb # The GNU Debugger
 AddPackage git-crypt # Transparent file encryption in Git
 AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting, repl, changelog population and more
 AddPackage go # Core compiler tools for the Go programming language
@@ -10,6 +11,7 @@ AddPackage hub # cli interface for Github
 AddPackage npm # A package manager for javascript
 AddPackage qemu # A generic and open source machine emulator and virtualizer
 AddPackage rust # Systems programming language focused on safety, speed and concurrency
+AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
 AddPackage clang # C language family frontend for LLVM
