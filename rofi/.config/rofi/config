@@ -1,4 +1,4 @@
-rofi.font:  Mononoki 20
+rofi.font:  Mononoki 15
 rofi.theme: /usr/share/rofi/themes/gruvbox-dark-hard.rasi
 
 rofi.kb-row-up:   Control+k
