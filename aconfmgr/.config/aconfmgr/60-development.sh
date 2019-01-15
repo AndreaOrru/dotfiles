@@ -29,7 +29,6 @@ AddPackage python-mutagen # An audio metadata tag reader and writer library for 
 AddPackage --foreign python-spotipy-git # Simple client for the Spotify Web API
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
-AddPackage --foreign python36 # Major release 3.6 of the Python high-level programming language
 AddPackage yapf # Python style guide checker
 
 # PHP.
