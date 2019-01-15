@@ -1,0 +1,10 @@
+[Unit]
+Description=Intel Undervolt Service
+After=multi-user.target suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/undervolt -f --core -50 --gpu -50 --cache -50 --uncore -50 --analogio 0
+
+[Install]
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target

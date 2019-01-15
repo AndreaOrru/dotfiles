@@ -1,8 +1,3 @@
-if [ "$LAPTOP" == true ]; then
-    AddPackage dhclient # A standalone DHCP client from the dhcp package
-    AddPackage networkmanager # Network connection manager and user applications
-fi
-
 # Network-related shell utils.
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage autossh # Automatically restart SSH sessions and tunnels
@@ -20,7 +15,7 @@ CopyFile /etc/ufw/user.rules
 CopyFile /etc/ufw/user6.rules
 
 
-if [ "$LAPTOP" == false ]; then
+if [ "$HOSTNAME" == "toxicity" ]; then
   # Custom DNS and simple DHCP on workstations.
   CopyFile /etc/dhcpcd.conf
   CopyFile /etc/resolv.conf
@@ -29,6 +24,9 @@ if [ "$LAPTOP" == false ]; then
   CreateLink /etc/systemd/system/multi-user.target.wants/dhcpcd.service /usr/lib/systemd/system/dhcpcd.service
 
 else
+  AddPackage dhclient # A standalone DHCP client from the dhcp package
+  AddPackage networkmanager # Network connection manager and user applications
+
   # NetworkManager.
   CreateLink /etc/systemd/system/dbus-org.freedesktop.NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
   CreateLink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service /usr/lib/systemd/system/NetworkManager-dispatcher.service
