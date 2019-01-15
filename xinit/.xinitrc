@@ -2,6 +2,7 @@ xrdb -merge ~/.Xresources
 
 xset r rate 200 60
 setxkbmap -option ctrl:nocaps
+setxkbmap -option altwin:swap_lalt_lwin
 xcape
 
 xss-lock -- i3lock -nec 999999 &
