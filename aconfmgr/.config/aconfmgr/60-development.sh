@@ -15,6 +15,7 @@ AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
 AddPackage clang # C language family frontend for LLVM
+AddPackage --foreign cppclean # Find problems in C++ source that slow development of large code bases.
 AddPackage llvm # Collection of modular and reusable compiler and toolchain technologies
 
 # Python.
