@@ -4,8 +4,8 @@
 
 ;; Set global variables based on the hostname.
 (pcase (system-name)
-  ("toxicity" (setq large-screen t))
-  (_          (setq large-screen nil)))
+  ("manhattan" (setq large-screen nil))
+  (_           (setq large-screen t)))
 
 (defun dotspacemacs/layers ()
   "Layer configuration:

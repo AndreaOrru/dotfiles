@@ -33,26 +33,6 @@ else
   CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
   CreateLink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service /usr/lib/systemd/system/NetworkManager-wait-online.service
 
-  # Wireless connections on laptops.
-  CopyFile /etc/NetworkManager/system-connections/AIRPORT\ FREE\ WIFI.nmconnection 600
-  CopyFile /etc/NetworkManager/system-connections/AndyPhone 600
-  CopyFile /etc/NetworkManager/system-connections/BTBHub6-H5MP 600
-  CopyFile /etc/NetworkManager/system-connections/BTWifi-Starbucks.nmconnection 600
-  CopyFile /etc/NetworkManager/system-connections/Clarence’s\ iPhone\ X🅂 600
-  CopyFile /etc/NetworkManager/system-connections/Dot11 600
-  CopyFile /etc/NetworkManager/system-connections/GAP-5G 600
-  CopyFile /etc/NetworkManager/system-connections/LNER-WIFI.nmconnection 600
-  CopyFile /etc/NetworkManager/system-connections/NETGEAR_5GEXT 600
-  CopyFile /etc/NetworkManager/system-connections/Printroom\ Cafe 600
-  CopyFile /etc/NetworkManager/system-connections/TISCALI-C81635.nmconnection 600
-  CopyFile /etc/NetworkManager/system-connections/TNCAP617AA5\ 5G 600
-  CopyFile /etc/NetworkManager/system-connections/TOG5 600
-  CopyFile /etc/NetworkManager/system-connections/TP-LINK_F35C 600
-  CopyFile /etc/NetworkManager/system-connections/The\ Dog\ House.nmconnection 600
-  CopyFile /etc/NetworkManager/system-connections/VM9882114 600
-  CopyFile /etc/NetworkManager/system-connections/WebPocket-53E0 600
-  CopyFile /etc/NetworkManager/system-connections/Wireless-N 600
-
   # No custom DNS on laptop (because of WiFi hotspots).
   IgnorePath /etc/resolv.conf
 fi
