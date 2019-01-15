@@ -27,7 +27,6 @@ stow tmux
 stow zsh
 
 ./_emacs/install.sh
-./_org-todoist/install.sh
 stow spacemacs
 
 ./_librespot/install.sh

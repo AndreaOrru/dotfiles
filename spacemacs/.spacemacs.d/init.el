@@ -87,7 +87,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(org-gcal pkgbuild-mode zig-mode)
+   dotspacemacs-additional-packages '(pkgbuild-mode zig-mode)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -541,9 +541,6 @@ before packages are loaded."
   ;; ORG MODE
   ;;
 
-  ;; List of Org files to include in the agenda.
-  (setq org-agenda-files '("~/org/calendar.org"
-                           "~/org/todo.org"))
   ;; List of Org files to sync through rsync.
   (setq files-to-sync '("~/org/goals.org"))
 
@@ -556,27 +553,6 @@ before packages are loaded."
       (shell-command (format "download %s" buffer-file-truename))))
   (add-hook 'after-save-hook #'file-upload)
   (add-hook 'find-file-hook #'file-download)
-
-  ;; Todoist synchronization.
-  (load-file "~/dev/org-todoist.el/org-todoist.el")
-  (setq org-todoist-api-token (getenv "TODOIST_API_TOKEN"))
-  (spacemacs/set-leader-keys-for-major-mode 'org-mode "D s" #'org-todoist-sync)
-  (spacemacs/set-leader-keys-for-major-mode 'org-mode "D d" #'org-todoist-download)
-
-  ;; Google Calendar credentials.
-  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
-        org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
-        org-gcal-file-alist '(("andreaorru1991@gmail.com" . "~/org/calendar.org")))
-  ;; Google Calendar synchronization.
-  (add-hook 'org-agenda-mode-hook #'(lambda() (org-gcal-sync)))
-  (add-hook 'org-capture-after-finalize-hook #'(lambda() (org-gcal-sync)))
-
-  ;; First-time fetching of Org files.
-  (when (not (file-exists-p "~/org/calendar.org")) (org-gcal-fetch))
-  (when (not (file-exists-p "~/org/todo.org")) (org-todoist-sync))
-  (mapc (lambda (file) (when (not (file-exists-p file))
-                         (find-file file)))
-        files-to-sync)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
