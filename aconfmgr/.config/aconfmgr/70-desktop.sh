@@ -105,3 +105,9 @@ else
 [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
 EOF
 fi
+
+
+# Natural scrolling on Logitech keyboard.
+if [ "$HOSTNAME" == "badwater" ]; then
+  CopyFile /etc/X11/xorg.conf.d/30-touchpad.conf
+fi
