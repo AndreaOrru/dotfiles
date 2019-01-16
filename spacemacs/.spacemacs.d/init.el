@@ -542,7 +542,10 @@ before packages are loaded."
   ;;
 
   ;; List of Org files to sync through rsync.
-  (setq files-to-sync '("~/org/goals.org"))
+  (setq files-to-sync '("~/org/year.org"
+                        "~/org/month.org"
+                        "~/org/week.org"
+                        "~/org/past.org"))
 
   ;; Automatic synchronization of some files through rsync.
   (defun file-upload ()
