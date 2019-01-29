@@ -64,13 +64,11 @@ This function should only modify configuration layer settings."
      (ruby :variables
            ruby-test-runner 'rspec
            ruby-enable-enh-ruby-mode t)
-     rust
      semantic
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
-     php
      (python :variables
              python-enable-yapf-format-on-save t
              python-sort-imports-on-save t)
