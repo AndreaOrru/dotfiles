@@ -14,25 +14,14 @@ CopyFile /etc/ufw/ufw.conf
 CopyFile /etc/ufw/user.rules
 CopyFile /etc/ufw/user6.rules
 
+AddPackage dhclient # A standalone DHCP client from the dhcp package
+AddPackage networkmanager # Network connection manager and user applications
 
-if [ "$HOSTNAME" == "toxicity" ]; then
-  # Custom DNS and simple DHCP on workstations.
-  CopyFile /etc/dhcpcd.conf
-  CopyFile /etc/resolv.conf
+# NetworkManager.
+CreateLink /etc/systemd/system/dbus-org.freedesktop.NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
+CreateLink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service /usr/lib/systemd/system/NetworkManager-dispatcher.service
+CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
+CreateLink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service /usr/lib/systemd/system/NetworkManager-wait-online.service
 
-  # DHCP service.
-  CreateLink /etc/systemd/system/multi-user.target.wants/dhcpcd.service /usr/lib/systemd/system/dhcpcd.service
-
-else
-  AddPackage dhclient # A standalone DHCP client from the dhcp package
-  AddPackage networkmanager # Network connection manager and user applications
-
-  # NetworkManager.
-  CreateLink /etc/systemd/system/dbus-org.freedesktop.NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
-  CreateLink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service /usr/lib/systemd/system/NetworkManager-dispatcher.service
-  CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
-  CreateLink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service /usr/lib/systemd/system/NetworkManager-wait-online.service
-
-  # No custom DNS on laptop (because of WiFi hotspots).
-  IgnorePath /etc/resolv.conf
-fi
+# No custom DNS.
+IgnorePath /etc/resolv.conf
