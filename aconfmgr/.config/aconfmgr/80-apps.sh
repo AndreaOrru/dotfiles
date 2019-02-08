@@ -1,4 +1,4 @@
-AddPackage chromium-vaapi # Chromium with VA-API support to enable hardware acceleration
+AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
@@ -20,8 +20,8 @@ CopyFile /usr/local/bin/spotify 755
 
 
 if [ "$AMD_GRAPHICS" == true ]; then
-  # Workaround for VA-API enabled Chromium.
-  sed -i -f - "$(GetPackageOriginalFile chromium-vaapi /usr/share/applications/chromium.desktop)" <<EOF
+  # Workaround for VA-API in Chromium.
+  sed -i -f - "$(GetPackageOriginalFile chromium /usr/share/applications/chromium.desktop)" <<EOF
     s/^Exec=/Exec=env allow_rgb10_configs=false /
 EOF
 fi
