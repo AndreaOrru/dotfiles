@@ -421,3 +421,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Start compositor.
 awful.spawn("compton -b", false)
+-- Start MPD monitoring and notifications.
+awful.spawn("systemctl --user restart mpDris2", false)
