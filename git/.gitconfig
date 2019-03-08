@@ -1,9 +1,3 @@
 [user]
 	email = andrea@orru.io
 	name = Andrea Orru
-[magithub]
-	online = false
-[magithub "status"]
-	includeStatusHeader = false
-	includePullRequestsSection = false
-	includeIssuesSection = false

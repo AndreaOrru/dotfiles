@@ -1,6 +1,3 @@
-IgnorePackage --foreign ruby2.4
-IgnorePackage --foreign ruby2.4-bundler
-
 IgnorePath '/boot/*.img'
 IgnorePath '/boot/EFI'
 IgnorePath '/boot/vmlin*'
@@ -19,7 +16,6 @@ IgnorePath '/etc/localtime'
 IgnorePath '/etc/machine-id'
 IgnorePath '/etc/os-release'
 IgnorePath '/etc/pacman.d/gnupg/*'
-IgnorePath '/etc/rabbitmq/rabbitmq-env.conf'
 IgnorePath '/etc/shells'
 IgnorePath '/etc/ssl/certs'
 
@@ -73,7 +69,6 @@ IgnorePath '/var/lib/pacman'
 IgnorePath '/var/lib/portables'
 IgnorePath '/var/lib/postgres'
 IgnorePath '/var/lib/private'
-IgnorePath '/var/lib/rabbitmq'
 IgnorePath '/var/lib/redis'
 IgnorePath '/var/lib/rpcbind'
 IgnorePath '/var/lib/systemd'

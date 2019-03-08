@@ -9,9 +9,6 @@ AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended z
 
 # Add ~/bin to the PATHs.
 CopyFile /etc/profile.d/homebin.sh
-# ZSH configuration.
-CopyFile /etc/zsh/zshenv
-CopyFile /etc/zsh/zshrc.local
 
 
 # Shell utilities.

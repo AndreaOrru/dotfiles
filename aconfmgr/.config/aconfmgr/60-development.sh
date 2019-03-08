@@ -8,7 +8,6 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage go # Core compiler tools for the Go programming language
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
-AddPackage npm # A package manager for javascript
 AddPackage qemu # A generic and open source machine emulator and virtualizer
 AddPackage rust # Systems programming language focused on safety, speed and concurrency
 AddPackage scons # Extensible Python-based build utility
@@ -33,17 +32,8 @@ AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage yapf # Python style guide checker
 
-# PHP.
-AddPackage composer # Dependency Manager for PHP
-AddPackage php # A general-purpose scripting language that is especially suited to web development
-AddPackage php-gd # gd module for PHP
-# PHP configuration.
-CopyFile /etc/php/php.ini
-
 # Web development.
 AddPackage aws-cli # Universal Command Line Interface for Amazon Web Services
 AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps from the command line
 AddPackage postgresql # Sophisticated object-relational DBMS
-AddPackage rabbitmq # Highly reliable and performant enterprise messaging implementation of AMQP written in Erlang/OTP
 AddPackage redis # Advanced key-value store
-AddPackage yarn # Fast, reliable, and secure dependency management
