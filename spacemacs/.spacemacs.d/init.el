@@ -60,10 +60,6 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      org
-     react
-     (ruby :variables
-           ruby-test-runner 'rspec
-           ruby-enable-enh-ruby-mode t)
      semantic
      (shell :variables
             shell-default-height 30
@@ -91,7 +87,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(auto-yasnippet helm-c-yasnippet php-auto-yasnippets yasnippet yasnippet-snippets)
+   dotspacemacs-excluded-packages '(auto-yasnippet helm-c-yasnippet yasnippet yasnippet-snippets)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -481,10 +477,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;;
-  ;; GENERAL
-  ;;
-
   ;; Slower mouse scrolling.
   (setq mouse-wheel-progressive-speed nil)
   (setq mouse-wheel-scroll-amount '(           2
@@ -516,44 +508,6 @@ before packages are loaded."
   (global-set-key (kbd "C-s") #'helm-swoop)
   (spacemacs/set-leader-keys "RET"
     #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
-
-
-  ;;
-  ;; LANGUAGE SPECIFIC
-  ;;
-
-  ;; React mode indenting.
-  (setq-default js-indent-level 2
-                css-indent-offset 2
-                web-mode-markup-indent-offset 2
-                web-mode-css-indent-offset 2
-                web-mode-code-indent-offset 2
-                web-mode-attr-indent-offset 2)
-  (with-eval-after-load 'web-mode
-    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
-
-
-  ;;
-  ;; ORG MODE
-  ;;
-
-  ;; List of Org files to sync through rsync.
-  (setq files-to-sync '("~/org/year.org"
-                        "~/org/month.org"
-                        "~/org/week.org"
-                        "~/org/past.org"))
-
-  ;; Automatic synchronization of some files through rsync.
-  (defun file-upload ()
-    (when (member buffer-file-truename files-to-sync)
-      (shell-command (format "upload %s" buffer-file-truename))))
-  (defun file-download ()
-    (when (member buffer-file-truename files-to-sync)
-      (shell-command (format "download %s" buffer-file-truename))))
-  (add-hook 'after-save-hook #'file-upload)
-  (add-hook 'find-file-hook #'file-download)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
