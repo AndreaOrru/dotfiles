@@ -56,6 +56,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      github
+     html
      lua
      markdown
      multiple-cursors
