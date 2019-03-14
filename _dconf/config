@@ -82,4 +82,4 @@ app-icon-mode='both'
 
 [org/gnome/shell]
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['kitty.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['kitty.desktop', 'emacs.desktop', 'org.gnome.Nautilus.desktop']
