@@ -45,6 +45,7 @@ if [ "$LAPTOP" == true ]; then
   RemovePackage orca # Screen reader for individuals who are blind or visually impaired
   RemovePackage rygel # UPnP AV MediaServer and MediaRenderer that allows you to easily share audio, video and pictures, and control of media player on your home network
   RemovePackage totem # Movie player for the GNOME desktop based on GStreamer
+  RemovePackage vino # A VNC server for the GNOME desktop
   RemovePackage yelp # Get help with GNOME
 
   AddPackage dconf-editor # dconf Editor
@@ -104,10 +105,4 @@ else
   cat >> "$(GetPackageOriginalFile zsh /etc/zsh/zprofile)" <<'EOF'
 [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
 EOF
-fi
-
-
-# Natural scrolling on Logitech keyboard.
-if [ "$HOSTNAME" == "badwater" ]; then
-  CopyFile /etc/X11/xorg.conf.d/30-touchpad.conf
 fi

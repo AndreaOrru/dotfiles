@@ -12,7 +12,6 @@ CopyFile /etc/profile.d/homebin.sh
 
 
 # Shell utilities.
-AddPackage --foreign 1password-cli # 1Password command line tool
 AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage htop # Interactive process viewer
 AddPackage mlocate # Merging locate/updatedb implementation
