@@ -18,8 +18,8 @@ stow secrets
 
 stow aconfmgr
 stow binaries
-stow chromium
 stow git
+stow kitty
 stow mpd
 stow mpv
 stow ncmpcpp
