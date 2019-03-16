@@ -3,6 +3,7 @@ AddPackage firefox-developer-edition # Developer Edition of the popular Firefox 
 AddPackage hunspell-en_GB # GB English hunspell dictionaries
 CopyFile /etc/profile.d/mozilla-xinput2.sh # Enable touchscreen on Firefox.
 
+AddPackage anki # Helps you remember facts (like words/phrases in a foreign language) efficiently
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL based terminal emulator
 AddPackage mpv # a free, open source, and cross-platform media player
