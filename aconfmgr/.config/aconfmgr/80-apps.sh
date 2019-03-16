@@ -1,6 +1,7 @@
 # Firefox.
 AddPackage firefox-developer-edition # Developer Edition of the popular Firefox web browser
 AddPackage hunspell-en_GB # GB English hunspell dictionaries
+AddPackage --foreign profile-cleaner # Reduces profile size by cleaning their sqlite databases.
 CopyFile /etc/profile.d/mozilla-xinput2.sh # Enable touchscreen on Firefox.
 
 AddPackage anki # Helps you remember facts (like words/phrases in a foreign language) efficiently

@@ -33,6 +33,7 @@ AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 if [ "$LAPTOP" == true ]; then
   AddPackageGroup gnome
   RemovePackage epiphany # A GNOME web browser based on the WebKit rendering engine
+  RemovePackage gnome-books # Access and organize your e-books on GNOME
   RemovePackage gnome-contacts # Contacts Manager for GNOME
   RemovePackage gnome-getting-started-docs # Help a new user get started in GNOME
   RemovePackage gnome-maps # A simple GNOME 3 maps application
@@ -42,6 +43,7 @@ if [ "$LAPTOP" == true ]; then
   RemovePackage gnome-terminal # The GNOME Terminal Emulator
   RemovePackage gnome-todo # Task manager for GNOME
   RemovePackage gnome-user-docs # User documentation for GNOME
+  RemovePackage gnome-weather # Access current weather conditions and forecasts
   RemovePackage orca # Screen reader for individuals who are blind or visually impaired
   RemovePackage rygel # UPnP AV MediaServer and MediaRenderer that allows you to easily share audio, video and pictures, and control of media player on your home network
   RemovePackage totem # Movie player for the GNOME desktop based on GStreamer
@@ -52,7 +54,7 @@ if [ "$LAPTOP" == true ]; then
   AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
 
   # MPD integration with Gnome.
-  AddPackage --foreign gnome-shell-extension-mediaplayer-git # A mediaplayer indicator for the Gnome Shell
+  AddPackage --foreign gnome-shell-extension-mpris-indicator-button-git # A mediaplayer indicator for the Gnome Shell
 
   # Gnome/GTK theme.
   AddPackage --foreign vimix-gtk-themes-git # Vimix is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
