@@ -6,6 +6,10 @@ RemovePackage xf86-video-vesa # X.org vesa video driver
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
+# Japanese fonts.
+AddPackage ttf-hanazono # A free Japanese kanji font, which contains about 78,685 characters (and 2 SPACEs) defined in ISO/IEC 10646 standard / the Unicode standard.
+AddPackage --foreign kanjistrokeorders-ttf # Kanji stroke order font
+AddPackage --foreign ttf-vlgothic # Japanese TrueType fonts from Vine Linux
 # Force CrOS fonts.
 CopyFile /etc/fonts/local.conf
 

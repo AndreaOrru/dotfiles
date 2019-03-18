@@ -86,5 +86,5 @@ switch-to-application-9=@as []
 toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
-enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'mprisindicatorbutton@JasonLG1979.github.io']
+enabled-extensions=['mprisindicatorbutton@JasonLG1979.github.io', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['kitty.desktop', 'emacs.desktop', 'firefox-developer-edition.desktop', 'org.gnome.Nautilus.desktop']
