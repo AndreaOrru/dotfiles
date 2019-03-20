@@ -47,6 +47,9 @@ alias e='emacsclient -n'
 alias em='emacsclient -nw'
 alias vi='em'
 
+# SSH stuff.
+alias socks='autossh -M 0 -o "ServerAliveInterval 45" -o "ServerAliveCountMax 2" -NCD 4711 me'
+
 
 #
 # Functions
