@@ -52,7 +52,7 @@ IgnorePath '/var/db/*'
 IgnorePath '/var/log/*'
 IgnorePath '/var/tmp/*'
 
-IgnorePath '/var/lib/AccountsService'
+IgnorePath '/var/lib/AccountsService/*'
 IgnorePath '/var/lib/NetworkManager'
 IgnorePath '/var/lib/boltd'
 IgnorePath '/var/lib/bluetooth'
