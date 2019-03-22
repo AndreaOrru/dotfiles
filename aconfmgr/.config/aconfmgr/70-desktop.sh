@@ -8,6 +8,7 @@ AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
 # Japanese fonts.
 AddPackage adobe-source-han-sans-jp-fonts # Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts
+AddPackage adobe-source-han-serif-jp-fonts # Adobe Source Han Serif Subset OTF - Japanese OpenType/CFF fonts
 AddPackage --foreign kanjistrokeorders-ttf # Kanji stroke order font
 AddPackage ttf-hanazono # A free Japanese kanji font, which contains about 78,685 characters (and 2 SPACEs) defined in ISO/IEC 10646 standard / the Unicode standard.
 AddPackage ttf-ibm-plex # IBM Plex Mono, Sans, and Serif

@@ -14,6 +14,7 @@ CopyFile /etc/profile.d/homebin.sh
 # Shell utilities.
 AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage htop # Interactive process viewer
+AddPackage lsof # Lists open files for running Unix processes
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage powerline # Statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome, i3 and Qtile
