@@ -37,6 +37,9 @@ if [ "$LAPTOP" == true ]; then
   CopyFile /etc/systemd/sleep.conf
   CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 
+  # Always react to lid events.
+  CopyFile /etc/systemd/logind.conf
+
 else
   # Bluetooth-related packages.
   AddPackage bluez # Daemons for the bluetooth protocol stack
