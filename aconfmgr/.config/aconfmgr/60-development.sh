@@ -36,3 +36,4 @@ AddPackage aws-cli # Universal Command Line Interface for Amazon Web Services
 AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps from the command line
 AddPackage postgresql # Sophisticated object-relational DBMS
 AddPackage redis # Advanced key-value store
+AddPackage yarn # Fast, reliable, and secure dependency management
