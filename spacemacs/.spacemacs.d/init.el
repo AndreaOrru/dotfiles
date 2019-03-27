@@ -61,6 +61,7 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      org
+     react
      semantic
      (shell :variables
             shell-default-height 30
