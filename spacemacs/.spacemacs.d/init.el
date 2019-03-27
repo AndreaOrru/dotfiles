@@ -61,7 +61,8 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      org
-     react
+     (react :variables
+            node-add-modules-path t)
      semantic
      (shell :variables
             shell-default-height 30
