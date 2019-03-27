@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      multiple-cursors
      org
      (react :variables
+            javascript-fmt-tool 'prettier
             node-add-modules-path t)
      semantic
      (shell :variables
@@ -512,6 +513,8 @@ before packages are loaded."
   (spacemacs/set-leader-keys "RET"
     #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
 
+  ;; React mode prettyify on save.
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode)
   ;; React mode indenting.
   (setq-default js-indent-level 2
                 css-indent-offset 2
