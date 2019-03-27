@@ -511,6 +511,18 @@ before packages are loaded."
   (global-set-key (kbd "C-s") #'helm-swoop)
   (spacemacs/set-leader-keys "RET"
     #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
+
+  ;; React mode indenting.
+  (setq-default js-indent-level 2
+                css-indent-offset 2
+                web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2
+                web-mode-attr-indent-offset 2)
+  (with-eval-after-load 'web-mode
+    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
