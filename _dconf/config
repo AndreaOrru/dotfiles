@@ -66,6 +66,9 @@ play='<Super>space'
 previous='<Super>Left'
 screensaver='<Super>BackSpace'
 
+[org/gnome/settings-daemon/plugins/power]
+power-button-action='interactive'
+
 [org/gnome/settings-daemon/plugins/xsettings]
 antialiasing='rgba'
 hinting='slight'
