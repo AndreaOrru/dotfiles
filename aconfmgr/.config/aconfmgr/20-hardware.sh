@@ -37,8 +37,17 @@ if [ "$LAPTOP" == true ]; then
   CopyFile /etc/systemd/sleep.conf
   CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 
-  # Always react to lid events.
-  CopyFile /etc/systemd/logind.conf
+  # Fixes for suspension.
+  CopyFile /etc/systemd/logind.conf  # Always react to lid events.
+  # Shut down bluetooth before sleeping, restart after resume.
+  CopyFile /etc/systemd/system/bluetooth-resume.service
+  CopyFile /etc/systemd/system/bluetooth-sleep.service
+  CreateLink /etc/systemd/system/hibernate.target.wants/bluetooth-resume.service /etc/systemd/system/bluetooth-resume.service
+  CreateLink /etc/systemd/system/hibernate.target.wants/bluetooth-sleep.service /etc/systemd/system/bluetooth-sleep.service
+  CreateLink /etc/systemd/system/hybrid-sleep.target.wants/bluetooth-resume.service /etc/systemd/system/bluetooth-resume.service
+  CreateLink /etc/systemd/system/hybrid-sleep.target.wants/bluetooth-sleep.service /etc/systemd/system/bluetooth-sleep.service
+  CreateLink /etc/systemd/system/sleep.target.wants/bluetooth-sleep.service /etc/systemd/system/bluetooth-sleep.service
+  CreateLink /etc/systemd/system/suspend.target.wants/bluetooth-resume.service /etc/systemd/system/bluetooth-resume.service
 
 else
   # Bluetooth-related packages.

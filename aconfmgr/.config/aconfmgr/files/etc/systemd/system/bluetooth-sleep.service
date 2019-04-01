@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable Bluetooth module before sleep
+Before=sleep.target
+WantedBy=hibernate.target hybrid-sleep.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/modprobe -r btusb
+
+[Install]
+WantedBy=sleep.target hibernate.target hybrid-sleep.target
