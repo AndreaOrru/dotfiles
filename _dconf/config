@@ -4,6 +4,7 @@ xkb-options=['ctrl:nocaps', 'altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
 clock-show-date=true
+clock-show-weekday=true
 enable-animations=false
 gtk-im-module='ibus'
 gtk-theme='vimix-dark-laptop-ruby'
