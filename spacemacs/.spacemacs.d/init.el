@@ -2,11 +2,6 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
-;; Set global variables based on the hostname.
-(pcase (system-name)
-  ("manhattan" (setq large-screen nil))
-  (_           (setq large-screen t)))
-
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
@@ -47,31 +42,25 @@ This function should only modify configuration layer settings."
      (helm :variables
            helm-use-fuzzy nil)
      auto-completion
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t
-            c-c++-enable-clang-format-on-save t)
      (dash :variables
            helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
      git
      github
      html
-     lua
      markdown
      multiple-cursors
      org
+     (python :variables
+             python-enable-yapf-format-on-save t
+             python-sort-imports-on-save t)
      (react :variables
             javascript-fmt-tool 'prettier
             node-add-modules-path t)
-     semantic
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
-     (python :variables
-             python-enable-yapf-format-on-save t
-             python-sort-imports-on-save t)
      version-control
      vim-empty-lines
      vinegar
@@ -225,8 +214,8 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font `("Mononoki"
-                               :size ,(if large-screen 26 34)
+   dotspacemacs-default-font '("Mononoki"
+                               :size 34
                                :weight normal
                                :width normal)
 
@@ -368,7 +357,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers (if large-screen '(:enabled-for-modes prog-mode) nil)
+   dotspacemacs-line-numbers nil
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -500,11 +489,6 @@ before packages are loaded."
   (setq flycheck-display-errors-delay 0)
   (setq delete-by-moving-to-trash nil)
   (setq vc-follow-symlinks t)
-
-  ;; Open Helm inside splits instead of full width on wide screens.
-  (when large-screen
-    (setq-default helm-display-function #'helm-default-display-buffer)
-    (setq helm-split-window-inside-p t))
 
   ;; Key bindings.
   (global-set-key (kbd "C-x 2") #'split-window-below-and-focus)
