@@ -1,3 +1,7 @@
+##########
+#  Base  #
+##########
+
 # Base group.
 AddPackageGroup base
 AddPackage linux-zen # The Linux-zen kernel and modules
@@ -17,12 +21,16 @@ CopyFile /boot/loader/entries/arch-zen.conf 755
 CopyFile /etc/locale.conf
 CopyFile /etc/locale.gen
 
+# Miscellaneous.
 CopyFile /etc/modprobe.d/nowatchdog.conf          # Blacklisted modules.
-CopyFile /etc/sudoers                             # Sudo for wheel group.
 CopyFile /etc/sysctl.d/vm.conf                    # Kernel virtual memory options.
 CopyFile /etc/udev/rules.d/60-ioschedulers.rules  # BFQ by default.
 CopyFile /etc/vconsole.conf                       # Bigger console fonts.
 
+
+################
+#  Base Devel  #
+################
 
 # Base development group.
 AddPackageGroup base-devel
@@ -30,8 +38,14 @@ AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and 
 # Neovim is Vi.
 CreateLink /usr/local/bin/vi /usr/bin/nvim
 
+# Sudo for wheel group.
+CopyFile /etc/sudoers
 
-# Arch Linux specific tools.
+
+###################
+#  Arch Specific  #
+###################
+
 AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage --foreign agetpkg # Arch Linux Archive Get Package
 AddPackage --foreign aurvote # Tool to vote for favorite AUR packages
@@ -39,8 +53,9 @@ AddPackage --foreign downgrade # Bash script for downgrading one or more package
 AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 
-# Optimized compilation.
-CopyFile /etc/makepkg.conf
-# Pacman.
+# Pacman configuration.
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/mirrorlist
+
+# Optimized compilation, faster packaging.
+CopyFile /etc/makepkg.conf

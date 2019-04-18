@@ -1,8 +1,5 @@
 #!/bin/sh
 
-source ./env.sh
-
-
 #############
 #  Secrets  #
 #############
@@ -31,18 +28,3 @@ stow spacemacs
 
 ./_librespot/install.sh
 ./_zig/install.sh
-
-
-######################
-#  Machine specific  #
-######################
-
-if [ "$WORKSTATION" == true ]; then
-  stow awesome
-  stow compton
-  stow redshift
-  stow rofi
-  stow xdg
-  stow xinit
-  stow zathura
-fi

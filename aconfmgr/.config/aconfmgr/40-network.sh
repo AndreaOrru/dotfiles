@@ -1,11 +1,20 @@
-# Network-related shell utils.
+#####################
+#  Shell Utilities  #
+#####################
+
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage autossh # Automatically restart SSH sessions and tunnels
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
 AddPackage nmap # Utility for network discovery and security auditing
 AddPackage rsync # A file transfer program to keep remote files in sync
-AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 AddPackage wget # Network utility to retrieve files from the Web
+
+
+##############
+#  Firewall  #
+##############
+
+AddPackage ufw # Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 
 # Firewall service.
 CreateLink /etc/systemd/system/multi-user.target.wants/ufw.service /usr/lib/systemd/system/ufw.service
@@ -13,6 +22,11 @@ CreateLink /etc/systemd/system/multi-user.target.wants/ufw.service /usr/lib/syst
 CopyFile /etc/ufw/ufw.conf
 CopyFile /etc/ufw/user.rules
 CopyFile /etc/ufw/user6.rules
+
+
+####################
+#  NetworkManager  #
+####################
 
 AddPackage dhclient # A standalone DHCP client from the dhcp package
 AddPackage networkmanager # Network connection manager and user applications

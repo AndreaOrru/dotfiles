@@ -1,8 +1,0 @@
-rofi.font:  Mononoki 20
-rofi.theme: /usr/share/rofi/themes/gruvbox-dark-hard.rasi
-
-rofi.kb-row-up:   Control+k
-rofi.kb-row-down: Control+j
-
-rofi.kb-accept-entry:  Return
-rofi.kb-remove-to-eol:
