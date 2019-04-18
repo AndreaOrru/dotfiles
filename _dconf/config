@@ -9,6 +9,7 @@ enable-animations=false
 gtk-im-module='ibus'
 gtk-theme='vimix-dark-laptop-ruby'
 icon-theme='Arc'
+text-scaling-factor=1.10
 toolkit-accessibility=false
 
 [org/gnome/desktop/peripherals/keyboard]
