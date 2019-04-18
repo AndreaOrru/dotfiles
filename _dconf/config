@@ -15,8 +15,11 @@ toolkit-accessibility=false
 delay=uint32 200
 repeat-interval=uint32 17
 
+[org/gnome/desktop/peripherals/mouse]
+speed=0.45
+
 [org/gnome/desktop/peripherals/touchpad]
-speed=0.40
+speed=0.45
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
