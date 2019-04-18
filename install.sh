@@ -16,6 +16,7 @@ stow secrets
 stow aconfmgr
 stow binaries
 stow git
+stow gnome
 stow kitty
 stow mpd
 stow mpv
