@@ -23,11 +23,12 @@ AddPackage mypy # Optional static typing for Python 2 and 3 (PEP484)
 AddPackage --foreign python-autoflake # Removes unused imports and unused variables
 AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
 AddPackage --foreign python-importmagic # Automatically manage imports in Python
-AddPackage python-ipdb # IPython-enabled pdb
 AddPackage python-isort # A Python utility / library to sort Python imports.
 AddPackage python-mutagen # An audio metadata tag reader and writer library for Python 3
 AddPackage --foreign python-spotipy-git # Simple client for the Spotify Web API
+AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
+AddPackage --foreign python-pyrepl # A library for building flexible command line interfaces
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage yapf # Python style guide checker
 
