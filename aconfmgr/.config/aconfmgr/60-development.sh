@@ -1,4 +1,5 @@
 # Developer tools.
+AddPackage --foreign asar-git # SNES assembler for applying patches to existing ROMs or creating new ROMs from scratch
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage --foreign emacs-git # GNU Emacs. Development.
@@ -8,7 +9,7 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage qemu # A generic and open source machine emulator and virtualizer
-AddPackage rust # Systems programming language focused on safety, speed and concurrency
+AddPackage rustup # The Rust toolchain installer
 AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
