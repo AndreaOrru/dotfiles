@@ -9,7 +9,7 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage qemu # A generic and open source machine emulator and virtualizer
-AddPackage rustup # The Rust toolchain installer
+AddPackage rust # Systems programming language focused on safety, speed and concurrency
 AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
