@@ -57,8 +57,6 @@ This function should only modify configuration layer settings."
      (react :variables
             javascript-fmt-tool 'prettier
             node-add-modules-path t)
-     (rust :variables
-           rust-format-on-save t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
