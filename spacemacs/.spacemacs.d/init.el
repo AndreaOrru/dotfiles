@@ -57,6 +57,8 @@ This function should only modify configuration layer settings."
      (react :variables
             javascript-fmt-tool 'prettier
             node-add-modules-path t)
+     (rust :variables
+           rust-format-on-save t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -196,8 +198,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(gruvbox-dark-soft
-                         gruvbox-light-soft)
+   dotspacemacs-themes '(gruvbox
+                         gruvbox-light-medium)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -215,7 +217,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Mononoki"
-                               :size 34
+                               :size 38
                                :weight normal
                                :width normal)
 

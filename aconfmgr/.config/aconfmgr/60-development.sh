@@ -1,4 +1,5 @@
 # Developer tools.
+AddPackage --foreign asar-git # SNES assembler for applying patches to existing ROMs or creating new ROMs from scratch
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage --foreign emacs-git # GNU Emacs. Development.
@@ -8,7 +9,7 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
 AddPackage qemu # A generic and open source machine emulator and virtualizer
-AddPackage rust # Systems programming language focused on safety, speed and concurrency
+AddPackage rustup # The Rust toolchain installer
 AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
@@ -23,11 +24,12 @@ AddPackage mypy # Optional static typing for Python 2 and 3 (PEP484)
 AddPackage --foreign python-autoflake # Removes unused imports and unused variables
 AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
 AddPackage --foreign python-importmagic # Automatically manage imports in Python
-AddPackage python-ipdb # IPython-enabled pdb
 AddPackage python-isort # A Python utility / library to sort Python imports.
 AddPackage python-mutagen # An audio metadata tag reader and writer library for Python 3
 AddPackage --foreign python-spotipy-git # Simple client for the Spotify Web API
+AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
+AddPackage --foreign python-pyrepl # A library for building flexible command line interfaces
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage yapf # Python style guide checker
 

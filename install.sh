@@ -1,8 +1,5 @@
 #!/bin/sh
 
-source ./env.sh
-
-
 #############
 #  Secrets  #
 #############
@@ -19,10 +16,12 @@ stow secrets
 stow aconfmgr
 stow binaries
 stow git
+stow gnome
 stow kitty
 stow mpd
 stow mpv
 stow ncmpcpp
+stow pdbpp
 stow tmux
 stow zsh
 
@@ -31,18 +30,3 @@ stow spacemacs
 
 ./_librespot/install.sh
 ./_zig/install.sh
-
-
-######################
-#  Machine specific  #
-######################
-
-if [ "$WORKSTATION" == true ]; then
-  stow awesome
-  stow compton
-  stow redshift
-  stow rofi
-  stow xdg
-  stow xinit
-  stow zathura
-fi

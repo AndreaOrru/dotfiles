@@ -1,9 +1,6 @@
-# Time synchronization.
-CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
-CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
-# Filesystem TRIM for SSD drives.
-CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
-
+##############
+#  Defaults  #
+##############
 
 # Systemd defaults.
 CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
@@ -18,7 +15,11 @@ CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib
 CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
 
 
-# Silent boot: enable quiet fsck.
+#################
+#  Silent boot  #
+#################
+
+# Enable silent fsck (was disabled in mkinitcpio).
 cat > "$(CreateFile /etc/systemd/system/systemd-fsck-root.service)" <<EOF
 $(AconfGetPackageOriginalFile systemd /usr/lib/systemd/system/systemd-fsck-root.service)
 StandardOutput=null
@@ -30,3 +31,14 @@ $(AconfGetPackageOriginalFile systemd /usr/lib/systemd/system/systemd-fsck@.serv
 StandardOutput=null
 StandardError=journal+console
 EOF
+
+
+###################
+#  Miscellaneous  #
+###################
+
+# Time synchronization.
+CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
+CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
+# Filesystem TRIM for SSD drives.
+CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
