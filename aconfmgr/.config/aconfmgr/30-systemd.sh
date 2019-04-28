@@ -37,6 +37,9 @@ EOF
 #  Miscellaneous  #
 ###################
 
+# Disable core dumps.
+CopyFile /etc/systemd/coredump.conf
+
 # Time synchronization.
 CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
 CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
