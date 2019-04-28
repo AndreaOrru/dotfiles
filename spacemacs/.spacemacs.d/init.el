@@ -39,14 +39,14 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (helm :variables
-           helm-use-fuzzy nil)
      auto-completion
      (dash :variables
            helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
      git
      github
+     (helm :variables
+           helm-use-fuzzy nil)
      html
      markdown
      multiple-cursors
