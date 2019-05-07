@@ -52,7 +52,7 @@ This function should only modify configuration layer settings."
      multiple-cursors
      org
      (python :variables
-             python-enable-yapf-format-on-save t
+             python-format-on-save t
              python-sort-imports-on-save t)
      (react :variables
             javascript-fmt-tool 'prettier
