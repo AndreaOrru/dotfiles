@@ -196,8 +196,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(gruvbox
-                         gruvbox-light-medium)
+   dotspacemacs-themes '(gruvbox-dark-hard
+                         gruvbox-light-hard)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -206,7 +206,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.25)
+   dotspacemacs-mode-line-theme '(vim-powerline :separator arrow :separator-scale 1.25)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -307,7 +307,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
 
    ;; If non-nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
@@ -476,9 +476,8 @@ before packages are loaded."
                                     ((shift) . 1)))
 
   ;; Interface customization.
-  (spacemacs/toggle-mode-line-minor-modes-off)  ;; Don't show minor modes.
-  (setq git-gutter-fr+-side 'left-fringe)       ;; Show Git indicator on the left.
-  (fringe-mode '(nil . 0))                      ;; Only show fringe on the left.
+  (setq git-gutter-fr+-side 'left-fringe)  ;; Show Git indicator on the left.
+  (fringe-mode '(nil . 0))                 ;; Only show fringe on the left.
 
   ;; Editing behaviour.
   (global-company-mode t)  ;; Autocompletion everywhere.
