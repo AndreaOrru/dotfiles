@@ -5,6 +5,6 @@ Name=kitty
 GenericName=Terminal emulator
 Comment=A fast, feature full, GPU based terminal emulator
 TryExec=kitty
-Exec=kitty
+Exec=sh -c "sleep 0.5 && kitty tmux"
 Icon=kitty
 Categories=System;TerminalEmulator;
