@@ -82,6 +82,9 @@ sleep-inactive-ac-type='nothing'
 antialiasing='rgba'
 hinting='slight'
 
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['kitty.desktop:1', 'firefox-developer-edition.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
+
 [org/gnome/shell/keybindings]
 switch-to-application-1=@as []
 switch-to-application-2=@as []
@@ -95,5 +98,5 @@ switch-to-application-9=@as []
 toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
-enabled-extensions=['mprisindicatorbutton@JasonLG1979.github.io', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['mprisindicatorbutton@JasonLG1979.github.io', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['kitty.desktop', 'emacs.desktop', 'firefox-developer-edition.desktop', 'org.gnome.Nautilus.desktop']
