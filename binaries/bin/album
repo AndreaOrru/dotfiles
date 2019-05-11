@@ -1,4 +1,0 @@
-#!/bin/sh
-
-spotify.py search "$@" | fzf --tac --with-nth=2.. | cut -f 1 -d ' ' | xargs spotify.py download
-

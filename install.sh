@@ -18,9 +18,7 @@ stow binaries
 stow git
 stow gnome
 stow kitty
-stow mpd
 stow mpv
-stow ncmpcpp
 stow pdbpp
 stow tmux
 stow zsh
@@ -28,5 +26,4 @@ stow zsh
 ./_emacs/install.sh
 stow spacemacs
 
-./_librespot/install.sh
 ./_zig/install.sh
