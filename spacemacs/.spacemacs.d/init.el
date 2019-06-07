@@ -40,6 +40,10 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-format-on-save t
+            c-c++-enable-clang-support t)
      (dash :variables
            helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
@@ -55,8 +59,10 @@ This function should only modify configuration layer settings."
              python-format-on-save t
              python-sort-imports-on-save t)
      (react :variables
+            node-add-modules-path t
             javascript-fmt-tool 'prettier
-            node-add-modules-path t)
+            js2-mode-show-parse-errors nil
+            js2-mode-show-strict-warnings nil)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
