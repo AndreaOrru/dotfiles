@@ -12,8 +12,10 @@ AddPackage qemu # A generic and open source machine emulator and virtualizer
 AddPackage scons # Extensible Python-based build utility
 
 # C/C++.
+AddPackage catch2 # Modern, C++-native, header-only, test framework for unit-tests, TDD and BDD
 AddPackage clang # C language family frontend for LLVM
 AddPackage --foreign cppclean # Find problems in C++ source that slow development of large code bases.
+AddPackage fmt # Open-source formatting library for C++
 AddPackage llvm # Collection of modular and reusable compiler and toolchain technologies
 
 # Python.
