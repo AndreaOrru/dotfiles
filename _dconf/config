@@ -83,7 +83,7 @@ antialiasing='rgba'
 hinting='slight'
 
 [org/gnome/shell/extensions/auto-move-windows]
-application-list=['kitty.desktop:1', 'firefox.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
+application-list=['alacritty.desktop:1', 'firefox.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
 
 [org/gnome/shell/keybindings]
 switch-to-application-1=@as []
@@ -99,4 +99,4 @@ toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
 enabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['kitty.desktop', 'emacs.desktop', 'firefox-developer-edition.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']
+favorite-apps=['alacritty.desktop', 'emacs.desktop', 'firefox-developer-edition.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']

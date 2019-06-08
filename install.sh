@@ -17,7 +17,6 @@ stow aconfmgr
 stow binaries
 stow git
 stow gnome
-stow kitty
 stow mpv
 stow pdbpp
 stow tmux
