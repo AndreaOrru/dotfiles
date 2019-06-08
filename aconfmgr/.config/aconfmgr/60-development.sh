@@ -28,7 +28,6 @@ AddPackage --foreign python-importmagic # Automatically manage imports in Python
 AddPackage python-isort # A Python utility / library to sort Python imports.
 AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
-AddPackage --foreign python-pyrepl # A library for building flexible command line interfaces
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage yapf # Python style guide checker
 
