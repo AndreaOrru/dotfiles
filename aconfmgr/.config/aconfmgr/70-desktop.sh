@@ -13,7 +13,11 @@ CopyFile /etc/profile.d/wayland.sh
 # Wayland support for QT.
 AddPackage qt5-wayland # Provides APIs for Wayland
 
-# Drivers.
+# Caps -> Escape.
+AddPackage --foreign caps2esc # caps2esc: transforming the most useless key ever in the most useful one
+CreateLink /etc/systemd/system/multi-user.target.wants/caps2esc.service /usr/lib/systemd/system/caps2esc.service
+
+# Drivers for accelerated video decoding.
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 CopyFile /etc/profile.d/libva-driver.sh
