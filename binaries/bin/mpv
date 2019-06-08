@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gnome-session-inhibit /usr/bin/mpv "$@"
