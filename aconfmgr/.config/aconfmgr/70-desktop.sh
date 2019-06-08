@@ -70,10 +70,6 @@ AddPackage arc-icon-theme # Arc icon theme. Official releases only.
 #  GDM  #
 #########
 
-# Disable Wayland, map Caps Lock to Ctrl/Escape.
-CopyFile /etc/gdm/custom.conf
-CopyFile /etc/xdg/autostart/xcape.desktop
-
 # Gnome / GDM and related services.
 CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/gdm.service
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
