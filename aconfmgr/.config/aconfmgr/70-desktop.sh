@@ -1,17 +1,19 @@
-##########
-#  Xorg  #
-##########
+####################
+#  Wayland + Xorg  #
+####################
 
-AddPackageGroup xorg
-RemovePackage xf86-video-vesa # X.org vesa video driver
-
-# Xorg utilities.
-AddPackage xcape # Configure modifier keys to act as other keys when pressed and released on their own
+# Support legacy X applications.
+AddPackage xorg-server-xwayland # run X clients under wayland
+# X clipboard utilities (that seem to work on Wayland).
 AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 
+# Environment variables to enable Wayland everywhere.
+CopyFile /etc/profile.d/wayland.sh
+# Wayland support for QT.
+AddPackage qt5-wayland # Provides APIs for Wayland
+
 # Drivers.
-AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 CopyFile /etc/profile.d/libva-driver.sh

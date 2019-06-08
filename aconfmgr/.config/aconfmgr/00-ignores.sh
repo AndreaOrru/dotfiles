@@ -98,3 +98,8 @@ IgnorePath '/var/lib/gdm/Pictures'
 IgnorePath '/var/lib/gdm/Public'
 IgnorePath '/var/lib/gdm/Templates'
 IgnorePath '/var/lib/gdm/Videos'
+
+# FIX: temporary.
+IgnorePath '/usr/lib/libsnesfilter.so.1'
+IgnorePath '/usr/lib/libsnesreader.so.1'
+IgnorePath '/usr/lib/libsupergameboy.so.1'
