@@ -28,10 +28,17 @@ CopyFile /etc/ufw/user6.rules
 #  NetworkManager  #
 ####################
 
-AddPackage dhclient # A standalone DHCP client from the dhcp package
 AddPackage networkmanager # Network connection manager and user applications
 
-# NetworkManager.
+# Use dhclient for DHCP.
+AddPackage dhclient # A standalone DHCP client from the dhcp package
+CopyFile /etc/NetworkManager/conf.d/dhcp-client.conf
+
+# Use iwd instead of wpa_supplicant as backend.
+AddPackage iwd # Internet Wireless Daemon
+CopyFile /etc/NetworkManager/conf.d/wifi-backend.conf
+
+# NetworkManager services.
 CreateLink /etc/systemd/system/dbus-org.freedesktop.NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
 CreateLink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service /usr/lib/systemd/system/NetworkManager-dispatcher.service
 CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
