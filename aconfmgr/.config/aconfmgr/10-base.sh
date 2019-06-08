@@ -4,7 +4,7 @@
 
 # Base group.
 AddPackageGroup base
-AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler v0.190 Sixth Gen Intel Core i3/i5/i7 optimized.
+AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler v0.192 Sixth Gen Intel Core i3/i5/i7 optimized.
 RemovePackage jfsutils # JFS filesystem utilities
 RemovePackage linux # The Linux kernel and modules
 RemovePackage nano # Pico editor clone with enhancements
