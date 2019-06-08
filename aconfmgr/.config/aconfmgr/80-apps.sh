@@ -1,5 +1,5 @@
 # Firefox.
-AddPackage firefox-developer-edition # Developer Edition of the popular Firefox web browser
+AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage hunspell-en_GB # GB English hunspell dictionaries
 AddPackage --foreign profile-cleaner # Reduces profile size by cleaning their sqlite databases.
 CopyFile /etc/profile.d/mozilla-xinput2.sh # Enable touchscreen on Firefox.

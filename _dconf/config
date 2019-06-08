@@ -83,7 +83,7 @@ antialiasing='rgba'
 hinting='slight'
 
 [org/gnome/shell/extensions/auto-move-windows]
-application-list=['kitty.desktop:1', 'firefox-developer-edition.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
+application-list=['kitty.desktop:1', 'firefox.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
 
 [org/gnome/shell/keybindings]
 switch-to-application-1=@as []
