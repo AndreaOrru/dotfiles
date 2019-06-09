@@ -14,6 +14,7 @@ stow secrets
 ############
 
 stow aconfmgr
+stow alacritty
 stow binaries
 stow git
 stow gnome
