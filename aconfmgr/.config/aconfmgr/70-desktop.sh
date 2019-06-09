@@ -6,8 +6,7 @@
 AddPackage xorg-server-xwayland # run X clients under wayland
 # Clipboard utilities.
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
-AddPackage xclip # Command line interface to the X11 clipboard
-AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
+AddPackage --foreign wl-clipboard-x11 # A wrapper to use wl-clipboard as a drop-in replacement to X11 clipboard tools
 
 # Environment variables to enable Wayland everywhere.
 CopyFile /etc/profile.d/wayland.sh
