@@ -19,10 +19,10 @@ delay=uint32 200
 repeat-interval=uint32 17
 
 [org/gnome/desktop/peripherals/mouse]
-speed=0.45
+speed=0.40
 
 [org/gnome/desktop/peripherals/touchpad]
-speed=0.45
+speed=0.40
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
