@@ -4,7 +4,8 @@
 
 # Support legacy X applications.
 AddPackage xorg-server-xwayland # run X clients under wayland
-# X clipboard utilities (that seem to work on Wayland).
+# Clipboard utilities.
+AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 
