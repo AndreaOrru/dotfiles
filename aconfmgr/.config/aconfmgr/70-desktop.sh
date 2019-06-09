@@ -14,8 +14,10 @@ CopyFile /etc/profile.d/wayland.sh
 # Wayland support for QT.
 AddPackage qt5-wayland # Provides APIs for Wayland
 
-# Caps -> Escape.
-AddPackage --foreign interception-caps2esc # caps2esc
+# Caps -> Escape/CTRL.
+AddPackage --foreign interception-caps2esc # caps2esc: transforming the most useless key ever in the most useful one
+CopyFile /etc/udevmon.yaml
+CreateLink /etc/systemd/system/multi-user.target.wants/udevmon.service /usr/lib/systemd/system/udevmon.service
 
 # Drivers for accelerated video decoding.
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
