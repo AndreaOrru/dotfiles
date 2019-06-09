@@ -32,6 +32,9 @@ StandardOutput=null
 StandardError=journal+console
 EOF
 
+# Don't wait for devices to settle.
+CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
+
 
 ###################
 #  Miscellaneous  #
