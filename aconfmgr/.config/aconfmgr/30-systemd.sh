@@ -1,3 +1,14 @@
+####################
+#  Sane behaviour  #
+####################
+
+# No stop jobs...
+CopyFile /etc/systemd/logind.conf
+CopyFile /etc/systemd/system.conf
+# Don't wait for devices to settle.
+CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
+
+
 ##############
 #  Defaults  #
 ##############
@@ -31,9 +42,6 @@ $(AconfGetPackageOriginalFile systemd /usr/lib/systemd/system/systemd-fsck@.serv
 StandardOutput=null
 StandardError=journal+console
 EOF
-
-# Don't wait for devices to settle.
-CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
 
 
 ###################

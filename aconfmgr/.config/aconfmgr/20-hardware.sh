@@ -61,8 +61,6 @@ CopyFile /etc/default/tlp
 # Suspend then hibernate after some time.
 CopyFile /etc/systemd/sleep.conf
 CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
-# Always react to lid events.
-CopyFile /etc/systemd/logind.conf
 
 # Shut down bluetooth before sleeping, restart after resume.
 CopyFile /etc/systemd/system/bluetooth-resume.service
