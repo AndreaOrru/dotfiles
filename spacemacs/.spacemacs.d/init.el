@@ -460,6 +460,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; Save custom variables in a separate file.
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
   (when (file-exists-p custom-file) (load custom-file))
+
+  ;; Increase line spacing.
+  (setq-default line-spacing 1)
   )
 
 (defun dotspacemacs/user-load ()
