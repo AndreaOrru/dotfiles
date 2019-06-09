@@ -15,8 +15,7 @@ CopyFile /etc/profile.d/wayland.sh
 AddPackage qt5-wayland # Provides APIs for Wayland
 
 # Caps -> Escape.
-AddPackage --foreign caps2esc # caps2esc: transforming the most useless key ever in the most useful one
-CreateLink /etc/systemd/system/multi-user.target.wants/caps2esc.service /usr/lib/systemd/system/caps2esc.service
+AddPackage --foreign interception-caps2esc # caps2esc
 
 # Drivers for accelerated video decoding.
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
