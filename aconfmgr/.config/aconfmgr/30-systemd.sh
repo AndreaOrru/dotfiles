@@ -5,6 +5,7 @@
 # No stop jobs...
 CopyFile /etc/systemd/logind.conf
 CopyFile /etc/systemd/system.conf
+CopyFile /etc/systemd/user.conf
 # Don't wait for devices to settle.
 CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
 

@@ -18,6 +18,7 @@ IgnorePath '/etc/os-release'
 IgnorePath '/etc/pacman.d/gnupg/*'
 IgnorePath '/etc/shells'
 IgnorePath '/etc/ssl/certs'
+IgnorePath '/etc/udev/hwdb.bin'
 
 IgnorePath '/etc/group'
 IgnorePath '/etc/group-'
