@@ -19,6 +19,7 @@ delay=uint32 200
 repeat-interval=uint32 17
 
 [org/gnome/desktop/peripherals/mouse]
+natural-scroll=true
 speed=0.30
 
 [org/gnome/desktop/peripherals/touchpad]
