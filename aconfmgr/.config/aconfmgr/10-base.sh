@@ -4,7 +4,7 @@
 
 # Base group.
 AddPackageGroup base
-AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler v0.192 Sixth Gen Intel Core i3/i5/i7 optimized.
+AddPackage linux-zen # The Linux-zen kernel and modules
 RemovePackage jfsutils # JFS filesystem utilities
 RemovePackage linux # The Linux kernel and modules
 RemovePackage nano # Pico editor clone with enhancements
@@ -15,7 +15,7 @@ RemovePackage xfsprogs # XFS filesystem utilities
 
 # Boot loader.
 CopyFile /boot/loader/loader.conf 755
-CopyFile /boot/loader/entries/arch-ck.conf 755
+CopyFile /boot/loader/entries/arch-zen.conf 755
 
 # Localization.
 CopyFile /etc/locale.conf
