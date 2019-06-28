@@ -23,13 +23,13 @@ AddPackage flake8 # The modular source code checker
 AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage mypy # Optional static typing for Python 2 and 3 (PEP484)
 AddPackage --foreign python-autoflake # Removes unused imports and unused variables
+AddPackage python-black # Uncompromising Python code formatter
 AddPackage --foreign python-flake8-mypy # A plugin for flake8 integrating mypy.
 AddPackage --foreign python-importmagic # Automatically manage imports in Python
 AddPackage python-isort # A Python utility / library to sort Python imports.
 AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-pip # The PyPA recommended tool for installing Python packages
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
-AddPackage yapf # Python style guide checker
 
 # Web development.
 AddPackage aws-cli # Universal Command Line Interface for Amazon Web Services
