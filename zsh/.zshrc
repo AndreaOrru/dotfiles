@@ -35,6 +35,7 @@ alias i='ipython'
 alias open='xdg-open'
 alias p='yay'
 alias pastebinit='pastebinit -b paste.debian.net'
+alias pipdev='pip install -e ".[dev]"'
 alias ta='tmux attach -t'
 
 # Git commands.

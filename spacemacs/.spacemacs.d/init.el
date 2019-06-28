@@ -57,6 +57,7 @@ This function should only modify configuration layer settings."
      org
      (python :variables
              python-format-on-save t
+             python-formatter 'black
              python-sort-imports-on-save t)
      (react :variables
             node-add-modules-path t
