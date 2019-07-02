@@ -99,4 +99,4 @@ toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
 enabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['alacritty.desktop', 'emacs.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']
+favorite-apps=['termite.desktop', 'emacs.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']

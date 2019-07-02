@@ -14,12 +14,12 @@ stow secrets
 ############
 
 stow aconfmgr
-stow alacritty
 stow binaries
 stow git
 stow gnome
 stow mpv
 stow pdbpp
+stow termite
 stow tmux
 stow zsh
 

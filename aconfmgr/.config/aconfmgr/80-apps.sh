@@ -14,11 +14,10 @@ AddPackage wine_gecko # Wine's built-in replacement for Microsoft's Internet Exp
 AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
 
 # Others.
-AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
-AddPackage alacritty-terminfo # Terminfo files for the alacritty terminal emulator
 AddPackage anki # Helps you remember facts (like words/phrases in a foreign language) efficiently
 AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+AddPackage termite # A simple VTE-based terminal
 AddPackage youtube-viewer # Command line utility for viewing YouTube videos
