@@ -218,7 +218,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.125)
+   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.1)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -477,7 +477,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (when (file-exists-p custom-file) (load custom-file))
 
   ;; Increase line spacing.
-  (setq-default line-spacing 1)
+  (setq-default line-spacing 3)
   )
 
 (defun dotspacemacs/user-load ()
