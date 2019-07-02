@@ -218,7 +218,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(vim-powerline :separator arrow :separator-scale 1.25)
+   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.125)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -332,7 +332,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
    ;; borderless fullscreen. (default nil)
-   dotspacemacs-undecorated-at-startup t
+   dotspacemacs-undecorated-at-startup nil
 
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -500,8 +500,9 @@ before packages are loaded."
                                     ((shift) . 1)))
 
   ;; Interface customization.
-  (setq git-gutter-fr+-side 'left-fringe)  ;; Show Git indicator on the left.
-  (fringe-mode '(nil . 0))                 ;; Only show fringe on the left.
+  (spacemacs/toggle-mode-line-minor-modes-off)  ;; Don't show minor modes.
+  (setq git-gutter-fr+-side 'left-fringe)       ;; Show Git indicator on the left.
+  (fringe-mode '(nil . 0))                      ;; Only show fringe on the left.
 
   ;; Editing behaviour.
   (global-company-mode t)  ;; Autocompletion everywhere.
