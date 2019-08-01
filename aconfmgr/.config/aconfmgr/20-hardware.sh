@@ -16,9 +16,8 @@ CreateLink /etc/systemd/system/systemd-rfkill.socket /dev/null
 
 CopyFile /etc/default/tlp
 
-# Suspend then hibernate after a while.
-CopyFile /etc/systemd/sleep.conf
-CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
+# Lid switch behaviour.
+CopyFile /etc/systemd/logind.conf
 
 
 ###############
@@ -71,3 +70,9 @@ CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd
 
 # Allow TrackPoint and touchpad to work together.
 CopyFile /etc/modprobe.d/psmouse.conf
+
+# Firmware upgrade.
+AddPackage fwupd # A simple daemon to allow session software to update firmware
+AddPackage tpm2-abrmd # Trusted Platform Module 2.0 Access Broker and Resource Management Daemon
+AddPackage tpm2-tools # Trusted Platform Module 2.0 tools based on tpm2-tss
+CopyFile /etc/pacman.d/hooks/fwupd-to-esp.hook

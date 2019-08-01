@@ -89,6 +89,7 @@ screensaver='<Super>BackSpace'
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
+sleep-inactive-ac-type='nothing'
 
 [org/gnome/settings-daemon/plugins/xsettings]
 antialiasing='rgba'

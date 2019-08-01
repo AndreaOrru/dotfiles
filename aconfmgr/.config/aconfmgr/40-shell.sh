@@ -35,5 +35,6 @@ AddPackage unrar # The RAR uncompression program
 AddPackage alsa-utils # An alternative implementation of Linux sound support
 AddPackage imagemagick # An image viewing/manipulation program
 AddPackage mps-youtube # Terminal based YouTube jukebox with playlist management
+AddPackage pamixer # Pulseaudio command-line mixer like amixer
 AddPackage pulsemixer # CLI and curses mixer for pulseaudio
 AddPackage youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
