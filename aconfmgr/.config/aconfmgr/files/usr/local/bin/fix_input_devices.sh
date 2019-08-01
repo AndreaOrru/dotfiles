@@ -1,7 +1,7 @@
 #!/bin/sh
 
-systemctl restart udevmon &
+sudo systemctl restart udevmon &
 
-rmmod i2c_hid
+sudo rmmod i2c_hid
 sleep 2
-modprobe i2c_hid
+sudo modprobe i2c_hid

@@ -16,8 +16,9 @@ CreateLink /etc/systemd/system/systemd-rfkill.socket /dev/null
 
 CopyFile /etc/default/tlp
 
-# Lid switch behaviour.
-CopyFile /etc/systemd/logind.conf
+# Suspend then hibernate after a while.
+CopyFile /etc/systemd/sleep.conf
+CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 
 
 ######################
@@ -28,10 +29,11 @@ CopyFile /etc/systemd/logind.conf
 CopyFile /etc/modprobe.d/psmouse.conf
 
 # Restore input devices state after resuming from hibernation.
-CopyFile /etc/modprobe.d/no-i2c_i801.conf
 CopyFile /usr/local/bin/fix_input_devices.sh 755
 CopyFile /etc/systemd/system/fix-input-devices.service
 CreateLink /etc/systemd/system/hibernate.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
+CreateLink /etc/systemd/system/hybrid-sleep.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
+CreateLink /etc/systemd/system/suspend.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
 
 
 ###############

@@ -36,5 +36,6 @@ AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-b
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 
 # No stop jobs.
+CopyFile /etc/systemd/logind.conf
 CopyFile /etc/systemd/system.conf
 CopyFile /etc/systemd/user.conf

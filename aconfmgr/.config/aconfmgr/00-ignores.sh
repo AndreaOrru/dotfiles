@@ -21,6 +21,7 @@ IgnorePath '/etc/pacman.d/gnupg/*'
 IgnorePath '/etc/shells'
 IgnorePath '/etc/ssl/certs/*'
 IgnorePath '/etc/udev/hwdb.bin'
+IgnorePath '/etc/xdg/nvim/.netrwhist'
 IgnorePath '/etc/xml/catalog'
 
 IgnorePath '/etc/systemd/system/getty.target.wants/getty@tty1.service'

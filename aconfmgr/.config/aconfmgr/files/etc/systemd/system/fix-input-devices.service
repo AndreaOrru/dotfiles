@@ -1,10 +1,10 @@
 [Unit]
 Description=Fix input devices after hibernation
-After=hibernate.target
+After=suspend.target hibernate.target hybrid-sleep.target
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/fix_input_devices.sh
 
 [Install]
-WantedBy=hibernate.target
+WantedBy=suspend.target hibernate.target hybrid-sleep.target
