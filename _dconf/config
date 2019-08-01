@@ -1,3 +1,9 @@
+[org/gnome/desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/Road.jpg'
+primary-color='#ffffff'
+secondary-color='#000000'
+
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
 xkb-options=['altwin:swap_lalt_lwin']
@@ -8,9 +14,8 @@ clock-show-weekday=true
 document-font-name='Cantarell 12'
 enable-animations=false
 font-name='Cantarell 12'
-gtk-im-module='ibus'
-gtk-theme='vimix-dark-laptop-ruby'
-icon-theme='Arc'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Adwaita-dark'
 monospace-font-name='Source Code Pro 11'
 toolkit-accessibility=false
 
@@ -25,6 +30,12 @@ speed=0.30
 speed=0.30
 tap-to-click=true
 two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/screensaver]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/Road.jpg'
+primary-color='#ffffff'
+secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
 disable-external=true
@@ -76,14 +87,10 @@ screensaver='<Super>BackSpace'
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
-sleep-inactive-ac-type='nothing'
 
 [org/gnome/settings-daemon/plugins/xsettings]
 antialiasing='rgba'
 hinting='slight'
-
-[org/gnome/shell/extensions/auto-move-windows]
-application-list=['firefox.desktop:2', 'emacs.desktop:3', 'spotify.desktop:4']
 
 [org/gnome/shell/keybindings]
 switch-to-application-1=@as []
@@ -98,5 +105,5 @@ switch-to-application-9=@as []
 toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
-enabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['termite.desktop', 'emacs.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']
+enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['termite.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']

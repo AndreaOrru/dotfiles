@@ -1,11 +1,12 @@
-# Add ~/bin to the PATHs.
-CopyFile /etc/profile.d/homebin.sh
+# Use neovim as vi.
+AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
+CreateLink /usr/local/bin/vi /usr/bin/nvim
 
 # Shell and shell extensions.
 AddPackage autojump # A faster way to navigate your filesystem from the command line
 AddPackage --foreign direnv # a shell extension that manages your environment
-AddPackage grml-zsh-config # grml's zsh setup
 AddPackage fzf # Command-line fuzzy finder
+AddPackage grml-zsh-config # grml's zsh setup
 AddPackage zsh # A very advanced and programmable command interpreter (shell) for UNIX
 AddPackage zsh-completions # Additional completion definitions for Zsh
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
@@ -17,7 +18,7 @@ AddPackage lsof # Lists open files for running Unix processes
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
 AddPackage powerline # Statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome, i3 and Qtile
-AddPackage ranger # A simple, vim-like file manager
+AddPackage ranger # Simple, vim-like file manager
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage stow # Manage installation of multiple softwares in the same directory tree
 AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
@@ -27,9 +28,9 @@ AddPackage tree # A directory listing program displaying a depth indented list o
 # Archives.
 AddPackage atool # A script for managing file archives of various types
 AddPackage p7zip # Command-line file archiver with high compression ratio
-AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
 AddPackage unzip # For extracting and viewing files in .zip archives
+AddPackage zip # Compressor/archiver for creating and modifying zipfiles
 
 # Media.
 AddPackage alsa-utils # An alternative implementation of Linux sound support

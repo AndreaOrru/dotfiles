@@ -69,8 +69,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 # Values are given in order of increasing power saving.
 # Note: Intel Skylake or newer CPU and Kernel >= 4.10 required.
 # Default: <none>
-CPU_HWP_ON_AC=performance
-CPU_HWP_ON_BAT=balance_performance
+CPU_HWP_ON_AC=balance_performance
+CPU_HWP_ON_BAT=balance_power
 
 # Set Intel P-state performance: 0..100 (%).
 # Limit the max/min P-state to control the power dissipation of the CPU.
@@ -80,7 +80,7 @@ CPU_HWP_ON_BAT=balance_performance
 #CPU_MIN_PERF_ON_AC=0
 #CPU_MAX_PERF_ON_AC=100
 #CPU_MIN_PERF_ON_BAT=0
-CPU_MAX_PERF_ON_BAT=100
+#CPU_MAX_PERF_ON_BAT=30
 
 # Set the CPU "turbo boost" feature: 0=disable, 1=allow
 # Requires an Intel Core i processor.
@@ -89,13 +89,13 @@ CPU_MAX_PERF_ON_BAT=100
 # - A value of 1 does *not* activate boosting, it just allows it
 # Default: <none>
 #CPU_BOOST_ON_AC=1
-CPU_BOOST_ON_BAT=1
+#CPU_BOOST_ON_BAT=0
 
 # Minimize number of used CPU cores/hyper-threads under light load conditions:
 #   0=disable, 1=enable.
 # Default: <none>
 SCHED_POWERSAVE_ON_AC=0
-SCHED_POWERSAVE_ON_BAT=0
+SCHED_POWERSAVE_ON_BAT=1
 
 # Kernel NMI Watchdog:
 #   0=disable (default, saves power), 1=enable (for kernel debugging only).
@@ -115,7 +115,7 @@ NMI_WATCHDOG=0
 # Requires kernel module msr and x86_energy_perf_policy from linux-tools.
 # Default: <none>
 ENERGY_PERF_POLICY_ON_AC=performance
-ENERGY_PERF_POLICY_ON_BAT=balance-performance
+ENERGY_PERF_POLICY_ON_BAT=power
 
 # Disk devices; separate multiple devices with spaces.
 # Devices can be specified by disk ID also (lookup with: tlp diskid).
@@ -156,7 +156,7 @@ DISK_APM_LEVEL_ON_BAT="128 128"
 # - Single queue schedulers are legacy now and were removed together with
 #   the old block layer in kernel 5.0
 # Default: keep
-#DISK_IOSCHED="mq-deadline mq-deadline"
+DISK_IOSCHED="bfq bfq"
 
 # AHCI link power management (ALPM) for disk devices:
 #   min_power, med_power_with_dipm(*), medium_power, max_performance.
