@@ -40,18 +40,11 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-format-on-save t
-            c-c++-enable-clang-support t)
-     (dash :variables
-           helm-dash-docset-newpath "~/.local/share/docsets")
      emacs-lisp
      git
      github
      (helm :variables
            helm-use-fuzzy nil)
-     html
      markdown
      multiple-cursors
      org
@@ -59,11 +52,6 @@ This function should only modify configuration layer settings."
              python-format-on-save t
              python-formatter 'black
              python-sort-imports-on-save t)
-     (react :variables
-            node-add-modules-path t
-            javascript-fmt-tool 'prettier
-            js2-mode-show-parse-errors nil
-            js2-mode-show-strict-warnings nil)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -112,10 +100,10 @@ It should only modify the values of Spacemacs settings."
    ;; (default nil)
    dotspacemacs-enable-emacs-pdumper nil
 
-   ;; File path pointing to emacs 27.1 executable compiled with support
-   ;; for the portable dumper (this is currently the branch pdumper).
-   ;; (default "emacs-27.0.50")
-   dotspacemacs-emacs-pdumper-executable-file "emacs-27.0.50"
+   ;; Name of executable file pointing to emacs 27+. This executable must be
+   ;; in your PATH.
+   ;; (default "emacs")
+   dotspacemacs-emacs-pdumper-executable-file "emacs"
 
    ;; Name of the Spacemacs dump file. This is the file will be created by the
    ;; portable dumper in the cache directory under dumps sub-directory.
@@ -218,7 +206,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator arrow :separator-scale 1.1)
+   dotspacemacs-mode-line-theme '(vim-powerline :separator nil :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -226,7 +214,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font or prioritized list of fonts.
    dotspacemacs-default-font '("Mononoki"
-                               :size 38
+                               :size 13.0
                                :weight normal
                                :width normal)
 
@@ -389,7 +377,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smartparens-strict-mode nil
 
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
-   ;; over any automatically added closing parenthesis, bracket, quote, etc…
+   ;; over any automatically added closing parenthesis, bracket, quote, etc...
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
    dotspacemacs-smart-closing-parenthesis nil
 
@@ -435,7 +423,7 @@ It should only modify the values of Spacemacs settings."
    ;; %z - mnemonics of buffer, terminal, and keyboard coding systems
    ;; %Z - like %z, but including the end-of-line format
    ;; (default "%I@%S")
-   dotspacemacs-frame-title-format "%b (%t) - Emacs"
+   dotspacemacs-frame-title-format "%I@%S"
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
@@ -475,9 +463,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; Save custom variables in a separate file.
   (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
   (when (file-exists-p custom-file) (load custom-file))
-
-  ;; Increase line spacing.
-  (setq-default line-spacing 3)
   )
 
 (defun dotspacemacs/user-load ()
@@ -500,7 +485,7 @@ before packages are loaded."
                                     ((shift) . 1)))
 
   ;; Interface customization.
-  (spacemacs/toggle-mode-line-minor-modes-off)  ;; Don't show minor modes.
+  (setq powerline-default-separator nil)        ;; HACK: hide separators.
   (setq git-gutter-fr+-side 'left-fringe)       ;; Show Git indicator on the left.
   (fringe-mode '(nil . 0))                      ;; Only show fringe on the left.
 
@@ -520,20 +505,6 @@ before packages are loaded."
   (global-set-key (kbd "C-s") #'helm-swoop)
   (spacemacs/set-leader-keys "RET"
     #'(lambda() (interactive) (ansi-term shell-default-term-shell)))
-
-  ;; React mode prettyify on save.
-  (add-hook 'rjsx-mode-hook 'prettier-js-mode)
-  ;; React mode indenting.
-  (setq-default js-indent-level 2
-                css-indent-offset 2
-                web-mode-markup-indent-offset 2
-                web-mode-css-indent-offset 2
-                web-mode-code-indent-offset 2
-                web-mode-attr-indent-offset 2)
-  (with-eval-after-load 'web-mode
-    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
