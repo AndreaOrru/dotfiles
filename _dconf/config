@@ -89,8 +89,8 @@ name='Fix Wifi'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Shift>Favorites'
-command='fix_inputs.sh'
-name='Fix Inputs'
+command='fix_input_devices.sh'
+name='Fix Input Devices'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']

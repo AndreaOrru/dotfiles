@@ -20,6 +20,20 @@ CopyFile /etc/default/tlp
 CopyFile /etc/systemd/logind.conf
 
 
+######################
+#  Pointing devices  #
+######################
+
+# Allow TrackPoint and touchpad to work together.
+CopyFile /etc/modprobe.d/psmouse.conf
+
+# Restore input devices state after resuming from hibernation.
+CopyFile /etc/modprobe.d/no-i2c_i801.conf
+CopyFile /usr/local/bin/fix_input_devices.sh 755
+CopyFile /etc/systemd/system/fix-input-devices.service
+CreateLink /etc/systemd/system/hibernate.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
+
+
 ###############
 #  Undervolt  #
 ###############
@@ -67,10 +81,6 @@ CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
 
 # SSD periodic trim.
 CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
-
-# Allow TrackPoint and touchpad to work together.
-CopyFile /etc/modprobe.d/no-i2c_i801.conf
-CopyFile /etc/modprobe.d/psmouse.conf
 
 # Firmware upgrade.
 AddPackage fwupd # A simple daemon to allow session software to update firmware

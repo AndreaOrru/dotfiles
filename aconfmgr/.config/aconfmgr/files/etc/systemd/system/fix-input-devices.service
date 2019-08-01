@@ -1,0 +1,10 @@
+[Unit]
+Description=Fix input devices after hibernation
+After=hibernate.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix_input_devices.sh
+
+[Install]
+WantedBy=hibernate.target
