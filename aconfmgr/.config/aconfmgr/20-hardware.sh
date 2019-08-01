@@ -69,6 +69,7 @@ CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
 CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
 
 # Allow TrackPoint and touchpad to work together.
+CopyFile /etc/modprobe.d/no-i2c_i801.conf
 CopyFile /etc/modprobe.d/psmouse.conf
 
 # Firmware upgrade.

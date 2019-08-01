@@ -12,9 +12,9 @@ CopyFile /boot/loader/loader.conf 755
 CopyFile /boot/loader/entries/arch-zen.conf 755
 
 # Kernel options.
-CopyFile /etc/modprobe.d/nowatchdog.conf  # Disable watchdogs.
-CopyFile /etc/sysctl.d/nocoredump.conf    # Disable core dumps.
-CopyFile /etc/sysctl.d/vm.conf            # Virtual memory options.
+CopyFile /etc/modprobe.d/no-watchdog.conf  # Disable watchdogs.
+CopyFile /etc/sysctl.d/no-coredump.conf    # Disable core dumps.
+CopyFile /etc/sysctl.d/vm.conf             # Virtual memory options.
 
 # Localization.
 CopyFile /etc/locale.conf
