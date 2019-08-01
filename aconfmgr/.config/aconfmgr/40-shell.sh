@@ -28,6 +28,7 @@ AddPackage tree # A directory listing program displaying a depth indented list o
 # Archives.
 AddPackage atool # A script for managing file archives of various types
 AddPackage p7zip # Command-line file archiver with high compression ratio
+AddPackage unp # A script for unpacking a wide variety of archive formats
 AddPackage unrar # The RAR uncompression program
 
 # Media.
