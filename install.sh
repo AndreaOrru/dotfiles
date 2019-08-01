@@ -25,5 +25,3 @@ stow zsh
 
 ./_emacs/install.sh
 stow spacemacs
-
-./_zig/install.sh
