@@ -6,6 +6,7 @@ secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
+xkb-options=['altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
 clock-show-date=true
