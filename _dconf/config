@@ -6,7 +6,6 @@ secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
-xkb-options=['altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
 clock-show-date=true
@@ -75,6 +74,9 @@ toggle-tiled-right=['<Super>l', '<Shift><Super>l']
 
 [org/gnome/mutter]
 dynamic-workspaces=false
+
+[org/gnome/settings-daemon/peripherals/keyboard]
+numlock-state='off'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
