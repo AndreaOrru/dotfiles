@@ -34,3 +34,7 @@ AddPackage --foreign aurvote # Tool to vote for favorite AUR packages
 AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage --foreign systemd-boot-pacman-hook # Pacman hook to upgrade systemd-boot after systemd upgrade.
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
+
+# No stop jobs.
+CopyFile /etc/systemd/system.conf
+CopyFile /etc/systemd/user.conf
