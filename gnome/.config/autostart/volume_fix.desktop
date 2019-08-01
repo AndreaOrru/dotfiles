@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=VolumeFix
+Description=Fix Dolby Atmos volume change on X1 Carbon 7th Gen
+Exec=monitor_volume.sh
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
