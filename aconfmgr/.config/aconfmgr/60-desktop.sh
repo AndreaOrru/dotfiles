@@ -1,3 +1,16 @@
+#############
+#  Wayland  #
+#############
+
+# Enable Wayland everywhere.
+CopyFile /etc/profile.d/wayland.sh
+
+# Compatible GUI toolkits.
+AddPackage glew-wayland # The OpenGL Extension Wrangler Library (for Wayland)
+AddPackage glfw-wayland # A free, open source, portable framework for graphical application development (wayland)
+AddPackage qt5-wayland # Provides APIs for Wayland
+
+
 ###########
 #  GNOME  #
 ###########
