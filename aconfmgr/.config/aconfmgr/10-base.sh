@@ -2,14 +2,15 @@
 AddPackageGroup base
 AddPackageGroup base-devel
 
-# Use Linux Zen kernel.
-RemovePackage linux
-AddPackage linux-zen # The Linux-zen kernel and modules
-AddPackage linux-zen-headers # Header files and scripts for building modules for Linux-zen kernel
+# Additional kernels.
+AddPackage linux-headers # Header files and scripts for building modules for Linux kernel
+AddPackage linux-lts # The Linux-lts kernel and modules
+AddPackage linux-lts-headers # Header files and scripts for building modules for Linux-lts kernel
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
-CopyFile /boot/loader/entries/arch-zen.conf 755
+CopyFile /boot/loader/entries/arch.conf 755
+CopyFile /boot/loader/entries/arch-lts.conf 755
 
 # Kernel options.
 CopyFile /etc/modprobe.d/no-watchdog.conf  # Disable watchdogs.

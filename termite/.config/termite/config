@@ -9,7 +9,7 @@
 font = Mononoki 13
 #fullscreen = true
 #icon_name = terminal
-mouse_autohide = true
+#mouse_autohide = false
 #scroll_on_output = false
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
