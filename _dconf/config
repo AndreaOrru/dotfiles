@@ -84,13 +84,13 @@ night-light-enabled=true
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='Favorites'
-command='fix_wifi.sh'
-name='Fix Wifi'
+command='fullcharge.sh'
+name='Remove battery thresholds'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Shift>Favorites'
 command='fix_input_devices.sh'
-name='Fix Input Devices'
+name='Fix input devices'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
