@@ -39,3 +39,5 @@ AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper wri
 CopyFile /etc/systemd/logind.conf
 CopyFile /etc/systemd/system.conf
 CopyFile /etc/systemd/user.conf
+# Limit the size of systemd's journal.
+CopyFile /etc/systemd/journald.conf
