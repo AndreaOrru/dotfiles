@@ -1,3 +1,5 @@
+# Firefox.
+CopyFile /etc/profile.d/firefox-vars.sh
 AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage --foreign profile-cleaner # Reduces profile size by cleaning their sqlite databases.

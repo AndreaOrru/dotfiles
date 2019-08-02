@@ -3,7 +3,7 @@
 #############
 
 # Enable Wayland everywhere.
-CopyFile /etc/profile.d/wayland.sh
+CopyFile /etc/profile.d/wayland-toolkits.sh
 
 # Compatible GUI toolkits.
 AddPackage glew-wayland # The OpenGL Extension Wrangler Library (for Wayland)
