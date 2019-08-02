@@ -1,11 +1,13 @@
 # Base groups.
 AddPackageGroup base
 AddPackageGroup base-devel
-
-# Additional kernels.
 AddPackage linux-headers # Header files and scripts for building modules for Linux kernel
+
+# Linux LTS kernel.
 AddPackage linux-lts # The Linux-lts kernel and modules
 AddPackage linux-lts-headers # Header files and scripts for building modules for Linux-lts kernel
+# Prevent loading non-existing (on LTS) module.
+CopyFile /etc/modules-load.d/pkcs8.conf
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
