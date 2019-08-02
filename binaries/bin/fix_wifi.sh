@@ -2,4 +2,6 @@
 
 sudo rmmod iwlmvm
 sudo rmmod iwlwifi
-sudo modprobe iwlwifi iwlmvm
+
+sudo modprobe iwlwifi
+sudo modprobe iwlmvm

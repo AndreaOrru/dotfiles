@@ -25,6 +25,9 @@ CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/s
 #  Pointing devices  #
 ######################
 
+# Allow TrackPoint and touchpad to work together.
+CopyFile /etc/modprobe.d/psmouse.conf
+
 # Restore input devices state after resuming from hibernation.
 CopyFile /usr/local/bin/fix_input_devices.sh 755
 CopyFile /etc/systemd/system/fix-input-devices.service
