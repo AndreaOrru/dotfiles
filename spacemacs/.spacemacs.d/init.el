@@ -206,7 +206,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(vim-powerline :separator nil :separator-scale 1.0)
+   dotspacemacs-mode-line-theme '(vim-powerline :separator arrow :separator-scale 1.1)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -488,7 +488,7 @@ before packages are loaded."
                                     ((shift) . 1)))
 
   ;; Interface customization.
-  (setq powerline-default-separator nil)        ;; HACK: hide separators.
+  (setq powerline-default-separator 'utf-8)     ;; HACK: hide separators.
   (setq git-gutter-fr+-side 'left-fringe)       ;; Show Git indicator on the left.
   (fringe-mode '(nil . 0))                      ;; Only show fringe on the left.
 
