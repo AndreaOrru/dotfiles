@@ -8,4 +8,5 @@ org/gnome/evince/default
 org/gnome/evolution-data-server
 org/gnome/gnome-screenshot
 org/gnome/nautilus
+org/gnome/software
 org/gtk/settings/file-chooser
