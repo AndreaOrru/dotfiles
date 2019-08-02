@@ -1,0 +1,10 @@
+#!/bin/sh
+
+/usr/bin/google-chrome-stable          \
+  --ignore-gpu-blacklist               \
+  --enable-gpu-rasterization           \
+  --enable-native-gpu-memory-buffers   \
+  --enable-zero-copy                   \
+  --disable-gpu-driver-bug-workarounds \
+  --enable-accelerated-mjpeg-decode    \
+  --enable-accelerated-video

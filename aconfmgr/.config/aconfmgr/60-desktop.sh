@@ -19,6 +19,7 @@ CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/sys
 ###########
 
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
 

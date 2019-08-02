@@ -5,11 +5,12 @@ chmod 644 secrets/.ssh/id_rsa.pub
 stow secrets
 
 stow aconfmgr
-stow binaries
+stow chrome
 stow git
 stow gnome
 stow mpv
 stow pdbpp
+stow spotify
 stow termite
 stow tmux
 stow zsh
