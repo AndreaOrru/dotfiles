@@ -121,4 +121,4 @@ toggle-message-tray=['<Shift><Super>n']
 
 [org/gnome/shell]
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['termite.desktop', 'emacs.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']
+favorite-apps=['termite.desktop', 'emacs.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop']
