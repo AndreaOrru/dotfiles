@@ -1,4 +1,5 @@
 # Developer tools.
+AddPackage clang # C language family frontend for LLVM
 AddPackage cloc # Count lines of code
 AddPackage --foreign emacs-git # GNU Emacs. Development.
 AddPackage gdb # The GNU Debugger
