@@ -4,6 +4,7 @@
 
 AddPackage aria2 # Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 AddPackage autossh # Automatically restart SSH sessions and tunnels
+AddPackage bind-tools # The ISC DNS tools
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
 AddPackage nmap # Utility for network discovery and security auditing
 AddPackage rsync # A file transfer program to keep remote files in sync
@@ -44,8 +45,25 @@ CopyFile /etc/NetworkManager/conf.d/dhcp-client.conf
 AddPackage iwd # Internet Wireless Daemon
 CopyFile /etc/NetworkManager/conf.d/wifi-backend.conf
 
-# No custom DNS.
+# Control DNS through resolvconf.
 IgnorePath /etc/resolv.conf
+IgnorePath /etc/resolv.conf.bak
+CopyFile /etc/NetworkManager/conf.d/rc-manager.conf
+
+
+###################
+#  VPN & Proxies  #
+###################
+
+AddPackage openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+AddPackage --foreign openvpn-update-resolv-conf-git # OpenVPN Update resolvconf
+AddPackage stunnel # A program that allows you to encrypt arbitrary TCP connections inside SSL
+
+AddPackage shadowsocks-libev # A lightweight secured socks5 proxy for embedded devices and low end boxes
+AddPackage --foreign v2ray-plugin-git # A SIP003 plugin based on v2ray for shadowsocks (git version)
+
+AddPackage wireguard-dkms # next generation secure network tunnel
+AddPackage wireguard-tools # next generation secure network tunnel
 
 
 ###################
