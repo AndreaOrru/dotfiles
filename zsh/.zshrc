@@ -48,9 +48,6 @@ alias e='emacsclient -n'
 alias em='emacsclient -nw'
 alias vi='em'
 
-# SSH stuff.
-alias socks='autossh -M 0 -o "ServerAliveInterval 45" -o "ServerAliveCountMax 2" -NCD 4711'
-
 
 #
 # Functions
@@ -65,7 +62,7 @@ t() {
 }
 
 fetchmirrors() {
-    sudo sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=https&use_mirror_status=on' | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist"
+    sudo sh -c "curl -s 'https://www.archlinux.org/mirrorlist/?country=$1&protocol=https&use_mirror_status=on' | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist"
 }
 
 

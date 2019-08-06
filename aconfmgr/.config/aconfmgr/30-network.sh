@@ -50,6 +50,17 @@ IgnorePath /etc/resolv.conf
 
 
 ###################
+#  VPN & Proxies  #
+###################
+
+AddPackage v2ray # A platform for building proxies to bypass network restrictions
+CopyFile /etc/v2ray/config.json
+
+AddPackage tsocks # Transparent SOCKS proxying library
+CopyFile /etc/tsocks.conf
+
+
+###################
 #  Miscellaneous  #
 ###################
 
