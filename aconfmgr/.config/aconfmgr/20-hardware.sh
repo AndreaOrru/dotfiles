@@ -6,7 +6,7 @@ AddPackage tlp # Linux Advanced Power Management
 AddPackage tlp-rdw # Linux Advanced Power Management - Radio Device Wizard
 AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call
 AddPackage ethtool # Utility for controlling network drivers and hardware
-AddPackage --foreign tp_smapi-dkms # DKMS controlled modules for ThinkPad's SMAPI functionality
+AddPackage tpacpi-bat # A Perl script with ACPI calls for recent ThinkPads (such as T420 and W520) whose battery thresholds are not supported by tp_smapi
 AddPackage x86_energy_perf_policy # Read or write MSR_IA32_ENERGY_PERF_BIAS
 
 CreateLink /etc/systemd/system/multi-user.target.wants/tlp.service /usr/lib/systemd/system/tlp.service
