@@ -89,8 +89,8 @@ name='Remove battery thresholds'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Shift>Favorites'
-command='fix_input_devices.sh'
-name='Fix input devices'
+command='fix_wifi.sh'
+name='Fix WiFi connection'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
