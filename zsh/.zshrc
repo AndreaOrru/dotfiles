@@ -50,7 +50,8 @@ alias e='emacsclient -n'
 alias em='emacsclient -nw'
 alias vi='em'
 
-# Proxies.
+# SSH & Proxies.
+alias assh='autossh -M 0 -o "ServerAliveInterval 45" -o "ServerAliveCountMax 2"'
 alias tson='. tsocks on'
 alias tsoff='. tsocks off'
 alias v2on='sudo systemctl start v2ray.service'
