@@ -20,7 +20,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "unbox.sytes.net",
+            "address": "unboxtherapy.org",
             "port": 443,
             "users": [
               {
@@ -39,7 +39,7 @@
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "unbox.sytes.net",
+          "serverName": "unboxtherapy.org",
           "allowInsecure": false
         }
       }
