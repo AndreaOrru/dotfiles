@@ -2,16 +2,9 @@
 AddPackageGroup base
 AddPackageGroup base-devel
 
-# Linux LTS kernel.
-RemovePackage linux
-AddPackage linux-lts # The Linux-lts kernel and modules
-AddPackage linux-lts-headers # Header files and scripts for building modules for Linux-lts kernel
-# Prevent loading non-existing (on LTS) module.
-CopyFile /etc/modules-load.d/pkcs8.conf
-
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
-CopyFile /boot/loader/entries/arch-lts.conf 755
+CopyFile /boot/loader/entries/arch.conf 755
 
 # Kernel options.
 CopyFile /etc/modprobe.d/no-watchdog.conf  # Disable watchdogs.

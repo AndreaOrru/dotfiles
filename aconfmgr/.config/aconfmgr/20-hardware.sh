@@ -4,7 +4,7 @@
 
 AddPackage tlp # Linux Advanced Power Management
 AddPackage tlp-rdw # Linux Advanced Power Management - Radio Device Wizard
-AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call
+AddPackage acpi_call # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call
 AddPackage ethtool # Utility for controlling network drivers and hardware
 AddPackage tpacpi-bat # A Perl script with ACPI calls for recent ThinkPads (such as T420 and W520) whose battery thresholds are not supported by tp_smapi
 AddPackage x86_energy_perf_policy # Read or write MSR_IA32_ENERGY_PERF_BIAS
@@ -72,6 +72,13 @@ CopyFile /etc/mkinitcpio.conf
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 CopyFile /etc/profile.d/libva-driver.sh
+
+
+###########
+#  Audio  #
+###########
+
+CopyFile /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 
 
 ###################

@@ -275,7 +275,7 @@ USB_AUTOSUSPEND=1
 # Use lsusb to get the ids.
 # Note: input devices (usbhid) are excluded automatically
 # Default: <none>
-#USB_BLACKLIST="1111:2222 3333:4444"
+USB_BLACKLIST="06cb:00bd"
 
 # Bluetooth devices are excluded from USB autosuspend:
 #   0=do not exclude, 1=exclude.
