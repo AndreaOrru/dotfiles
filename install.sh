@@ -7,14 +7,12 @@ stow secrets
 stow aconfmgr
 stow binaries
 stow git
+stow gnome
 stow mpv
 stow pdbpp
 stow termite
 stow tmux
 stow zsh
-
-./gnome/bin/src/compile.sh
-stow gnome
 
 ./_emacs/install.sh
 stow spacemacs
