@@ -40,6 +40,9 @@ secondary-color='#000000'
 [org/gnome/desktop/search-providers]
 disable-external=true
 
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=true
+
 [org/gnome/desktop/wm/keybindings]
 close=['<Super>q']
 minimize=@as []
