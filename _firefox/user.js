@@ -38,3 +38,6 @@ user_pref("geo.enabled", false);
 
 // Disable download checking.
 user_pref("browser.safebrowsing.downloads.enabled", false);
+
+// Enable address autofill.
+user_pref("extensions.formautofill.available", "on");

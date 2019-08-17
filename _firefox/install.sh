@@ -3,4 +3,4 @@
 SCRIPT=`realpath $0`
 DIR=`dirname $SCRIPT`
 
-ln -vs "${DIR}/user.js" ~/.mozilla/firefox/*.default-release/
+ln -vsf "${DIR}/user.js" ~/.mozilla/firefox/*.default-release/
