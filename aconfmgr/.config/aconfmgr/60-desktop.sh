@@ -18,6 +18,7 @@ AddPackage qt5-wayland # Provides APIs for Wayland
 AddPackageGroup gnome
 AddPackage dconf-editor # dconf Editor
 AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
+RemovePackage gnome-software
 RemovePackage gnome-terminal
 
 # GDM.
