@@ -1,5 +1,4 @@
-Server = https://mirror.bytemark.co.uk/archlinux/$repo/os/$arch
-Server = https://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch
-Server = https://www.mirrorservice.org/sites/ftp.archlinux.org/$repo/os/$arch
-Server = https://mirrors.ukfast.co.uk/sites/archlinux.org/$repo/os/$arch
-Server = https://mirror.netweaver.uk/archlinux/$repo/os/$arch
+Server = https://download.nus.edu.sg/mirror/archlinux/$repo/os/$arch
+Server = https://mirror.0x.sg/archlinux/$repo/os/$arch
+Server = https://mirror.aktkn.sg/archlinux/$repo/os/$arch
+Server = https://sgp.mirror.pkgbuild.com/$repo/os/$arch
