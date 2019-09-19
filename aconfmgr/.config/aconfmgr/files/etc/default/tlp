@@ -70,7 +70,7 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 # Note: Intel Skylake or newer CPU and Kernel >= 4.10 required.
 # Default: <none>
 CPU_HWP_ON_AC=balance_performance
-CPU_HWP_ON_BAT=balance_power
+CPU_HWP_ON_BAT=power
 
 # Set Intel P-state performance: 0..100 (%).
 # Limit the max/min P-state to control the power dissipation of the CPU.
@@ -164,7 +164,7 @@ DISK_IOSCHED="bfq bfq"
 # Multiple values separated with spaces are tried sequentially until success.
 # Default: <none>
 SATA_LINKPWR_ON_AC="med_power_with_dipm max_performance"
-SATA_LINKPWR_ON_BAT="med_power_with_dipm min_power"
+SATA_LINKPWR_ON_BAT="min_power"
 
 # Exclude host devices from AHCI link power management.
 # Separate multiple hosts with spaces.
@@ -188,7 +188,7 @@ AHCI_RUNTIME_PM_TIMEOUT=15
 # (*) keeps BIOS ASPM defaults (recommended)
 # Default: <none>
 #PCIE_ASPM_ON_AC=default
-#PCIE_ASPM_ON_BAT=default
+PCIE_ASPM_ON_BAT=powersupersave
 
 # Set the min/max/turbo frequency for the Intel GPU.
 # Possible values depend on your hardware. For available frequencies see
