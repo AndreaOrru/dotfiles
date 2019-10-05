@@ -19,11 +19,9 @@ function auto_workon() {
 
 # Custom grml ZSH prompt.
 function virtual_env_prompt () { REPLY=''${VIRTUAL_ENV+ (''${VIRTUAL_ENV:t})} }
-function ld_preload_prompt () { REPLY=''${LD_PRELOAD+* } }
 grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
-grml_theme_add_token ld-preload -f ld_preload_prompt '%F{yellow}' '%f'
 zstyle ':prompt:grml:right:setup' items sad-smiley virtual-env
-zstyle ':prompt:grml:left:setup' items ld-preload rc path vcs percent
+zstyle ':prompt:grml:left:setup' items rc path vcs percent
 
 
 #
@@ -52,8 +50,6 @@ alias vi='em'
 
 # SSH & Proxies.
 alias assh='autossh -M 0 -o "ServerAliveInterval 45" -o "ServerAliveCountMax 2"'
-alias tson='. tsocks on'
-alias tsoff='. tsocks off'
 alias v2on='sudo systemctl start v2ray.service'
 alias v2off='sudo systemctl stop v2ray.service'
 
