@@ -20,6 +20,7 @@ AddPackage dconf-editor # dconf Editor
 AddPackage gnome-tweaks # Graphical interface for advanced GNOME 3 settings (Tweak Tool)
 RemovePackage gnome-software
 RemovePackage gnome-terminal
+RemovePackage gnome-todo
 
 # GDM.
 CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/gdm.service
@@ -49,7 +50,7 @@ CopyFile /etc/fonts/local.conf
 CopyFile /etc/pulse/default.pa
 
 # Caps -> Escape/CTRL.
-AddPackage --foreign interception-caps2esc # caps2esc
+AddPackage --foreign interception-caps2esc-delay-git # caps2esc
 CreateLink /etc/systemd/system/multi-user.target.wants/udevmon.service /usr/lib/systemd/system/udevmon.service
 CopyFile /etc/udevmon.yaml
 

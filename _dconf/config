@@ -97,10 +97,10 @@ name='Fix WiFi connection'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
-next='<Super>Right'
-play='<Super>space'
-previous='<Super>Left'
-screensaver='<Super>BackSpace'
+next=['<Super>Right']
+play=['<Super>space']
+previous=['<Super>Left']
+screensaver=['<Super>BackSpace']
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
