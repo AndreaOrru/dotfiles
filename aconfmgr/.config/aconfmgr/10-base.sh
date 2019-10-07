@@ -1,5 +1,5 @@
 # Base groups.
-AddPackageGroup base
+AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackageGroup base-devel
 
 # Boot loader configuration.
