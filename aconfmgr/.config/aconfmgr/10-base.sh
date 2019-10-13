@@ -1,6 +1,8 @@
 # Base groups.
 AddPackage base # Minimal package set to define a basic Arch Linux installation
+AddPackageGroup base
 AddPackageGroup base-devel
+AddPackage linux # The Linux kernel and modules
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
