@@ -11,6 +11,7 @@ AddPackage hub # cli interface for Github
 
 # Python.
 AddPackage bpython # Fancy ncurses interface to the Python interpreter
+AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage python-jedi # Awesome autocompletion for python
 AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool

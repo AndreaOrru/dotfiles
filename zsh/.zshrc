@@ -31,7 +31,7 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 # Misc.
 alias diff='diff --color=auto'
 alias f='sudo updatedb && sudo locate -i'
-alias i='bpython'
+alias i='ipython'
 alias open='xdg-open'
 alias p='yay'
 alias pastebinit='pastebinit -b paste.debian.net'
