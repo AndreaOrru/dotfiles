@@ -41,3 +41,13 @@ user_pref("browser.safebrowsing.downloads.enabled", false);
 
 // Enable address autofill.
 user_pref("extensions.formautofill.available", "on");
+
+
+//------------------
+//  JAPANESE FONTS
+//------------------
+
+user_pref("font.name.sans-serif.ja", "Source Han Sans JP");
+user_pref("font.name.serif.ja", "Source Han Serif JP");
+user_pref("font.name.monospace.ja", "Cousine");
+user_pref("font.size.monospace.ja", 13);
