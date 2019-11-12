@@ -38,8 +38,9 @@ CreateLink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service /usr/l
 CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
 CreateLink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service /usr/lib/systemd/system/NetworkManager-wait-online.service
 
-# Use dhclient for DHCP.
+# Use dhclient for DHCP, but keep dhcpcd for emergencies.
 AddPackage dhclient # A standalone DHCP client from the dhcp package
+AddPackage dhcpcd # RFC2131 compliant DHCP client daemon
 CopyFile /etc/NetworkManager/conf.d/dhcp-client.conf
 
 # Use iwd instead of wpa_supplicant as wifi backend.
@@ -48,17 +49,6 @@ CopyFile /etc/NetworkManager/conf.d/wifi-backend.conf
 
 # No custom DNS.
 IgnorePath /etc/resolv.conf
-
-
-###################
-#  VPN & Proxies  #
-###################
-
-AddPackage v2ray # A platform for building proxies to bypass network restrictions
-CopyFile /etc/v2ray/config.json
-
-AddPackage tsocks # Transparent SOCKS proxying library
-CopyFile /etc/tsocks.conf
 
 
 ###################

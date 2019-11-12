@@ -3,7 +3,7 @@ AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and 
 CreateLink /usr/local/bin/vi /usr/bin/nvim
 
 # Shell and shell extensions.
-AddPackage autojump # A faster way to navigate your filesystem from the command line
+AddPackage --foreign autojump # A faster way to navigate your filesystem from the command line
 AddPackage --foreign direnv # a shell extension that manages your environment
 AddPackage fzf # Command-line fuzzy finder
 AddPackage grml-zsh-config # grml's zsh setup

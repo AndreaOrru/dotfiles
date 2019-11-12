@@ -2,7 +2,13 @@
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackageGroup base
 AddPackageGroup base-devel
+AddPackage man-db # A utility for reading man pages
+AddPackage man-pages # Linux man pages
+
+# Linux kernel.
 AddPackage linux # The Linux kernel and modules
+AddPackage linux-firmware # Firmware files for Linux
+CopyFile /etc/mkinitcpio.d/linux.preset
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
