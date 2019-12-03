@@ -2,6 +2,7 @@
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackageGroup base
 AddPackageGroup base-devel
+AddPackage logrotate # Rotates system logs automatically
 AddPackage man-db # A utility for reading man pages
 AddPackage man-pages # Linux man pages
 

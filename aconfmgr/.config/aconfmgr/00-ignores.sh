@@ -14,6 +14,7 @@ IgnorePath '/etc/ca-certificates/extracted/*'
 IgnorePath '/etc/fstab'
 IgnorePath '/etc/hostname'
 IgnorePath '/etc/hosts'
+IgnorePath '/etc/iwd'
 IgnorePath '/etc/ld.so.cache'
 IgnorePath '/etc/localtime'
 IgnorePath '/etc/machine-id'
@@ -45,6 +46,9 @@ IgnorePath '/etc/shadow'
 IgnorePath '/etc/shadow-'
 
 IgnorePath '/lost+found'
+
+IgnorePath '/usr/bin/newgidmap'
+IgnorePath '/usr/bin/newuidmap'
 
 IgnorePath '/usr/bin/__pycache__/*'
 IgnorePath '/usr/lib/gdk-pixbuf-*/**/loaders.cache'

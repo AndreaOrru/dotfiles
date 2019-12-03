@@ -17,6 +17,11 @@
 :ufw-user-limit-accept - [0:0]
 ### RULES ###
 
+### tuple ### limit tcp 22 0.0.0.0/0 any 0.0.0.0/0 SSH - in
+-A ufw-user-input -p tcp --dport 22 -m conntrack --ctstate NEW -m recent --set -m comment --comment 'dapp_SSH'
+-A ufw-user-input -p tcp --dport 22 -m conntrack --ctstate NEW -m recent --update --seconds 30 --hitcount 6 -j ufw-user-limit -m comment --comment 'dapp_SSH'
+-A ufw-user-input -p tcp --dport 22 -j ufw-user-limit-accept -m comment --comment 'dapp_SSH'
+
 ### END RULES ###
 
 ### LOGGING ###

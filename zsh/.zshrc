@@ -29,6 +29,7 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 #
 
 # Misc.
+alias atril='GTK_THEME=Adwaita:light atril'
 alias diff='diff --color=auto'
 alias f='sudo updatedb && sudo locate -i'
 alias i='ipython'
