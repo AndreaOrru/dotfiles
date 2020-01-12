@@ -47,6 +47,7 @@ user_pref("extensions.formautofill.available", "on");
 //  JAPANESE FONTS
 //------------------
 
+user_pref("font.cjk_pref_fallback_order", "ja,zh-cn,zh-hk,zh-tw,ko");
 user_pref("font.name.sans-serif.ja", "Source Han Sans JP");
 user_pref("font.name.serif.ja", "Source Han Serif JP");
 user_pref("font.name.monospace.ja", "Cousine");
