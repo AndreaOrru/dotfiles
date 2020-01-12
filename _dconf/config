@@ -5,7 +5,8 @@ primary-color='#ffffff'
 secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
-sources=[('xkb', 'us'), ('xkb', 'it')]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp'), ('xkb', 'it')]
+sources=[('xkb', 'us'), ('xkb', 'it'), ('ibus', 'mozc-jp')]
 xkb-options=['altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
@@ -14,7 +15,7 @@ clock-show-weekday=true
 document-font-name='Cantarell 12'
 enable-animations=false
 font-name='Cantarell 12'
-gtk-im-module='gtk-im-context-simple'
+gtk-im-module='ibus'
 gtk-theme='Adwaita-dark'
 monospace-font-name='Source Code Pro 11'
 toolkit-accessibility=false
