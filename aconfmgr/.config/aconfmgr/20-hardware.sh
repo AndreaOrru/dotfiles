@@ -67,6 +67,7 @@ CopyFile /etc/mkinitcpio.conf
 
 # Intel hardware video acceleration.
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
+AddPackage intel-media-sdk # API to access hardware-accelerated video on Intel Gen graphics hardware platforms
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 CopyFile /etc/profile.d/libva-driver.sh
 
