@@ -14,7 +14,7 @@ CreateLink /etc/systemd/system/sleep.target.wants/tlp-sleep.service /usr/lib/sys
 CreateLink /etc/systemd/system/systemd-rfkill.service /dev/null
 CreateLink /etc/systemd/system/systemd-rfkill.socket /dev/null
 
-CopyFile /etc/default/tlp
+CopyFile /etc/tlp.conf
 
 # Suspend then hibernate after a while.
 CopyFile /etc/systemd/sleep.conf
