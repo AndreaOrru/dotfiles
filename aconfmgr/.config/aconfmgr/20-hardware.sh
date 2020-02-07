@@ -21,18 +21,6 @@ CopyFile /etc/systemd/sleep.conf
 CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 
 
-######################
-#  Pointing devices  #
-######################
-
-# Restore input devices state after resuming from hibernation.
-CopyFile /usr/local/bin/fix_input_devices.sh 755
-CopyFile /etc/systemd/system/fix-input-devices.service
-CreateLink /etc/systemd/system/hibernate.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
-CreateLink /etc/systemd/system/hybrid-sleep.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
-CreateLink /etc/systemd/system/suspend.target.wants/fix-input-devices.service /etc/systemd/system/fix-input-devices.service
-
-
 ###############
 #  Undervolt  #
 ###############
@@ -76,7 +64,11 @@ CopyFile /etc/profile.d/libva-driver.sh
 #  Audio  #
 ###########
 
-CopyFile /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+AddPackage sof-firmware # Sound Open Firmware
+CopyFile /etc/modprobe.d/no-wrong-audio.conf
+
+# Automatically switch to newly connected audio devices, enable SOF.
+CopyFile /etc/pulse/default.pa
 
 
 ###################

@@ -46,9 +46,6 @@ CopyFile /etc/fonts/local.conf
 #  Miscellaneous  #
 ###################
 
-# Automatically switch to newly connected audio devices.
-CopyFile /etc/pulse/default.pa
-
 # Caps -> Escape/CTRL.
 AddPackage --foreign interception-caps2esc-delay-git # caps2esc
 CreateLink /etc/systemd/system/multi-user.target.wants/udevmon.service /usr/lib/systemd/system/udevmon.service
