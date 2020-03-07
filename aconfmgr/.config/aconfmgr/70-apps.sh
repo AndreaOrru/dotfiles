@@ -2,8 +2,9 @@
 CopyFile /etc/profile.d/firefox-vars.sh
 AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage hunspell-en_US # US English hunspell dictionaries
-AddPackage --foreign profile-cleaner # Reduces profile size by cleaning their sqlite databases.
+AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
+AddPackage atril # MATE document viewer
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage mpv # a free, open source, and cross-platform media player

@@ -54,3 +54,4 @@ CopyFile /etc/udevmon.yaml
 # Clipboard management.
 AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
+AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
