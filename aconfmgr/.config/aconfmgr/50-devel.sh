@@ -1,7 +1,7 @@
 # Developer tools.
 AddPackage clang # C language family frontend for LLVM
 AddPackage cloc # Count lines of code
-AddPackage --foreign emacs-git # GNU Emacs. Development.
+AddPackage --foreign emacs27-git # GNU Emacs. emacs-27 release branch.
 AddPackage gdb # The GNU Debugger
 AddPackage git # the fast distributed version control system
 AddPackage git-crypt # Transparent file encryption in Git
