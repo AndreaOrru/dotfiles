@@ -22,7 +22,7 @@
 
 ### Automatically restore the volume of streams and devices
 load-module module-device-restore
-#load-module module-stream-restore
+load-module module-stream-restore
 load-module module-card-restore
 
 ### Automatically augment property information from .desktop files
@@ -32,7 +32,7 @@ load-module module-augment-properties
 ### Should be after module-*-restore but before module-*-detect
 load-module module-switch-on-port-available
 
-### Automatically switch to newly connected devices
+### Automatically switch to newly-connected devices
 load-module module-switch-on-connect
 
 ### Load audio drivers statically

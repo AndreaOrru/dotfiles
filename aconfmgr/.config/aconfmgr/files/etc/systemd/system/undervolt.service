@@ -4,7 +4,7 @@ After=multi-user.target suspend.target hibernate.target hybrid-sleep.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/undervolt -t 90 --core -97 --cache -97 --gpu -77 --uncore -97 --analogio -77
+ExecStart=/usr/bin/undervolt --core -97 --cache -97 --gpu -77 --uncore -97 --analogio -77
 
 [Install]
 WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target
