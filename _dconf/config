@@ -5,8 +5,7 @@ primary-color='#ffffff'
 secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp'), ('xkb', 'it')]
-sources=[('xkb', 'us'), ('xkb', 'it'), ('ibus', 'mozc-jp')]
+sources=[('xkb', 'us'), ('xkb', 'it')]
 xkb-options=['altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
