@@ -123,6 +123,9 @@ switch-to-application-8=@as []
 switch-to-application-9=@as []
 toggle-message-tray=['<Shift><Super>n']
 
+[org/gnome/shell/window-switcher]
+current-workspace-only=false
+
 [org/gnome/shell]
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['termite.desktop', 'emacs.desktop', 'firefox.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
