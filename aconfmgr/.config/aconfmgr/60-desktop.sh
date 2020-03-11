@@ -38,6 +38,12 @@ AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-mononoki-git # Monospace font for programmers, successor of monoOne
 
+# Japanese fonts.
+AddPackage adobe-source-han-sans-jp-fonts # Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts
+AddPackage adobe-source-han-serif-jp-fonts # Adobe Source Han Serif Subset OTF - Japanese OpenType/CFF fonts
+AddPackage ttf-hanazono # A free Japanese kanji font, which contains about 78,685 characters (and 2 SPACEs) defined in ISO/IEC 10646 standard / the Unicode standard.
+AddPackage --foreign ttf-kanjistrokeorders # Kanji stroke order font
+
 # Force CrOS fonts.
 CopyFile /etc/fonts/local.conf
 

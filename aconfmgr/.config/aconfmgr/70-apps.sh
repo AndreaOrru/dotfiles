@@ -4,6 +4,7 @@ AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
+AddPackage --foreign anki-official-binary-bundle # The official binary shipped with the tested versions of the dependent libraries.
 AddPackage atril # MATE document viewer
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage gimp # GNU Image Manipulation Program

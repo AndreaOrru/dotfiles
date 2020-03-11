@@ -9,6 +9,7 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage go # Core compiler tools for the Go programming language
 AddPackage highlight # Fast and flexible source code highlighter (CLI version)
 AddPackage hub # cli interface for Github
+AddPackage redis # Advanced key-value store
 
 # Python.
 AddPackage bpython # Fancy ncurses interface to the Python interpreter
