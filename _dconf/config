@@ -24,7 +24,7 @@ delay=uint32 200
 repeat-interval=uint32 17
 
 [org/gnome/desktop/peripherals/mouse]
-speed=0.30
+speed=0.26
 
 [org/gnome/desktop/peripherals/touchpad]
 speed=0.30
