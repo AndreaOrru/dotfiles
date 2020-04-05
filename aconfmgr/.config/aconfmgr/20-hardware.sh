@@ -75,9 +75,6 @@ CopyFile /etc/pulse/default.pa
 #  Miscellaneous  #
 ###################
 
-# Disable camera.
-CopyFile /etc/modprobe.d/no-camera.conf
-
 # Don't wait for devices to settle.
 CreateLink /etc/systemd/system/systemd-udev-settle.service /dev/null
 

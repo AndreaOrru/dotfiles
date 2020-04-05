@@ -1,6 +1,6 @@
 # Firefox.
 CopyFile /etc/profile.d/firefox-vars.sh
-AddPackage firefox # Standalone web browser from mozilla.org
+AddPackage --foreign fedora-firefox-wayland-bin # Fedora's firefox build with wayland enabled by default
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
