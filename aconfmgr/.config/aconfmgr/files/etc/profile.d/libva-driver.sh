@@ -1,4 +1,1 @@
 export LIBVA_DRIVER_NAME="iHD"
-
-# Fix MPV.
-export MESA_LOADER_DRIVER_OVERRIDE="i965"
