@@ -9,9 +9,10 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 user_pref("gfx.font_rendering.fontconfig.max_generic_substitutions", 127);
 
 // Hardware acceleration.
-user_pref("layers.acceleration.force-enabled", true);  // OpenGL Off-Main-Thread Compositing.
-user_pref("gfx.webrender.all", true);                  // WebRender.
-user_pref("gfx.canvas.azure.accelerated", true);       // Accelerated Azure Canvas.
+user_pref("layers.acceleration.force-enabled", true);    // OpenGL Off-Main-Thread Compositing.
+user_pref("gfx.webrender.all", true);                    // WebRender.
+user_pref("gfx.canvas.azure.accelerated", true);         // Accelerated Azure Canvas.
+user_pref("widget.wayland-dmabuf-vaapi.enabled", true);  // VA-API on Wayland.
 
 // Disable restoring after crash.
 user_pref("browser.sessionstore.resume_from_crash", false);
@@ -42,6 +43,9 @@ user_pref("browser.safebrowsing.downloads.enabled", false);
 
 // Enable address autofill.
 user_pref("extensions.formautofill.available", "on");
+
+// Stop WebRTC from leaking local IP address.
+user_pref("media.peerconnection.ice.default_address_only", true);
 
 
 //------------------
