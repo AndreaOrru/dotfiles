@@ -47,8 +47,9 @@ CopyFile /etc/NetworkManager/conf.d/dhcp-client.conf
 AddPackage iwd # Internet Wireless Daemon
 CopyFile /etc/NetworkManager/conf.d/wifi-backend.conf
 
-# No custom DNS.
-IgnorePath /etc/resolv.conf
+# Custom DNS.
+CopyFile /etc/resolv.conf
+CopyFile /etc/NetworkManager/conf.d/dns.conf
 
 
 ###################

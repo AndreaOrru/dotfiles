@@ -32,6 +32,7 @@ user_pref("browser.fullscreen.autohide", false);
 
 // Use CloudFlare DNS-over-HTTPS when possible.
 user_pref("network.trr.mode", 2);
+user_pref("network.trr.uri", "https://family.cloudflare-dns.com/dns-query/");
 
 // Disable geolocation.
 user_pref("geo.enabled", false);
