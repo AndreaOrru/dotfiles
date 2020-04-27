@@ -1,8 +1,6 @@
 [org/gnome/desktop/background]
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Road.jpg'
-primary-color='#ffffff'
-secondary-color='#000000'
+picture-uri='file:///home/andrea/.local/share/backgrounds/2020-04-27-18-46-34-google-logo.jpg'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
@@ -33,9 +31,7 @@ two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/screensaver]
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Road.jpg'
-primary-color='#ffffff'
-secondary-color='#000000'
+picture-uri='file:///home/andrea/.local/share/backgrounds/2020-04-27-18-46-34-google-logo.jpg'
 
 [org/gnome/desktop/search-providers]
 disable-external=true
@@ -83,7 +79,7 @@ numlock-state='off'
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
 night-light-schedule-automatic=false
-night-light-schedule-from=22.0
+night-light-schedule-from=21.0
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='Favorites'
@@ -91,7 +87,7 @@ command='fullcharge.sh'
 name='Remove battery thresholds'
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 next=['<Super>Right']
 play=['<Super>space']
 previous=['<Super>Left']
