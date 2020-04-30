@@ -16,7 +16,7 @@
 
 (require 'init-ivy)
 (require 'init-dired)
-(require 'init-eshell)
+(require 'init-shell)
 
 (require 'init-projects)
 (require 'init-git)

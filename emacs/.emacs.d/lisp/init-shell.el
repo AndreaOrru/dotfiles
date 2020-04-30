@@ -11,4 +11,10 @@
 (global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
 
-(provide 'init-eshell)
+;; TMux integration.
+(require-package 'tmux-pane)
+(require 'tmux-pane)
+(with-eval-after-load 'evil-leader
+  (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
+
+(provide 'init-shell)
