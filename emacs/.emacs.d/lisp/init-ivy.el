@@ -2,6 +2,7 @@
 (require-package 'counsel)         ;; Ivy + extras.
 (require-package 'imenu-anywhere)  ;; Semantic search across buffers.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
+(require-package 'ivy-posframe)    ;; Show Ivy in sub-frames.
 (require-package 'smex)            ;; Better M-x.
 (require-package 'wgrep)           ;; Edit search results.
 
@@ -25,6 +26,8 @@
    ivy-height 15
    ivy-fixed-height-minibuffer t)
 
+  (ivy-posframe-mode 1)  ;; Show Ivy in sub-frames.
+
   (global-set-key (kbd "C-s") 'swiper)            ;; Search by filtering.
   (global-set-key (kbd "M-p") 'counsel-yank-pop)  ;; Kill ring selection.
 
@@ -32,6 +35,12 @@
   (define-key ivy-minibuffer-map (kbd "C-j") 'ivy-next-line)
   (define-key ivy-minibuffer-map (kbd "C-k") 'ivy-previous-line)
   (define-key ivy-switch-buffer-map (kbd "C-k") 'ivy-previous-line))
+
+;; Display Ivy at point for Company completion filtering.
+(with-eval-after-load 'ivy-posframe
+  (setq ivy-posframe-display-functions-alist
+	'((counsel-company . ivy-posframe-display-at-point)
+	  (t . nil))))
 
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
