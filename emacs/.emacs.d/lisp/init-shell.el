@@ -5,17 +5,19 @@
 (add-hook 'eshell-mode-hook
 	  (lambda () (setq-local global-hl-line-mode nil)))
 
-;; Eshell prompt theme and extra info.
-(require-package 'eshell-prompt-extras)
-(with-eval-after-load 'esh-opt
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-	eshell-prompt-function 'epe-theme-lambda))
+;; Custom prompt.
+(setq eshell-prompt-function
+      (lambda ()
+	(concat
+	 (propertize (abbreviate-file-name (eshell/pwd)) 'face `(:foreground "blue"))
+	 (propertize " λ" 'face `(:foreground "red" :weight bold))
+	 (propertize " " 'face nil))))
 
 ;; Eshell aliases.
 (defun eshell/d () (dired-other-window "."))
 (defalias 'eshell/e 'find-file-other-window)
 (defalias 'eshell/s 'magit-status)
+(defalias 'eshell/x 'eshell/exit)
 
 ;; Pop an Eshell at the bottom of the frame.
 (require-package 'shell-pop)
@@ -32,9 +34,9 @@
 (global-set-key (kbd "M-x") 'shell-pop)
 
 (with-eval-after-load 'eshell
-  (evil-define-key 'insert eshell-mode-map (kbd "C-c") 'eshell-interrupt-process)
-  (evil-define-key 'insert eshell-mode-map (kbd "C-d")
-    (lambda () (interactive) (kill-buffer (current-buffer)))))
+  ;; Use Emacs key bindings inside Eshell.
+  (evil-set-initial-state 'eshell-mode 'emacs)
+  (evil-define-key 'emacs eshell-mode-map (kbd "C-c") 'eshell-interrupt-process))
 
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
