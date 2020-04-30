@@ -11,7 +11,7 @@
 (setq evil-want-keybinding nil)
 (with-eval-after-load 'evil
   (evil-collection-init))
-  
+
 ;; Use Space as leader key.
 (with-eval-after-load 'evil-leader
   (evil-leader/set-leader "<SPC>"))

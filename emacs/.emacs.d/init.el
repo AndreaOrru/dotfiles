@@ -18,7 +18,7 @@
 (require 'init-dired)
 (require 'init-eshell)
 
-(require 'init-projectile)
+(require 'init-projects)
 (require 'init-git)
 (require 'init-help)
 

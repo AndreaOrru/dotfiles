@@ -9,11 +9,15 @@
 (add-hook 'after-init-hook 'ivy-mode)
 
 (with-eval-after-load 'counsel
-  (setq-default
-   ;; Search words in any order in Ivy.
-   ivy-re-builders-alist '((t . ivy--regex-ignore-order))
-   counsel-yank-pop-separator "\n\n"  ;; Separate items in kill ring.
-   ivy-initial-inputs-alist nil))     ;; No ^ in Ivy regex by default.
+  ;; Search words in any order in Ivy.
+  (setq-default ivy-re-builders-alist '((t . ivy--regex-ignore-order)))
+  ;; No ^ in Ivy regex by default.
+  (setq-default ivy-initial-inputs-alist nil)
+
+  ;; Search inside hidden files as well.
+  (setq-default counsel-rg-base-command (concat counsel-rg-base-command " --hidden"))
+  ;; Separate items in kill ring.
+  (setq-default counsel-yank-pop-separator "\n\n"))
 
 (with-eval-after-load 'ivy
   ;; Bigger Ivy minibuffer with fixed size.

@@ -7,8 +7,14 @@
    projectile-completion-system 'ivy  ;; Use Ivy for completion.
    projectile-enable-caching t))      ;; Faster file indexing.
 
+(defun edit-dotemacs ()
+  "Open the directory of the current Emacs configuration."
+  (interactive)
+  (find-file (expand-file-name "lisp" user-emacs-directory)))
+
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
+  (evil-leader/set-key "fe" 'edit-dotemacs)
   (evil-leader/set-key "p" 'projectile-command-map))
 
-(provide 'init-projectile)
+(provide 'init-projects)
