@@ -45,14 +45,8 @@ alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`"
 alias "g.."="cd \`git root\`"
 
 # Text editors.
-alias e='emacsclient -n'
-alias em='emacsclient -nw'
-alias vi='em'
-
-# SSH & Proxies.
-alias assh='autossh -M 0 -o "ServerAliveInterval 45" -o "ServerAliveCountMax 2"'
-alias v2on='sudo systemctl start v2ray.service'
-alias v2off='sudo systemctl stop v2ray.service'
+alias e='emacsclient -nw'
+alias vi='nvim'
 
 
 #

@@ -1,0 +1,24 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+
+
+# Temporary Emacs files.
+elpa/
+eshell/
+transient/
+
+.last-package-update-day
+custom.el
+projectile-bookmarks.eld
+projectile.cache
+recentf
+smex-items

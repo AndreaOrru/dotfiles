@@ -6,6 +6,7 @@ stow secrets
 
 stow aconfmgr
 stow binaries
+stow emacs
 stow git
 stow gnome
 stow kitty
@@ -13,6 +14,3 @@ stow mpv
 stow pdbpp
 stow tmux
 stow zsh
-
-./_emacs/install.sh
-stow spacemacs
