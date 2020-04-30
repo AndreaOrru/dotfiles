@@ -1,9 +1,3 @@
-;; Display help windows inside popups.
-(require-package 'popwin)
-(add-hook 'after-init-hook 'popwin-mode)
-(with-eval-after-load 'popwin
-  (push 'apropos-mode popwin:special-display-config))
-
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "ha" 'apropos)

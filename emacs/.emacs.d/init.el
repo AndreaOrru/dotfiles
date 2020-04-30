@@ -13,6 +13,7 @@
 (require 'init-editing)
 (require 'init-buffers)
 (require 'init-files)
+(require 'init-windows)
 
 (require 'init-ivy)
 (require 'init-company)

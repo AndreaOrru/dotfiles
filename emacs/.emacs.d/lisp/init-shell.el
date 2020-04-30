@@ -25,10 +25,6 @@
  shell-pop-full-span t
  shell-pop-shell-type '("eshell" "*eshell" (lambda nil (eshell))))
 
-;; TMux integration.
-(require-package 'tmux-pane)
-(require 'tmux-pane)
-
 ;; Key bindings.
 (global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
@@ -38,6 +34,9 @@
   (evil-set-initial-state 'eshell-mode 'emacs)
   (evil-define-key 'emacs eshell-mode-map (kbd "C-c") 'eshell-interrupt-process))
 
+;; TMux integration.
+(require-package 'tmux-pane)
+(require 'tmux-pane)
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "'" 'tmux-pane-toggle-horizontal))
 
