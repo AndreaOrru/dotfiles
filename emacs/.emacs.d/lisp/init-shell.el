@@ -1,3 +1,6 @@
+;; Launch inferior shells on a fast shell.
+(setq shell-file-name "/bin/sh")
+
 ;; Disable line highlighting in Eshell.
 (add-hook 'eshell-mode-hook
 	  (lambda () (setq-local global-hl-line-mode nil)))
@@ -8,6 +11,7 @@
   (autoload 'epe-theme-lambda "eshell-prompt-extras")
   (setq eshell-highlight-prompt nil
 	eshell-prompt-function 'epe-theme-lambda))
+
 ;; Eshell aliases.
 (defun eshell/d () (dired-other-window "."))
 (defalias 'eshell/e 'find-file-other-window)
@@ -25,6 +29,12 @@
 ;; Key bindings.
 (global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
+
+(with-eval-after-load 'eshell
+  (evil-define-key 'insert eshell-mode-map (kbd "C-c") 'eshell-interrupt-process)
+  (evil-define-key 'insert eshell-mode-map (kbd "C-d")
+    (lambda () (interactive) (kill-buffer (current-buffer)))))
+
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
 
