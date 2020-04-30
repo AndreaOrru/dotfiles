@@ -21,6 +21,7 @@
   (evil-leader/set-key "gl" 'magit-log-all)
   (evil-leader/set-key "gs" 'magit-status)
 
+  (evil-leader/set-key "gm" 'diff-hl-margin-mode)
   (evil-leader/set-key "[" 'diff-hl-previous-hunk)
   (evil-leader/set-key "]" 'diff-hl-next-hunk)
   (evil-leader/set-key "u" 'diff-hl-revert-hunk))
