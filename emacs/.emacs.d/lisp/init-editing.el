@@ -5,6 +5,8 @@
 
 ;; Highlight the current line.
 (add-hook 'after-init-hook 'global-hl-line-mode)
+;; Highlight matching parenthesis.
+(add-hook 'prog-mode-hook 'show-paren-mode)
 
 ;; Intelligently clean up extra whitespaces on save.
 (require-package 'whitespace-cleanup-mode)

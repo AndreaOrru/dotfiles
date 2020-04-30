@@ -39,6 +39,6 @@
   (evil-define-key 'emacs eshell-mode-map (kbd "C-c") 'eshell-interrupt-process))
 
 (with-eval-after-load 'evil-leader
-  (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
+  (evil-leader/set-key "'" 'tmux-pane-toggle-horizontal))
 
 (provide 'init-shell)
