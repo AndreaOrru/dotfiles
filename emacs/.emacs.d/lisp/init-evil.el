@@ -13,6 +13,7 @@
 ;; Configure extra Evil keybindings.
 (setq evil-want-keybinding nil)
 (with-eval-after-load 'evil
+  (setq evil-collection-company-use-tng nil)  ;; Use standard Company completion.
   (evil-collection-init))
 
 ;; Custom key bindings.

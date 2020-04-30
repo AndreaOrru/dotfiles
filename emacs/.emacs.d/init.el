@@ -15,6 +15,7 @@
 (require 'init-files)
 
 (require 'init-ivy)
+(require 'init-company)
 (require 'init-dired)
 (require 'init-shell)
 
