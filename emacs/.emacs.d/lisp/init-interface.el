@@ -10,6 +10,7 @@
 
 ;; Set interface font.
 (setq default-frame-alist '((font . "Mononoki-14")))
+(setq-default line-spacing 3)
 
 (setq inhibit-startup-screen t)    ;; Disable Emacs startup screen.
 (setq ring-bell-function 'ignore)  ;; Disable audible bell.
