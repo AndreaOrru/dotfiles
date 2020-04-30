@@ -15,6 +15,7 @@
 ;; Eshell aliases.
 (defun eshell/d () (dired-other-window "."))
 (defalias 'eshell/e 'find-file-other-window)
+(defalias 'eshell/s 'magit-status)
 
 ;; Pop an Eshell at the bottom of the frame.
 (require-package 'shell-pop)
