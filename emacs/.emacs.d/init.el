@@ -22,7 +22,7 @@
 
 (require 'init-projects)
 (require 'init-git)
-(require 'init-help)
+(require 'init-misc)
 
 
 ;; Load customized variables.
