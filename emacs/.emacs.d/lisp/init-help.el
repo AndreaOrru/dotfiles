@@ -1,10 +1,16 @@
 ;; Switch focus to newly opened help windows.
-(setq-default help-window-select t)
+;; (setq-default help-window-select t)
 
-;; Open help buffers at the bottom.
-(add-to-list
- 'display-buffer-alist
- '("^\\*Help\\*$" (display-buffer-reuse-window display-buffer-below-selected)))
+;; ;; Open help buffers at the bottom.
+;; (setq display-buffer-alist
+;;       '(("^\\*Help\\*$" (display-buffer-reuse-window display-buffer-below-selected))
+;;	("^\\*Apropos\\*$" (display-buffer-reuse-window display-buffer-below-selected))))
+
+(require-package 'popwin)
+(add-hook 'after-init-hook 'popwin-mode)
+
+(with-eval-after-load 'popwin
+  (push "*Apropos*" popwin:special-display-config))
 
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
