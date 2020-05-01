@@ -2,6 +2,7 @@
 (require-package 'evil)
 (require-package 'evil-collection)
 (require-package 'evil-leader)
+(require-package 'evil-surround)
 
 ;; Enable Evil and Evil Leader.
 (add-hook 'after-init-hook 'global-evil-leader-mode)
@@ -14,6 +15,11 @@
 (setq evil-want-keybinding nil)
 (with-eval-after-load 'evil
   (setq evil-collection-company-use-tng nil)  ;; Use standard Company completion.
+
+  ;; Use s for surround and S for substitute.
+  (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
+  (evil-define-key 'visual evil-surround-mode-map "S" 'evil-substitute)
+
   (evil-collection-init))
 
 ;; Custom key bindings.
