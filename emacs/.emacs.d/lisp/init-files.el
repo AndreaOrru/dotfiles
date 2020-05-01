@@ -21,8 +21,11 @@
       (set-visited-file-name new-name)
       (rename-buffer new-name))))
 
-;; Abbreviate recent filenames (i.e. $HOME -> ~).
+;; Enable recentf mode.
 (require 'recentf)
+(add-hook 'after-init-hook 'recentf-mode)
+(setq-default recentf-max-saved-items 1000)
+;; Abbreviate recent filenames (i.e. $HOME -> ~).
 (add-to-list 'recentf-filename-handlers 'abbreviate-file-name)
 
 ;; Key bindings.

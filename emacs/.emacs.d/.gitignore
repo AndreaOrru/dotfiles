@@ -15,8 +15,10 @@
 elpa/
 eshell/
 transient/
+var/
 
 .last-package-update-day
+.lsp-session-v1
 custom.el
 projectile-bookmarks.eld
 projectile.cache

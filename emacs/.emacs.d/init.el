@@ -5,6 +5,7 @@
 
 
 ;; Load submodules.
+(require 'init-performance)
 (require 'init-elpa)
 (require 'init-interface)
 (require 'init-modeline)
@@ -22,6 +23,7 @@
 
 (require 'init-projects)
 (require 'init-git)
+(require 'init-lsp)
 (require 'init-misc)
 
 

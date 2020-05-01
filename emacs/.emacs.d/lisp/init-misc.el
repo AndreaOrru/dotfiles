@@ -9,6 +9,10 @@
 (setq ring-bell-function 'ignore)  ;; Disable audible bell.
 (fset 'yes-or-no-p 'y-or-n-p)      ;; Use Y/N instead of yes/no.
 
+;; Persist prescient data.
+(with-eval-after-load 'prescient
+  (prescient-persist-mode 1))
+
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "ha" 'apropos)
