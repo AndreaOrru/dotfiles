@@ -1,3 +1,6 @@
+[org/gnome/GWeather]
+temperature-unit='centigrade'
+
 [org/gnome/desktop/background]
 picture-options='zoom'
 picture-uri='file:///home/andrea/.local/share/backgrounds/2020-04-27-18-46-34-google-logo.jpg'
@@ -113,9 +116,19 @@ switch-to-application-8=@as []
 switch-to-application-9=@as []
 toggle-message-tray=['<Shift><Super>n']
 
+[org/gnome/shell/weather]
+automatic-location=false
+locations=[<(uint32 2, <('Tokyo', 'RJTI', true, [(0.62191898430954862, 2.4408429589140699)], [(0.62282074357417661, 2.4391218722853854)])>)>]
+
 [org/gnome/shell/window-switcher]
 current-workspace-only=false
+
+[org/gnome/shell/world-clocks]
+locations=[<(uint32 2, <('Los Angeles', 'KCQT', true, [(0.59370283970450188, -2.0644336110828618)], [(0.59432360095955872, -2.063741622941031)])>)>, <(uint32 2, <('New York', 'KNYC', true, [(0.71180344078725644, -1.2909618758762367)], [(0.71059804659265924, -1.2916478949920254)])>)>, <(uint32 2, <('London', 'EGWU', true, [(0.89971722940307675, -0.007272211034407213)], [(0.89884456477707964, -0.0020362232784242244)])>)>, <(uint32 2, <('Rome', 'LIRU', true, [(0.73216562121162132, 0.21816615649929119)], [(0.73129295658562399, 0.21787526247286132)])>)>, <(uint32 2, <('Shanghai', 'ZSSS', true, [(0.54396095602266359, 2.1194114825206833)], [(0.54493057368860898, 2.1198429802716539)])>)>]
 
 [org/gnome/shell]
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['kitty.desktop', 'emacs.desktop', 'firefox.desktop', 'spotify.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/system/location]
+enabled=false
