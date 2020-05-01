@@ -11,16 +11,7 @@
 *.~undo-tree
 
 
-# Temporary Emacs files.
+# Emacs littering.
 elpa/
-eshell/
-transient/
+etc/
 var/
-
-.last-package-update-day
-.lsp-session-v1
-custom.el
-projectile-bookmarks.eld
-projectile.cache
-recentf
-smex-items
