@@ -35,12 +35,6 @@ In that case, insert the number."
     (mapc (lambda (x) (define-key map (format "%d" x) 'my/company-number))
 	  (number-sequence 0 9)))
 
-  ;; HACK: Workaround for https://github.com/abo-abo/swiper/issues/2385
-  (advice-add 'counsel-company
-	      :before
-	      (defun my/company-hide-popup (&rest args)
-		(company-cancel)))
-
   ;; Filter Company results with Ivy.
   (define-key company-active-map (kbd "C-s") 'counsel-company))
 
