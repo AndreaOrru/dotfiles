@@ -35,6 +35,8 @@ In that case, insert the number."
     (mapc (lambda (x) (define-key map (format "%d" x) 'my/company-number))
 	  (number-sequence 0 9)))
 
+  ;; Use TAB to start completion.
+  (global-set-key (kbd "TAB") 'company-indent-or-complete-common)
   ;; Filter Company results with Ivy.
   (define-key company-active-map (kbd "C-s") 'counsel-company))
 
