@@ -1,4 +1,5 @@
 (require-package 'company)
+(require-package 'company-prescient)
 (add-hook 'after-init-hook 'global-company-mode)
 
 
@@ -24,10 +25,9 @@ In that case, insert the number."
 
 
 (with-eval-after-load 'company
-  ;; Show numbered completions.
-  (setq company-show-numbers t)
-  ;; Show completions faster.
-  (setq company-idle-delay 0.15)
+  (setq company-show-numbers t)   ;; Show numbered completions.
+  (setq company-idle-delay 0.15)  ;; Show completions faster.
+  (company-prescient-mode 1)      ;; Order results by frequency.
 
   ;; Taken from abo-abo's configuration.
   ;; Map digits to completions directly, when possible.

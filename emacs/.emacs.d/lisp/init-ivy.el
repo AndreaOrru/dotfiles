@@ -1,9 +1,8 @@
-;; Install packages.
 (require-package 'counsel)         ;; Ivy + extras.
 (require-package 'imenu-anywhere)  ;; Semantic search across buffers.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
 (require-package 'ivy-posframe)    ;; Show Ivy in sub-frames.
-(require-package 'smex)            ;; Better M-x.
+(require-package 'ivy-prescient)   ;; Order results by frequency.
 (require-package 'wgrep)           ;; Edit search results.
 
 ;; Enable Ivy mode.
@@ -12,8 +11,8 @@
 (with-eval-after-load 'counsel
   ;; Search words in any order in Ivy.
   (setq-default ivy-re-builders-alist '((t . ivy--regex-ignore-order)))
-  ;; No ^ in Ivy regex by default.
-  (setq-default ivy-initial-inputs-alist nil)
+  (setq-default ivy-initial-inputs-alist nil)  ;; No ^ in Ivy regex by default.
+  (ivy-prescient-mode 1)                       ;; Order results by frequency.
 
   ;; Search inside hidden files as well.
   (setq-default counsel-rg-base-command (concat counsel-rg-base-command " --hidden"))
