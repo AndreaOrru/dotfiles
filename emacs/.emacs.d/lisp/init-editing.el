@@ -1,7 +1,7 @@
-;; Disable autosave and backup files.
 (setq-default
   auto-save-default nil
-  make-backup-files nil)
+  make-backup-files nil
+  indent-tabs-mode nil)
 
 ;; Highlight the current line.
 (add-hook 'after-init-hook 'global-hl-line-mode)
