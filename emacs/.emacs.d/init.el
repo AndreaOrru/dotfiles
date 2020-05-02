@@ -23,6 +23,7 @@
 (require 'init-projects)
 (require 'init-git)
 (require 'init-lsp)
+(require 'init-flycheck)
 (require 'init-misc)
 
 ;; Save customized variables in a separate file.
