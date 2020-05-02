@@ -17,6 +17,8 @@
 
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
+  (which-key/describe-prefix "g" "git")
+
   (evil-leader/set-key "gd" 'magit-diff-working-tree)
   (evil-leader/set-key "gl" 'magit-log-all)
   (evil-leader/set-key "gs" 'magit-status)

@@ -46,6 +46,7 @@
   (evil-leader/set-key "SPC" 'counsel-M-x)
   (evil-leader/set-key "/" 'counsel-rg)
 
+  (which-key/describe-prefix "j" "jump")
   (evil-leader/set-key "ji" 'counsel-semantic-or-imenu)
   (evil-leader/set-key "jI" 'ivy-imenu-anywhere)
 

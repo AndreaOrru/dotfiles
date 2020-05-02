@@ -3,6 +3,7 @@
 
 (with-eval-after-load 'flycheck
   ;; Use SPC e as prefix for Flycheck commands.
+  (which-key/describe-prefix "e" "errors")
   (evil-leader/set-key "e" flycheck-command-map)
   ;; Disable Emacs Lisp syntax checking.
   (setq flycheck-global-modes '(not emacs-lisp-mode))

@@ -15,6 +15,7 @@
 
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
+  (which-key/describe-prefix "h" "help")
   (evil-leader/set-key "ha" 'apropos)
   (evil-leader/set-key "hf" 'counsel-describe-function)
   (evil-leader/set-key "hk" 'describe-key)

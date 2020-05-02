@@ -22,11 +22,23 @@
 
   (evil-collection-init))
 
+;; Use which-key to display available key bindings.
+(require-package 'which-key)
+(add-hook 'after-init-hook 'which-key-mode)
+
+(require 'evil-leader)
+(defun which-key/describe-prefix (prefix description)
+  "Assign a which-key DESCRIPTION to a evil-leader PREFIX."
+  (which-key-add-key-based-replacements
+    (concat evil-leader/leader " " prefix) description))
+
 ;; Custom key bindings.
 (with-eval-after-load 'evil-leader
   ;; Use Space as leader key.
-  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-leader "SPC")
+
   ;; Clear search selection.
+  (which-key/describe-prefix "s" "search")
   (evil-leader/set-key "sc" 'evil-ex-nohighlight))
 
 (provide 'init-evil)

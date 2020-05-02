@@ -15,6 +15,8 @@
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
   (evil-leader/set-key "fe" 'edit-dotemacs)
+
+  (which-key/describe-prefix "p" "projects")
   (evil-leader/set-key "p" 'projectile-command-map))
 
 (provide 'init-projects)

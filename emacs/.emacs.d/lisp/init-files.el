@@ -30,6 +30,7 @@
 
 ;; Key bindings.
 (with-eval-after-load 'evil-leader
+  (which-key/describe-prefix "f" "files")
   (evil-leader/set-key "fr" 'counsel-recentf)
   (evil-leader/set-key "fD" 'delete-this-file)
   (evil-leader/set-key "fR" 'rename-this-file-and-buffer))
