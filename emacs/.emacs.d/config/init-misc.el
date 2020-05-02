@@ -8,9 +8,10 @@
 	      ";;\n"
 	      ";;                 - Hafez Shirazi -\n\n"))
 
-(setq inhibit-startup-screen t)    ;; Disable Emacs startup screen.
-(setq ring-bell-function 'ignore)  ;; Disable audible bell.
-(fset 'yes-or-no-p 'y-or-n-p)      ;; Use Y/N instead of yes/no.
+(setq inhibit-startup-screen t)       ;; Disable Emacs startup screen.
+(setq ring-bell-function 'ignore)     ;; Disable audible bell.
+(fset 'yes-or-no-p 'y-or-n-p)         ;; Use Y/N instead of yes/no.
+(setq disabled-command-function nil)  ;; Enable all functions.
 
 ;; Persist prescient data.
 (after 'prescient
