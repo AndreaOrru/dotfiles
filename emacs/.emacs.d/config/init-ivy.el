@@ -3,7 +3,6 @@
 (add-hook 'after-init-hook 'ivy-mode)
 
 ;; Extra functionalities.
-(require-package 'imenu-anywhere)  ;; Semantic search across buffers.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
 (require-package 'ivy-posframe)    ;; Show Ivy in sub-frames.
 (require-package 'ivy-prescient)   ;; Order results by frequency.
@@ -39,8 +38,19 @@
 ;; Display Ivy at point for Company completion filtering.
 (after 'ivy-posframe
   (setq ivy-posframe-display-functions-alist
-	'((counsel-company . ivy-posframe-display-at-point)
-	  (t . nil))))
+    '((counsel-company . ivy-posframe-display-at-point)
+      (t . nil))))
+
+;; Semantic search across buffers.
+(require-package 'imenu-anywhere)
+(after 'imenu-anywhere
+  ;; Consider only buffers in the same project.
+  (setq imenu-anywhere-buffer-filter-functions '(imenu-anywhere-same-project-p))
+  ;; Filter out Magit buffers.
+  (setq-default imenu-anywhere-buffer-list-function
+        (lambda ()
+          (--remove (eq (buffer-local-value 'major-mode it) 'magit-status-mode)
+                    (buffer-list)))))
 
 ;; Key bindings.
 (after 'init-evil
