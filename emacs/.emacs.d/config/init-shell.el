@@ -36,6 +36,6 @@
 (require-package 'tmux-pane)
 (after 'evil-leader
   (require 'tmux-pane)
-  (evil-leader/set-key "'" 'tmux-pane-toggle-horizontal))
+  (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
 
 (provide 'init-shell)
