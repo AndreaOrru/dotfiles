@@ -1,5 +1,5 @@
 ;; Add the lisp/ subdirectory to the load path.
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
 ;; Load submodules.
 (require 'init-performance)
