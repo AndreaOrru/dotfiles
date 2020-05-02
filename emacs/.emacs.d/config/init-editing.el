@@ -18,12 +18,15 @@
 
 ;; Key bindings.
 (after 'init-evil
-  (evil-leader/set-key "v" 'er/expand-region)
+  ;; Adjust region indentation.
+  (evil-define-key 'visual prog-mode-map (kbd "TAB") 'indent-region)
+  (evil-leader/set-key "v" 'er/expand-region)  ;; Expand region.
 
   ;; Clear search selection.
   (which-key/describe-prefix "s" "search")
   (evil-leader/set-key "sc" 'evil-ex-nohighlight)
 
+  ;; Comment/uncomment.
   (require 'evil-nerd-commenter)
   (evil-leader/set-key ";" 'evilnc-comment-operator))
 
