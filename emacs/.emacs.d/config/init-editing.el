@@ -1,8 +1,10 @@
 ;; Sane defaults.
 (setq-default
-  auto-save-default nil
-  make-backup-files nil
-  indent-tabs-mode nil)
+  auto-save-default nil  ;; Don't auto save files.
+  column-number-mode t   ;; Show column number in modeline.
+  make-backup-files nil  ;; Don't create ~ backup files.
+  indent-tabs-mode nil   ;; Use spaces for indentation.
+  tab-width 4)           ;; Show tabs as 4 spaces.
 
 ;; Highlight the current line.
 (add-hook 'after-init-hook 'global-hl-line-mode)
