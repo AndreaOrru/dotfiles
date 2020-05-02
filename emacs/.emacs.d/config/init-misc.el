@@ -3,10 +3,10 @@
 
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"
-	      ";;   Or you can gather the effort\n"
-	      ";;      To rise above them all\n"
-	      ";;\n"
-	      ";;                 - Hafez Shirazi -\n\n"))
+	          ";;   Or you can gather the effort\n"
+	          ";;      To rise above them all\n"
+	          ";;\n"
+	          ";;                 - Hafez Shirazi -\n\n"))
 
 (setq inhibit-startup-screen t)       ;; Disable Emacs startup screen.
 (setq ring-bell-function 'ignore)     ;; Disable audible bell.
