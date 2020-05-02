@@ -1,3 +1,4 @@
+;; Sane defaults.
 (setq-default
   auto-save-default nil
   make-backup-files nil
@@ -12,12 +13,16 @@
 (require-package 'whitespace-cleanup-mode)
 (add-hook 'after-init-hook 'global-whitespace-cleanup-mode)
 
-(require-package 'expand-region)        ;; Expand selected region interactively.
+(require-package 'expand-region)        ;; Interactively expand region.
 (require-package 'evil-nerd-commenter)  ;; Utilities for (un-)commenting.
 
 ;; Key bindings.
-(with-eval-after-load 'evil-leader
+(after 'init-evil
   (evil-leader/set-key "v" 'er/expand-region)
+
+  ;; Clear search selection.
+  (which-key/describe-prefix "s" "search")
+  (evil-leader/set-key "sc" 'evil-ex-nohighlight)
 
   (require 'evil-nerd-commenter)
   (evil-leader/set-key ";" 'evilnc-comment-operator))

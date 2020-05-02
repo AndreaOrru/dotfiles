@@ -1,3 +1,4 @@
+;; Use LSP in all programming modes.
 (require-package 'lsp-mode)
 (require-package 'lsp-ui)
 (add-hook 'prog-mode-hook 'lsp-deferred)

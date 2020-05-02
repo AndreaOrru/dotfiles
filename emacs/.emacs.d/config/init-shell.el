@@ -1,11 +1,11 @@
-;; Launch inferior shells on a fast shell.
+;; Launch inferior shells on a lightweight shell.
 (setq shell-file-name "/bin/sh")
 
 ;; Disable line highlighting in Eshell.
 (add-hook 'eshell-mode-hook
 	  (lambda () (setq-local global-hl-line-mode nil)))
 
-(with-eval-after-load 'eshell
+(after 'eshell
   ;; Custom prompt.
   (setq eshell-prompt-regexp "^[^#\nλ]*[#λ] ")
   (setq eshell-prompt-function
@@ -34,8 +34,8 @@
 
 ;; TMux integration.
 (require-package 'tmux-pane)
-(require 'tmux-pane)
-(with-eval-after-load 'evil-leader
+(after 'evil-leader
+  (require 'tmux-pane)
   (evil-leader/set-key "'" 'tmux-pane-toggle-horizontal))
 
 (provide 'init-shell)

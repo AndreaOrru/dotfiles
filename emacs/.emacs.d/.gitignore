@@ -10,8 +10,7 @@
 # Undo-tree save-files
 *.~undo-tree
 
-
-# Emacs littering.
+# Emacs littering
 elpa/
 etc/
 var/

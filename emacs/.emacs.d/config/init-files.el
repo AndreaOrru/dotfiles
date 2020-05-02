@@ -29,7 +29,7 @@
 (add-to-list 'recentf-filename-handlers 'abbreviate-file-name)
 
 ;; Key bindings.
-(with-eval-after-load 'evil-leader
+(after 'init-evil
   (which-key/describe-prefix "f" "files")
   (evil-leader/set-key "fr" 'counsel-recentf)
   (evil-leader/set-key "fD" 'delete-this-file)

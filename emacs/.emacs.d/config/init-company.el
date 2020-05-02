@@ -1,7 +1,10 @@
+;; Use company mode for completion everywhere.
 (require-package 'company)
-(require-package 'company-prescient)
 (add-hook 'after-init-hook 'global-company-mode)
-
+(after 'company
+  (setq company-show-numbers t)   ;; Show numbered completions.
+  (setq company-idle-delay 0.15)  ;; Show completions faster.
+  (company-prescient-mode 1))     ;; Order results by frequency.
 
 ;; Taken from abo-abo's configuration.
 (defun my/company-number ()
@@ -23,20 +26,15 @@ In that case, insert the number."
 	   10
 	 (string-to-number k))))))
 
+;; Use TAB to start completion (or indent if necessary, as per default).
+(global-set-key (kbd "TAB") 'company-indent-or-complete-common)
 
-(with-eval-after-load 'company
-  (setq company-show-numbers t)   ;; Show numbered completions.
-  (setq company-idle-delay 0.15)  ;; Show completions faster.
-  (company-prescient-mode 1)      ;; Order results by frequency.
-
+(after 'company
   ;; Taken from abo-abo's configuration.
   ;; Map digits to completions directly, when possible.
   (let ((map company-active-map))
     (mapc (lambda (x) (define-key map (format "%d" x) 'my/company-number))
 	  (number-sequence 0 9)))
-
-  ;; Use TAB to start completion.
-  (global-set-key (kbd "TAB") 'company-indent-or-complete-common)
   ;; Filter Company results with Ivy.
   (define-key company-active-map (kbd "C-s") 'counsel-company))
 

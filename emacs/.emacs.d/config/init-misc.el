@@ -1,3 +1,6 @@
+;; Utility to update packages.
+(require-package 'auto-package-update)
+
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"
 	      ";;   Or you can gather the effort\n"
@@ -10,11 +13,11 @@
 (fset 'yes-or-no-p 'y-or-n-p)      ;; Use Y/N instead of yes/no.
 
 ;; Persist prescient data.
-(with-eval-after-load 'prescient
+(after 'prescient
   (prescient-persist-mode 1))
 
 ;; Key bindings.
-(with-eval-after-load 'evil-leader
+(after 'init-evil
   (which-key/describe-prefix "h" "help")
   (evil-leader/set-key "ha" 'apropos)
   (evil-leader/set-key "hf" 'counsel-describe-function)

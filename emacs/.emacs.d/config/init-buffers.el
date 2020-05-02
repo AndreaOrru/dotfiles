@@ -4,7 +4,7 @@
   (switch-to-buffer (other-buffer)))
 
 ;; Key bindings.
-(with-eval-after-load 'evil-leader
+(after 'init-evil
   (evil-leader/set-key "TAB" 'switch-to-alternate-buffer)
 
   (which-key/describe-prefix "b" "buffers")

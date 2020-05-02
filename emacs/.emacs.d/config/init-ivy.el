@@ -1,14 +1,15 @@
-(require-package 'counsel)         ;; Ivy + extras.
+;; Enable Ivy mode.
+(require-package 'counsel)
+(add-hook 'after-init-hook 'ivy-mode)
+
+;; Extra functionalities.
 (require-package 'imenu-anywhere)  ;; Semantic search across buffers.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
 (require-package 'ivy-posframe)    ;; Show Ivy in sub-frames.
 (require-package 'ivy-prescient)   ;; Order results by frequency.
 (require-package 'wgrep)           ;; Edit search results.
 
-;; Enable Ivy mode.
-(add-hook 'after-init-hook 'ivy-mode)
-
-(with-eval-after-load 'counsel
+(after 'counsel
   ;; Search words in any order in Ivy.
   (setq-default ivy-re-builders-alist '((t . ivy--regex-ignore-order)))
   (setq-default ivy-initial-inputs-alist nil)  ;; No ^ in Ivy regex by default.
@@ -19,7 +20,7 @@
   ;; Separate items in kill ring.
   (setq-default counsel-yank-pop-separator "\n\n"))
 
-(with-eval-after-load 'ivy
+(after 'ivy
   ;; Bigger Ivy minibuffer with fixed size.
   (setq-default
    ivy-height 15
@@ -36,13 +37,13 @@
   (define-key ivy-switch-buffer-map (kbd "C-k") 'ivy-previous-line))
 
 ;; Display Ivy at point for Company completion filtering.
-(with-eval-after-load 'ivy-posframe
+(after 'ivy-posframe
   (setq ivy-posframe-display-functions-alist
 	'((counsel-company . ivy-posframe-display-at-point)
 	  (t . nil))))
 
 ;; Key bindings.
-(with-eval-after-load 'evil-leader
+(after 'init-evil
   (evil-leader/set-key "SPC" 'counsel-M-x)
   (evil-leader/set-key "/" 'counsel-rg)
 
