@@ -5,8 +5,7 @@ temperature-unit='centigrade'
 world-clocks=[{'location': <(uint32 2, <('Los Angeles', 'KCQT', true, [(0.59370283970450188, -2.0644336110828618)], [(0.59432360095955872, -2.063741622941031)])>)>}, {'location': <(uint32 2, <('New York', 'KNYC', true, [(0.71180344078725644, -1.2909618758762367)], [(0.71059804659265924, -1.2916478949920254)])>)>}, {'location': <(uint32 2, <('London', 'EGWU', true, [(0.89971722940307675, -0.007272211034407213)], [(0.89884456477707964, -0.0020362232784242244)])>)>}, {'location': <(uint32 2, <('Rome', 'LIRU', true, [(0.73216562121162132, 0.21816615649929119)], [(0.73129295658562399, 0.21787526247286132)])>)>}, {'location': <(uint32 2, <('Shanghai', 'ZSSS', true, [(0.54396095602266359, 2.1194114825206833)], [(0.54493057368860898, 2.1198429802716539)])>)>}]
 
 [org/gnome/desktop/background]
-picture-options='zoom'
-picture-uri='file:///home/andrea/.local/share/backgrounds/2020-04-27-18-46-34-google-logo.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'it')]
@@ -18,7 +17,7 @@ clock-show-weekday=true
 document-font-name='Cantarell 12'
 enable-animations=false
 font-name='Cantarell 12'
-gtk-im-module='ibus'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adwaita-dark'
 monospace-font-name='Source Code Pro 11'
 toolkit-accessibility=false
@@ -36,8 +35,7 @@ tap-to-click=true
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/screensaver]
-picture-options='zoom'
-picture-uri='file:///home/andrea/.local/share/backgrounds/2020-04-27-18-46-34-google-logo.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
 
 [org/gnome/desktop/search-providers]
 disable-external=true
