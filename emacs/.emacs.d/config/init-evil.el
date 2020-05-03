@@ -15,7 +15,8 @@
 
 ;; Use s for surround and S for substitute.
 (require-package 'evil-surround)
-(after 'evil
+(add-hook 'after-init-hook 'global-evil-surround-mode)
+(after 'evil-surround
   (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
   (evil-define-key 'visual evil-surround-mode-map "S" 'evil-substitute))
 
