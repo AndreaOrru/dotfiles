@@ -3,7 +3,7 @@
 
 ;; Disable line highlighting in Eshell.
 (add-hook 'eshell-mode-hook
-	  (lambda () (setq-local global-hl-line-mode nil)))
+          (lambda () (setq-local global-hl-line-mode nil)))
 
 (after 'eshell
   ;; Custom prompt.
