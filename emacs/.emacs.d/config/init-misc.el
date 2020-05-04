@@ -1,3 +1,4 @@
+(setq initial-major-mode 'emacs-lisp-mode)
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"
               ";;   Or you can gather the effort\n"
@@ -28,13 +29,5 @@
 (after 'init-evil
   (setq webpaste-paste-confirmation t)
   (evil-leader/set-key "sp" 'webpaste-paste-buffer-or-region))
-
-;; Help and documentation functions.
-(after 'init-evil
-  (which-key/describe-prefix "h" "help")
-  (evil-leader/set-key "ha" 'apropos)
-  (evil-leader/set-key "hf" 'counsel-describe-function)
-  (evil-leader/set-key "hk" 'describe-key)
-  (evil-leader/set-key "hv" 'counsel-describe-variable))
 
 (provide 'init-misc)
