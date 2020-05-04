@@ -28,6 +28,10 @@
 ;; Use which-key to display available key bindings.
 (require-package 'which-key)
 (add-hook 'after-init-hook 'which-key-mode)
+(after 'which-key
+  (setq which-key-idle-delay 0.4
+        which-key-idle-secondary-delay 0.01))
+
 (after 'evil
   (require 'evil-leader)
   (defun which-key/describe-prefix (prefix description)
