@@ -3,10 +3,10 @@
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
 
 ;; Enable Flycheck syntax checking for Python.
-(add-hook 'python-mode-hook 'flycheck-mode)
-(after 'flycheck
-  ;; Disable Pylint.
-  (add-to-list 'flycheck-disabled-checkers 'python-pylint))
+(add-hook 'python-mode-hook
+          (lambda ()
+            (flycheck-mode 1)
+            (flycheck-disable-checker 'python-pylint)))
 
 (after 'lsp-mode
   ;; Enable Flake8.
