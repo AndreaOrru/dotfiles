@@ -35,7 +35,9 @@
 ;; TMux integration.
 (require-package 'tmux-pane)
 (after 'evil-leader
-  (require 'tmux-pane)
-  (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal))
+  (if (display-graphic-p)
+      (evil-leader/set-key "RET" 'shell-pop)
+    (require 'tmux-pane)
+    (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal)))
 
 (provide 'init-shell)
