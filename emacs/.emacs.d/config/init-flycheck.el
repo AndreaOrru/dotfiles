@@ -1,6 +1,4 @@
-;; Enable Flycheck for all programming modes.
 (require-package 'flycheck)
-(add-hook 'prog-mode-hook 'global-flycheck-mode)
 
 ;; Display Flycheck error list as a sticky popup.
 (after 'popwin
@@ -11,10 +9,11 @@
   ;; Use SPC e as prefix for Flycheck commands.
   (which-key/describe-prefix "e" "errors")
   (evil-leader/set-key "e" flycheck-command-map)
-
-  ;; Disable Emacs Lisp syntax checking.
-  (setq flycheck-global-modes '(not emacs-lisp-mode))
   ;; Only run syntax check on open and save.
-  (setq flycheck-check-syntax-automatically '(save mode-enabled)))
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  ;; Use margin instead of fringe in terminal.
+  (unless (display-graphic-p)
+    (add-hook 'flycheck-mode-hook
+              (lambda () (flycheck-set-indication-mode 'left-margin)))))
 
 (provide 'init-flycheck)

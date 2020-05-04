@@ -2,6 +2,12 @@
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
 
+;; Enable Flycheck syntax checking for Python.
+(add-hook 'python-mode-hook 'flycheck-mode)
+(after 'flycheck
+  ;; Disable Pylint.
+  (add-to-list 'flycheck-disabled-checkers 'python-pylint))
+
 (after 'lsp-mode
   ;; Enable Flake8.
   (setq lsp-pyls-configuration-sources ["flake8"])
@@ -15,9 +21,5 @@
   ;; Disable YAPF and autopep8 to prioritize Black.
   (setq lsp-pyls-plugins-autopep8-enabled nil)
   (setq lsp-pyls-plugins-yapf-enabled nil))
-
-;; Disable Pylint.
-(add-hook 'python-mode-hook
-          (lambda () (add-to-list 'flycheck-disabled-checkers 'python-pylint)))
 
 (provide 'init-python)
