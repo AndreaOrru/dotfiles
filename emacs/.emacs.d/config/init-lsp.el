@@ -6,7 +6,7 @@
 (after [lsp-mode evil]
   ;; Set \ as the LSP prefix.
   (setq lsp-keymap-prefix "\\")
-  (evil-define-key '(normal visual) lsp-mode-map "\\" lsp-command-map)
+  (evil-define-key '(normal visual) lsp-mode-map (kbd "\\") lsp-command-map)
   (add-hook 'lsp-mode-hook 'lsp-enable-which-key-integration)
 
   (setq lsp-auto-guess-root t)            ;; Guess the project root.

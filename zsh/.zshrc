@@ -46,6 +46,7 @@ alias "g.."="cd \`git root\`"
 
 # Text editors.
 alias e='emacsclient -t'
+alias "e."='emacsclient -t . ..'
 
 
 #
