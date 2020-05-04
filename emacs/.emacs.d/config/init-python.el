@@ -3,10 +3,10 @@
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
 
 ;; Enable Python 3 documentation through Dash.
-(require 'dash-docs)
-(unless (dash-docs-docset-installed-p "Python 3")
-  (dash-docs-install-docset "Python 3"))
-(add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3"))))
+(after 'init-docs
+  (unless (dash-docs-docset-installed-p "Python 3")
+    (dash-docs-install-docset "Python 3"))
+  (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
 
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook

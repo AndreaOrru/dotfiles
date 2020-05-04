@@ -1,7 +1,8 @@
 ;; Dash documentation search.
 (require-package 'counsel-dash)
+(require 'dash-docs)
+(setq dash-docs-docsets-path (no-littering-expand-var-file-name "docsets"))
 (after 'init-evil
-  (setq dash-docs-docsets-path (no-littering-expand-var-file-name "docsets"))
   (which-key/describe-prefix "d" "docs")
   (evil-leader/set-key "dd" 'counsel-dash-at-point)
   (evil-leader/set-key "ds" 'counsel-dash))
