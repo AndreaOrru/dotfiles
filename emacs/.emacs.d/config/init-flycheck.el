@@ -9,8 +9,10 @@
   ;; Use SPC e as prefix for Flycheck commands.
   (which-key/describe-prefix "e" "errors")
   (evil-leader/set-key "e" flycheck-command-map)
+
   ;; Only run syntax check on open and save.
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+
   ;; Use margin instead of fringe in terminal.
   (unless (display-graphic-p)
     (add-hook 'flycheck-mode-hook

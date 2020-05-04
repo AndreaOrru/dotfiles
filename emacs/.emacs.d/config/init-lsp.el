@@ -25,6 +25,7 @@
 
   ;; VIM-like bindings for peek mode.
   (after 'lsp-ui
+    (define-key lsp-command-map (kbd "i") 'lsp-ui-imenu)
     (define-key lsp-ui-peek-mode-map (kbd "C-j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "C-k") 'lsp-ui-peek--select-prev)
