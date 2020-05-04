@@ -11,6 +11,8 @@
 ;; Set interface font.
 (setq default-frame-alist '((font . "Mononoki-14")))
 (setq-default line-spacing 3)
+;; Make the fringe bigger.
+(fringe-mode '(16 . nil))
 
 ;; Enable mouse in terminal.
 (unless (display-graphic-p)
