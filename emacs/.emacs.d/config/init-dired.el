@@ -5,7 +5,6 @@
 ;; Don't open useless Dired buffers.
 (require-package 'dired-single)
 (after 'dired
-  (put 'dired-find-alternate-file 'disabled nil)
   (define-key dired-mode-map [remap dired-find-file]
     'dired-find-alternate-file)
   (define-key dired-mode-map [remap dired-mouse-find-file-other-window]
