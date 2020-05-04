@@ -12,7 +12,6 @@
   (setq lsp-flycheck-live-reporting nil)  ;; Flycheck live reporting.
   (setq lsp-keep-workspace-alive nil)     ;; Kill language server when done.
   (setq lsp-prefer-capf t)                ;; Use CAPF completion (more efficient).
-
   ;; Format files before saving.
   (add-hook 'before-save-hook 'lsp-format-buffer)
 

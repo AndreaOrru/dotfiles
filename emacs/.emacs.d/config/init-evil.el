@@ -4,7 +4,6 @@
 
 ;; VIM-like search with persistent highlight.
 (setq-default evil-search-module 'evil-search)
-(setq evil-want-C-i-jump nil)  ;; Fix TAB inside Org mode.
 
 ;; Collection of extra Evil keybindings.
 (require-package 'evil-collection)

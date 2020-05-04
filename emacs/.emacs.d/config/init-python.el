@@ -2,7 +2,7 @@
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
 
-(after 'lsp-mode
+(defun my/lsp-python-config ()
   ;; Enable Flake8.
   (setq lsp-pyls-configuration-sources ["flake8"])
   (setq lsp-pyls-plugins-flake8-enabled t)
@@ -12,9 +12,12 @@
   (setq lsp-pyls-plugins-pyflakes-enabled nil)
   ;; Disable PyLint.
   (setq lsp-pyls-plugins-pylint-enabled nil)
-
   ;; Disable YAPF and autopep8 to prioritize Black.
   (setq lsp-pyls-plugins-autopep8-enabled nil)
   (setq lsp-pyls-plugins-yapf-enabled nil))
+
+(after 'lsp-mode
+  (my/lsp-python-config)
+  (add-hook 'python-mode-hook 'my/lsp-python-config))
 
 (provide 'init-python)
