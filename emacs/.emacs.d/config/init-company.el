@@ -1,5 +1,6 @@
 ;; Use company mode for completion everywhere.
 (require-package 'company)
+(require-package 'company-prescient)
 (add-hook 'after-init-hook 'global-company-mode)
 (after 'company
   (setq company-show-numbers t)   ;; Show numbered completions.
