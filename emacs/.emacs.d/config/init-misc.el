@@ -15,15 +15,19 @@
 ;; Make clipboard work in TTY Emacs.
 (require-package 'clipetty)
 (add-hook 'after-init-hook 'global-clipetty-mode)
-;; Pastebin integration.
-(require-package 'webpaste)
 
 ;; Google search integration.
 (require-package 'google-this)
-(after 'evil-leader
-  (which-key/describe-prefix "s" "search")
+(after 'init-evil
+  (which-key/describe-prefix "s" "search/selection")
   (evil-leader/set-key "sg" 'google-this-noconfirm)
   (evil-leader/set-key "sG" 'google-this-search))
+
+;; Pastebin integration.
+(require-package 'webpaste)
+(after 'init-evil
+  (setq webpaste-paste-confirmation t)
+  (evil-leader/set-key "sp" 'webpaste-paste-buffer-or-region))
 
 ;; Help and documentation functions.
 (after 'init-evil
