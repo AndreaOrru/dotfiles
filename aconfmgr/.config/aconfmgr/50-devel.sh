@@ -12,9 +12,6 @@ AddPackage hub # cli interface for Github
 AddPackage redis # Advanced key-value store
 
 # Python.
-AddPackage bpython # Fancy ncurses interface to the Python interpreter
 AddPackage ipython # An enhanced Interactive Python shell.
-AddPackage python-jedi # Awesome autocompletion for python
 AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
-AddPackage python-watchdog # Python API and shell utilities to monitor file system events.
