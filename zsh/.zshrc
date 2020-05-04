@@ -45,7 +45,7 @@ alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`"
 alias "g.."="cd \`git root\`"
 
 # Text editors.
-alias e='emacsclient -nw'
+alias e='emacsclient -t'
 
 
 #
