@@ -20,13 +20,12 @@
 (require-package 'evil-nerd-commenter)  ;; Utilities for (un-)commenting.
 
 ;; Key bindings.
-(after 'init-evil
+(after 'evil-leader
   ;; Adjust region indentation.
   (evil-define-key 'visual prog-mode-map (kbd "TAB") 'indent-region)
   (evil-leader/set-key "v" 'er/expand-region)  ;; Expand region.
 
   ;; Clear search selection.
-  (which-key/describe-prefix "s" "search")
   (evil-leader/set-key "sc" 'evil-ex-nohighlight)
 
   ;; Comment/uncomment.

@@ -1,10 +1,3 @@
-;; Utility to update packages.
-(require-package 'auto-package-update)
-
-;; Persist prescient data.
-(after 'prescient
-  (prescient-persist-mode 1))
-
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"
               ";;   Or you can gather the effort\n"
@@ -12,14 +5,23 @@
               ";;\n"
               ";;                 - Hafez Shirazi -\n\n"))
 
-(setq inhibit-startup-screen t)       ;; Disable Emacs startup screen.
-(setq ring-bell-function 'ignore)     ;; Disable audible bell.
-(fset 'yes-or-no-p 'y-or-n-p)         ;; Use Y/N instead of yes/no.
-(setq disabled-command-function nil)  ;; Enable all functions.
+(require-package 'auto-package-update)  ;; Utility to update packages.
+(setq disabled-command-function nil)    ;; Enable all functions.
+
+;; Persist prescient data.
+(after 'prescient
+  (prescient-persist-mode 1))
+
+;; Make clipboard work in TTY Emacs.
+(require-package 'clipetty)
+(add-hook 'after-init-hook 'global-clipetty-mode)
+;; Pastebin integration.
+(require-package 'webpaste)
 
 ;; Google search integration.
 (require-package 'google-this)
-(after 'init-evil
+(after 'evil-leader
+  (which-key/describe-prefix "s" "search")
   (evil-leader/set-key "sg" 'google-this-noconfirm)
   (evil-leader/set-key "sG" 'google-this-search))
 

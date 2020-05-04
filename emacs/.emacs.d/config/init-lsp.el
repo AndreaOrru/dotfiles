@@ -18,10 +18,7 @@
               ;; Enable the LSP prefix for LSP-enabled buffers.
               (lsp-enable-which-key-integration)
               (evil-local-set-key 'normal (kbd ",") lsp-command-map)
-              (evil-local-set-key 'visual (kbd ",") lsp-command-map)
-              ;; Use LSP for jump to definition.
-              (evil-local-set-key 'normal (kbd "gd") 'lsp-find-definition)
-              (evil-local-set-key 'visual (kbd "gd") 'lsp-find-definition)))
+              (evil-local-set-key 'visual (kbd ",") lsp-command-map)))
 
   ;; VIM-like bindings for peek mode.
   (after 'lsp-ui

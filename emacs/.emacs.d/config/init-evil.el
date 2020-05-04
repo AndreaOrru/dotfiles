@@ -19,6 +19,11 @@
   (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
   (evil-define-key 'visual evil-surround-mode-map "S" 'evil-substitute))
 
+;; Use xref for jump to definition.
+(after 'evil
+  (define-key evil-motion-state-map "gd" 'xref-find-definitions)
+  (define-key evil-motion-state-map "gD" 'xref-find-definitions-other-window))
+
 ;; Use Space as leader key.
 (require-package 'evil-leader)
 (add-hook 'after-init-hook 'global-evil-leader-mode)
@@ -32,6 +37,7 @@
   (setq which-key-idle-delay 0.4
         which-key-idle-secondary-delay 0.01))
 
+;; Utility function to define which key prefix descriptions.
 (after 'evil
   (require 'evil-leader)
   (defun which-key/describe-prefix (prefix description)
