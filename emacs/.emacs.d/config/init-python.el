@@ -2,7 +2,7 @@
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
 
-(defun my/lsp-python-config ()
+(after 'lsp-mode
   ;; Enable Flake8.
   (setq lsp-pyls-configuration-sources ["flake8"])
   (setq lsp-pyls-plugins-flake8-enabled t)
@@ -16,8 +16,8 @@
   (setq lsp-pyls-plugins-autopep8-enabled nil)
   (setq lsp-pyls-plugins-yapf-enabled nil))
 
-(after 'lsp-mode
-  (my/lsp-python-config)
-  (add-hook 'python-mode-hook 'my/lsp-python-config))
+;; Disable Pylint.
+(add-hook 'python-mode-hook
+          (lambda () (add-to-list 'flycheck-disabled-checkers 'python-pylint)))
 
 (provide 'init-python)
