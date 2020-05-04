@@ -1,6 +1,10 @@
 ;; Utility to update packages.
 (require-package 'auto-package-update)
 
+;; Persist prescient data.
+(after 'prescient
+  (prescient-persist-mode 1))
+
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"
               ";;   Or you can gather the effort\n"
@@ -13,11 +17,13 @@
 (fset 'yes-or-no-p 'y-or-n-p)         ;; Use Y/N instead of yes/no.
 (setq disabled-command-function nil)  ;; Enable all functions.
 
-;; Persist prescient data.
-(after 'prescient
-  (prescient-persist-mode 1))
+;; Google search integration.
+(require-package 'google-this)
+(after 'init-evil
+  (evil-leader/set-key "sg" 'google-this-noconfirm)
+  (evil-leader/set-key "sG" 'google-this-search))
 
-;; Key bindings.
+;; Help and documentation functions.
 (after 'init-evil
   (which-key/describe-prefix "h" "help")
   (evil-leader/set-key "ha" 'apropos)
