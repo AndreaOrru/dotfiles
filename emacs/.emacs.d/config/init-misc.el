@@ -15,7 +15,8 @@
 
 ;; Make clipboard work in TTY Emacs.
 (require-package 'clipetty)
-(add-hook 'after-init-hook 'global-clipetty-mode)
+(unless (display-graphic-p)
+  (add-hook 'after-init-hook 'global-clipetty-mode))
 
 ;; Google search integration.
 (require-package 'google-this)
