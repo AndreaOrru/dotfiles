@@ -14,8 +14,9 @@
   (setq-default ivy-initial-inputs-alist nil)  ;; No ^ in Ivy regex by default.
   (ivy-prescient-mode 1)                       ;; Order results by frequency.
 
-  ;; Search inside hidden files as well.
-  (setq-default counsel-rg-base-command (concat counsel-rg-base-command " --hidden"))
+  ;; Search inside hidden files as well (but not the ".git" directory).
+  (setq-default counsel-rg-base-command
+                (concat counsel-rg-base-command " --hidden -g '!.git/**'"))
   ;; Separate items in kill ring.
   (setq-default counsel-yank-pop-separator "\n\n"))
 
