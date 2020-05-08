@@ -1,3 +1,6 @@
+;; Enable Python Language Server.
+(add-hook 'python-mode-hook 'lsp-deferred)
+
 ;; Automatically enable the project's virtualenv.
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate)
@@ -34,7 +37,7 @@
   (setq lsp-pyls-plugins-pyflakes-enabled nil)
   ;; Disable PyLint.
   (setq lsp-pyls-plugins-pylint-enabled nil)
-  ;; Disable YAPF and autopep8 to prioritize Black.
+  ;; Disable YAPF and autopep8 (we're using Black).
   (setq lsp-pyls-plugins-autopep8-enabled nil)
   (setq lsp-pyls-plugins-yapf-enabled nil))
 

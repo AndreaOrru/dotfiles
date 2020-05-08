@@ -1,12 +1,7 @@
-;; Use LSP in all programming modes.
 (require-package 'lsp-mode)
 (require-package 'lsp-ui)
-(add-hook 'prog-mode-hook 'lsp-deferred)
 
 (after [lsp-mode init-evil]
-  ;; Format files before saving.
-  (add-hook 'before-save-hook 'lsp-format-buffer)
-
   (setq lsp-auto-guess-root t)            ;; Guess the project root.
   (setq lsp-flycheck-live-reporting nil)  ;; Disable Flycheck live reporting.
   (setq lsp-keep-workspace-alive nil)     ;; Kill language server when done.
