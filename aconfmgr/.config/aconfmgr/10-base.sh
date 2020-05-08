@@ -7,12 +7,16 @@ AddPackage man-pages # Linux man pages
 
 # Linux kernel.
 AddPackage linux # The Linux kernel and modules
+AddPackage linux-ck-skylake # The Linux-ck-skylake kernel and modules with the ck1 patchset featuring MuQSS CPU scheduler
 AddPackage linux-firmware # Firmware files for Linux
+# Don't generate fallback images.
 CopyFile /etc/mkinitcpio.d/linux.preset
+CopyFile /etc/mkinitcpio.d/linux-ck-skylake.preset
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
 CopyFile /boot/loader/entries/arch.conf 755
+CopyFile /boot/loader/entries/arch-ck.conf 755
 
 # Kernel options.
 CopyFile /etc/modprobe.d/no-watchdog.conf  # Disable watchdogs.

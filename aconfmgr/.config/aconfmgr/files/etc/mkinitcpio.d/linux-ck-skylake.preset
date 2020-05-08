@@ -1,0 +1,15 @@
+# mkinitcpio preset file for the 'linux-ck-skylake' package
+
+ALL_config="/etc/mkinitcpio.conf"
+ALL_kver="/boot/vmlinuz-linux-ck-skylake"
+
+#PRESETS=('default' 'fallback')
+PRESETS=('default')
+
+#default_config="/etc/mkinitcpio.conf"
+default_image="/boot/initramfs-linux-ck-skylake.img"
+#default_options=""
+
+#fallback_config="/etc/mkinitcpio.conf"
+fallback_image="/boot/initramfs-linux-ck-skylake-fallback.img"
+fallback_options="-S autodetect"
