@@ -29,6 +29,6 @@
 (require-package 'webpaste)
 (after 'init-evil
   (setq webpaste-paste-confirmation t)
-  (evil-leader/set-key "sp" 'webpaste-paste-buffer-or-region))
+  (evil-leader/set-key "sp" 'webpaste-paste-region))
 
 (provide 'init-misc)
