@@ -14,6 +14,16 @@
             (flycheck-mode 1)
             (flycheck-disable-checker 'python-pylint)))
 
+;; Enable Black for automatic formatting after save.
+(require-package 'blacken)
+(add-hook 'python-mode-hook 'blacken-mode)
+(after 'blacken
+  (setq blacken-fast-unsafe t))
+
+;; Enable isort for automatic import sorting after save.
+(require-package 'py-isort)
+(add-hook 'before-save-hook 'py-isort-before-save)
+
 (after 'lsp-mode
   ;; Enable Flake8.
   (setq lsp-pyls-configuration-sources ["flake8"])
