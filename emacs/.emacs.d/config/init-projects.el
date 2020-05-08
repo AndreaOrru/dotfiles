@@ -8,14 +8,20 @@
 
 ;; Enable dumb-jump as a fallback to search for definitions inside projects.
 (require-package 'dumb-jump)
-(defun my/xref-find-definitions (orig-fun &rest args)
-  (condition-case nil (apply orig-fun args)
-    (error (dumb-jump-go))))
-(defun my/xref-find-definitions-other-window (orig-fun &rest args)
-  (condition-case nil (apply orig-fun args)
-    (error (dumb-jump-go-other-window))))
-(advice-add 'xref-find-definitions :around 'my/xref-find-definitions)
-(advice-add 'xref-find-definitions-other-window :around 'my/xref-find-definitions-other-window)
+(after 'dumb-jump
+  (setq dumb-jump-force-searcher 'rg)
+  (setq dumb-jump-selector 'ivy)
+
+  (defun my/xref-find-definitions (orig-fun &rest args)
+    (condition-case nil (apply orig-fun args)
+      (error (dumb-jump-go))))
+  (advice-add 'xref-find-definitions :around 'my/xref-find-definitions)
+
+  (defun my/xref-find-definitions-other-window (orig-fun &rest args)
+    (condition-case nil (apply orig-fun args)
+      (error (dumb-jump-go-other-window))))
+  (advice-add 'xref-find-definitions-other-window
+              :around 'my/xref-find-definitions-other-window))
 
 (defun edit-dotemacs ()
   "Open the directory of the current Emacs configuration."

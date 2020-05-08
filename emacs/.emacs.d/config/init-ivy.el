@@ -53,6 +53,10 @@
           (--remove (eq (buffer-local-value 'major-mode it) 'magit-status-mode)
                     (buffer-list)))))
 
+;; Use Ivy for Xref filtering.
+(require-package 'ivy-xref)
+(setq xref-show-definitions-function 'ivy-xref-show-defs)
+
 ;; Key bindings.
 (after 'init-evil
   (evil-leader/set-key "SPC" 'counsel-M-x)
