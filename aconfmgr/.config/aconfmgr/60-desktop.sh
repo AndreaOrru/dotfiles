@@ -36,7 +36,7 @@ CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/sys
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
-AddPackage --foreign ttf-iosevka-ss09 # A slender monospace typeface. Shape: Source Code Pro
+AddPackage --foreign ttf-iosevka-fixed-ss09 # A slender monospace typeface. Shape: Source Code Pro
 
 # Japanese fonts.
 AddPackage adobe-source-han-sans-jp-fonts # Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts
