@@ -6,9 +6,7 @@
 ;; Load theme.
 (setq custom-safe-themes t)
 (require-package 'doom-themes)
-(if (display-graphic-p)
-    (load-theme 'doom-tomorrow-night)
-  (load-theme 'doom-gruvbox))
+(load-theme 'doom-tomorrow-night)
 
 ;; Set interface font.
 (setq default-frame-alist '((font . "Iosevka SS09 Extended-14")))

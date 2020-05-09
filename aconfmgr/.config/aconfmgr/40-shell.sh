@@ -17,7 +17,6 @@ AddPackage htop # Interactive process viewer
 AddPackage lsof # Lists open files for running Unix processes
 AddPackage mlocate # Merging locate/updatedb implementation
 AddPackage pastebinit # Send anything you want directly to a pastebin from the command line
-AddPackage powerline # Statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome, i3 and Qtile
 AddPackage ranger # Simple, vim-like file manager
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage stow # Manage installation of multiple softwares in the same directory tree
