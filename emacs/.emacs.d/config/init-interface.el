@@ -11,7 +11,7 @@
   (load-theme 'doom-gruvbox))
 
 ;; Set interface font.
-(setq default-frame-alist '((font . "Mononoki-14")))
+(setq default-frame-alist '((font . "Iosevka SS09 Extended-14")))
 (setq-default line-spacing 3)
 ;; Make the fringe bigger.
 (fringe-mode '(16 . 0))
