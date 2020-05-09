@@ -6,7 +6,9 @@
 ;; Load theme.
 (setq custom-safe-themes t)
 (require-package 'doom-themes)
-(load-theme 'doom-gruvbox)
+(if (display-graphic-p)
+    (load-theme 'doom-tomorrow-night)
+  (load-theme 'doom-gruvbox))
 
 ;; Set interface font.
 (setq default-frame-alist '((font . "Mononoki-14")))
@@ -14,14 +16,20 @@
 ;; Make the fringe bigger.
 (fringe-mode '(16 . 0))
 
-;; Enable mouse in terminal.
-(unless (display-graphic-p)
-  (xterm-mouse-mode 1))
-
 ;; Start GUI in fullscreen mode.
 (when (display-graphic-p)
   (toggle-frame-fullscreen))
 
+;; Show clearer window dividers in GUI mode.
+(when (display-graphic-p)
+  (setq window-divider-default-places t
+        window-divider-default-bottom-width 4
+        window-divider-default-right-width 3)
+  (add-hook 'after-init-hook 'window-divider-mode))
+
+;; Enable mouse in terminal.
+(unless (display-graphic-p)
+  (xterm-mouse-mode 1))
 ;; Enable smooth scrolling.
 (setq mouse-wheel-progressive-speed nil
       scroll-preserve-screen-position t
