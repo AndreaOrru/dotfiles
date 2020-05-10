@@ -4,6 +4,13 @@
 (require-package 'counsel)
 (add-hook 'after-init-hook 'ivy-mode)
 
+;; Use Ivy Rich to provide a friendlier Ivy interface.
+(require-package 'ivy-rich)
+(add-hook 'after-init-hook 'ivy-rich-mode)
+(after 'ivy-rich
+  (setq ivy-rich-path-style 'abbrev)
+  (setcdr (assq t ivy-format-functions-alist) 'ivy-format-function-line))
+
 ;; Extra functionalities.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
 (require-package 'ivy-posframe)    ;; Show Ivy in sub-frames.
