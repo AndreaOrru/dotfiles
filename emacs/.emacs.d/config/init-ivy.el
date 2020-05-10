@@ -6,7 +6,9 @@
 
 ;; Use Ivy Rich to provide a friendlier Ivy interface.
 (require-package 'ivy-rich)
+(require-package 'all-the-icons-ivy-rich)
 (add-hook 'after-init-hook 'ivy-rich-mode)
+(add-hook 'after-init-hook 'all-the-icons-ivy-rich-mode)
 (after 'ivy-rich
   (setq ivy-rich-path-style 'abbrev)
   (setcdr (assq t ivy-format-functions-alist) 'ivy-format-function-line))
