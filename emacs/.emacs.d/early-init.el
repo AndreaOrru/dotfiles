@@ -9,3 +9,6 @@
       comp-speed 3)
 
 (provide 'early-init)
+;; Local Variables:
+;; no-byte-compile: t
+;; End:

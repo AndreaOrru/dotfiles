@@ -48,3 +48,6 @@ FEATURE may be any one of:
 (require 'no-littering)
 
 (provide 'core)
+;; Local Variables:
+;; no-byte-compile: t
+;; End:
