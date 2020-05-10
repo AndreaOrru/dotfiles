@@ -5,7 +5,7 @@
 
 ;; Load config files.
 (defvar config-directory (expand-file-name "config" user-emacs-directory))
-(cl-loop for file in (directory-files-recursively config-directory "^[^.].*\\.el$")
+(cl-loop for file in (directory-files-recursively config-directory "\\.el$")
   do (load file))
 
 ;; Save customized variables in a separate file.
@@ -13,6 +13,3 @@
 (when (file-exists-p custom-file) (load custom-file))
 
 (provide 'init)
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
