@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (require 'dired)
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)  ;; Minimal interface.
 (add-hook 'dired-mode-hook 'diff-hl-dired-mode)       ;; Git diffs.

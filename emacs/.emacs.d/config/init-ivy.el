@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Enable Ivy mode.
 (require-package 'counsel)
 (add-hook 'after-init-hook 'ivy-mode)

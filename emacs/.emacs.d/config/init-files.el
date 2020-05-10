@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
   (interactive)

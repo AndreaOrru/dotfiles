@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Make it so that temporary windows don't stick around.
 (require-package 'popwin)
 (add-hook 'after-init-hook 'popwin-mode)

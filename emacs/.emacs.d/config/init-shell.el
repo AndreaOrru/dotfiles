@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Launch inferior shells on a lightweight shell.
 (setq shell-file-name "/bin/sh")
 

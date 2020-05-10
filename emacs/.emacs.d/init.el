@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Initialize the core functionalities.
 (load (expand-file-name "core" user-emacs-directory))
 

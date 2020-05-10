@@ -1,8 +1,9 @@
+;; -*- lexical-binding: t -*-
+
 ;; Enable Emacs Lisp documentation through Dash.
 (after 'init-docs
-  (unless (dash-docs-docset-installed-p "Emacs Lisp")
-    (dash-docs-install-docset "Emacs Lisp"))
-  (add-hook 'emacs-lisp-mode-hook (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp")))))
+  (add-hook 'emacs-lisp-mode-hook
+            (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp")))))
 
 (after 'init-evil
   ;; Shortcut for evaluating region.

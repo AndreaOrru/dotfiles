@@ -1,8 +1,11 @@
+;; -*- lexical-binding: t -*-
+
 ;; Sane defaults.
 (setq-default
   auto-save-default nil  ;; Don't auto save files.
   c-basic-offset 4       ;; Use 4 spaces for indentation.
   column-number-mode t   ;; Show column number in modeline.
+  create-lockfiles nil   ;; Don't create # lock files.
   make-backup-files nil  ;; Don't create ~ backup files.
   indent-tabs-mode nil   ;; Use spaces for indentation.
   tab-width 4)           ;; Show tabs as 4 spaces.

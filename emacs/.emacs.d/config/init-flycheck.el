@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (require-package 'flycheck)
 
 ;; Display Flycheck error list as a sticky popup.

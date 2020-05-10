@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Follow symlinks in Git repositories.
 (setq vc-follow-symlinks t)
 

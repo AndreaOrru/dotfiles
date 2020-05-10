@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Use company mode for completion everywhere.
 (require-package 'company)
 (require-package 'company-prescient)

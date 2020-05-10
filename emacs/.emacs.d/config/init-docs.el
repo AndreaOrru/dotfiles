@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Dash documentation search.
 (require-package 'counsel-dash)
 (require 'dash-docs)

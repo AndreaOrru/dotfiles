@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (defun switch-to-alternate-buffer ()
   "Switch between the two most recently used buffers."
   (interactive)

@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Enable Python Language Server.
 (add-hook 'python-mode-hook 'lsp-deferred)
 
@@ -7,9 +9,8 @@
 
 ;; Enable Python 3 documentation through Dash.
 (after 'init-docs
-  (unless (dash-docs-docset-installed-p "Python 3")
-    (dash-docs-install-docset "Python 3"))
-  (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
+  (add-hook 'python-mode-hook
+            (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
 
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook

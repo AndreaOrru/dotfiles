@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Performance fixes.
 (setq gc-cons-threshold (* 128 1024 1024))      ;; GC threshold = 128 MB.
 (setq read-process-output-max (* 4 1024 1024))  ;; Process output = 4 MB.

@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Evil mode.
 (require-package 'evil)
 (add-hook 'after-init-hook 'evil-mode)

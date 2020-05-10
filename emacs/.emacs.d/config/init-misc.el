@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (setq initial-major-mode 'emacs-lisp-mode)
 (setq initial-scratch-message
       (concat ";; You can be like the common people\n"

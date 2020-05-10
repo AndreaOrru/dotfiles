@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Enable Projectile.
 (require-package 'projectile)
 (add-hook 'after-init-hook 'projectile-mode)
