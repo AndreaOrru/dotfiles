@@ -51,6 +51,8 @@ IgnorePath '/lost+found'
 
 IgnorePath '/opt/containerd'
 
+IgnorePath '/run/*'
+
 IgnorePath '/usr/bin/newgidmap'
 IgnorePath '/usr/bin/newuidmap'
 
@@ -64,7 +66,6 @@ IgnorePath '/usr/lib/p11-kit-trust.so'
 IgnorePath '/usr/lib/python2.7/**.pyc'
 IgnorePath '/usr/lib/udev/hwdb.bin'
 IgnorePath '/usr/share/applications/mimeinfo.cache'
-IgnorePath '/usr/share/emacs/*'
 IgnorePath '/usr/share/fonts/*'
 IgnorePath '/usr/share/glib-*/schemas/gschemas.compiled'
 IgnorePath '/usr/share/icons/**/icon-theme.cache'

@@ -7,6 +7,7 @@ AddPackage autossh # Automatically restart SSH sessions and tunnels
 AddPackage bind-tools # The ISC DNS tools
 AddPackage elinks # An advanced and well-established feature-rich text mode web browser.
 AddPackage nmap # Utility for network discovery and security auditing
+AddPackage openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
 AddPackage rsync # A file transfer program to keep remote files in sync
 AddPackage --foreign tzupdate # Set the system timezone based on IP geolocation
 AddPackage wget # Network utility to retrieve files from the Web
