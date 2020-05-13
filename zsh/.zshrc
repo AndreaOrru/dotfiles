@@ -36,7 +36,7 @@ alias i='ipython'
 alias open='xdg-open'
 alias p='yay'
 alias pastebinit='pastebinit -b paste.debian.net'
-alias pipdev='pip install -e ".[dev]"'
+alias pinit='pip install -r requirements.txt -r requirements-dev.txt; pre-commit install'
 alias ta='tmux attach -t'
 
 # Git commands.
