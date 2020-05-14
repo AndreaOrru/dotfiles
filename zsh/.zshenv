@@ -1,6 +1,6 @@
 export PATH="$HOME/bin:$PATH"
 
-export EDITOR="vi"
-export ALTERNATE_EDITOR=$EDITOR;
+export EDITOR="emacsclient -t"
+export ALTERNATE_EDITOR="vi"
 
-export FZF_DEFAULT_OPTS="--exact";
+export FZF_DEFAULT_OPTS="--exact"
