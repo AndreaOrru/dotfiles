@@ -1,7 +1,7 @@
 ;; -*- lexical-binding: t -*-
 
 ;; Enable Python Language Server.
-(add-hook 'python-mode-hook 'lsp-deferred)
+(add-hook 'python-mode-hook 'lsp)
 
 ;; Automatically enable the project's virtualenv.
 (require-package 'auto-virtualenvwrapper)
@@ -18,17 +18,16 @@
             (flycheck-mode 1)
             (flycheck-disable-checker 'python-pylint)))
 
-;; Enable Black for automatic formatting after save.
+;; Black for formatting and isort for import saving.
 (require-package 'blacken)
-(add-hook 'python-mode-hook 'blacken-mode)
-(after 'blacken
-  (setq blacken-fast-unsafe t))
-
-;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
-(add-hook 'before-save-hook 'py-isort-before-save)
+(defun blacken-py-isort-buffer ()
+  "Sort a Python's buffer imports with isort and format it with Black."
+  (interactive)
+  (py-isort-buffer)
+  (blacken-buffer))
 
-(after 'lsp-mode
+(defun my/init-lsp-python-mode ()
   ;; Enable Flake8.
   (setq lsp-pyls-configuration-sources ["flake8"])
   (setq lsp-pyls-plugins-flake8-enabled t)
@@ -40,6 +39,13 @@
   (setq lsp-pyls-plugins-pylint-enabled nil)
   ;; Disable YAPF and autopep8 (we're using Black).
   (setq lsp-pyls-plugins-autopep8-enabled nil)
-  (setq lsp-pyls-plugins-yapf-enabled nil))
+  (setq lsp-pyls-plugins-yapf-enabled nil)
+
+  ;; Substitute the default lsp-format-buffer function with black/isort.
+  (setq blacken-fast-unsafe t)
+  (evil-local-set-key 'normal (kbd ",==") 'blacken-py-isort-buffer))
+
+(add-hook 'python-mode-hook
+          (lambda () (add-hook 'lsp-mode-hook 'my/init-lsp-python-mode)))
 
 (provide 'init-python)

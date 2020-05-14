@@ -4,10 +4,11 @@
 (require-package 'lsp-ui)
 
 (after [lsp-mode init-evil]
-  (setq lsp-auto-guess-root t)            ;; Guess the project root.
-  (setq lsp-flycheck-live-reporting nil)  ;; Disable Flycheck live reporting.
-  (setq lsp-keep-workspace-alive nil)     ;; Kill language server when done.
-  (setq lsp-prefer-capf t)                ;; Use CAPF completion (more efficient).
+  (setq lsp-auto-guess-root t            ;; Guess the project root.
+        lsp-enable-snippet nil           ;; Disable Yasnippet.
+        lsp-flycheck-live-reporting nil  ;; Disable Flycheck live reporting.
+        lsp-keep-workspace-alive nil     ;; Kill language server when done.
+        lsp-prefer-capf t)               ;; Use CAPF completion (more efficient).
 
   (setq lsp-keymap-prefix ",")
   (add-hook 'lsp-mode-hook
