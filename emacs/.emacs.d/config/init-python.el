@@ -2,7 +2,7 @@
 
 ;; Automatically enable the project's virtualenv (as early as possible).
 (require-package 'auto-virtualenvwrapper)
-(add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -100)
+(add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -99)
 
 ;; Enable Python 3 documentation through Dash.
 (after 'init-docs
@@ -52,6 +52,6 @@
           (lambda ()
             (setq blacken-fast-unsafe t)
             (evil-local-set-key 'normal (kbd ",==") 'blacken-py-isort-buffer))
-          100)  ;; As late as possible.
+          99)  ;; As late as possible.
 
 (provide 'init-python)
