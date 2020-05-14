@@ -20,8 +20,11 @@
 (when (display-graphic-p)
   (toggle-frame-fullscreen))
 
-;; Show clearer window dividers in GUI mode.
-(when (display-graphic-p)
+;; Show clearer window dividers.
+(if (not (display-graphic-p))
+    (set-face-attribute 'vertical-border nil
+                        :background (doom-color 'base2)
+                        :foreground (doom-color 'base2))
   (setq window-divider-default-places t
         window-divider-default-bottom-width 4
         window-divider-default-right-width 3)

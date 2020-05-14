@@ -12,10 +12,12 @@
 
 ;; CamelCase words.
 (add-hook 'after-init-hook 'global-subword-mode)
-;; Highlight the current line.
-(add-hook 'after-init-hook 'global-hl-line-mode)
 ;; Highlight matching parenthesis.
 (add-hook 'prog-mode-hook 'show-paren-mode)
+;; Highlight the current line.
+(add-hook 'after-init-hook 'global-hl-line-mode)
+(after 'hl-line
+  (set-face-background 'hl-line (doom-color 'base3)))
 
 ;; Intelligently clean up extra whitespaces on save.
 (require-package 'whitespace-cleanup-mode)
