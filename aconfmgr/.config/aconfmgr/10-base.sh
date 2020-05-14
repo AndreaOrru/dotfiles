@@ -27,8 +27,8 @@ CopyFile /etc/sysctl.d/vm.conf             # Virtual memory options.
 CopyFile /etc/locale.conf
 CopyFile /etc/locale.gen
 
-CopyFile /etc/sudoers        # Sudo for wheel group.
-CopyFile /etc/vconsole.conf  # Bigger console fonts.
+# Sudo for wheel group.
+CopyFile /etc/sudoers
 
 # Arch tools.
 CopyFile /etc/makepkg.conf
