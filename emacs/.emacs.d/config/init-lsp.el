@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t -*-
 
 (require-package 'lsp-mode)
+(require-package 'lsp-ivy)
 (require-package 'lsp-ui)
 
 (after [lsp-mode init-evil]
@@ -19,10 +20,12 @@
               (evil-local-set-key 'normal (kbd ",") lsp-command-map)
               (evil-local-set-key 'visual (kbd ",") lsp-command-map)))
 
-  ;; VIM-like bindings for peek mode.
   (after 'lsp-ui
-    (define-key lsp-command-map (kbd "i") 'lsp-ui-imenu)
+    ;; Extra commands.
+    (define-key lsp-command-map (kbd "i") 'lsp-ivy-workspace-symbol)
+    (define-key lsp-command-map (kbd "I") 'lsp-ui-imenu)
     (define-key lsp-command-map (kbd ",") 'lsp-ui-doc-glance)
+    ;; VIM-like bindings for peek mode.
     (define-key lsp-ui-peek-mode-map (kbd "C-j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "C-k") 'lsp-ui-peek--select-prev)
