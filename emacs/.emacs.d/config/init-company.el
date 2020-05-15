@@ -2,12 +2,10 @@
 
 ;; Use company mode for completion everywhere.
 (require-package 'company)
-(require-package 'company-prescient)
 (add-hook 'after-init-hook 'global-company-mode)
 (after 'company
-  (setq company-show-numbers t)   ;; Show numbered completions.
-  (setq company-idle-delay 0.15)  ;; Show completions faster.
-  (company-prescient-mode 1))     ;; Order results by frequency.
+  (setq company-show-numbers t)    ;; Show numbered completions.
+  (setq company-idle-delay 0.15))  ;; Show completions faster.
 
 ;; Taken from abo-abo's configuration.
 (defun my/company-number ()
