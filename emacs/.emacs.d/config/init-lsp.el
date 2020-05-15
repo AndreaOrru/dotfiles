@@ -8,7 +8,8 @@
         lsp-enable-snippet nil           ;; Disable Yasnippet.
         lsp-flycheck-live-reporting nil  ;; Disable Flycheck live reporting.
         lsp-keep-workspace-alive nil     ;; Kill language server when done.
-        lsp-prefer-capf t)               ;; Use CAPF completion (more efficient).
+        lsp-prefer-capf t                ;; Use CAPF completion (more efficient).
+        lsp-ui-doc-enable nil)           ;; Disable documentation on hover.
 
   (setq lsp-keymap-prefix ",")
   (add-hook 'lsp-mode-hook
@@ -21,6 +22,7 @@
   ;; VIM-like bindings for peek mode.
   (after 'lsp-ui
     (define-key lsp-command-map (kbd "i") 'lsp-ui-imenu)
+    (define-key lsp-command-map (kbd ",") 'lsp-ui-doc-glance)
     (define-key lsp-ui-peek-mode-map (kbd "C-j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "C-k") 'lsp-ui-peek--select-prev)
