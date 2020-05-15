@@ -13,9 +13,44 @@
   (evil-mc-undo-all-cursors)
   (evil-force-normal-state)
   (keyboard-quit))
+
+;; Key bindings.
 (after 'evil
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "grq") nil)
+  ;; Undefine some of the default bindings.
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "gr") nil)
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-n") nil)
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-p") nil)
+
+  ;; Add a new cursor on the next line.
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-j")
+    'evil-mc-make-cursor-move-next-line)
+  ;; Add a new cursor on the previous line.
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-k")
+    'evil-mc-make-cursor-move-prev-line)
+  ;; Go to first cursor.
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-f")
+    'evil-mc-make-and-goto-first-cursor)
+
   (evil-define-key '(normal visual insert)
     evil-mc-key-map (kbd "C-g") 'my/keyboard-quit))
+
+;; Integration with expand-region to edit all occurrences of region.
+;; Adapted from https://github.com/syl20bnr/evil-iedit-state/blob/master/evil-iedit-state.el#L157
+(after 'expand-region
+  (defun my/evil-mc-mode-from-expand-region (&optional arg)
+    (interactive "P")
+    (evil-mc-make-all-cursors)
+    ;; Force expand-region temporary overlay map exit.
+    (setq overriding-terminal-local-map nil))
+
+  (defadvice er/prepare-for-more-expansions-internal
+      (around my/er-prepare-for-more-expansions-internal activate)
+    ad-do-it
+    (let ((default-msg (car ad-return-value))
+          (default-bindings (cdr ad-return-value)))
+      (setq ad-return-value
+            (cons (concat default-msg ", e to edit")
+                  (add-to-list 'default-bindings
+                               '("e" my/evil-mc-mode-from-expand-region)))))))
 
 (provide 'init-multiple-cursors)
