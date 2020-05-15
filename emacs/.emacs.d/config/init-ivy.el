@@ -54,17 +54,6 @@
     '((counsel-company . ivy-posframe-display-at-point)
       (t . nil))))
 
-;; Semantic search across buffers.
-(require-package 'imenu-anywhere)
-(after 'imenu-anywhere
-  ;; Consider only buffers in the same project.
-  (setq imenu-anywhere-buffer-filter-functions '(imenu-anywhere-same-project-p))
-  ;; Filter out Magit buffers.
-  (setq-default imenu-anywhere-buffer-list-function
-        (lambda ()
-          (--remove (eq (buffer-local-value 'major-mode it) 'magit-status-mode)
-                    (buffer-list)))))
-
 ;; Use Ivy for Xref filtering.
 (require-package 'ivy-xref)
 (setq xref-show-definitions-function 'ivy-xref-show-defs)
@@ -76,7 +65,6 @@
 
   (which-key/describe-prefix "j" "jump")
   (evil-leader/set-key "ji" 'counsel-semantic-or-imenu)
-  (evil-leader/set-key "jI" 'ivy-imenu-anywhere)
 
   (evil-leader/set-key "r" 'ivy-resume))
 
