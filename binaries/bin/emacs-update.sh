@@ -9,7 +9,8 @@ rm -rf pkg src
 
 git reset --hard
 git pull
-sed -i 's/^LUCID=     /LUCID="YES"/' PKGBUILD
+sed -i 's/^NOTKIT=     /NOTKIT="YES"/' PKGBUILD
+sed -i 's/^LTO=     /LTO="YES"/' PKGBUILD
 
 makepkg -si --noconfirm
 rm -rf pkg src

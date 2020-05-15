@@ -8,38 +8,24 @@
 (add-hook 'python-mode-hook 'lsp)
 (require-package 'lsp-python-ms)
 
-;; Enable Python 3 documentation through Dash.
-(after 'init-docs
-  (add-hook 'python-mode-hook
-            (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
-
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook
           (lambda ()
             (flycheck-mode 1)
             (flycheck-disable-checker 'python-pylint)))
 
-;; Black for formatting and isort for import saving.
-(require-package 'blacken)
+;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
-(defun blacken-py-isort-buffer ()
-  "Sort a Python's buffer imports with isort and format it with Black."
-  (interactive)
-  (py-isort-buffer)
-  (blacken-buffer))
-
-;; Black for formatting and isort for import saving.
+(add-hook 'before-save-hook 'py-isort-before-save)
+;; Enable Black for automatic formatting after saving.
 (require-package 'blacken)
-(require-package 'py-isort)
-(defun blacken-py-isort-buffer ()
-  "Sort a Python's buffer imports with isort and format it with Black."
-  (interactive) (py-isort-buffer) (blacken-buffer))
+(add-hook 'python-mode-hook 'blacken-mode)
+(after 'blacken
+  (setq blacken-fast-unsafe t))
 
-;; Substitute the default lsp-format-buffer function with black/isort.
-(add-hook 'python-mode-hook
-          (lambda ()
-            (setq blacken-fast-unsafe t)
-            (evil-local-set-key 'normal (kbd ",==") 'blacken-py-isort-buffer))
-          99)  ;; As late as possible.
+;; Enable Python 3 documentation through Dash.
+(after 'init-docs
+  (add-hook 'python-mode-hook
+            (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
 
 (provide 'init-python)
