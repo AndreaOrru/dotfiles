@@ -6,6 +6,8 @@
 
 ;; VIM-like search with persistent highlight.
 (setq-default evil-search-module 'evil-search)
+(setq-default evil-want-C-u-scroll t)       ;; C-u to scroll up.
+(setq-default evil-ex-substitute-global t)  ;; Substitute globally by default.
 
 ;; Collection of extra Evil keybindings.
 (require-package 'evil-collection)
