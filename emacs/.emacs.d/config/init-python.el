@@ -12,7 +12,9 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (flycheck-mode 1)
-            (flycheck-disable-checker 'python-pylint)))
+            (flycheck-select-checker 'python-mypy)
+            (add-to-list 'flycheck-disabled-checkers 'lsp))
+          99)
 
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
