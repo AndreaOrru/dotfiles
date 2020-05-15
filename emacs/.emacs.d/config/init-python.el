@@ -4,6 +4,10 @@
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -99)
 
+;; Enable Microsoft Python Language Server.
+(add-hook 'python-mode-hook 'lsp)
+(require-package 'lsp-python-ms)
+
 ;; Enable Python 3 documentation through Dash.
 (after 'init-docs
   (add-hook 'python-mode-hook
@@ -23,22 +27,6 @@
   (interactive)
   (py-isort-buffer)
   (blacken-buffer))
-
-;; Enable Python Language Server.
-(add-hook 'python-mode-hook 'lsp)
-(after 'lsp-mode
-  ;; Enable Flake8.
-  (setq lsp-pyls-configuration-sources ["flake8"])
-  (setq lsp-pyls-plugins-flake8-enabled t)
-  ;; Disable plugins included inside Flake8.
-  (setq lsp-pyls-plugins-mccabe-enabled nil)
-  (setq lsp-pyls-plugins-pycodestyle-enabled nil)
-  (setq lsp-pyls-plugins-pyflakes-enabled nil)
-  ;; Disable PyLint.
-  (setq lsp-pyls-plugins-pylint-enabled nil)
-  ;; Disable YAPF and autopep8 (we're using Black).
-  (setq lsp-pyls-plugins-autopep8-enabled nil)
-  (setq lsp-pyls-plugins-yapf-enabled nil))
 
 ;; Black for formatting and isort for import saving.
 (require-package 'blacken)
