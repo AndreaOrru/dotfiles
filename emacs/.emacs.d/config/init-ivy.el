@@ -49,8 +49,8 @@
 ;; Display Ivy at point for Company completion filtering.
 (after 'ivy-posframe
   (setq ivy-posframe-display-functions-alist
-    '((counsel-company . ivy-posframe-display-at-point)
-      (t . nil))))
+        '((counsel-company . ivy-posframe-display-at-point)
+          (t . nil))))
 
 ;; Use Ivy for Xref filtering.
 (require-package 'ivy-xref)

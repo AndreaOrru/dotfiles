@@ -14,11 +14,11 @@
 
   (setq lsp-keymap-prefix ",")
   (add-hook 'lsp-mode-hook
-            (lambda ()
-              ;; Enable the LSP prefix for LSP-enabled buffers.
-              (lsp-enable-which-key-integration)
-              (evil-local-set-key 'normal (kbd ",") lsp-command-map)
-              (evil-local-set-key 'visual (kbd ",") lsp-command-map)))
+            #'(lambda ()
+                ;; Enable the LSP prefix for LSP-enabled buffers.
+                (lsp-enable-which-key-integration)
+                (evil-local-set-key 'normal (kbd ",") lsp-command-map)
+                (evil-local-set-key 'visual (kbd ",") lsp-command-map)))
 
   (after 'lsp-ui
     ;; Extra commands.

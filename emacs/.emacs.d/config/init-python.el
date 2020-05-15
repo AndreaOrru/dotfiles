@@ -10,9 +10,9 @@
 
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook
-          (lambda ()
-            (flycheck-mode 1)
-            (flycheck-select-checker 'python-flake8))
+          #'(lambda ()
+              (flycheck-mode 1)
+              (flycheck-select-checker 'python-flake8))
           99)
 ;; HACK: Microsoft's server seems to interfere with the standard flycheck list.
 (evil-leader/set-key-for-mode 'python-mode "el" 'lsp-ui-flycheck-list)
@@ -29,6 +29,6 @@
 ;; Enable Python 3 documentation through Dash.
 (after 'init-docs
   (add-hook 'python-mode-hook
-            (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
+            #'(lambda () (setq-local counsel-dash-docsets '("Python 3")))))
 
 (provide 'init-python)

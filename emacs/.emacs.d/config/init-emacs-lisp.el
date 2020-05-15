@@ -3,7 +3,7 @@
 ;; Enable Emacs Lisp documentation through Dash.
 (after 'init-docs
   (add-hook 'emacs-lisp-mode-hook
-            (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp")))))
+            #'(lambda () (setq-local counsel-dash-docsets '("Emacs Lisp")))))
 
 (after 'init-evil
   (defun describe-symbol-at-point ()

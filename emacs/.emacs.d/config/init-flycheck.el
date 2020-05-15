@@ -18,6 +18,6 @@
   ;; Use margin instead of fringe in terminal.
   (unless (display-graphic-p)
     (add-hook 'flycheck-mode-hook
-              (lambda () (flycheck-set-indication-mode 'left-margin)))))
+              #'(lambda () (flycheck-set-indication-mode 'left-margin)))))
 
 (provide 'init-flycheck)
