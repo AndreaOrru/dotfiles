@@ -22,9 +22,9 @@
 
   (after 'lsp-ui
     ;; Extra commands.
-    (define-key lsp-command-map (kbd "i") 'lsp-ivy-workspace-symbol)
-    (define-key lsp-command-map (kbd "I") 'lsp-ui-imenu)
     (define-key lsp-command-map (kbd ",") 'lsp-ui-doc-glance)
+    (define-key lsp-command-map (kbd ">") 'lsp-ivy-workspace-symbol)
+    (define-key lsp-command-map (kbd "i") 'lsp-ui-imenu)
     ;; VIM-like bindings for peek mode.
     (define-key lsp-ui-peek-mode-map (kbd "C-j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "j") 'lsp-ui-peek--select-next)
