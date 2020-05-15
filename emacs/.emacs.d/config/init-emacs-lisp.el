@@ -6,12 +6,14 @@
             (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp")))))
 
 (after 'init-evil
-  ;; Shortcut for evaluating region.
+  (defun describe-symbol-at-point ()
+    "Display the full documentation of symbol at point."
+    (interactive)
+    (describe-symbol (symbol-at-point)))
+
   (evil-define-key 'visual emacs-lisp-mode-map (kbd ",e") 'eval-region)
   (evil-define-key '(normal visual) emacs-lisp-mode-map (kbd ",p") 'check-parens)
-
-  ;; Find help for symbol at point.
-  (evil-leader/set-key "hh"
-    (lambda () (interactive) (describe-symbol (symbol-at-point)))))
+  (evil-define-key '(normal visual) emacs-lisp-mode-map (kbd ",,")
+    'describe-symbol-at-point))
 
 (provide 'init-emacs-lisp)
