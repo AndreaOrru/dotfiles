@@ -21,8 +21,6 @@
 (require-package 'wgrep)           ;; Edit search results.
 
 (after 'counsel
-  ;; Search words in any order in Ivy.
-  (setq-default ivy-re-builders-alist '((t . ivy--regex-ignore-order)))
   (setq-default ivy-initial-inputs-alist nil)  ;; No ^ in Ivy regex by default.
   (ivy-prescient-mode 1)                       ;; Order results by frequency.
 
@@ -62,10 +60,8 @@
 (after 'init-evil
   (evil-leader/set-key "SPC" 'counsel-M-x)
   (evil-leader/set-key "/" 'counsel-rg)
+  (evil-leader/set-key "r" 'ivy-resume)
 
-  (which-key/describe-prefix "j" "jump")
-  (evil-leader/set-key "ji" 'counsel-semantic-or-imenu)
-
-  (evil-leader/set-key "r" 'ivy-resume))
+  (evil-global-set-key 'normal ",." 'counsel-semantic-or-imenu))
 
 (provide 'init-ivy)
