@@ -10,10 +10,9 @@
   indent-tabs-mode nil   ;; Use spaces for indentation.
   tab-width 4)           ;; Show tabs as 4 spaces.
 
-;; CamelCase words.
-(add-hook 'after-init-hook 'global-subword-mode)
-;; Highlight matching parenthesis.
-(add-hook 'prog-mode-hook 'show-paren-mode)
+(add-hook 'after-init-hook 'global-subword-mode) ;; CamelCase words.
+(add-hook 'after-init-hook 'electric-pair-mode)  ;; Insert separators in pairs.
+(add-hook 'prog-mode-hook 'show-paren-mode)      ;; Highlight matching parenthesis.
 ;; Highlight the current line.
 (add-hook 'after-init-hook 'global-hl-line-mode)
 (after 'hl-line
