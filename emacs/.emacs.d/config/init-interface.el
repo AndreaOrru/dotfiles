@@ -12,7 +12,7 @@
 
 ;; Set interface font.
 (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-14")))
-(setq-default line-spacing 3)
+(setq-default line-spacing 2)
 ;; Make the fringe bigger.
 (fringe-mode '(16 . 0))
 

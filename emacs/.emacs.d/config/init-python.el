@@ -16,6 +16,9 @@
           99)
 ;; HACK: Microsoft's server seems to interfere with the standard flycheck list.
 (evil-leader/set-key-for-mode 'python-mode "el" 'lsp-ui-flycheck-list)
+;; HACK: Microsoft's server seems to fuck up symbol highlight.
+(add-hook 'python-mode-hook
+          #'(lambda () (setq-local lsp-enable-symbol-highlighting nil)))
 
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
