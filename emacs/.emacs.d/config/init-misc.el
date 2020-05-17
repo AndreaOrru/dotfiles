@@ -22,13 +22,18 @@
 
 ;; Dim text in surrounding paragraphs.
 (require-package 'focus)
+(defun my/focus-pin ()
+  "Pin the focused section or the region, if active. Enable focus-mode if needed."
+  (interactive)
+  (focus-mode 1)
+  (focus-pin)
+  (evil-exit-visual-state))
 (after 'init-evil
-  (which-key/describe-prefix "F" "focus")
-  (evil-leader/set-key "FF" 'focus-mode)
-  (evil-leader/set-key "Fp" 'focus-pin)
-  (evil-leader/set-key "Fu" 'focus-unpin)
-  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "]]") 'focus-next-thing)
-  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "[[") 'focus-prev-thing))
+  (evil-leader/set-key "ff" 'focus-mode)
+  (evil-leader/set-key "fp" 'my/focus-pin)
+  (evil-leader/set-key "fu" 'focus-unpin)
+  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "C-f") 'focus-next-thing)
+  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "C-b") 'focus-prev-thing))
 
 ;; Google search integration.
 (require-package 'google-this)

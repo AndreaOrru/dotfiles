@@ -31,7 +31,7 @@
 
 ;; Key bindings.
 (after 'init-evil
-  (evil-leader/set-key "fe" 'edit-dotemacs)
+  (evil-leader/set-key "fd" 'edit-dotemacs)
 
   (which-key/describe-prefix "p" "projects")
   (evil-leader/set-key "p" 'projectile-command-map))

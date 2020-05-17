@@ -32,8 +32,8 @@
 
 ;; Key bindings.
 (after 'init-evil
-  (which-key/describe-prefix "f" "files")
-  (evil-leader/set-key "ff" 'find-file)
+  (which-key/describe-prefix "f" "files/focus")
+  (evil-leader/set-key "fe" 'find-file)
   (evil-leader/set-key "fr" 'counsel-recentf)
   (evil-leader/set-key "fD" 'delete-this-file)
   (evil-leader/set-key "fR" 'rename-this-file-and-buffer))
