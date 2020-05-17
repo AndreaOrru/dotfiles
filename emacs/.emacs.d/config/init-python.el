@@ -16,8 +16,6 @@
               (flycheck-mode 1)
               (flycheck-select-checker 'python-flake8))
           99)
-;; HACK: Microsoft's server seems to interfere with the standard flycheck list.
-(evil-leader/set-key-for-mode 'python-mode "el" 'lsp-ui-flycheck-list)
 
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
