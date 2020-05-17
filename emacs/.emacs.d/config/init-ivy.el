@@ -35,12 +35,11 @@
   (setq-default
    ivy-height 15
    ivy-fixed-height-minibuffer t)
+  ;; Show Ivy in sub-frames.
+  (ivy-posframe-mode 1)
 
-  (ivy-posframe-mode 1)  ;; Show Ivy in sub-frames.
-
-  (global-set-key (kbd "C-s") 'swiper)            ;; Search by filtering.
-  (global-set-key (kbd "M-p") 'counsel-yank-pop)  ;; Kill ring selection.
-
+  ;; Search by filtering.
+  (global-set-key (kbd "C-s") 'swiper)
   ;; VIM-like keybindings inside Ivy minibuffer.
   (define-key ivy-minibuffer-map (kbd "C-j") 'ivy-next-line)
   (define-key ivy-minibuffer-map (kbd "C-k") 'ivy-previous-line)
@@ -61,6 +60,7 @@
   (evil-leader/set-key "SPC" 'counsel-M-x)
   (evil-leader/set-key "/" 'counsel-rg)
   (evil-leader/set-key "r" 'ivy-resume)
+  (evil-leader/set-key "P" 'counsel-yank-pop)
 
   (evil-global-set-key 'normal ",." 'counsel-semantic-or-imenu))
 
