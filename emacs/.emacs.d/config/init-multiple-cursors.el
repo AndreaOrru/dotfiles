@@ -18,21 +18,31 @@
 (after 'evil
   ;; Undefine some of the default bindings.
   (evil-define-key '(normal visual) evil-mc-key-map (kbd "gr") nil)
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-n") nil)
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-p") nil)
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-t") nil)
 
   ;; Add a new cursor on the next line.
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-j")
-    'evil-mc-make-cursor-move-next-line)
+  (evil-define-key '(normal visual) evil-mc-key-map
+    (kbd "C-j") 'evil-mc-make-cursor-move-next-line)
   ;; Add a new cursor on the previous line.
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-k")
-    'evil-mc-make-cursor-move-prev-line)
-  ;; Go to first cursor.
-  (evil-define-key '(normal visual) evil-mc-key-map (kbd "C-f")
-    'evil-mc-make-and-goto-first-cursor)
+  (evil-define-key '(normal visual) evil-mc-key-map
+    (kbd "C-k") 'evil-mc-make-cursor-move-prev-line)
 
-  (evil-define-key '(normal visual insert)
-    evil-mc-key-map (kbd "C-g") 'my/keyboard-quit))
+  ;; Go to last cursor.
+  (evil-define-key '(normal visual) evil-mc-key-map
+    (kbd "C-b") 'evil-mc-make-and-goto-last-cursor)
+  ;; Go to first cursor.
+  (evil-define-key '(normal visual) evil-mc-key-map
+    (kbd "C-f") 'evil-mc-make-and-goto-first-cursor)
+
+  ;; Skip matches.
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-n")
+    'evil-mc-skip-and-goto-next-match)
+  (evil-define-key '(normal visual) evil-mc-key-map (kbd "M-p")
+    'evil-mc-skip-and-goto-prev-match)
+
+  ;; Undo all cursors.
+  (evil-define-key '(normal visual insert) evil-mc-key-map
+    (kbd "C-g") 'my/keyboard-quit))
 
 ;; Integration with expand-region to edit all occurrences of region.
 ;; Adapted from https://github.com/syl20bnr/evil-iedit-state/blob/master/evil-iedit-state.el#L157
