@@ -26,7 +26,9 @@
   (which-key/describe-prefix "F" "focus")
   (evil-leader/set-key "FF" 'focus-mode)
   (evil-leader/set-key "Fp" 'focus-pin)
-  (evil-leader/set-key "Fu" 'focus-unpin))
+  (evil-leader/set-key "Fu" 'focus-unpin)
+  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "]]") 'focus-next-thing)
+  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "[[") 'focus-prev-thing))
 
 ;; Google search integration.
 (require-package 'google-this)
