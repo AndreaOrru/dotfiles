@@ -15,12 +15,14 @@
 
 (defun my/xref-find-definitions (orig-fun &rest args)
   (condition-case nil (apply orig-fun args)
-    (error (dumb-jump-go))))
+    (error (dumb-jump-go)))
+  (mapc 'funcall imenu-after-jump-hook))
 (advice-add 'xref-find-definitions :around 'my/xref-find-definitions)
 
 (defun my/xref-find-definitions-other-window (orig-fun &rest args)
   (condition-case nil (apply orig-fun args)
-    (error (dumb-jump-go-other-window))))
+    (error (dumb-jump-go-other-window)))
+  (mapc 'funcall imenu-after-jump-hook))
 (advice-add 'xref-find-definitions-other-window
             :around 'my/xref-find-definitions-other-window)
 

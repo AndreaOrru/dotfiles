@@ -11,6 +11,12 @@
 (require-package 'auto-package-update)  ;; Utility to update packages.
 (setq disabled-command-function nil)    ;; Enable all functions.
 
+;; Re-center the screen and make the line pulse after jumping to definition.
+(after 'imenu
+  (add-to-list 'imenu-after-jump-hook
+               #'(lambda () (pulse-momentary-highlight-one-line (point))))
+  (add-to-list 'imenu-after-jump-hook 'recenter))
+
 ;; Persist prescient data.
 (after 'prescient
   (prescient-persist-mode 1))
@@ -19,21 +25,6 @@
 (require-package 'clipetty)
 (unless (display-graphic-p)
   (add-hook 'after-init-hook 'global-clipetty-mode))
-
-;; Dim text in surrounding paragraphs.
-(require-package 'focus)
-(defun my/focus-pin ()
-  "Pin the focused section or the region, if active. Enable focus-mode if needed."
-  (interactive)
-  (focus-mode 1)
-  (focus-pin)
-  (evil-exit-visual-state))
-(after 'init-evil
-  (evil-leader/set-key "ff" 'focus-mode)
-  (evil-leader/set-key "fp" 'my/focus-pin)
-  (evil-leader/set-key "fu" 'focus-unpin)
-  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "C-f") 'focus-next-thing)
-  (evil-define-minor-mode-key 'normal 'focus-mode (kbd "C-b") 'focus-prev-thing))
 
 ;; Google search integration.
 (require-package 'google-this)

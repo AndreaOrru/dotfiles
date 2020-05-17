@@ -1,8 +1,14 @@
 ;; -*- lexical-binding: t -*-
 
 (require-package 'lsp-mode)
-(require-package 'lsp-ivy)
 (require-package 'lsp-ui)
+
+;; Re-center the screen and make the line pulse after jumping to symbol.
+(require-package 'lsp-ivy)  ;; Jump to symbol across workspace.
+(after 'lsp-ivy
+  (advice-add 'lsp-ivy--workspace-symbol-action :after
+              #'(lambda (orig-fun &rest args)
+                  (mapc 'funcall imenu-after-jump-hook))))
 
 (after [lsp-mode init-evil]
   (setq lsp-auto-guess-root t              ;; Guess the project root.
@@ -30,6 +36,5 @@
     (define-key lsp-ui-peek-mode-map (kbd "j") 'lsp-ui-peek--select-next)
     (define-key lsp-ui-peek-mode-map (kbd "C-k") 'lsp-ui-peek--select-prev)
     (define-key lsp-ui-peek-mode-map (kbd "k") 'lsp-ui-peek--select-prev)))
-
 
 (provide 'init-lsp)
