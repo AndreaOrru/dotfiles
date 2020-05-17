@@ -6,13 +6,14 @@
 
 ;; Use Ivy Rich to provide a friendlier Ivy interface.
 (require-package 'ivy-rich)
-(require-package 'all-the-icons-ivy-rich)
-(add-hook 'after-init-hook 'ivy-rich-mode 98)
-(when (display-graphic-p)
-  (add-hook 'after-init-hook 'all-the-icons-ivy-rich-mode 99))
+(add-hook 'after-init-hook 'ivy-rich-mode)
 (after 'ivy-rich
   (setq ivy-rich-path-style 'abbrev)
   (setcdr (assq t ivy-format-functions-alist) 'ivy-format-function-line))
+;; Use icons in Ivy Rich in graphic mode.
+(require-package 'all-the-icons-ivy-rich)
+(when (display-graphic-p)
+  (add-hook 'after-init-hook 'all-the-icons-ivy-rich-mode))
 
 ;; Extra functionalities.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
