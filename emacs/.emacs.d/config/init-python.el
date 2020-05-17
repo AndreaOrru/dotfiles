@@ -7,6 +7,8 @@
 ;; Enable Microsoft Python Language Server.
 (add-hook 'python-mode-hook 'lsp)
 (require-package 'lsp-python-ms)
+(after 'lsp-python-ms
+  (setq lsp-python-ms-executable "~/bin/Microsoft.Python.LanguageServer"))
 
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook
@@ -16,9 +18,6 @@
           99)
 ;; HACK: Microsoft's server seems to interfere with the standard flycheck list.
 (evil-leader/set-key-for-mode 'python-mode "el" 'lsp-ui-flycheck-list)
-;; HACK: Microsoft's server seems to fuck up symbol highlight.
-(add-hook 'python-mode-hook
-          #'(lambda () (setq-local lsp-enable-symbol-highlighting nil)))
 
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
