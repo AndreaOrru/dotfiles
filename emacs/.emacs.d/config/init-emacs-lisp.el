@@ -1,5 +1,8 @@
 ;; -*- lexical-binding: t -*-
 
+(require-package 'aggressive-indent)
+(add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode)
+
 ;; Enable Emacs Lisp documentation through Dash.
 (after 'init-docs
   (add-hook 'emacs-lisp-mode-hook
