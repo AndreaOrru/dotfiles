@@ -20,6 +20,14 @@
 (unless (display-graphic-p)
   (add-hook 'after-init-hook 'global-clipetty-mode))
 
+;; Dim text in surrounding paragraphs.
+(require-package 'focus)
+(after 'init-evil
+  (which-key/describe-prefix "F" "focus")
+  (evil-leader/set-key "FF" 'focus-mode)
+  (evil-leader/set-key "Fp" 'focus-pin)
+  (evil-leader/set-key "Fu" 'focus-unpin))
+
 ;; Google search integration.
 (require-package 'google-this)
 (after 'init-evil
