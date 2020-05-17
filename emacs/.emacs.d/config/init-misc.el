@@ -26,6 +26,12 @@
 (unless (display-graphic-p)
   (add-hook 'after-init-hook 'global-clipetty-mode))
 
+;; Use avy for quick navigation.
+(require-package 'avy)
+(after 'evil
+  (setq avy-timeout-seconds 0.35)
+  (evil-define-key '(normal motion) global-map "s" 'avy-goto-char-timer))
+
 ;; Google search integration.
 (require-package 'google-this)
 (after 'init-evil
