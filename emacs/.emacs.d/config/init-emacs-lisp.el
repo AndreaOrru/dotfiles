@@ -1,5 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
+;; Keep the code always indented.
 (require-package 'aggressive-indent)
 (add-hook 'emacs-lisp-mode-hook 'aggressive-indent-mode)
 
