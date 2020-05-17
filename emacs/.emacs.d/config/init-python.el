@@ -14,7 +14,8 @@
 (add-hook 'python-mode-hook
           #'(lambda ()
               (flycheck-mode 1)
-              (flycheck-select-checker 'python-flake8))
+              (flycheck-select-checker 'python-flake8)
+              (flycheck-add-next-checker 'python-flake8 'python-pycompile))
           99)
 
 ;; Enable isort for automatic import sorting after save.
