@@ -1,16 +1,3 @@
-;; Highlight arbitrary regions of the buffer.
-(require-package 'highlight)
-(after 'highlight
-  (setq hlt-auto-faces-flag t)
-  (setq hlt-auto-face-foreground nil)
-  (defface hlt-blue '((t (:background "#29343d" :extend t))) "")
-  (setq hlt-auto-face-backgrounds '(hlt-blue)))
-(defun my/hlt-highlight-region ()
-  "Highlight the region or the buffer."
-  (interactive)
-  (hlt-highlight-region)
-  (evil-exit-visual-state))
-
 ;; Highlight matching parenthesis.
 (add-hook 'prog-mode-hook 'show-paren-mode)
 ;; Highlight TODOs, HACKs, etc.
@@ -34,6 +21,20 @@
         ahs-definition-face 'isearch)
   (set-face-background 'ahs-plugin-defalt-face (face-background 'isearch))
   (set-face-foreground 'ahs-plugin-defalt-face (face-foreground 'isearch)))
+
+;; Highlight arbitrary regions of the buffer.
+(require-package 'highlight)
+(after 'highlight
+  (setq hlt-auto-faces-flag t)
+  (setq hlt-auto-face-foreground nil)
+  (defface hlt-blue '((t (:background "#29343d" :extend t))) "")
+  (setq hlt-auto-face-backgrounds '(hlt-blue)))
+
+(defun my/hlt-highlight-region ()
+  "Highlight the current region, or the buffer if no region is selected."
+  (interactive)
+  (hlt-highlight-region)
+  (evil-exit-visual-state))
 
 (after 'evil-leader
   ;; Toggle auto-highlight.
