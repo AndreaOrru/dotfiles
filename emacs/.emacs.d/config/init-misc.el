@@ -10,6 +10,7 @@
 
 (require-package 'auto-package-update)  ;; Utility to update packages.
 (setq disabled-command-function nil)    ;; Enable all functions.
+(require-package 'pkgbuild-mode)        ;; Support Arch Linux's PKGBUILDs.
 
 ;; Re-center the screen and make the line pulse after jumping to definition.
 (after 'imenu
