@@ -2,15 +2,14 @@
 
 ;; Follow symlinks in Git repositories.
 (setq vc-follow-symlinks t)
+;; GitHub integration.
+(require-package 'browse-at-remote)
 
 ;; Install Magit and configure Evil key bindings.
 (require-package 'magit)
 (require-package 'evil-magit)
 (after 'magit
   (evil-magit-init))
-
-;; GitHub integration.
-(require-package 'browse-at-remote)
 
 ;; Enable diff-hl for Git diff in the fringe.
 (require-package 'diff-hl)
@@ -21,6 +20,11 @@
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
+;; Keep track of project's TODOs:
+(require-package 'magit-todos)
+(after 'ivy
+  (require 'magit-todos))
+
 ;; Key bindings.
 (after 'init-evil
   (which-key/describe-prefix "g" "git")
@@ -30,6 +34,7 @@
   (evil-leader/set-key "gD" 'magit-diff-working-tree)
   (evil-leader/set-key "gl" 'magit-log-all)
   (evil-leader/set-key "gs" 'magit-status)
+  (evil-leader/set-key "gt" 'ivy-magit-todos)
 
   (evil-leader/set-key "[" 'diff-hl-previous-hunk)
   (evil-leader/set-key "]" 'diff-hl-next-hunk)

@@ -1,5 +1,8 @@
 ;; Highlight matching parenthesis.
 (add-hook 'prog-mode-hook 'show-paren-mode)
+;; Highlight TODO, HACK, etc.
+(require-package 'hl-todo)
+(add-hook 'after-init-hook 'global-hl-todo-mode)
 
 ;; Highlight the current line.
 (add-hook 'after-init-hook 'global-hl-line-mode)
@@ -20,6 +23,9 @@
   (set-face-foreground 'ahs-plugin-defalt-face (face-foreground 'isearch)))
 
 (after 'evil-leader
+  ;; Toggle auto-highlight.
+  (evil-leader/set-key "hh" 'auto-highlight-symbol-mode)
+
   ;; Clear search selection and highlights.
   (evil-leader/set-key "sc" 'evil-ex-nohighlight))
 
