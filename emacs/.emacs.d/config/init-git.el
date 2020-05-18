@@ -36,8 +36,8 @@
   (evil-leader/set-key "gs" 'magit-status)
   (evil-leader/set-key "gt" 'ivy-magit-todos)
 
-  (evil-leader/set-key "[" 'diff-hl-previous-hunk)
-  (evil-leader/set-key "]" 'diff-hl-next-hunk)
+  (evil-global-set-key 'normal (kbd "]g") 'diff-hl-next-hunk)
+  (evil-global-set-key 'normal (kbd "[g") 'diff-hl-previous-hunk)
   (evil-leader/set-key "u" 'diff-hl-revert-hunk))
 
 (provide 'init-git)

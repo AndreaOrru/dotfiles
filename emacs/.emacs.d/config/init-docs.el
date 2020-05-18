@@ -11,7 +11,7 @@
 
 ;; Help and documentation functions.
 (after 'init-evil
-  (which-key/describe-prefix "h" "help")
+  (which-key/describe-prefix "h" "help/highlight")
   (evil-leader/set-key "ha" 'apropos)
   (evil-leader/set-key "hf" 'counsel-describe-function)
   (evil-leader/set-key "hk" 'describe-key)

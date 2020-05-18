@@ -1,6 +1,19 @@
+;; Highlight arbitrary regions of the buffer.
+(require-package 'highlight)
+(after 'highlight
+  (setq hlt-auto-faces-flag t)
+  (setq hlt-auto-face-foreground nil)
+  (defface hlt-blue '((t (:background "#29343d" :extend t))) "")
+  (setq hlt-auto-face-backgrounds '(hlt-blue)))
+(defun my/hlt-highlight-region ()
+  "Highlight the region or the buffer."
+  (interactive)
+  (hlt-highlight-region)
+  (evil-exit-visual-state))
+
 ;; Highlight matching parenthesis.
 (add-hook 'prog-mode-hook 'show-paren-mode)
-;; Highlight TODO, HACK, etc.
+;; Highlight TODOs, HACKs, etc.
 (require-package 'hl-todo)
 (add-hook 'after-init-hook 'global-hl-todo-mode)
 
@@ -24,9 +37,13 @@
 
 (after 'evil-leader
   ;; Toggle auto-highlight.
-  (evil-leader/set-key "hh" 'auto-highlight-symbol-mode)
+  (evil-leader/set-key "ht" 'auto-highlight-symbol-mode)
+  (evil-leader/set-key "hh" 'my/hlt-highlight-region)
+  (evil-leader/set-key "hu" 'hlt-unhighlight-region)
+  (evil-global-set-key 'normal (kbd "]h") 'hlt-next-highlight)
+  (evil-global-set-key 'normal (kbd "[h") 'hlt-previous-highlight)
 
-  ;; Clear search selection and highlights.
+  ;; Clear search selection.
   (evil-leader/set-key "sc" 'evil-ex-nohighlight))
 
 (provide 'init-highlight)
