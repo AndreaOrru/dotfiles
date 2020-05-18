@@ -1,7 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-;; Automatically enable the project's virtualenv (as early as possible).
-(require-package 'auto-virtualenvwrapper)
+;; Automatically enable the project's virtualenv (as early as possible). (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -99)
 
 ;; Enable Microsoft Python Language Server.
@@ -16,7 +15,7 @@
               (flycheck-mode 1)
               (flycheck-select-checker 'python-flake8)
               (flycheck-add-next-checker 'python-flake8 'python-pycompile))
-          99)
+          98)
 
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
@@ -31,5 +30,18 @@
 (after 'init-docs
   (add-hook 'python-mode-hook
             #'(lambda () (setq-local counsel-dash-docsets '("Python 3")))))
+
+;; Show Python test coverage through Flycheck.
+(after 'init-vendor
+  (require-package 'xml+)
+  (ensure-lib-from-url
+   'python-coverage
+   (concat
+    "https://raw.githubusercontent.com/AndreaOrru/emacs-python-coverage/"
+    "master/python-coverage.el"))
+  (add-hook 'python-mode-hook
+            #'(lambda ()
+                (define-key lsp-command-map (kbd "c") 'python-coverage-mode))
+            99))
 
 (provide 'init-python)

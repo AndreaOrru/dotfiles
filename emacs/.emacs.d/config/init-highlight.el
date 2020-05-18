@@ -27,8 +27,8 @@
 (after 'highlight
   (setq hlt-auto-faces-flag t)
   (setq hlt-auto-face-foreground nil)
-  (defface hlt-blue '((t (:background "#29343d" :extend t))) "")
-  (setq hlt-auto-face-backgrounds '(hlt-blue)))
+  (defface hlt-red '((t (:background "#332525" :extend t))) "")
+  (setq hlt-auto-face-backgrounds '(hlt-red)))
 
 (defun my/hlt-highlight-region ()
   "Highlight the current region, or the buffer if no region is selected."
