@@ -12,11 +12,6 @@
 
 (add-hook 'after-init-hook 'global-subword-mode) ;; CamelCase words.
 (add-hook 'after-init-hook 'electric-pair-mode)  ;; Insert separators in pairs.
-(add-hook 'prog-mode-hook 'show-paren-mode)      ;; Highlight matching parenthesis.
-;; Highlight the current line.
-(add-hook 'after-init-hook 'global-hl-line-mode)
-(after 'hl-line
-  (set-face-background 'hl-line (doom-color 'base3)))
 
 ;; Intelligently clean up extra whitespaces on save.
 (require-package 'whitespace-cleanup-mode)
@@ -30,9 +25,6 @@
   ;; Adjust region indentation.
   (evil-define-key 'visual prog-mode-map (kbd "TAB") 'indent-region)
   (evil-leader/set-key "v" 'er/expand-region)  ;; Expand region.
-
-  ;; Clear search selection.
-  (evil-leader/set-key "sc" 'evil-ex-nohighlight)
 
   ;; Comment/uncomment.
   (require 'evil-nerd-commenter)

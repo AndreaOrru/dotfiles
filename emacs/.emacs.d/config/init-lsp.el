@@ -11,12 +11,13 @@
                   (mapc 'funcall imenu-after-jump-hook))))
 
 (after [lsp-mode init-evil]
-  (setq lsp-auto-guess-root t              ;; Guess the project root.
-        lsp-enable-snippet nil             ;; Disable Yasnippet.
-        lsp-flycheck-live-reporting nil    ;; Disable Flycheck live reporting.
-        lsp-keep-workspace-alive nil       ;; Kill language server when done.
-        lsp-prefer-capf t                  ;; Use CAPF completion (more efficient).
-        lsp-ui-doc-enable nil)             ;; Disable documentation on hover.
+  (setq lsp-auto-guess-root t               ;; Guess the project root.
+        lsp-enable-symbol-highlighting nil  ;; Disable symbol highlighting.
+        lsp-enable-snippet nil              ;; Disable Yasnippet.
+        lsp-flycheck-live-reporting nil     ;; Disable Flycheck live reporting.
+        lsp-keep-workspace-alive nil        ;; Kill language server when done.
+        lsp-prefer-capf t                   ;; Use CAPF completion (more efficient).
+        lsp-ui-doc-enable nil)              ;; Disable documentation on hover.
 
   (setq lsp-keymap-prefix ",")
   (add-hook 'lsp-mode-hook

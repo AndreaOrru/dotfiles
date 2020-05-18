@@ -3,10 +3,6 @@
 ;; Launch inferior shells on a lightweight shell.
 (setq shell-file-name "/bin/sh")
 
-;; Disable line highlighting in Eshell.
-(add-hook 'eshell-mode-hook
-          #'(lambda () (setq-local global-hl-line-mode nil)))
-
 (after 'eshell
   ;; Custom prompt.
   (setq eshell-prompt-regexp "^[^#\nλ]*[#λ] ")
