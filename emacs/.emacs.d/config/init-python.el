@@ -13,7 +13,7 @@
 ;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook
           #'(lambda ()
-              (flycheck-mode 1)
+              (add-to-list 'flycheck-disabled-checkers 'lsp)
               (flycheck-select-checker 'python-flake8)
               (flycheck-add-next-checker 'python-flake8 'python-pycompile))
           98)
