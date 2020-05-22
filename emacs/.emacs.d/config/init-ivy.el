@@ -22,8 +22,7 @@
   (ivy-prescient-mode 1)                       ;; Order results by frequency.
 
   ;; Search inside hidden files as well (but not the ".git" directory).
-  (setq-default counsel-rg-base-command
-                (concat counsel-rg-base-command " --hidden -g '!.git/**'"))
+  (setq counsel-rg-base-command (append counsel-rg-base-command '("--hidden" "-g '!.git/**")))
   ;; Separate items in kill ring.
   (setq-default counsel-yank-pop-separator "\n\n"))
 
