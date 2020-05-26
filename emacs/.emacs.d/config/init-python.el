@@ -10,21 +10,21 @@
 (after 'lsp-python-ms
   (setq lsp-python-ms-executable "~/bin/Microsoft.Python.LanguageServer"))
 
-;; Enable Flycheck syntax checking for Python.
-(add-hook 'python-mode-hook
-          #'(lambda ()
-              (flycheck-select-checker 'python-flake8)
-              (flycheck-add-next-checker 'python-flake8 'python-pycompile))
-          98)
-
-;; Enable isort for automatic import sorting after save.
-(require-package 'py-isort)
-(add-hook 'before-save-hook 'py-isort-before-save)
 ;; Enable Black for automatic formatting after saving.
 (require-package 'blacken)
 (add-hook 'python-mode-hook 'blacken-mode)
 (after 'blacken
   (setq blacken-fast-unsafe t))
+;; Enable isort for automatic import sorting after save.
+(require-package 'py-isort)
+
+;; Enable Flycheck syntax checking for Python.
+(add-hook 'python-mode-hook
+          #'(lambda ()
+              (add-hook 'before-save-hook 'py-isort-before-save t t)
+              (flycheck-select-checker 'python-flake8)
+              (flycheck-add-next-checker 'python-flake8 'python-pycompile))
+          98)
 
 ;; Enable Python 3 documentation through Dash.
 (after 'init-docs
