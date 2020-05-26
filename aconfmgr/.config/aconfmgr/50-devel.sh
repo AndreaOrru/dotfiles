@@ -24,3 +24,8 @@ AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage --foreign python-pdbpp # pdb++, a drop-in replacement for pdb
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 AddPackage pypy3 # A Python3 implementation written in Python, JIT enabled
+
+# Ruby and webdev.
+AddPackage postgresql # Sophisticated object-relational DBMS
+AddPackage --foreign rbenv # Simple Ruby version manager
+AddPackage --foreign ruby-build # Compile and install Ruby

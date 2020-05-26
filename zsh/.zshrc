@@ -5,6 +5,9 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 
+# Ruby environments.
+eval "$(rbenv init -)"
+
 # Python virtualenvs.
 source virtualenvwrapper_lazy.sh
 # Automatically activate virtualenvs.
