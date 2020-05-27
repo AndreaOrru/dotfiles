@@ -45,4 +45,4 @@ systemctl --user daemon-reload
 cd "$PLS/src/LanguageServer/Impl"
 git pull
 dotnet publish -c Release -r arch-x64
-ln -vs "$PLS/output/bin/Release/arch-x64/publish/Microsoft.Python.LanguageServer" ~/bin
+ln -vsf "$PLS/output/bin/Release/arch-x64/publish/Microsoft.Python.LanguageServer" ~/bin
