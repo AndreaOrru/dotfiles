@@ -26,6 +26,7 @@ AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv too
 AddPackage pypy3 # A Python3 implementation written in Python, JIT enabled
 
 # Ruby and webdev.
+AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps from the command line
 AddPackage postgresql # Sophisticated object-relational DBMS
 AddPackage --foreign rbenv # Simple Ruby version manager
 AddPackage --foreign ruby-build # Compile and install Ruby
