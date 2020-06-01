@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Highlight matching parenthesis.
 (add-hook 'prog-mode-hook 'show-paren-mode)
 ;; Highlight TODOs, HACKs, etc.

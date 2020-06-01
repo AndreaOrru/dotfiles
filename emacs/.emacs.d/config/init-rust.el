@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (require-package 'rustic)
 (after 'rustic
   (setq rustic-lsp-server 'rust-analyzer)

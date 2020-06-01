@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (add-hook 'ruby-mode-hook 'lsp)
 
 (require-package 'rbenv)

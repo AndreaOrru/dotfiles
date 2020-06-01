@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Taken from Purcell's site-lisp configuration.
 
 ;; Utility functions.

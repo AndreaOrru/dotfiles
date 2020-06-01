@@ -32,6 +32,7 @@ rm -rf pkg src
 rm -rf ~/.emacs.d/elpa
 rm -rf ~/.emacs.d/etc
 rm -rf ~/.emacs.d/var
+rm -rf ~/.emacs.d/vendor
 
 systemctl --user daemon-reload
 

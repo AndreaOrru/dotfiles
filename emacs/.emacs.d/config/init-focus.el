@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;; Dim text in surrounding paragraphs.
 (require-package 'focus)
 
