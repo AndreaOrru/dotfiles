@@ -4,9 +4,8 @@
 
 ;; Display Flycheck error list as a sticky popup.
 (after 'popwin
-  (push '(flycheck-error-list-mode :stick t :noselect t)
+  (push '(flycheck-error-list-mode :stick t)
         popwin:special-display-config))
-;; HACK: Waiting for https://github.com/flycheck/flycheck/pull/1778 to be merged.
 
 (after [flycheck init-evil]
   ;; Use SPC e as prefix for Flycheck commands.
