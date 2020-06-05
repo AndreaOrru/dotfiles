@@ -1,5 +1,5 @@
 # Emacs.
-AddPackage --foreign emacs27-git # GNU Emacs. emacs-27 release branch.
+AddPackage --foreign emacs-git # GNU Emacs. Development master branch.
 AddPackage dotnet-sdk # The .NET Core SDK
 
 # Developer tools.

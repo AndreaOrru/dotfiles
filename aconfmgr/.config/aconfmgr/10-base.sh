@@ -6,16 +6,17 @@ AddPackage man-db # A utility for reading man pages
 AddPackage man-pages # Linux man pages
 
 # Linux kernel.
-AddPackage linux # The Linux kernel and modules
-AddPackage linux-pf-skylake # The pf-kernel and modules
 AddPackage linux-firmware # Firmware files for Linux
-# Don't generate fallback images.
-CopyFile /etc/mkinitcpio.d/linux.preset
+AddPackage linux-pf-skylake # The pf-kernel and modules
+AddPackage linux-pf-headers-skylake # Headers and scripts for building modules for the pf-kernel
 CopyFile /etc/mkinitcpio.d/linux-pf.preset
+
+# Kernel Same Page Merging.
+AddPackage --foreign uksmd-git # Userspace KSM helper daemon
+CreateLink /etc/systemd/system/multi-user.target.wants/uksmd.service /usr/lib/systemd/system/uksmd.service
 
 # Boot loader configuration.
 CopyFile /boot/loader/loader.conf 755
-CopyFile /boot/loader/entries/arch.conf 755
 CopyFile /boot/loader/entries/arch-pf.conf 755
 
 # Kernel options.
