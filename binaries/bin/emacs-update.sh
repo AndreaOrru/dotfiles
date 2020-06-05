@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DEV="$HOME/dev/makepkg"
-EMACS="$DEV/emacs27-git"
+EMACS="$DEV/emacs-git"
 PLS="$DEV/python-language-server"
 mkdir -p "$DEV"
 
@@ -10,10 +10,10 @@ mkdir -p "$DEV"
 #  Emacs executable.  #
 #######################
 
-[ ! -d "$EMACS" ] && yay -G emacs27-git
+[ ! -d "$EMACS" ] && yay -G emacs-git
 
 cd "$EMACS"
-rm -f emacs27-git-*
+rm -f emacs-git-*
 rm -rf pkg src
 
 git reset --hard
