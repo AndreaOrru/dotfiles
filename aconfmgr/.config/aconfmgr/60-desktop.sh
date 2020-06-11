@@ -61,3 +61,6 @@ CopyFile /etc/udevmon.yaml
 AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
+
+# Japanese input.
+AddPackage --foreign ibus-mozc-ut2 # IBus engine module for Mozc

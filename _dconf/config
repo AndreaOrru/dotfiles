@@ -8,7 +8,7 @@ world-clocks=[{'location': <(uint32 2, <('Los Angeles', 'KCQT', true, [(0.593702
 picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
 
 [org/gnome/desktop/input-sources]
-sources=[('xkb', 'us'), ('xkb', 'it')]
+sources=[('xkb', 'us'), ('xkb', 'it'), ('ibus', 'mozc-jp')]
 xkb-options=['altwin:swap_lalt_lwin']
 
 [org/gnome/desktop/interface]
@@ -17,7 +17,7 @@ clock-show-weekday=true
 document-font-name='Cantarell 12'
 enable-animations=false
 font-name='Cantarell 12'
-gtk-im-module='gtk-im-context-simple'
+gtk-im-module='ibus'
 gtk-theme='Adwaita-dark'
 monospace-font-name='Source Code Pro 11'
 toolkit-accessibility=false
