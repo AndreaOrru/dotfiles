@@ -10,6 +10,10 @@
 (after 'ivy-rich
   (setq ivy-rich-path-style 'abbrev)
   (setcdr (assq t ivy-format-functions-alist) 'ivy-format-function-line))
+;; Use icons in Ivy Rich in graphic mode.
+(require-package 'all-the-icons-ivy-rich)
+(when (display-graphic-p)
+  (add-hook 'after-init-hook 'all-the-icons-ivy-rich-mode))
 
 ;; Extra functionalities.
 (require-package 'ivy-hydra)       ;; Ivy action selection.
