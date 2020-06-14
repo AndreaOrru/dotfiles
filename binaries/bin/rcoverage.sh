@@ -8,4 +8,4 @@ cargo clean
 cargo build
 cargo test
 
-grcov ./target/debug/ -s . -t html --llvm --branch --ignore-not-existing --ignore tests/ -o ./target/debug/coverage/
+grcov ./target/debug/ -s . -t html --llvm --branch --ignore-not-existing --ignore "tests/**" -o ./target/debug/coverage/
