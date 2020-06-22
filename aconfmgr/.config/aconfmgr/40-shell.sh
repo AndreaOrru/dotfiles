@@ -12,6 +12,7 @@ AddPackage zsh-completions # Additional completion definitions for Zsh
 AddPackage --foreign zsh-fast-syntax-highlighting-git # Optimized and extended zsh-syntax-highlighting
 
 # Shell utilities.
+AddPackage asciinema # Record and share terminal sessions
 AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage htop # Interactive process viewer
 AddPackage lsof # Lists open files for running Unix processes
