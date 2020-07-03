@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep 1
+sleep 2
 
 kitty &
 emacs &
