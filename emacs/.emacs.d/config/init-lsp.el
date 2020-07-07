@@ -12,7 +12,7 @@
 
 (after [lsp-mode init-evil]
   (setq lsp-auto-guess-root t               ;; Guess the project root.
-        lsp-enable-symbol-highlighting nil  ;; Disable symbol highlighting.
+        lsp-enable-semantic-highlighting t  ;; Enable semantic highlighting.
         lsp-enable-snippet nil              ;; Disable Yasnippet.
         lsp-keep-workspace-alive nil        ;; Kill language server when done.
         lsp-signature-auto-activate nil     ;; Disable signature popup.
