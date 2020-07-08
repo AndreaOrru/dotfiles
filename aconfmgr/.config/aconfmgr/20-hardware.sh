@@ -86,3 +86,6 @@ AddPackage fwupd # A simple daemon to allow session software to update firmware
 AddPackage tpm2-abrmd # Trusted Platform Module 2.0 Access Broker and Resource Management Daemon
 AddPackage tpm2-tools # Trusted Platform Module 2.0 tools based on tpm2-tss
 CopyFile /etc/pacman.d/hooks/fwupd-to-esp.hook
+
+# Keyboard firmware.
+AddPackage --foreign qmk # CLI tool for customizing supported mechanical keyboards.

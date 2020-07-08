@@ -3,6 +3,7 @@ CopyFile /etc/profile.d/firefox-vars.sh
 AddPackage firefox # Standalone web browser from mozilla.org
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
+AddPackage --foreign ff2mpv-native-messaging-host-git # Native Messaging Host for ff2mpv firefox addon.
 
 # Chromium.
 AddPackage chromium # A web browser built for speed, simplicity, and security
@@ -19,6 +20,7 @@ AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulato
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 AddPackage youtube-viewer # Command line utility for viewing YouTube videos

@@ -64,3 +64,6 @@ AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Japanese input.
 AddPackage --foreign ibus-mozc-ut2 # IBus engine module for Mozc
+
+# Lock keyboard.
+AddPackage --foreign lk4b # A small program which locks your keyboard but leaves your mouse free

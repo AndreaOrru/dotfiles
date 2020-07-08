@@ -1,6 +1,7 @@
 # Emacs.
 AddPackage --foreign emacs-git # GNU Emacs. Development master branch.
 AddPackage dotnet-sdk # The .NET Core SDK
+AddPackage --foreign jdtls # Eclipse Java language server
 
 # Developer tools.
 AddPackage clang # C language family frontend for LLVM
