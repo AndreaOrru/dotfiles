@@ -1,7 +1,6 @@
 # Emacs.
 AddPackage --foreign emacs-git # GNU Emacs. Development master branch.
 AddPackage dotnet-sdk # The .NET Core SDK
-AddPackage --foreign jdtls # Eclipse Java language server
 
 # Developer tools.
 AddPackage clang # C language family frontend for LLVM
@@ -31,3 +30,6 @@ AddPackage --foreign heroku-cli # a tool for creating and managing Heroku apps f
 AddPackage postgresql # Sophisticated object-relational DBMS
 AddPackage --foreign rbenv # Simple Ruby version manager
 AddPackage --foreign ruby-build # Compile and install Ruby
+
+# Java.
+AddPackage jdk-openjdk # OpenJDK Java 14 development kit
