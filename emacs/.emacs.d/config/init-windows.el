@@ -11,12 +11,6 @@
   (which-key/describe-prefix "w" "windows")
   (evil-leader/set-key "ws" 'popwin:stick-popup-window))
 
-;; Keep windows balanced.
-(require-package 'balanced-windows)
-(add-hook 'after-init-hook 'balanced-windows-mode)
-(after 'balanced-windows
-  (setq balanced-windows-functions '(delete-window quit-window)))
-
 ;; Split and switch to the new window immediately.
 (global-set-key (kbd "C-x 2")
                 #'(lambda () (interactive) (evil-window-split) (other-window 1)))
