@@ -14,11 +14,13 @@
 ;; Keep windows balanced.
 (require-package 'balanced-windows)
 (add-hook 'after-init-hook 'balanced-windows-mode)
+(after 'balanced-windows
+  (setq balanced-windows-functions '(delete-window quit-window)))
 
 ;; Split and switch to the new window immediately.
 (global-set-key (kbd "C-x 2")
-                #'(lambda () (interactive) (split-window-below) (other-window 1)))
+                #'(lambda () (interactive) (evil-window-split) (other-window 1)))
 (global-set-key (kbd "C-x 3")
-                #'(lambda () (interactive) (split-window-right) (other-window 1)))
+                #'(lambda () (interactive) (evil-window-vsplit) (other-window 1)))
 
 (provide 'init-windows)
