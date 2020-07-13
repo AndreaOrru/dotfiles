@@ -5,3 +5,4 @@ sleep 2
 kitty &
 emacs &
 chromium &
+firefox &
