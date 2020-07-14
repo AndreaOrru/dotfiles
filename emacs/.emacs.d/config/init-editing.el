@@ -21,7 +21,11 @@
 (require-package 'evil-nerd-commenter)  ;; Utilities for (un-)commenting.
 
 ;; Key bindings.
-(after 'evil-leader
+(after 'init-evil
+  ;; Toggle line numbers.
+  (which-key/describe-prefix "t" "toggle")
+  (evil-leader/set-key "tl" 'global-linum-mode)
+
   ;; Adjust region indentation.
   (evil-define-key 'visual prog-mode-map (kbd "TAB") 'indent-region)
   (evil-leader/set-key "v" 'er/expand-region)  ;; Expand region.
