@@ -68,8 +68,9 @@ CopyFile /etc/profile.d/libva-driver.sh
 AddPackage sof-firmware # Sound Open Firmware
 CopyFile /etc/modprobe.d/no-wrong-audio.conf
 
-# Automatically switch to newly connected audio devices, enable SOF.
+# Switch to newly connected audio devices, enable SOF, noise cancelling, no resampling.
 CopyFile /etc/pulse/default.pa
+CopyFile /etc/pulse/daemon.conf
 
 
 ###################
