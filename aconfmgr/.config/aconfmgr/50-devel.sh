@@ -13,6 +13,7 @@ AddPackage --foreign git-extras # GIT utilities -- repo summary, commit counting
 AddPackage hub # cli interface for Github
 AddPackage redis # Advanced key-value store
 AddPackage scons # Extensible Python-based build utility
+AddPackage --foreign zig-git # a programming language prioritizing robustness, optimality, and clarity
 
 # Go, Rust.
 AddPackage go # Core compiler tools for the Go programming language
