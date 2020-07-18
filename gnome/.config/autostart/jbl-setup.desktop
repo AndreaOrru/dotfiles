@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=JBL Setup
+Exec=jbl-setup.sh
+Terminal=false
