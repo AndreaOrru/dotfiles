@@ -41,6 +41,7 @@ CopyFile /etc/systemd/system/undervolt.service
 ###############
 
 AddPackage bluez-tools # A set of tools to manage Bluetooth devices for Linux
+AddPackage bluez-plugins # bluez plugins (PS3 Sixaxis controller)
 AddPackage bluez-utils # Development and debugging utilities for the bluetooth protocol stack
 
 CreateLink /etc/systemd/system/bluetooth.target.wants/bluetooth.service /usr/lib/systemd/system/bluetooth.service
