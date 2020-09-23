@@ -16,6 +16,10 @@
 ;; Make the fringe bigger.
 (fringe-mode '(16 . 0))
 
+;; Adjust font size dynamically.
+(require-package 'default-text-scale)
+(add-hook 'after-init-hook 'default-text-scale-mode)
+
 ;; Start GUI in fullscreen mode.
 (when (display-graphic-p)
   (toggle-frame-fullscreen))
