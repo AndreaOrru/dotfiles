@@ -22,6 +22,11 @@ AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
 AddPackage --foreign spotify # A proprietary music streaming service
+AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 AddPackage youtube-viewer # Command line utility for viewing YouTube videos
 AddPackage --foreign zoom # Video Conferencing and Web Conferencing Service
+
+AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
+AddPackage virtualbox-guest-iso # The official VirtualBox Guest Additions ISO image
+AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources

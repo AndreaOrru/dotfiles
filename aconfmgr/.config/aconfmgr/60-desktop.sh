@@ -22,6 +22,9 @@ RemovePackage gnome-software
 RemovePackage gnome-terminal
 RemovePackage gnome-todo
 
+# Extensions.
+AddPackage --foreign gnome-shell-extension-appindicator-git # Integrates AppIndicators into GNOME Shell
+
 # GDM.
 CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/gdm.service
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
@@ -61,9 +64,9 @@ CreateLink /etc/systemd/system/multi-user.target.wants/udevmon.service /usr/lib/
 CopyFile /etc/udevmon.yaml
 
 # Clipboard management.
+AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage xclip # Command line interface to the X11 clipboard
 AddPackage xsel # XSel is a command-line program for getting and setting the contents of the X selection
-AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Japanese input.
 AddPackage --foreign ibus-mozc-ut2 # IBus engine module for Mozc
