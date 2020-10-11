@@ -1,9 +1,7 @@
 IgnorePath '/boot/*.img'
-IgnorePath '/boot/BOOT'
 IgnorePath '/boot/EFI'
-IgnorePath '/boot/System Volume Information'
 IgnorePath '/boot/loader/random-seed'
-IgnorePath '/boot/vmlin*'
+IgnorePath '/boot/vmlinuz-*'
 
 IgnorePath '/etc/.pwd.lock'
 IgnorePath '/etc/.updated'
