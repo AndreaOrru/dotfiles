@@ -31,9 +31,6 @@ CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
 
-# GDM A2DP fix for headphones.
-AddPackage --foreign pulseaudio-bluetooth-a2dp-gdm-fix # Unload bluetooth modules from gdm instance of pulseaudio. Fixes availability a2dp profile of bluetooth headset
-
 
 ###########
 #  Fonts  #
