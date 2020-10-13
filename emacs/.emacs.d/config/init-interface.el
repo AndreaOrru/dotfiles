@@ -11,7 +11,7 @@
 (load-theme 'doom-tomorrow-night)
 
 ;; Set interface font.
-(setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-12")))
+(setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
 (setq-default line-spacing 4)
 ;; Make the fringe bigger.
 (fringe-mode '(16 . 0))
