@@ -4,6 +4,12 @@
 (require-package 'evil)
 (add-hook 'after-init-hook 'evil-mode)
 
+;; Use undo-tree as the undo system.
+(require-package 'undo-tree)
+(add-hook 'after-init-hook 'global-undo-tree-mode)
+(after 'evil
+  (evil-set-undo-system 'undo-tree))
+
 ;; VIM-like search with persistent highlight.
 (setq-default evil-search-module 'evil-search)
 (setq-default evil-want-C-u-scroll t)       ;; C-u to scroll up.
