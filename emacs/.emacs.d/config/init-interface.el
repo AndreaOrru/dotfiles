@@ -10,19 +10,19 @@
 (require-package 'doom-themes)
 (load-theme 'doom-tomorrow-night)
 
-;; Set interface font.
-(setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
-(setq-default line-spacing 4)
-;; Make the fringe bigger.
-(fringe-mode '(16 . 0))
+;; GUI-specific options.
+(when (display-graphic-p)
+  (toggle-frame-fullscreen)      ;; Fullscreen mode.
+  (fringe-mode '(16 . 0))        ;; Bigger fringe.
+  (setq-default line-spacing 4)  ;; More vertical spacing.
+  ;; Choose interface font size based on whether the external monitor is connected.
+  (if (eq (call-process-shell-command "external-monitor.sh") 0)
+      (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
+    (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-14")))))
 
-;; Adjust font size dynamically.
+;; Adjust font size at runtime.
 (require-package 'default-text-scale)
 (add-hook 'after-init-hook 'default-text-scale-mode)
-
-;; Start GUI in fullscreen mode.
-(when (display-graphic-p)
-  (toggle-frame-fullscreen))
 
 ;; Show clearer window dividers.
 (if (not (display-graphic-p))
