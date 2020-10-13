@@ -42,7 +42,7 @@
       scroll-margin 0
       scroll-conservatively 101
       mouse-wheel-progressive-speed nil
-      mouse-wheel-scroll-amount '(2
+      mouse-wheel-scroll-amount '(3
                                   ((shift) . 1)))
 
 (setq inhibit-startup-screen t)    ;; Disable Emacs startup screen.
