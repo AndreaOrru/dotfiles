@@ -38,10 +38,12 @@
 (unless (display-graphic-p)
   (xterm-mouse-mode 1))
 ;; Enable smooth scrolling.
-(setq mouse-wheel-progressive-speed nil
-      scroll-preserve-screen-position t
+(setq scroll-preserve-screen-position t
       scroll-margin 0
-      scroll-conservatively 101)
+      scroll-conservatively 101
+      mouse-wheel-progressive-speed nil
+      mouse-wheel-scroll-amount '(2
+                                  ((shift) . 1)))
 
 (setq inhibit-startup-screen t)    ;; Disable Emacs startup screen.
 (setq ring-bell-function 'ignore)  ;; Disable audible bell.
