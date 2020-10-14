@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-;; Automatically enable the project's virtualenv (as early as possible). (require-package 'auto-virtualenvwrapper)
+;; Automatically enable the project's virtualenv (as early as possible).
 (require-package 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -99)
 
