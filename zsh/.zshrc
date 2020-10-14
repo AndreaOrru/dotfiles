@@ -13,8 +13,8 @@ source virtualenvwrapper_lazy.sh
 # Automatically activate virtualenvs.
 precmd_functions=(auto_workon $precmd_functions)
 function auto_workon() {
-    if [ "$PWD" != "$PY_OLDPWD" ] && [ -f .venv ]; then
-        workon `cat .venv`
+    if [ "$PWD" != "$PY_OLDPWD" ] && [ -f .workon ]; then
+        workon `cat .workon`
         PY_OLDPWD="$PWD"
     fi
 }
