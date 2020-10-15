@@ -18,7 +18,7 @@
   ;; Choose interface font size based on whether the external monitor is connected.
   (if (eq (call-process-shell-command "external-monitor.sh") 0)
       (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
-    (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-14")))))
+    (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-13")))))
 
 ;; Adjust font size at runtime.
 (require-package 'default-text-scale)
