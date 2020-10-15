@@ -27,6 +27,7 @@ alias diff='diff --color=auto'
 alias f='sudo updatedb && sudo locate -i'
 alias i='ipython'
 alias p='yay'
+alias t='tmux'
 
 alias e='emacsclient -t'
 alias "e."='emacsclient -t . ..'
