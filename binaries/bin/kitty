@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if ~/bin/external-monitor.sh ; then
-    /usr/bin/kitty -o font_size=10
-else
-    /usr/bin/kitty
-fi
