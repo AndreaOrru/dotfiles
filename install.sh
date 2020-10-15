@@ -8,5 +8,6 @@ stow secrets
 stow git
 stow kitty
 stow mpv
+stow sway
 stow tmux
 stow zsh
