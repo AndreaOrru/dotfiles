@@ -12,13 +12,9 @@
 
 ;; GUI-specific options.
 (when (display-graphic-p)
-  (toggle-frame-fullscreen)      ;; Fullscreen mode.
-  (fringe-mode '(16 . 0))        ;; Bigger fringe.
-  (setq-default line-spacing 4)  ;; More vertical spacing.
-  ;; Choose interface font size based on whether the external monitor is connected.
-  (if (eq (call-process-shell-command "external-monitor.sh") 0)
-      (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
-    (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-13")))))
+  (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
+  (fringe-mode '(8 . 0))          ;; Fringe only on the left.
+  (setq-default line-spacing 4))  ;; More vertical spacing.
 
 ;; Adjust font size at runtime.
 (require-package 'default-text-scale)
