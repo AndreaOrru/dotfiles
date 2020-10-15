@@ -20,16 +20,6 @@
 (require-package 'default-text-scale)
 (add-hook 'after-init-hook 'default-text-scale-mode)
 
-;; Show clearer window dividers.
-(if (not (display-graphic-p))
-    (set-face-attribute 'vertical-border nil
-                        :background (doom-color 'base2)
-                        :foreground (doom-color 'base2))
-  (setq window-divider-default-places t
-        window-divider-default-bottom-width 4
-        window-divider-default-right-width 3)
-  (add-hook 'after-init-hook 'window-divider-mode))
-
 ;; Enable mouse in terminal.
 (unless (display-graphic-p)
   (xterm-mouse-mode 1))
