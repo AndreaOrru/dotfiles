@@ -9,7 +9,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; Utility functions and macros.
+;; Core macros from bling/dotemacs.
 (defun require-package (package)
   "Ensures that PACKAGE is installed."
   (unless (or (package-installed-p package)

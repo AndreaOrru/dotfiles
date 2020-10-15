@@ -14,6 +14,11 @@
 (setq-default evil-search-module 'evil-search)
 (setq-default evil-want-C-u-scroll t)       ;; C-u to scroll up.
 (setq-default evil-ex-substitute-global t)  ;; Substitute globally by default.
+(setq-default evil-symbol-word-search t)    ;; * and # search for symbols.
+
+;; Support using * and # on selections.
+(require-package 'evil-visualstar)
+(add-hook 'after-init-hook 'global-evil-visualstar-mode)
 
 ;; Collection of extra Evil keybindings.
 (require-package 'evil-collection)
