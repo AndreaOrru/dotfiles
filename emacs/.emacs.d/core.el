@@ -7,9 +7,7 @@
 ;; Setup MELPA repository and load packages.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(setq load-prefer-newer t)            ;; Prefer new byte-compiled files.
-(setq package-enable-at-startup nil)  ;; Prevent (package-initialize) at startup.
-(package-initialize)                  ;; Load Emacs Lisp packages.
+(package-initialize)
 
 ;; Utility functions and macros.
 (defun require-package (package)

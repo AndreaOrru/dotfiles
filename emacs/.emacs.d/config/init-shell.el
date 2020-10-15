@@ -30,7 +30,7 @@
 (global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
 
-;; TMux integration.
+;; Tmux integration.
 (require-package 'tmux-pane)
 (after 'evil-leader
   (if (display-graphic-p)
