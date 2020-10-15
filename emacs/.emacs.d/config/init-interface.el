@@ -13,7 +13,6 @@
 ;; GUI-specific options.
 (when (display-graphic-p)
   (setq default-frame-alist '((font . "Iosevka Fixed SS09 Extended-10")))
-  (toggle-frame-fullscreen)       ;; Fullscreen mode.
   (fringe-mode '(8 . 0))          ;; Fringe only on the left.
   (setq-default line-spacing 4))  ;; More vertical spacing.
 
