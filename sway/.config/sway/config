@@ -24,6 +24,8 @@ set $menu rofi -show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+default_border pixel
 #
 # Example configuration:
 #
@@ -229,7 +231,5 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-default_border pixel
 
 include /etc/sway/config.d/*
