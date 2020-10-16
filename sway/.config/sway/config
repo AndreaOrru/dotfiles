@@ -65,6 +65,7 @@ output DP-1 pos 1280 0
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
+    xkb_options altwin:swap_lalt_lwin
     repeat_delay 200
     repeat_rate 60
 }
