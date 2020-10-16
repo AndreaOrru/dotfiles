@@ -244,4 +244,9 @@ bar {
     }
 }
 
+#
+# Autostart:
+#
+exec gammastep  # Adjust color temperature in the evening.
+
 include /etc/sway/config.d/*
