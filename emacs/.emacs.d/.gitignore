@@ -11,7 +11,8 @@
 *.~undo-tree
 
 # Emacs littering
-elpa/
-etc/
-var/
-vendor/
+/eln-cache/
+/elpa/
+/etc/
+/var/
+/vendor/
