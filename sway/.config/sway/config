@@ -23,7 +23,8 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output eDP-1 bg $HOME/.config/sway/wallpaper1.png fill
+output  DP-1 bg $HOME/.config/sway/wallpaper2.png fill
 
 font Iosevka Fixed SS09 Extended 9
 default_border pixel
@@ -40,7 +41,7 @@ default_border pixel
 #
 exec swayidle -w \
          timeout 300 'swaylock' \
-         timeout 600 'swaymsg "output eDP-1 dpms off"' resume 'swaymsg "output eDP-1 dpms on"' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
