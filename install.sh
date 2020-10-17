@@ -12,7 +12,6 @@ stow kitty
 stow mpv
 stow pastebinit
 stow pulseaudio
-stow rofi
 stow sway
 stow tmux
 stow zsh
