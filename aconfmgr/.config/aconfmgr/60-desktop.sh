@@ -1,7 +1,9 @@
 # Sway.
-AddPackage --foreign sway-git # i3-compatible Wayland compositor
+AddPackage --foreign grimshot-git # A helper for screenshots within sway.
 AddPackage jq # Command-line JSON processor
+AddPackage kanshi # Dynamic output configuration for Wayland WMs
 AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application launcher and dmenu replacement (Wayland fork)
+AddPackage --foreign sway-git # i3-compatible Wayland compositor
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 
@@ -22,3 +24,6 @@ AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage --foreign interception-caps2esc-delay-git # caps2esc
 CreateLink /etc/systemd/system/multi-user.target.wants/udevmon.service /usr/lib/systemd/system/udevmon.service
 CopyFile /etc/udevmon.yaml
+
+# XDG directories.
+CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service

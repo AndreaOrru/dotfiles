@@ -201,6 +201,11 @@ input type:touchpad {
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+    bindsym Print exec grimshot copy area
+    bindsym $mod+Print exec grimshot copy output
+    bindsym Shift+Print exec grimshot save area
+    bindsym $mod+Shift+Print exec grimshot copy area
 #
 # Resizing containers:
 #
