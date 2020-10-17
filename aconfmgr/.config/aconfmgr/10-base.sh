@@ -37,5 +37,6 @@ CopyFile /etc/makepkg.conf
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/mirrorlist
 
-# Basic tools.
+# Systemd.
 AddPackage logrotate # Rotates system logs automatically
+CopyFile /etc/systemd/journald.conf  # Limit size of journal.

@@ -1,10 +1,10 @@
-# Use neovim as vi.
-AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
-CreateLink /usr/local/bin/vi /usr/bin/nvim
-
 # Man pages.
 AddPackage man-db # A utility for reading man pages
 AddPackage man-pages # Linux man pages
+
+# Use neovim as vi.
+AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
+CreateLink /usr/local/bin/vi /usr/bin/nvim
 
 # Shell and shell extensions.
 AddPackage --foreign autojump # A faster way to navigate your filesystem from the command line

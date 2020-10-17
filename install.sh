@@ -11,6 +11,7 @@ stow git
 stow kitty
 stow mpv
 stow pastebinit
+stow pdbpp
 stow pulseaudio
 stow sway
 stow tmux

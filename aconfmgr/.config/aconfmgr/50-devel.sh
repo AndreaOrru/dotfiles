@@ -17,6 +17,7 @@ AddPackage github-cli # The GitHub CLI
 # Python.
 AddPackage ipython # An enhanced Interactive Python shell.
 AddPackage python # Next generation of the python high-level scripting language
+AddPackage --foreign python-pdbpp-git # pdb++, a drop-in replacement for pdb
 AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv tool
 
 # Rust.
