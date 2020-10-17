@@ -15,6 +15,8 @@ AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 # Fonts.
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage ttf-liberation # Red Hats Liberation fonts
+AddPackage adobe-source-han-sans-jp-fonts # Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts
+AddPackage adobe-source-han-serif-jp-fonts # Adobe Source Han Serif Subset OTF - Japanese OpenType/CFF fonts
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-iosevka-fixed-ss09 # Typeface family designed for coding, terminal use and technical documents.
 CreateLink /etc/fonts/conf.d/10-sub-pixel-rgb.conf ../conf.avail/10-sub-pixel-rgb.conf
