@@ -14,7 +14,10 @@ CreateLink /etc/systemd/system/systemd-rfkill.service /dev/null
 CreateLink /etc/systemd/system/systemd-rfkill.socket /dev/null
 
 CopyFile /etc/tlp.conf
+
+# Suspend then hibernate after a while.
 CopyFile /etc/systemd/sleep.conf
+CreateLink /etc/systemd/system/systemd-suspend.service /usr/lib/systemd/system/systemd-suspend-then-hibernate.service
 
 
 ###############
