@@ -11,7 +11,13 @@ AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulato
 AddPackage --foreign lk4b # A small program which locks your keyboard but leaves your mouse free
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
-AddPackage snes9x-gtk # Portable Super Nintendo Entertainment System (TM) emulator
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
+
+AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
+AddPackage snes9x-gtk # Portable Super Nintendo Entertainment System (TM) emulator
+IgnorePath '/usr/lib/libsnesmusic.so.1'
+IgnorePath '/usr/lib/libsnesfilter.so.1'
+IgnorePath '/usr/lib/libsnesreader.so.1'
+IgnorePath '/usr/lib/libsupergameboy.so.1'

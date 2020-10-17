@@ -34,3 +34,6 @@ CopyFile /etc/udevmon.yaml
 
 # XDG directories.
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
+
+# QT theming.
+AddPackage --foreign adwaita-qt # A style to bend Qt applications to look like they belong into GNOME Shell
