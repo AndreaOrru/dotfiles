@@ -23,3 +23,6 @@ AddPackage python-virtualenvwrapper # Extensions to Ian Bicking's virtualenv too
 # Rust.
 AddPackage rust-analyzer # Experimental Rust compiler front-end for IDEs
 AddPackage rustup # The Rust toolchain installer
+
+# SNES.
+AddPackage --foreign asar-git # SNES assembler for applying patches to existing ROMs or creating new ROMs from scratch
