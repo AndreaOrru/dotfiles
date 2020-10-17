@@ -1,3 +1,7 @@
+# XFCE.
+AddPackageGroup xfce4
+AddPackage xorg-server # Xorg X server
+
 # Sway.
 AddPackage --foreign grimshot-git # A helper for screenshots within sway.
 AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application launcher and dmenu replacement (Wayland fork)
