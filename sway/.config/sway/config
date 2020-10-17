@@ -23,8 +23,8 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 bg $HOME/.config/sway/wallpaper1.png fill
-output  DP-1 bg $HOME/.config/sway/wallpaper2.png fill
+output eDP-1 bg $HOME/Pictures/wallpapers/1.png fill
+output  DP-1 bg $HOME/Pictures/wallpapers/2.png fill
 
 font Iosevka Fixed SS09 Extended 9
 default_border pixel
