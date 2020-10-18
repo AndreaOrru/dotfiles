@@ -38,3 +38,9 @@ alias "g.."="cd \`git root\`"
 alias pinit='pip install -r requirements.txt; \
 	     pip install -r requirements-dev.txt; \ 
 	     pre-commit install'
+
+# Start tmux automatically.
+if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}" ]; then
+    [ -z "${TMUX}" ] && (tmux attach || tmux)
+    true
+fi
