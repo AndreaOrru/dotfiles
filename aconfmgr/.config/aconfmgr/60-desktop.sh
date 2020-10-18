@@ -17,6 +17,7 @@ AddPackage kanshi # Dynamic output configuration for Wayland WMs
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Fonts.
+AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage adobe-source-han-sans-jp-fonts # Adobe Source Han Sans Subset OTF - Japanese OpenType/CFF fonts

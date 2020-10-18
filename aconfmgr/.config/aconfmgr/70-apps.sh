@@ -7,6 +7,7 @@ AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite database
 AddPackage blueberry # Bluetooth configuration tool
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage discord # All-in-one voice and text chat for gamers that's free and secure.
+AddPackage evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 AddPackage --foreign lk4b # A small program which locks your keyboard but leaves your mouse free
