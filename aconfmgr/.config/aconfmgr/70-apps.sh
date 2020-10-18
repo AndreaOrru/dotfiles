@@ -1,5 +1,6 @@
 # Firefox.
 AddPackage firefox # Standalone web browser from mozilla.org
+AddPackage --foreign ff2mpv-native-messaging-host-git # Native Messaging Host for ff2mpv firefox addon.
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
