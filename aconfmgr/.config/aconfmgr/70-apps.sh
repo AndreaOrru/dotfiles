@@ -15,6 +15,9 @@ AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 
+AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
+AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
+
 AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
 AddPackage snes9x-gtk # Portable Super Nintendo Entertainment System (TM) emulator
 IgnorePath '/usr/lib/libsnesmusic.so.1'
