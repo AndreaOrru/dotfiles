@@ -7,6 +7,7 @@ stow secrets
 
 stow aconfmgr
 stow emacs
+stow firefox
 stow git
 stow kitty
 stow mpv

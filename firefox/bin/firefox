@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export GTK_THEME="Adwaita:light"  # Draw text widgets in white.
+export MOZ_ENABLE_WAYLAND=1       # Enable Wayland support.
+export MOZ_USE_XINPUT2=1          # Touch gestures.
+
+exec /usr/bin/firefox
