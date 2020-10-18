@@ -7,7 +7,6 @@ export ALTERNATE_EDITOR="vi"          # Substitute editor when Emacs is not avai
 
 # Dark theme.
 export GTK_THEME="Adwaita:dark"
-export QT_STYLE_OVERRIDE="Adwaita-dark"
 
 # Firefox.
 export MOZ_USE_XINPUT2=1              # Touch gestures.
