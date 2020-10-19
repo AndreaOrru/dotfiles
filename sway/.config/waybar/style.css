@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Iosevka Fixed SS09;
+    font-family: Iosevka Fixed SS09, "FontAwesome 5 Free Solid";
     font-size: 12px;
     min-height: 0;
 }
