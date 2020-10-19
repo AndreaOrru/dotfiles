@@ -23,8 +23,10 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 bg $HOME/Pictures/wallpapers/1.png fill
-output  DP-1 bg $HOME/Pictures/wallpapers/2.png fill
+set $output-laptop eDP-1
+set $output-monitor DP-1
+output $output-laptop  bg $HOME/Pictures/wallpapers/1.png fill
+output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
 
 font Iosevka Fixed SS09 Extended 9
 default_border pixel
@@ -133,6 +135,17 @@ input type:touchpad {
 #
 # Workspaces:
 #
+    workspace 1 output $output-laptop
+    workspace 2 output $output-monitor
+    workspace 3 output $output-laptop
+    workspace 4 output $output-monitor
+    workspace 5 output $output-laptop
+    workspace 6 output $output-monitor
+    workspace 7 output $output-laptop
+    workspace 8 output $output-monitor
+    workspace 9 output $output-laptop
+    workspace 10 output $output-monitor
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
