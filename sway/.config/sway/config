@@ -207,7 +207,7 @@ input type:touchpad {
     bindsym Print exec grimshot copy area
     bindsym $mod+Print exec grimshot copy output
     bindsym Shift+Print exec grimshot save area
-    bindsym $mod+Shift+Print exec grimshot copy area
+    bindsym $mod+Shift+Print exec grimshot save area
 #
 # Resizing containers:
 #
