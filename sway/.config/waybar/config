@@ -2,7 +2,7 @@
     "height": 24, // Waybar height (to be removed for auto height)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "battery", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "network", "pulseaudio", "battery", "tray", "clock"],
     // Modules configuration
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

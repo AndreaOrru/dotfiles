@@ -67,6 +67,7 @@ window#waybar.hidden {
 
 #clock {
     background-color: #64727D;
+    margin-right: 0;
 }
 
 #battery {
