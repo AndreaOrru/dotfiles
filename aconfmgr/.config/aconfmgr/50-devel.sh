@@ -7,6 +7,7 @@ AddPackage clang # C language family frontend for LLVM
 AddPackage cloc # Count lines of code
 AddPackage cmake # A cross-platform open-source make system
 AddPackage gdb # The GNU Debugger
+AddPackage go # Core compiler tools for the Go programming language
 
 # Git.
 AddPackage git # the fast distributed version control system

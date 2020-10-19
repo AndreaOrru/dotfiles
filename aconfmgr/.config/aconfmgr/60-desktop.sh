@@ -8,6 +8,7 @@ AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application lau
 AddPackage --foreign sway-git # i3-compatible Wayland compositor
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
+AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
 
 # Wayland utilities.
 AddPackage brightnessctl # Lightweight brightness control tool
