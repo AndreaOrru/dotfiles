@@ -25,7 +25,8 @@ set $menu rofi -show drun
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $output-laptop eDP-1
 set $output-monitor DP-1
-output * bg $HOME/Pictures/wallpapers/cyberpunk-blue.png fill
+output $output-laptop  bg $HOME/Pictures/wallpapers/1.png fill
+output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
 
 font Iosevka Fixed SS09 Extended 9
 default_border pixel 3
@@ -136,16 +137,16 @@ input type:touchpad {
 #
 # Workspaces:
 #
-    workspace 1 output $output-laptop
-    workspace 2 output $output-monitor
-    workspace 3 output $output-laptop
-    workspace 4 output $output-monitor
-    workspace 5 output $output-laptop
-    workspace 6 output $output-monitor
-    workspace 7 output $output-laptop
-    workspace 8 output $output-monitor
-    workspace 9 output $output-laptop
-    workspace 10 output $output-monitor
+    workspace 1 output $output-monitor
+    workspace 2 output $output-laptop
+    workspace 3 output $output-monitor
+    workspace 4 output $output-laptop
+    workspace 5 output $output-monitor
+    workspace 6 output $output-laptop
+    workspace 7 output $output-monitor
+    workspace 8 output $output-laptop
+    workspace 9 output $output-monitor
+    workspace 10 output $output-laptop
 
     # Switch to workspace
     bindsym $mod+1 workspace number 1
@@ -259,8 +260,10 @@ bar {
 #
 # Autostart:
 #
-exec gammastep                  # Adjust color temperature in the evening.
-exec kanshi                     # Multi-monitor profiles.
-exec mako                       # Notification daemon.
+exec gammastep  # Adjust color temperature in the evening.
+exec kanshi     # Multi-monitor profiles.
+exec mako       # Notification daemon.
+# Focus external display.
+focus output $output-monitor
 
 include /etc/sway/config.d/*
