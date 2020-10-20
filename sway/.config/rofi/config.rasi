@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    font: "Iosevka Fixed SS09 Extended 12";
+    font: "Iosevka Fixed SS09 Extended 10";
     show-icons: true;
     theme: "Arc-Dark";
 
