@@ -93,7 +93,7 @@ input type:touchpad {
     bindsym $mod+d exec $menu
 
     # Switch to window
-    bindsym $mod+w exec sway-window-menu
+    bindsym $mod+w exec $HOME/.config/sway/sway-window-menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
