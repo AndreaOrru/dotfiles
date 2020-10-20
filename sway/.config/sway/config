@@ -25,8 +25,7 @@ set $menu rofi -show drun
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $output-laptop eDP-1
 set $output-monitor DP-1
-output $output-laptop  bg $HOME/Pictures/wallpapers/1.png fill
-output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
+output * bg $HOME/Pictures/wallpapers/cyberpunk-blue.png fill
 
 font Iosevka Fixed SS09 Extended 9
 default_border pixel 3
