@@ -264,6 +264,7 @@ exec gammastep  # Adjust color temperature in the evening.
 exec mako       # Notification daemon.
 # Multi-monitor profiles.
 exec_always pkill kanshi; exec kanshi
+
 # Focus external display.
 focus output $output-monitor
 
