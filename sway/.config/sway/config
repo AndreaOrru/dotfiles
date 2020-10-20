@@ -29,8 +29,10 @@ output $output-laptop  bg $HOME/Pictures/wallpapers/1.png fill
 output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
 
 font Iosevka Fixed SS09 Extended 9
-default_border pixel
+default_border pixel 3
 smart_borders on
+gaps inner 16
+smart_gaps on
 #
 # Example configuration:
 #
@@ -174,6 +176,9 @@ input type:touchpad {
     # Switch to next/previous workspace
     bindsym $mod+Left workspace prev_on_output
     bindsym $mod+Right workspace next_on_output
+
+    # Switch back and forth between workspaces
+    bindsym $mod+tab workspace back_and_forth
 #
 # Layout stuff:
 #
@@ -258,6 +263,5 @@ bar {
 exec gammastep                  # Adjust color temperature in the evening.
 exec kanshi                     # Multi-monitor profiles.
 exec mako                       # Notification daemon.
-exec sway-alttab -c "Mod4+Tab"  # Alt+Tab.
 
 include /etc/sway/config.d/*

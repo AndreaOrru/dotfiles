@@ -19,7 +19,8 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%H:%M}",
+        "format": "{:%a, %b %d  %H:%M}"
     },
     "battery": {
         "full-at": 99,

@@ -6,7 +6,6 @@ AddPackage xorg-server # Xorg X server
 AddPackage --foreign grimshot-git # A helper for screenshots within sway.
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application launcher and dmenu replacement (Wayland fork)
-AddPackage --foreign sway-alttab-bin # Simple Alt-Tab daemon for SwayWM
 AddPackage --foreign sway-git # i3-compatible Wayland compositor
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
