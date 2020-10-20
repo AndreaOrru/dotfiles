@@ -6,6 +6,7 @@ AddPackage xorg-server # Xorg X server
 AddPackage --foreign grimshot-git # A helper for screenshots within sway.
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application launcher and dmenu replacement (Wayland fork)
+AddPackage --foreign sway-alttab-bin # Simple Alt-Tab daemon for SwayWM
 AddPackage --foreign sway-git # i3-compatible Wayland compositor
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
@@ -24,6 +25,7 @@ AddPackage adobe-source-han-serif-jp-fonts # Adobe Source Han Serif Subset OTF -
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage otf-font-awesome # Iconic font designed for Bootstrap
 AddPackage ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+AddPackage ttf-font-awesome # Iconic font designed for Bootstrap
 AddPackage ttf-liberation # Red Hats Liberation fonts
 AddPackage --foreign ttf-google-fonts-git # TrueType fonts from the Google Fonts project (git version)
 AddPackage --foreign ttf-iosevka-fixed-ss09 # Typeface family designed for coding, terminal use and technical documents.

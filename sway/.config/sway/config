@@ -220,6 +220,7 @@ input type:touchpad {
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+    bindsym XF86Favorites exec fullcharge.sh
 
     bindsym Print exec grimshot copy area
     bindsym $mod+Print exec grimshot copy output

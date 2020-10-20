@@ -28,8 +28,8 @@
             "critical": 15
         },
         "format": "{icon}",
-        "format-charging": "",
-        "format-plugged": "",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
         "format-alt": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
     },
