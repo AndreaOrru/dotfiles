@@ -6,6 +6,7 @@ chmod 644 secrets/.ssh/id_rsa.pub
 stow secrets
 
 stow aconfmgr
+stow binaries
 stow emacs
 stow firefox
 stow git
