@@ -129,11 +129,11 @@ input type:touchpad {
     bindsym $mod+Shift+$right move right
 
     # Switch to next/previous output
-    bindsym $mod+Control+$left focus output left
-    bindsym $mod+Control+$right focus output right
+    bindsym $mod+bracketleft focus output left
+    bindsym $mod+bracketright focus output right
     # Move focused container to next/previous output
-    bindsym $mod+Control+Shift+$left move container to output left; focus output left
-    bindsym $mod+Control+Shift+$right move container to output right; focus output right
+    bindsym $mod+Shift+bracketleft move container to output left; focus output left
+    bindsym $mod+Shift+bracketright move container to output right; focus output right
 #
 # Workspaces:
 #
@@ -174,8 +174,8 @@ input type:touchpad {
     # We just use 1-10 as the default.
 
     # Switch to next/previous workspace
-    bindsym $mod+Left workspace prev_on_output
-    bindsym $mod+Right workspace next_on_output
+    bindsym $mod+Control+$left workspace prev_on_output
+    bindsym $mod+Control+$right workspace next_on_output
 
     # Switch back and forth between workspaces
     bindsym $mod+tab workspace back_and_forth
