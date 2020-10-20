@@ -200,7 +200,7 @@ input type:touchpad {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+Control+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -231,6 +231,8 @@ input type:touchpad {
     bindsym $mod+Print exec grimshot copy output
     bindsym Shift+Print exec grimshot save area
     bindsym $mod+Shift+Print exec grimshot save area
+
+    bindsym $mod+space exec playerctl play-pause
 #
 # Resizing containers:
 #
@@ -247,6 +249,7 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym Control+g mode "default"
 }
 bindsym $mod+r mode "resize"
 
