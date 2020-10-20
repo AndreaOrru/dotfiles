@@ -15,10 +15,6 @@ window#waybar {
     transition-duration: .5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
 #workspaces * {
     font-family: Iosevka Fixed SS09 Extended;
 }
@@ -51,23 +47,21 @@ window#waybar.hidden {
     background-color: #eb4d4b;
 }
 
+#mode {
+    background-color: #64727D;
+    border-bottom: 2px solid #ffffff;
+}
+
 #clock,
 #battery,
 #network,
 #pulseaudio,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor {
     padding: 0 8px;
-    margin: 0 4px 2px 4px;
-    color: #ffffff;
-}
-
-#mode {
-    background-color: #64727D;
     margin: 0 4px;
-    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
 }
 
 #clock {
@@ -130,12 +124,9 @@ label:focus {
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
 #tray {
-    background-color: #90b1b1;
+    background-color: transparent;
+    padding: 0 4px;
 }
 
 #idle_inhibitor {

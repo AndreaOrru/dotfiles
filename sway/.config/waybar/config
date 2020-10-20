@@ -1,8 +1,8 @@
 {
     "height": 24, // Waybar height (to be removed for auto height)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "battery", "tray", "clock"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["idle_inhibitor", "custom/media", "pulseaudio", "network", "battery", "clock", "tray"],
     // Modules configuration
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -68,6 +68,7 @@
             "default": "🎜"
         },
         "escape": true,
+        "on-click": "playerctl play-pause",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
