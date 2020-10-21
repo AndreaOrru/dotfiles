@@ -31,7 +31,7 @@ output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
 ### Style configuration
 #
 font Iosevka Fixed SS09 Extended 9
-gaps inner 16
+gaps inner 12
 smart_gaps on
 default_border pixel 3
 smart_borders on
