@@ -13,6 +13,7 @@ AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application lau
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
+AddPackage xcursor-vanilla-dmz-aa # Vanilla DMZ AA cursor theme
 
 # Wayland utilities.
 AddPackage brightnessctl # Lightweight brightness control tool
@@ -42,6 +43,3 @@ CopyFile /etc/udevmon.yaml
 
 # XDG directories.
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
-
-# QT theming.
-AddPackage --foreign adwaita-qt # A style to bend Qt applications to look like they belong into GNOME Shell

@@ -267,6 +267,11 @@ exec gammastep  # Adjust color temperature in the evening.
 exec kanshi     # Multi-monitor profiles.
 exec mako       # Notification daemon.
 
+# Scale X11 applications.
+xwayland force scale 3
+exec xsettingsd
+seat seat0 xcursor_theme Vanilla-DMZ-AA 64
+
 # Focus external display.
 focus output $output-monitor
 
