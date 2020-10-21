@@ -25,6 +25,9 @@ AddPackage stow # Manage installation of multiple softwares in the same director
 AddPackage the_silver_searcher # Code searching tool similar to Ack, but faster
 AddPackage tmux # A terminal multiplexer
 AddPackage tree # A directory listing program displaying a depth indented list of files
+
+# Media.
+AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage youtube-dl # A command-line program to download videos from YouTube.com and a few more sites
 
 # Ranger.

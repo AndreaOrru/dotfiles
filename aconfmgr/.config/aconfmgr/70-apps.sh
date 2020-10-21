@@ -6,7 +6,7 @@ AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite database
 
 AddPackage blueberry # Bluetooth configuration tool
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage discord # All-in-one voice and text chat for gamers that's free and secure.
+AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
 AddPackage evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage imv # Image viewer for Wayland and X11
@@ -15,7 +15,6 @@ AddPackage --foreign lk4b # A small program which locks your keyboard but leaves
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
 AddPackage --foreign spotify # A proprietary music streaming service
-AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)

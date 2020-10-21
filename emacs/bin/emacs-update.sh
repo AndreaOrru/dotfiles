@@ -3,7 +3,9 @@
 DEV="$HOME/dev/makepkg"
 EMACS="$DEV/emacs-pgtk-native-comp-git"
 PLS="$DEV/python-language-server"
+
 mkdir -p "$DEV"
+cd "$DEV"
 
 
 #######################
@@ -26,6 +28,7 @@ rm -rf pkg src *.pkg.tar
 #  Emacs configuration.  #
 ##########################
 
+rm -rf ~/.emacs.d/eln-cache
 rm -rf ~/.emacs.d/elpa
 rm -rf ~/.emacs.d/etc
 rm -rf ~/.emacs.d/var
