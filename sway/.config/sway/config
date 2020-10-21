@@ -22,51 +22,32 @@ set $menu rofi -show drun
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $output-laptop eDP-1
 set $output-monitor DP-1
+focus output $output-monitor
 output $output-laptop  bg $HOME/Pictures/wallpapers/1.png fill
 output $output-monitor bg $HOME/Pictures/wallpapers/2.png fill
 
+### Style configuration
+#
 font Iosevka Fixed SS09 Extended 9
-default_border pixel 3
-smart_borders on
 gaps inner 16
 smart_gaps on
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+default_border pixel 3
+smart_borders on
 
 ### Idle configuration
-#
-# Example configuration:
 #
 exec swayidle -w \
          timeout 300 'swaylock' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock'
-#
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
 input type:keyboard {
     xkb_layout "us,it"
     xkb_options "altwin:swap_lalt_lwin,grp:shifts_toggle"
@@ -253,32 +234,26 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
+### Status Bar
 #
 bar {
     swaybar_command waybar
 }
 
+### Misc
 #
-# Autostart:
+# Scale X11 applications.
+xwayland force scale 3
+exec xsettingsd
+# Hide cursor after 5 seconds.
+seat * hide_cursor 5000
+# Fix for Pomotroid's window size.
+for_window [class="pomotroid"] resize set 360 478
+
+### Autostart
 #
 exec gammastep  # Adjust color temperature in the evening.
 exec kanshi     # Multi-monitor profiles.
 exec mako       # Notification daemon.
-
-# Scale X11 applications.
-xwayland force scale 3
-exec xsettingsd
-
-# Cursor configuration.
-seat seat0 xcursor_theme Vanilla-DMZ 32
-seat * hide_cursor 5000
-
-# Fix for Pomotroid's window size.
-for_window [class="pomotroid"] resize set 360 478
-
-# Focus external display.
-focus output $output-monitor
 
 include /etc/sway/config.d/*
