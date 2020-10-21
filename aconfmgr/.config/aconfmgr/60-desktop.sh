@@ -13,7 +13,6 @@ AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application lau
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
-AddPackage xcursor-vanilla-dmz # Vanilla DMZ cursor theme
 
 # Wayland utilities.
 AddPackage brightnessctl # Lightweight brightness control tool
