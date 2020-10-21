@@ -15,6 +15,8 @@ AddPackage --foreign lk4b # A small program which locks your keyboard but leaves
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
 AddPackage --foreign spotify # A proprietary music streaming service
+AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 

@@ -1,5 +1,6 @@
 # XFCE.
 AddPackageGroup xfce4
+AddPackage xfce4-screenshooter # Plugin that makes screenshots for the Xfce panel
 AddPackage xorg-server # Xorg X server
 
 # Sway.

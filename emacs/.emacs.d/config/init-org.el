@@ -6,8 +6,4 @@
 ;; Speed up font loading.
 (setq inhibit-compacting-font-caches t)
 
-;; Support for Pomodoro Technique.
-(require-package 'org-pomodoro)
-(setq org-pomodoro-format "%s")
-
 (provide 'init-org)
