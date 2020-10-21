@@ -1,13 +1,15 @@
 # XFCE.
 AddPackageGroup xfce4
 AddPackage xfce4-screenshooter # Plugin that makes screenshots for the Xfce panel
-AddPackage xorg-server # Xorg X server
 
 # Sway.
+AddPackage --foreign sway-hidpi-git # i3-compatible Wayland compositor, with XWayland HiDPI
+AddPackage --foreign wlroots-hidpi-git # Modular Wayland compositor library, with XWayland HiDPI
+AddPackage --foreign xorg-server-hidpi-git # Xorg X server (git version)
+
 AddPackage --foreign grimshot-git # A helper for screenshots within sway.
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application launcher and dmenu replacement (Wayland fork)
-AddPackage --foreign sway-git # i3-compatible Wayland compositor
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
