@@ -1,3 +1,9 @@
+# Plasma.
+AddPackage plasma-meta # Meta package to install KDE Plasma
+AddPackage dolphin # KDE File Manager
+AddPackage xorg-xinit # X.Org initialisation program
+CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
+
 # Sway.
 AddPackage --foreign sway-hidpi-git # i3-compatible Wayland compositor, with XWayland HiDPI
 AddPackage --foreign wlroots-hidpi-git # Modular Wayland compositor library, with XWayland HiDPI

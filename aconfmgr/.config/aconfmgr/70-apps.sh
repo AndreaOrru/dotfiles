@@ -4,6 +4,19 @@ AddPackage --foreign ff2mpv-native-messaging-host-git # Native Messaging Host fo
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
+# Wine.
+AddPackage wine # A compatibility layer for running Windows programs
+AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
+
+# Skype.
+AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
+AddPackage gnome-keyring # Stores passwords and encryption keys
+
+# VirtualBox.
+AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
+AddPackage virtualbox-guest-iso # The official VirtualBox Guest Additions ISO image
+AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
+
 AddPackage blueberry # Bluetooth configuration tool
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
@@ -17,10 +30,6 @@ AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
-
-AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
-AddPackage virtualbox-guest-iso # The official VirtualBox Guest Additions ISO image
-AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
 
 AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
 AddPackage snes9x-gtk # Portable Super Nintendo Entertainment System (TM) emulator
