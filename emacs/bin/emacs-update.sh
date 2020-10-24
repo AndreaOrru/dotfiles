@@ -41,7 +41,7 @@ systemctl --user daemon-reload
 #  Microsoft Python Language Server  #
 ######################################
 
-[ ! -d "$PLS" ] && git clone Microsoft/python-language-server
+[ ! -d "$PLS" ] && git clone https://github.com/Microsoft/python-language-server
 
 cd "$PLS/src/LanguageServer/Impl"
 git pull
