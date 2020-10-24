@@ -17,5 +17,4 @@ stow pdbpp
 stow pulseaudio
 stow sway
 stow tmux
-stow xfce
 stow zsh

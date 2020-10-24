@@ -1,7 +1,3 @@
-# XFCE.
-AddPackageGroup xfce4
-AddPackage xfce4-screenshooter # Plugin that makes screenshots for the Xfce panel
-
 # Sway.
 AddPackage --foreign sway-hidpi-git # i3-compatible Wayland compositor, with XWayland HiDPI
 AddPackage --foreign wlroots-hidpi-git # Modular Wayland compositor library, with XWayland HiDPI

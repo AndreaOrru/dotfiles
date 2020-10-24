@@ -7,7 +7,6 @@ export ALTERNATE_EDITOR="vi"          # Substitute editor when Emacs is not avai
 
 # Graphics widgets.
 export GTK_THEME="Adwaita:dark"       # Dark GTK theme.
-export QT_SCALE_FACTOR=1.5            # Scale QT applications.
 export WLR_DRM_NO_MODIFIERS=1         # FIXME: workaround for sway's DPMS bug.
 
 # Miscellaneous.
