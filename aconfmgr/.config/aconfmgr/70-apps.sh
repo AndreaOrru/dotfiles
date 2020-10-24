@@ -13,7 +13,7 @@ AddPackage imv # Image viewer for Wayland and X11
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 AddPackage --foreign lk4b # A small program which locks your keyboard but leaves your mouse free
 AddPackage mpv # a free, open source, and cross-platform media player
-AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
+AddPackage --foreign skypeforlinux-stable-bin # Skype for Linux - Stable/Release Version
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
