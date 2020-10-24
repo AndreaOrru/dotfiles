@@ -14,7 +14,7 @@ AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and W
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage gammastep # Adjust the color temperature of your screen according to your surroundings.
 AddPackage jq # Command-line JSON processor
-AddPackage --foreign kanshi-git # Dynamic output configuration for Wayland WMs
+AddPackage kanshi # Dynamic output configuration for Wayland WMs
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Fonts.

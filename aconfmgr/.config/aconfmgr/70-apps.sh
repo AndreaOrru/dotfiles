@@ -13,13 +13,13 @@ AddPackage imv # Image viewer for Wayland and X11
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
 AddPackage --foreign lk4b # A small program which locks your keyboard but leaves your mouse free
 AddPackage mpv # a free, open source, and cross-platform media player
-AddPackage --foreign skypeforlinux-stable-bin # Skype for Linux - Stable/Release Version
 AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 
 AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
+AddPackage virtualbox-guest-iso # The official VirtualBox Guest Additions ISO image
 AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
 
 AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
