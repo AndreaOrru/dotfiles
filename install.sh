@@ -18,3 +18,5 @@ stow pulseaudio
 stow sway
 stow tmux
 stow zsh
+
+./_xdg/install.sh
