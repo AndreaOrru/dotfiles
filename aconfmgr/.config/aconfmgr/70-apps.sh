@@ -20,7 +20,6 @@ AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
 AddPackage blueberry # Bluetooth configuration tool
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
-AddPackage evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 AddPackage gimp # GNU Image Manipulation Program
 AddPackage imv # Image viewer for Wayland and X11
 AddPackage kitty # A modern, hackable, featureful, OpenGL-based terminal emulator
@@ -30,6 +29,8 @@ AddPackage --foreign spotify # A proprietary music streaming service
 AddPackage --foreign pomotroid-bin # Simple and visually-pleasing Pomodoro timer
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
+AddPackage zathura # Minimalistic document viewer
+AddPackage zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 
 AddPackage --foreign bsnes-plus-git # debug-oriented fork of bsnes v073
 AddPackage snes9x-gtk # Portable Super Nintendo Entertainment System (TM) emulator
