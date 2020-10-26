@@ -49,8 +49,7 @@ exec swayidle -w \
 ### Input configuration
 #
 input type:keyboard {
-    xkb_layout "us,it"
-    xkb_options "altwin:swap_lalt_lwin,grp:shifts_toggle"
+    xkb_options "altwin:swap_lalt_lwin"
     repeat_delay 200
     repeat_rate 60
 }
@@ -252,6 +251,7 @@ for_window [class="pomotroid"] resize set 360 478
 
 ### Autostart
 #
+exec fcitx5     # Input method.
 exec gammastep  # Adjust color temperature in the evening.
 exec kanshi     # Multi-monitor profiles.
 exec mako       # Notification daemon.

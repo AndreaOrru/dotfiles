@@ -16,6 +16,10 @@ AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
 
+# Input method.
+AddPackageGroup fcitx5-im
+AddPackage --foreign fcitx5-mozc # Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
+
 # Wayland utilities.
 AddPackage brightnessctl # Lightweight brightness control tool
 AddPackage gammastep # Adjust the color temperature of your screen according to your surroundings.
