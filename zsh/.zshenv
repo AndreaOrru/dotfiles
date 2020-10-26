@@ -15,6 +15,6 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1  # Disable telemetry in .NET compiler.
 export LESSHISTFILE="-"               # Disable less history.
 
 # Input method.
-export GTK_IM_MODULE=fcitx5
-export QT_IM_MODULE=fcitx5
-export XMODIFIERS="@im=fcitx5"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
