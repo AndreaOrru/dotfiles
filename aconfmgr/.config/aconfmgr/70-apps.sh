@@ -17,6 +17,7 @@ AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as ho
 AddPackage virtualbox-guest-iso # The official VirtualBox Guest Additions ISO image
 AddPackage virtualbox-host-dkms # VirtualBox Host kernel modules sources
 
+AddPackage anki # Helps you remember facts (like words/phrases in a foreign language) efficiently
 AddPackage blueberry # Bluetooth configuration tool
 AddPackage chromium # A web browser built for speed, simplicity, and security
 AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance

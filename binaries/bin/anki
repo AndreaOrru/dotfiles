@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export QT_QPA_PLATFORM=xcb
+export QT_FONT_DPI=288
+
+/usr/bin/anki
