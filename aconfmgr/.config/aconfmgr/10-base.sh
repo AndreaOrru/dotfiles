@@ -40,3 +40,4 @@ CopyFile /etc/pacman.d/mirrorlist
 # Systemd.
 AddPackage logrotate # Rotates system logs automatically
 CopyFile /etc/systemd/journald.conf  # Limit size of journal.
+CopyFile /etc/systemd/system.conf    # Faster stop jobs.
