@@ -3,6 +3,8 @@ AddPackage --foreign fedora-firefox-wayland-bin # Fedora's firefox build with wa
 AddPackage --foreign ff2mpv-native-messaging-host-git # Native Messaging Host for ff2mpv firefox addon.
 AddPackage hunspell-en_US # US English hunspell dictionaries
 AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
+AddPackage libpipewire02 # User space API to deal with multimedia pipelines (0.2)
+AddPackage --foreign xdg-desktop-portal-wlr-git # xdg-desktop-portal backend for wlroots
 
 # Wine.
 AddPackage wine # A compatibility layer for running Windows programs
