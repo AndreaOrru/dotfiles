@@ -55,7 +55,6 @@ CopyFile /etc/bluetooth/main.conf
 AddPackage intel-media-driver # Intel Media Driver for VAAPI — Broadwell+ iGPUs
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 AddPackage vulkan-intel # Intel's Vulkan mesa driver
-AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 
 CopyFile /etc/modprobe.d/i915.conf
 

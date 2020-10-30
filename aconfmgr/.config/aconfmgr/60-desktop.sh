@@ -1,8 +1,3 @@
-# Plasma.
-AddPackage plasma-meta # Meta package to install KDE Plasma
-AddPackage dolphin # KDE File Manager
-AddPackage xorg-xinit # X.Org initialisation program
-CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 
 # Sway.
 AddPackage --foreign sway-hidpi-git # i3-compatible Wayland compositor, with XWayland HiDPI
@@ -15,6 +10,8 @@ AddPackage --foreign rofi-lbonn-wayland-git # A window switcher, application lau
 AddPackage --foreign swayidle-git # Idle management daemon for Wayland
 AddPackage --foreign swaylock-git # Screen locker for Wayland
 AddPackage --foreign waybar-git # Highly customizable Wayland bar for Sway and Wlroots based compositors (GIT)
+AddPackage --foreign xdg-desktop-portal-wlr-git # xdg-desktop-portal backend for wlroots
+CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 
 # Input method.
 AddPackageGroup fcitx5-im

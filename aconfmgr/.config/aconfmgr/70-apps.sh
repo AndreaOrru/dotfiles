@@ -2,17 +2,12 @@
 AddPackage --foreign fedora-firefox-wayland-bin # Fedora's firefox build with wayland enabled by default
 AddPackage --foreign ff2mpv-native-messaging-host-git # Native Messaging Host for ff2mpv firefox addon.
 AddPackage hunspell-en_US # US English hunspell dictionaries
-AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 AddPackage libpipewire02 # User space API to deal with multimedia pipelines (0.2)
-AddPackage --foreign xdg-desktop-portal-wlr-git # xdg-desktop-portal backend for wlroots
+AddPackage profile-cleaner # Simple script to vacuum and reindex sqlite databases used by browsers
 
 # Wine.
 AddPackage wine # A compatibility layer for running Windows programs
 AddPackage winetricks # Script to install various redistributable runtime libraries in Wine.
-
-# Skype.
-AddPackage --foreign skypeforlinux-preview-bin # Skype for Linux - Preview/Insider Version
-AddPackage gnome-keyring # Stores passwords and encryption keys
 
 # VirtualBox.
 AddPackage virtualbox # Powerful x86 virtualization for enterprise as well as home use
