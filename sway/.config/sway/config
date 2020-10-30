@@ -253,6 +253,7 @@ exec xsettingsd
 # Hide cursor after 5 seconds.
 seat * hide_cursor 5000
 # Individual application settings.
+for_window [class="bsnes-compatibility"] floating enable
 for_window [class="pomotroid"] resize set 360 478
 for_window [instance="anki"] floating enable
 
