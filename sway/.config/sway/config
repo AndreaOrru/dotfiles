@@ -115,11 +115,11 @@ input type:touchpad {
     bindsym $mod+Shift+$right move right
 
     # Switch to next/previous output
-    bindsym $mod+bracketleft focus output left
-    bindsym $mod+bracketright focus output right
+    bindsym $mod+bracketleft focus output up
+    bindsym $mod+bracketright focus output down
     # Move focused container to next/previous output
-    bindsym $mod+Shift+bracketleft move container to output left; focus output left
-    bindsym $mod+Shift+bracketright move container to output right; focus output right
+    bindsym $mod+Shift+bracketleft move container to output up; focus output up
+    bindsym $mod+Shift+bracketright move container to output down; focus output down
 #
 # Workspaces:
 #
