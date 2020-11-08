@@ -1,8 +1,5 @@
-# Locale.
-export LC_ALL=en_US.UTF-8
-
 # Path.
-export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.nimble/bin:$PATH"
 
 # Editors.
 export EDITOR="emacsclient -t"        # Default editor.
