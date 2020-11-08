@@ -1,8 +1,0 @@
-profile {
-    output eDP-1 enable scale 3
-}
-
-profile {
-    output DP-1 enable position 0,0 scale 2
-    output eDP-1 enable position 310,1080 scale 3
-}

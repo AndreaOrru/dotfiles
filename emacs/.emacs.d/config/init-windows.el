@@ -17,8 +17,8 @@
                         :background (doom-color 'base2)
                         :foreground (doom-color 'base2))
   (setq window-divider-default-places t
-        window-divider-default-bottom-width 3
-        window-divider-default-right-width 2)
+        window-divider-default-bottom-width 4
+        window-divider-default-right-width 3)
   (add-hook 'after-init-hook 'window-divider-mode))
 
 ;; Split and switch to the new window immediately.

@@ -1,13 +1,13 @@
 # Syntax highlighting.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # FZF.
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_DEFAULT_OPTS="--exact"
 
 # Automatically activate Python virtualenvs.
-source virtualenvwrapper_lazy.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 precmd_functions=(auto_workon $precmd_functions)
 function auto_workon() {
     if [ "$PWD" != "$PY_OLDPWD" ] && [ -f .workon ]; then
@@ -25,14 +25,14 @@ zstyle ':prompt:grml:left:setup' items rc path vcs percent
 # Aliases.
 alias diff='diff --color=auto'
 alias f='sudo updatedb && sudo locate -i'
-alias i='ipython'
+alias i='ipython3'
 alias open='xdg-open'
-alias p='yay'
 alias t='tmux'
 
 alias e='emacsclient -t'
 alias "e."='emacsclient -t . ..'
 
+alias git='hub'
 alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`"
 alias "g.."="cd \`git root\`"
 
