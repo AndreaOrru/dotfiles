@@ -22,9 +22,7 @@
 
 ;; Enable mouse in terminal.
 (unless (display-graphic-p)
-  (xterm-mouse-mode 1)
-  (global-set-key (kbd "<mouse-4>") (kbd "<wheel-up>"))
-  (global-set-key (kbd "<mouse-5>") (kbd "<wheel-down>")))
+  (xterm-mouse-mode 1))
 ;; Enable smooth scrolling.
 (setq scroll-preserve-screen-position t
       scroll-margin 0
