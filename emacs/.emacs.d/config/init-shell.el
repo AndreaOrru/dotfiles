@@ -29,13 +29,7 @@
       shell-pop-shell-type '("eshell" "*eshell" #'(lambda () (eshell))))
 (global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
-
-;; Tmux integration.
-(require-package 'tmux-pane)
 (after 'evil-leader
-  (if (display-graphic-p)
-      (evil-leader/set-key "RET" 'shell-pop)
-    (require 'tmux-pane)
-    (evil-leader/set-key "RET" 'tmux-pane-toggle-horizontal)))
+  (evil-leader/set-key "RET" 'shell-pop))
 
 (provide 'init-shell)

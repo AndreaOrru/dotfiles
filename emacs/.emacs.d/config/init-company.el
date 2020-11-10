@@ -7,7 +7,7 @@
   (setq company-show-numbers t)    ;; Show numbered completions.
   (setq company-idle-delay 0.15))  ;; Show completions faster.
 
-;; Taken from abo-abo's configuration.
+;; Taken from abo-abo/oremacs.
 (defun my/company-number ()
   "Forward to `company-complete-number'.
 

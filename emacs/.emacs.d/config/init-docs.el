@@ -9,8 +9,9 @@
   (evil-leader/set-key "dd" 'counsel-dash-at-point)
   (evil-leader/set-key "ds" 'counsel-dash))
 
-;; Open documentation in Firefox.
-(setq browse-url-browser-function 'browse-url-firefox)
+;; Open documentation in Chromium.
+(setq browse-url-browser-function 'browse-url-chromium)
+(setq browse-url-chromium-program "/snap/bin/chromium")
 
 ;; Help and documentation functions.
 (after 'init-evil
