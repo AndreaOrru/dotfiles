@@ -1,5 +1,4 @@
-# Path.
-export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.nimble/bin:$PATH"
+source ~/.profile
 
 # Editors.
 export EDITOR="emacsclient -t"        # Default editor.
