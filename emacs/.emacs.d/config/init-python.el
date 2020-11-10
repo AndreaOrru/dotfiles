@@ -15,13 +15,13 @@
 (add-hook 'python-mode-hook 'blacken-mode)
 (after 'blacken
   (setq blacken-fast-unsafe t))
+
 ;; Enable isort for automatic import sorting after save.
 (require-package 'py-isort)
-
-;; Enable Flycheck syntax checking for Python.
 (add-hook 'python-mode-hook
           #'(lambda ()
               (add-hook 'before-save-hook 'py-isort-before-save t t)
+              ;; Enable Flycheck syntax checking for Python.
               (flycheck-select-checker 'python-flake8)
               (flycheck-add-next-checker 'python-flake8 'python-pycompile))
           98)
