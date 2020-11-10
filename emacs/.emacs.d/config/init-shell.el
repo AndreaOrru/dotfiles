@@ -27,6 +27,7 @@
 (require-package 'shell-pop)
 (setq shell-pop-full-span t
       shell-pop-shell-type '("eshell" "*eshell" #'(lambda () (eshell))))
+(global-set-key (kbd "s-x") 'shell-pop)
 (global-set-key (kbd "M-x") 'shell-pop)
 
 ;; Tmux integration.
