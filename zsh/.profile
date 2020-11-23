@@ -1,1 +1,1 @@
-export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.nimble/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
