@@ -12,8 +12,11 @@
 (setq disabled-command-function nil)    ;; Enable all functions.
 (require-package 'pkgbuild-mode)        ;; Support Arch Linux's PKGBUILDs.
 
-;; Re-center the screen and make the line pulse after jumping to definition.
 (after 'imenu
+  ;; Add imenu jump to the history of jumps.
+  (advice-add 'imenu :before
+              #'(lambda (orig-fun &rest args) (evil--jumps-push)))
+  ;; Re-center the screen and make the line pulse after jumping to definition.
   (add-to-list 'imenu-after-jump-hook
                #'(lambda () (pulse-momentary-highlight-one-line (point))))
   (add-to-list 'imenu-after-jump-hook 'recenter))
