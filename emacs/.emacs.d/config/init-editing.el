@@ -27,11 +27,8 @@
   (evil-leader/set-key "tl" 'global-linum-mode)
 
   ;; Adjust region indentation.
-  (evil-define-key 'normal prog-mode-map (kbd "TAB") 'evil-indent-line)
   (evil-define-key 'visual prog-mode-map (kbd "TAB") 'indent-region)
-
-  ;; Expand region.
-  (evil-leader/set-key "v" 'er/expand-region)
+  (evil-leader/set-key "v" 'er/expand-region)  ;; Expand region.
 
   ;; Comment/uncomment.
   (require 'evil-nerd-commenter)

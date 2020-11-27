@@ -9,6 +9,9 @@
   (advice-add 'lsp-ivy--workspace-symbol-action :after
               #'(lambda (orig-fun &rest args)
                   (mapc 'funcall imenu-after-jump-hook))))
+;; Do not use ivy-prescient on workspace symbol lists.
+(after 'ivy-prescient
+  (nconc ivy-prescient-sort-commands '(lsp-ivy-workspace-symbol)))
 
 (after [lsp-mode init-evil]
   (setq lsp-auto-guess-root t            ;; Guess the project root.

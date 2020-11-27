@@ -1,13 +1,9 @@
 ;; -*- lexical-binding: t -*-
 
+;; Install Magit.
+(require-package 'magit)
 ;; Follow symlinks in Git repositories.
 (setq vc-follow-symlinks t)
-
-;; Install Magit and configure Evil key bindings.
-(require-package 'magit)
-(require-package 'evil-magit)
-(after 'magit
-  (evil-magit-init))
 
 ;; Enable diff-hl for Git diff in the fringe.
 (require-package 'diff-hl)
@@ -30,6 +26,10 @@
 ;; Keep track of project's TODOs:
 (require-package 'magit-todos)
 (after 'ivy (require 'magit-todos))
+
+;; HACK: remove once https://github.com/emacs-evil/evil-collection/issues/407 is merged.
+(after 'magit
+  (define-key magit-mode-map (kbd "C-w") 'evil-window-map))
 
 ;; Key bindings.
 (after 'init-evil

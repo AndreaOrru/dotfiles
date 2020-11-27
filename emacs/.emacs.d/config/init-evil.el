@@ -39,6 +39,15 @@
   (define-key evil-motion-state-map "gd" 'xref-find-definitions)
   (define-key evil-motion-state-map "gD" 'xref-find-definitions-other-window))
 
+;; Make the line pulse after jumping back and forth.
+(after 'evil
+  (advice-add 'evil-jump-backward :after
+              #'(lambda (orig-fun &rest args)
+                  (pulse-momentary-highlight-one-line (point))))
+  (advice-add 'evil-jump-forward :after
+              #'(lambda (orig-fun &rest args)
+                  (pulse-momentary-highlight-one-line (point)))))
+
 ;; Use Space as leader key.
 (require-package 'evil-leader)
 (add-hook 'after-init-hook 'global-evil-leader-mode)
