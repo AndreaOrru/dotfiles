@@ -27,10 +27,6 @@
 (require-package 'magit-todos)
 (after 'ivy (require 'magit-todos))
 
-;; HACK: remove once https://github.com/emacs-evil/evil-collection/issues/407 is merged.
-(after 'magit
-  (define-key magit-mode-map (kbd "C-w") 'evil-window-map))
-
 ;; Key bindings.
 (after 'init-evil
   (which-key/describe-prefix "g" "git")
