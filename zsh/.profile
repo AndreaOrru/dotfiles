@@ -1,1 +1,1 @@
-export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"

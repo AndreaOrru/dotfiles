@@ -8,16 +8,6 @@ source /usr/share/doc/fzf/examples/completion.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_DEFAULT_OPTS="--exact"
 
-# Automatically activate Python virtualenvs.
-source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
-precmd_functions=(auto_workon $precmd_functions)
-function auto_workon() {
-    if [ "$PWD" != "$PY_OLDPWD" ] && [ -f .workon ]; then
-        workon `cat .workon`
-        PY_OLDPWD="$PWD"
-    fi
-}
-
 # Custom grml-zsh prompt.
 function virtual_env_prompt() { REPLY=''${VIRTUAL_ENV+ (''${VIRTUAL_ENV:t})} }
 grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
@@ -37,10 +27,6 @@ alias "e."='emacsclient -t . ..'
 alias git='hub'
 alias gpush="git push -u origin \`git rev-parse --abbrev-ref HEAD\`"
 alias "g.."="cd \`git root\`"
-
-alias pinit='pip install -r requirements.txt; \
-	     pip install -r requirements-dev.txt; \ 
-	     pre-commit install'
 
 # Start tmux automatically.
 if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}" ]; then

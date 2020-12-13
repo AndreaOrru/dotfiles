@@ -1,5 +1,8 @@
 source ~/.profile
 
+# Extra autocompletions.
+fpath+=~/.zfunc
+
 # Editors.
 export EDITOR="emacsclient -t"        # Default editor.
 export GIT_EDITOR="vi"                # Default editor for git tasks.

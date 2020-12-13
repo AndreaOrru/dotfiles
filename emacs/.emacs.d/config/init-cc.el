@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-(add-hook 'c-mode-common-hook 'lsp)
+(add-hook 'c-mode-common-hook 'lsp-deferred)
 (add-hook 'c-mode-common-hook
           #'(lambda ()
               (setq c-basic-offset 2)
