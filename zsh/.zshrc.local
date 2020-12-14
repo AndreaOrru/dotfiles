@@ -8,6 +8,21 @@ source /usr/share/doc/fzf/examples/completion.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_DEFAULT_OPTS="--exact"
 
+# Automatically activate Python virtualenvs.
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+precmd_functions=(auto_virtualenv $precmd_functions)
+function auto_virtualenv() {
+    if [ "$PWD" != "$PY_OLDPWD" ]; then
+        if [ -f .workon ]; then
+            workon `cat .workon`
+            PY_OLDPWD="$PWD"
+        elif [ -f pyproject.toml ]; then
+            source `poetry env info --path`/bin/activate
+            PY_OLDPWD="$PWD"
+        fi
+    fi
+}
+
 # Custom grml-zsh prompt.
 function virtual_env_prompt() { REPLY=''${VIRTUAL_ENV+ (''${VIRTUAL_ENV:t})} }
 grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'

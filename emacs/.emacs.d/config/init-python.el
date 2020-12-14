@@ -1,6 +1,9 @@
 ;; -*- lexical-binding: t -*-
 
 ;; Automatically enable the project's virtualenv (as early as possible).
+(require-package 'auto-virtualenvwrapper)
+(add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate -99)
+;; Same for Poetry projects.
 (require-package 'poetry)
 (add-hook 'python-mode-hook 'poetry-tracking-mode -99)
 (after 'poetry
